@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#f5ecd9">
-<title>The Training Journal — Wednesday 27 May 2026</title>
+<title>The Training Journal — Wed 27 May 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -12,823 +12,193 @@
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   :root{
-    --paper:#f5ecd9;
-    --paper-2:#ebe0c6;
-    --paper-3:#e3d6b6;
-    --ink:#1a1812;
-    --ink-2:#3a3328;
-    --ink-3:#6b5f47;
-    --muted:#8a7d65;
-    --rule:#c9b896;
-    --rule-2:#d9c9a6;
-    --ember:#c8421f;
-    --ember-2:#a8330f;
-    --forest:#3a4a2e;
-    --forest-2:#5a6b48;
+    --paper:#f5ecd9;--paper-2:#ebe0c6;--paper-3:#e3d6b6;
+    --ink:#1a1812;--ink-2:#3a3328;--ink-3:#6b5f47;
+    --muted:#8a7d65;--rule:#c9b896;--rule-2:#d9c9a6;
+    --ember:#c8421f;--ember-2:#a8330f;
+    --forest:#3a4a2e;--forest-2:#5a6b48;
     --bone:#fbf6e8;
-    --shadow:rgba(26,24,18,0.08);
     --serif:'Instrument Serif',Georgia,serif;
     --body:'Spectral',Georgia,serif;
     --sans:'Inter Tight','Helvetica Neue',Arial,sans-serif;
   }
-
   html{font-size:16px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
-  body{
-    font-family:var(--body);
-    color:var(--ink);
-    background:var(--paper);
-    line-height:1.55;
-    font-weight:400;
-    font-feature-settings:'kern','liga','calt';
-    overflow-x:hidden;
-    min-height:100vh;
-  }
+  body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.55;font-weight:400;font-feature-settings:'kern','liga','calt';overflow-x:hidden;min-height:100vh}
+  body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:1;opacity:0.35;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.4 0 0 0 0 0.35 0 0 0 0 0.25 0 0 0 0.4 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");mix-blend-mode:multiply}
 
-  /* Paper grain texture overlay */
-  body::before{
-    content:'';
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    z-index:1;
-    opacity:0.35;
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.4 0 0 0 0 0.35 0 0 0 0 0.25 0 0 0 0.4 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-    mix-blend-mode:multiply;
-  }
-
-  /* Contour decoration in hero */
-  .contour-bg{
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-    opacity:0.18;
-    overflow:hidden;
-  }
+  .contour-bg{position:absolute;inset:0;pointer-events:none;opacity:0.18;overflow:hidden}
   .contour-bg svg{width:100%;height:100%;display:block}
 
-  /* Layout */
-  .page{
-    position:relative;
-    z-index:2;
-    max-width:780px;
-    margin:0 auto;
-    padding:24px 28px 80px;
-  }
-  @media(min-width:760px){
-    .page{padding:48px 64px 120px}
-  }
+  .page{position:relative;z-index:2;max-width:780px;margin:0 auto;padding:24px 28px 80px}
+  @media(min-width:760px){.page{padding:48px 64px 120px}}
 
-  /* MASTHEAD */
-  .masthead{
-    display:grid;
-    grid-template-columns:1fr auto 1fr;
-    align-items:baseline;
-    gap:16px;
-    padding-bottom:14px;
-    border-bottom:2px solid var(--ink);
-    margin-bottom:6px;
-  }
-  .mast-left,.mast-right{
-    font-family:var(--sans);
-    font-size:10px;
-    text-transform:uppercase;
-    letter-spacing:0.16em;
-    color:var(--ink-2);
-    font-weight:500;
-  }
+  .masthead{display:grid;grid-template-columns:1fr auto 1fr;align-items:baseline;gap:16px;padding-bottom:14px;border-bottom:2px solid var(--ink);margin-bottom:6px}
+  .mast-left,.mast-right{font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:0.16em;color:var(--ink-2);font-weight:500}
   .mast-right{text-align:right}
-  .mast-title{
-    font-family:var(--serif);
-    font-style:italic;
-    font-size:28px;
-    line-height:1;
-    letter-spacing:-0.01em;
-    color:var(--ink);
-    white-space:nowrap;
-  }
-  @media(min-width:760px){
-    .mast-title{font-size:36px}
-  }
+  .mast-title{font-family:var(--serif);font-style:italic;font-size:28px;line-height:1;letter-spacing:-0.01em;color:var(--ink);white-space:nowrap}
+  @media(min-width:760px){.mast-title{font-size:36px}}
 
-  /* DATELINE */
-  .dateline{
-    font-family:var(--sans);
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:0.2em;
-    color:var(--ink-3);
-    margin:6px 0 28px;
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    gap:16px;
-  }
-  .dateline em{
-    font-family:var(--serif);
-    font-style:italic;
-    font-size:14px;
-    text-transform:none;
-    letter-spacing:0;
-    color:var(--ink-2);
-  }
+  .dateline{font-family:var(--sans);font-size:11px;text-transform:uppercase;letter-spacing:0.2em;color:var(--ink-3);margin:6px 0 28px;display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+  .dateline em{font-family:var(--serif);font-style:italic;font-size:14px;text-transform:none;letter-spacing:0;color:var(--ink-2)}
 
-  /* HERO — RACE COUNTDOWN */
-  .hero{
-    position:relative;
-    text-align:center;
-    padding:48px 8px 56px;
-    margin:8px -28px 56px;
-    border-top:1px solid var(--rule);
-    border-bottom:1px solid var(--rule);
-    background:linear-gradient(180deg,rgba(255,248,228,0.4) 0%,rgba(245,236,217,0) 100%);
-  }
-  @media(min-width:760px){
-    .hero{margin-left:-64px;margin-right:-64px;padding:64px 16px 72px}
-  }
-  .hero-kicker{
-    font-family:var(--sans);
-    font-size:10px;
-    text-transform:uppercase;
-    letter-spacing:0.3em;
-    color:var(--ember);
-    font-weight:600;
-    margin-bottom:8px;
-  }
-  .hero-number{
-    font-family:var(--serif);
-    font-style:italic;
-    font-size:clamp(140px,28vw,240px);
-    line-height:0.85;
-    color:var(--ink);
-    letter-spacing:-0.04em;
-    margin:0;
-    font-feature-settings:'tnum','ss01';
-  }
-  .hero-word{
-    font-family:var(--serif);
-    font-style:italic;
-    font-size:clamp(22px,4vw,32px);
-    color:var(--ink-2);
-    margin-top:6px;
-    line-height:1.2;
-  }
-  .hero-eyebrow{
-    font-family:var(--sans);
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:0.22em;
-    color:var(--ink-3);
-    margin-top:24px;
-    font-weight:500;
-  }
+  .hero{position:relative;text-align:center;padding:48px 8px 56px;margin:8px -28px 56px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:linear-gradient(180deg,rgba(255,248,228,0.4) 0%,rgba(245,236,217,0) 100%)}
+  @media(min-width:760px){.hero{margin-left:-64px;margin-right:-64px;padding:64px 16px 72px}}
+  .hero-kicker{font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:0.3em;color:var(--ember);font-weight:600;margin-bottom:8px}
+  .hero-number{font-family:var(--serif);font-style:italic;font-size:clamp(140px,28vw,240px);line-height:0.85;color:var(--ink);letter-spacing:-0.04em;margin:0;font-feature-settings:'tnum','ss01'}
+  .hero-word{font-family:var(--serif);font-style:italic;font-size:clamp(22px,4vw,32px);color:var(--ink-2);margin-top:6px;line-height:1.2}
+  .hero-eyebrow{font-family:var(--sans);font-size:11px;text-transform:uppercase;letter-spacing:0.22em;color:var(--ink-3);margin-top:24px;font-weight:500}
   .hero-eyebrow .sep{margin:0 10px;color:var(--rule)}
-  .hero-quote{
-    font-family:var(--serif);
-    font-style:italic;
-    font-size:clamp(17px,2.4vw,21px);
-    color:var(--ink);
-    max-width:480px;
-    margin:28px auto 0;
-    line-height:1.4;
-    position:relative;
-  }
-  .hero-quote::before,.hero-quote::after{
-    content:'';
-    display:block;
-    width:36px;
-    height:1px;
-    background:var(--ember);
-    margin:14px auto;
-  }
-  .hero-attr{
-    font-family:var(--sans);
-    font-size:10px;
-    text-transform:uppercase;
-    letter-spacing:0.18em;
-    color:var(--ink-3);
-    margin-top:4px;
-  }
+  .hero-quote{font-family:var(--serif);font-style:italic;font-size:clamp(17px,2.4vw,21px);color:var(--ink);max-width:480px;margin:28px auto 0;line-height:1.4;position:relative}
+  .hero-quote::before,.hero-quote::after{content:'';display:block;width:36px;height:1px;background:var(--ember);margin:14px auto}
+  .hero-attr{font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--ink-3);margin-top:4px}
 
-  /* SECTION HEADERS — newspaper section break */
-  .sec{
-    margin:64px 0 28px;
-    display:grid;
-    grid-template-columns:auto 1fr auto;
-    align-items:center;
-    gap:18px;
-  }
-  .sec-num{
-    font-family:var(--serif);
-    font-style:italic;
-    font-size:22px;
-    color:var(--ember);
-    line-height:1;
-    font-feature-settings:'tnum';
-  }
-  .sec-title{
-    font-family:var(--serif);
-    font-size:32px;
-    line-height:1;
-    color:var(--ink);
-    letter-spacing:-0.01em;
-    font-feature-settings:'tnum';
-  }
+  .sec{margin:64px 0 28px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px}
+  .sec-num{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--ember);line-height:1;font-feature-settings:'tnum'}
+  .sec-title{font-family:var(--serif);font-size:32px;line-height:1;color:var(--ink);letter-spacing:-0.01em;font-feature-settings:'tnum'}
   .sec-title em{font-style:italic;color:var(--ink-2)}
-  .sec-rule{
-    height:1px;
-    background:var(--ink);
-    align-self:end;
-    margin-bottom:6px;
-  }
-  .sec-meta{
-    font-family:var(--sans);
-    font-size:10px;
-    text-transform:uppercase;
-    letter-spacing:0.16em;
-    color:var(--ink-3);
-    white-space:nowrap;
-    font-weight:500;
-  }
+  .sec-rule{height:1px;background:var(--ink);align-self:end;margin-bottom:6px}
+  .sec-meta{font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:0.16em;color:var(--ink-3);white-space:nowrap;font-weight:500}
 
-  /* TODAY PANEL — pull-quote treatment */
   .today{margin-bottom:20px}
-  .today-tag{
-    font-family:var(--sans);
-    font-size:10px;
-    text-transform:uppercase;
-    letter-spacing:0.22em;
-    color:var(--ember);
-    font-weight:600;
-    margin-bottom:14px;
-  }
-  .today-session{
-    font-family:var(--serif);
-    font-size:clamp(38px,6vw,56px);
-    line-height:0.95;
-    color:var(--ink);
-    letter-spacing:-0.02em;
-    margin-bottom:18px;
-  }
+  .today-tag{font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:0.22em;color:var(--ember);font-weight:600;margin-bottom:14px}
+  .today-session{font-family:var(--serif);font-size:clamp(38px,6vw,56px);line-height:0.95;color:var(--ink);letter-spacing:-0.02em;margin-bottom:18px}
   .today-session em{font-style:italic;color:var(--ember)}
-  .today-detail{
-    font-family:var(--body);
-    font-size:17px;
-    color:var(--ink-2);
-    line-height:1.55;
-    max-width:560px;
-  }
+  .today-detail{font-family:var(--body);font-size:17px;color:var(--ink-2);line-height:1.55;max-width:560px}
   .today-detail .accent{color:var(--ember);font-weight:500}
-  .today-meta{
-    display:flex;
-    gap:28px;
-    margin-top:24px;
-    padding-top:16px;
-    border-top:1px solid var(--rule);
-    flex-wrap:wrap;
-  }
-  .today-meta-item{
-    font-family:var(--sans);
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:0.14em;
-    color:var(--ink-3);
-    font-weight:500;
-  }
-  .today-meta-item strong{
-    display:block;
-    font-family:var(--serif);
-    font-style:italic;
-    font-size:22px;
-    color:var(--ink);
-    margin-top:2px;
-    letter-spacing:0;
-    text-transform:none;
-    font-feature-settings:'tnum';
-    font-weight:400;
-  }
+  .today-meta{display:flex;gap:28px;margin-top:24px;padding-top:16px;border-top:1px solid var(--rule);flex-wrap:wrap}
+  .today-meta-item{font-family:var(--sans);font-size:11px;text-transform:uppercase;letter-spacing:0.14em;color:var(--ink-3);font-weight:500}
+  .today-meta-item strong{display:block;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--ink);margin-top:2px;letter-spacing:0;text-transform:none;font-feature-settings:'tnum';font-weight:400}
 
-  /* STAT BAR — five-up across, no cards */
-  .stat-strip{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:0;
-    border-top:1px solid var(--rule);
-    border-bottom:1px solid var(--rule);
-    margin:36px 0;
-  }
-  @media(max-width:600px){
-    .stat-strip{grid-template-columns:repeat(2,1fr);gap:14px 24px;padding:14px 0}
-  }
-  .stat{
-    padding:18px 14px;
-    text-align:left;
-    border-right:1px solid var(--rule-2);
-    position:relative;
-  }
+  .stat-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:36px 0}
+  @media(max-width:600px){.stat-strip{grid-template-columns:repeat(2,1fr);gap:14px 24px;padding:14px 0}}
+  .stat{padding:18px 14px;text-align:left;border-right:1px solid var(--rule-2);position:relative}
   .stat:last-child{border-right:none}
-  @media(max-width:600px){
-    .stat{border-right:none;padding:6px 0}
-  }
-  .stat-label{
-    font-family:var(--sans);
-    font-size:9px;
-    text-transform:uppercase;
-    letter-spacing:0.2em;
-    color:var(--ink-3);
-    font-weight:600;
-    margin-bottom:8px;
-    display:block;
-  }
-  .stat-value{
-    font-family:var(--serif);
-    font-style:italic;
-    font-size:36px;
-    line-height:1;
-    color:var(--ink);
-    font-feature-settings:'tnum';
-  }
-  .stat-value.alert{color:var(--ember)}
-  .stat-value.good{color:var(--forest)}
-  .stat-sub{
-    font-family:var(--body);
-    font-size:11px;
-    color:var(--muted);
-    margin-top:6px;
-    line-height:1.4;
-    font-style:italic;
-  }
+  @media(max-width:600px){.stat{border-right:none;padding:6px 0}}
+  .stat-label{font-family:var(--sans);font-size:9px;text-transform:uppercase;letter-spacing:0.2em;color:var(--ink-3);font-weight:600;margin-bottom:8px;display:block}
+  .stat-value{font-family:var(--serif);font-style:italic;font-size:36px;line-height:1;color:var(--ink);font-feature-settings:'tnum'}
+  .stat-value.alert{color:var(--ember)} .stat-value.good{color:var(--forest)}
+  .stat-value small{font-size:18px;color:var(--muted)}
+  .stat-sub{font-family:var(--body);font-size:11px;color:var(--muted);margin-top:6px;line-height:1.4;font-style:italic}
 
-  /* INJURY BANNER — manuscript margin note */
-  .margin-note{
-    border-left:2px solid var(--forest);
-    padding:14px 18px;
-    margin:28px 0 36px;
-    background:linear-gradient(90deg,rgba(58,74,46,0.04) 0%,transparent 60%);
-    display:grid;
-    grid-template-columns:1fr auto;
-    gap:18px;
-    align-items:center;
-  }
-  .margin-note-body{
-    font-family:var(--body);
-    font-size:15px;
-    color:var(--ink);
-    line-height:1.5;
-  }
-  .margin-note-label{
-    font-family:var(--sans);
-    font-size:9px;
-    text-transform:uppercase;
-    letter-spacing:0.22em;
-    color:var(--forest);
-    font-weight:600;
-    margin-bottom:4px;
-  }
-  .margin-note-score{
-    font-family:var(--serif);
-    font-style:italic;
-    font-size:42px;
-    color:var(--forest);
-    line-height:1;
-    font-feature-settings:'tnum';
-  }
-  .margin-note-score-sub{
-    font-family:var(--sans);
-    font-size:9px;
-    text-transform:uppercase;
-    letter-spacing:0.18em;
-    color:var(--ink-3);
-    text-align:center;
-    margin-top:2px;
-    font-weight:500;
-  }
+  .margin-note{border-left:2px solid var(--forest);padding:14px 18px;margin:28px 0 36px;background:linear-gradient(90deg,rgba(58,74,46,0.04) 0%,transparent 60%);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
+  .margin-note-body{font-family:var(--body);font-size:15px;color:var(--ink);line-height:1.5}
+  .margin-note-label{font-family:var(--sans);font-size:9px;text-transform:uppercase;letter-spacing:0.22em;color:var(--forest);font-weight:600;margin-bottom:4px}
+  .margin-note-score{font-family:var(--serif);font-style:italic;font-size:42px;color:var(--forest);line-height:1;font-feature-settings:'tnum'}
+  .margin-note-score-sub{font-family:var(--sans);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--ink-3);text-align:center;margin-top:2px;font-weight:500}
 
-  /* WEEK TABLE — typeset like a programme */
-  .week-list{
-    border-top:1px solid var(--ink);
-    border-bottom:1px solid var(--ink);
-    margin-bottom:24px;
-  }
-  .week-row{
-    display:grid;
-    grid-template-columns:90px 1fr auto;
-    align-items:baseline;
-    padding:14px 0;
-    border-bottom:1px dotted var(--rule);
-    gap:18px;
-  }
+  .week-list{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin-bottom:24px}
+  .week-row{display:grid;grid-template-columns:90px 1fr auto;align-items:baseline;padding:14px 0;border-bottom:1px dotted var(--rule);gap:18px}
   .week-row:last-child{border-bottom:none}
   .week-row.today-row{background:linear-gradient(90deg,rgba(200,66,31,0.06) 0%,transparent 70%);margin:0 -16px;padding-left:16px;padding-right:16px}
-  .week-day{
-    font-family:var(--sans);
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:0.18em;
-    color:var(--ink-3);
-    font-weight:600;
-  }
+  .week-day{font-family:var(--sans);font-size:11px;text-transform:uppercase;letter-spacing:0.18em;color:var(--ink-3);font-weight:600}
   .week-day.today-mark{color:var(--ember)}
-  .week-day strong{
-    display:block;
-    font-family:var(--serif);
-    font-style:italic;
-    font-size:18px;
-    color:var(--ink);
-    margin-top:2px;
-    letter-spacing:0;
-    text-transform:none;
-    font-feature-settings:'tnum';
-    font-weight:400;
-  }
+  .week-day strong{display:block;font-family:var(--serif);font-style:italic;font-size:18px;color:var(--ink);margin-top:2px;letter-spacing:0;text-transform:none;font-feature-settings:'tnum';font-weight:400}
   .week-day.today-mark strong{color:var(--ember)}
-  .week-session{
-    font-family:var(--body);
-    font-size:15px;
-    color:var(--ink);
-    line-height:1.4;
-  }
+  .week-session{font-family:var(--body);font-size:15px;color:var(--ink);line-height:1.4}
   .week-session em{font-style:italic;color:var(--ember-2);font-weight:500;font-family:var(--serif);font-size:17px}
   .week-session .strike{text-decoration:line-through;color:var(--muted)}
-  .week-status{
-    font-family:var(--sans);
-    font-size:10px;
-    text-transform:uppercase;
-    letter-spacing:0.18em;
-    font-weight:600;
-    white-space:nowrap;
-    align-self:center;
-  }
-  .week-status.done{color:var(--forest)}
-  .week-status.upcoming{color:var(--ink-3)}
+  .week-status{font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:0.18em;font-weight:600;white-space:nowrap;align-self:center}
+  .week-status.done{color:var(--forest)} .week-status.upcoming{color:var(--ink-3)}
   .week-status.today-mark{color:var(--ember)}
   .week-status.rest{color:var(--muted);font-style:italic;font-family:var(--body);text-transform:none;letter-spacing:0}
 
-  /* RECENT ACTIVITIES — log entries */
   .log{margin-bottom:24px}
-  .log-entry{
-    display:grid;
-    grid-template-columns:64px 1fr auto;
-    gap:18px;
-    padding:18px 0;
-    border-bottom:1px solid var(--rule-2);
-    align-items:baseline;
-  }
+  .log-entry{display:grid;grid-template-columns:64px 1fr auto;gap:18px;padding:18px 0;border-bottom:1px solid var(--rule-2);align-items:baseline}
   .log-entry:last-child{border-bottom:none}
-  .log-date{
-    font-family:var(--serif);
-    font-style:italic;
-    color:var(--ink-3);
-    line-height:1;
-    font-feature-settings:'tnum';
-  }
-  .log-date .day{
-    display:block;
-    font-size:11px;
-    font-family:var(--sans);
-    font-style:normal;
-    text-transform:uppercase;
-    letter-spacing:0.18em;
-    color:var(--muted);
-    margin-bottom:4px;
-    font-weight:600;
-  }
-  .log-date .num{
-    font-size:32px;
-    color:var(--ink);
-    display:block;
-  }
-  .log-title{
-    font-family:var(--body);
-    font-size:17px;
-    color:var(--ink);
-    line-height:1.3;
-    margin-bottom:4px;
-  }
-  .log-sport{
-    font-family:var(--sans);
-    font-size:9px;
-    text-transform:uppercase;
-    letter-spacing:0.22em;
-    font-weight:600;
-    display:inline-block;
-    padding:2px 8px;
-    margin-right:8px;
-    vertical-align:1px;
-  }
+  .log-date{font-family:var(--serif);font-style:italic;color:var(--ink-3);line-height:1;font-feature-settings:'tnum'}
+  .log-date .day{display:block;font-size:11px;font-family:var(--sans);font-style:normal;text-transform:uppercase;letter-spacing:0.18em;color:var(--muted);margin-bottom:4px;font-weight:600}
+  .log-date .num{font-size:32px;color:var(--ink);display:block}
+  .log-title{font-family:var(--body);font-size:17px;color:var(--ink);line-height:1.3;margin-bottom:4px}
+  .log-sport{font-family:var(--sans);font-size:9px;text-transform:uppercase;letter-spacing:0.22em;font-weight:600;display:inline-block;padding:2px 8px;margin-right:8px;vertical-align:1px}
   .log-sport.run{background:rgba(58,74,46,0.12);color:var(--forest)}
   .log-sport.bike{background:rgba(58,74,46,0.08);color:var(--forest-2)}
   .log-sport.mtb{background:rgba(200,66,31,0.12);color:var(--ember)}
   .log-sport.weights{background:rgba(107,95,71,0.14);color:var(--ink-2)}
   .log-sport.other{background:rgba(138,125,101,0.14);color:var(--ink-3)}
-  .log-meta{
-    font-family:var(--sans);
-    font-size:12px;
-    color:var(--ink-3);
-    letter-spacing:0.04em;
-  }
-  .log-stats{
-    font-family:var(--serif);
-    font-style:italic;
-    font-size:20px;
-    color:var(--ink);
-    text-align:right;
-    line-height:1.1;
-    font-feature-settings:'tnum';
-  }
-  .log-stats .sub{
-    display:block;
-    font-family:var(--sans);
-    font-style:normal;
-    font-size:10px;
-    color:var(--muted);
-    text-transform:uppercase;
-    letter-spacing:0.16em;
-    margin-top:3px;
-    font-weight:500;
-  }
+  .log-meta{font-family:var(--sans);font-size:12px;color:var(--ink-3);letter-spacing:0.04em}
+  .log-stats{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--ink);text-align:right;line-height:1.1;font-feature-settings:'tnum'}
+  .log-stats .sub{display:block;font-family:var(--sans);font-style:normal;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.16em;margin-top:3px;font-weight:500}
 
-  /* RACES — feature treatment, 3 stacked */
-  .race-feature{
-    padding:28px 0;
-    border-bottom:1px solid var(--ink);
-    display:grid;
-    grid-template-columns:auto 1fr;
-    gap:32px;
-    align-items:baseline;
-  }
+  .race-feature{padding:28px 0;border-bottom:1px solid var(--ink);display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:baseline}
   .race-feature:first-of-type{border-top:1px solid var(--ink)}
-  @media(max-width:600px){
-    .race-feature{grid-template-columns:1fr;gap:16px}
-  }
-  .race-count{
-    font-family:var(--serif);
-    font-style:italic;
-    font-size:88px;
-    line-height:0.85;
-    color:var(--ember);
-    letter-spacing:-0.03em;
-    font-feature-settings:'tnum';
-    min-width:130px;
-  }
-  .race-count.b-race{color:var(--forest)}
-  .race-count.c-race{color:var(--ink-3)}
+  @media(max-width:600px){.race-feature{grid-template-columns:1fr;gap:16px}}
+  .race-count{font-family:var(--serif);font-style:italic;font-size:88px;line-height:0.85;color:var(--ember);letter-spacing:-0.03em;font-feature-settings:'tnum';min-width:130px}
+  .race-count.b-race{color:var(--forest)} .race-count.c-race{color:var(--ink-3)}
   .race-count small{font-size:24px;color:var(--ink-3);font-style:italic;display:block;margin-top:4px;font-feature-settings:'tnum'}
-  .race-priority{
-    font-family:var(--sans);
-    font-size:10px;
-    text-transform:uppercase;
-    letter-spacing:0.24em;
-    font-weight:600;
-    color:var(--ember);
-    margin-bottom:6px;
-  }
+  .race-priority{font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:0.24em;font-weight:600;color:var(--ember);margin-bottom:6px}
   .race-feature.b-race .race-priority{color:var(--forest)}
   .race-feature.c-race .race-priority{color:var(--ink-3)}
-  .race-name{
-    font-family:var(--serif);
-    font-size:30px;
-    line-height:1.05;
-    color:var(--ink);
-    margin-bottom:8px;
-    letter-spacing:-0.01em;
-  }
+  .race-name{font-family:var(--serif);font-size:30px;line-height:1.05;color:var(--ink);margin-bottom:8px;letter-spacing:-0.01em}
   .race-name em{font-style:italic}
-  .race-date{
-    font-family:var(--body);
-    font-style:italic;
-    font-size:15px;
-    color:var(--ink-2);
-    margin-bottom:14px;
-  }
-  .race-target{
-    font-family:var(--body);
-    font-size:14px;
-    color:var(--ink-2);
-    line-height:1.5;
-    max-width:480px;
-  }
+  .race-date{font-family:var(--body);font-style:italic;font-size:15px;color:var(--ink-2);margin-bottom:14px}
+  .race-target{font-family:var(--body);font-size:14px;color:var(--ink-2);line-height:1.5;max-width:480px}
   .race-target strong{font-family:var(--serif);color:var(--ink);font-weight:400;font-style:italic;font-size:16px}
 
-  /* TRENDS — small spark charts in newspaper infographic style */
-  .trends{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:32px 36px;
-    margin-bottom:24px;
-  }
-  @media(max-width:560px){
-    .trends{grid-template-columns:1fr;gap:28px}
-  }
-  .trend-label{
-    font-family:var(--sans);
-    font-size:10px;
-    text-transform:uppercase;
-    letter-spacing:0.18em;
-    color:var(--ink-3);
-    font-weight:600;
-    margin-bottom:4px;
-  }
-  .trend-value{
-    font-family:var(--serif);
-    font-style:italic;
-    font-size:30px;
-    line-height:1;
-    color:var(--ink);
-    margin-bottom:2px;
-    font-feature-settings:'tnum';
-  }
-  .trend-delta{
-    font-size:11px;
-    color:var(--muted);
-    margin-bottom:14px;
-    font-style:italic;
-    font-family:var(--body);
-  }
-  .trend-delta.warn{color:var(--ember)}
-  .trend-delta.good{color:var(--forest)}
-  .trend-chart{
-    width:100%;
-    height:64px;
-    border-bottom:1px solid var(--ink);
-    border-top:1px dotted var(--rule);
-    position:relative;
-  }
+  .trends{display:grid;grid-template-columns:repeat(2,1fr);gap:32px 36px;margin-bottom:24px}
+  @media(max-width:560px){.trends{grid-template-columns:1fr;gap:28px}}
+  .trend-label{font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--ink-3);font-weight:600;margin-bottom:4px}
+  .trend-value{font-family:var(--serif);font-style:italic;font-size:30px;line-height:1;color:var(--ink);margin-bottom:2px;font-feature-settings:'tnum'}
+  .trend-value small{font-size:18px;color:var(--muted)}
+  .trend-delta{font-size:11px;color:var(--muted);margin-bottom:14px;font-style:italic;font-family:var(--body)}
+  .trend-delta.warn{color:var(--ember)} .trend-delta.good{color:var(--forest)}
+  .trend-chart{width:100%;height:64px;border-bottom:1px solid var(--ink);border-top:1px dotted var(--rule);position:relative}
   .trend-chart canvas{width:100% !important;height:100% !important}
 
-  /* CALENDAR — typographic dot matrix */
-  .cal{
-    border:1px solid var(--ink);
-    padding:18px 20px;
-    background:var(--bone);
-  }
-  .cal-head{
-    display:grid;
-    grid-template-columns:repeat(7,1fr);
-    gap:6px;
-    margin-bottom:8px;
-    padding-bottom:6px;
-    border-bottom:1px solid var(--rule);
-  }
-  .cal-head span{
-    font-family:var(--sans);
-    font-size:9px;
-    text-transform:uppercase;
-    letter-spacing:0.16em;
-    color:var(--ink-3);
-    text-align:center;
-    font-weight:600;
-  }
-  .cal-grid{
-    display:grid;
-    grid-template-columns:repeat(7,1fr);
-    gap:6px;
-  }
-  .cal-cell{
-    aspect-ratio:1;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    padding:4px 5px;
-    font-family:var(--sans);
-    font-size:9px;
-    color:var(--muted);
-    position:relative;
-    border:1px solid transparent;
-    font-feature-settings:'tnum';
-    min-height:44px;
-  }
-  .cal-cell .num{
-    font-family:var(--serif);
-    font-style:italic;
-    font-size:13px;
-    line-height:1;
-    color:var(--ink-3);
-  }
-  .cal-cell .mark{
-    font-family:var(--body);
-    font-size:9px;
-    line-height:1;
-    text-transform:uppercase;
-    letter-spacing:0.06em;
-    color:var(--muted);
-    font-style:italic;
-  }
+  .cal{border:1px solid var(--ink);padding:18px 20px;background:var(--bone)}
+  .cal-head{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--rule)}
+  .cal-head span{font-family:var(--sans);font-size:9px;text-transform:uppercase;letter-spacing:0.16em;color:var(--ink-3);text-align:center;font-weight:600}
+  .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+  .cal-cell{aspect-ratio:1;display:flex;flex-direction:column;justify-content:space-between;padding:4px 5px;font-family:var(--sans);font-size:9px;color:var(--muted);position:relative;border:1px solid transparent;font-feature-settings:'tnum';min-height:44px}
+  .cal-cell .num{font-family:var(--serif);font-style:italic;font-size:13px;line-height:1;color:var(--ink-3)}
+  .cal-cell .mark{font-family:var(--body);font-size:9px;line-height:1;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);font-style:italic}
   .cal-cell.past-done{background:rgba(58,74,46,0.1)}
-  .cal-cell.past-done .num{color:var(--forest)}
-  .cal-cell.past-done .mark{color:var(--forest)}
-  .cal-cell.past-miss{background:rgba(200,66,31,0.05)}
-  .cal-cell.past-miss .num{color:var(--muted);text-decoration:line-through}
+  .cal-cell.past-done .num{color:var(--forest)} .cal-cell.past-done .mark{color:var(--forest)}
+  .cal-cell.past-miss{background:rgba(200,66,31,0.05)} .cal-cell.past-miss .num{color:var(--muted);text-decoration:line-through}
   .cal-cell.past-rest{opacity:0.5}
   .cal-cell.today{background:var(--ink);border-color:var(--ink)}
-  .cal-cell.today .num{color:var(--paper);font-style:italic;font-size:16px}
-  .cal-cell.today .mark{color:var(--paper-3)}
+  .cal-cell.today .num{color:var(--paper);font-style:italic;font-size:16px} .cal-cell.today .mark{color:var(--paper-3)}
   .cal-cell.race{background:var(--ember);border-color:var(--ember)}
   .cal-cell.race .num{color:var(--paper);font-style:italic;font-size:14px}
   .cal-cell.race .mark{color:var(--paper-3);font-weight:600;letter-spacing:0.1em;text-transform:uppercase}
   .cal-cell.race-b{background:var(--forest);border-color:var(--forest)}
-  .cal-cell.race-b .num{color:var(--paper)}
-  .cal-cell.race-b .mark{color:var(--paper-3)}
-  .cal-legend{
-    margin-top:14px;
-    padding-top:10px;
-    border-top:1px dotted var(--rule);
-    display:flex;
-    gap:18px;
-    flex-wrap:wrap;
-    font-family:var(--sans);
-    font-size:9px;
-    text-transform:uppercase;
-    letter-spacing:0.14em;
-    color:var(--ink-3);
-    font-weight:500;
-  }
+  .cal-cell.race-b .num{color:var(--paper)} .cal-cell.race-b .mark{color:var(--paper-3)}
+  .cal-legend{margin-top:14px;padding-top:10px;border-top:1px dotted var(--rule);display:flex;gap:18px;flex-wrap:wrap;font-family:var(--sans);font-size:9px;text-transform:uppercase;letter-spacing:0.14em;color:var(--ink-3);font-weight:500}
   .cal-legend span{display:flex;align-items:center;gap:6px}
   .cal-legend i{width:10px;height:10px;display:inline-block}
-  .cal-legend .l-done{background:rgba(58,74,46,0.4)}
-  .cal-legend .l-miss{background:rgba(200,66,31,0.2)}
-  .cal-legend .l-today{background:var(--ink)}
-  .cal-legend .l-race{background:var(--ember)}
-  .cal-legend .l-raceb{background:var(--forest)}
+  .cal-legend .l-done{background:rgba(58,74,46,0.4)} .cal-legend .l-miss{background:rgba(200,66,31,0.2)}
+  .cal-legend .l-today{background:var(--ink)} .cal-legend .l-race{background:var(--ember)} .cal-legend .l-raceb{background:var(--forest)}
 
-  /* COLOPHON / FOOTER */
-  .colophon{
-    margin-top:80px;
-    padding-top:24px;
-    border-top:2px solid var(--ink);
-    display:grid;
-    grid-template-columns:1fr auto;
-    gap:18px;
-    align-items:baseline;
-    font-family:var(--sans);
-    font-size:10px;
-    text-transform:uppercase;
-    letter-spacing:0.18em;
-    color:var(--ink-3);
-    font-weight:500;
-  }
-  .colophon em{
-    font-family:var(--serif);
-    font-style:italic;
-    font-size:16px;
-    color:var(--ink-2);
-    text-transform:none;
-    letter-spacing:0;
-  }
+  .colophon{margin-top:80px;padding-top:24px;border-top:2px solid var(--ink);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:baseline;font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--ink-3);font-weight:500}
+  .colophon em{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--ink-2);text-transform:none;letter-spacing:0}
   .colophon a{color:var(--ember);text-decoration:none;border-bottom:1px solid currentColor}
   .colophon a:hover{color:var(--ember-2)}
 
-  /* OBSERVATION CALLOUT */
-  .observation{
-    font-family:var(--body);
-    font-style:italic;
-    font-size:15px;
-    color:var(--ink-2);
-    line-height:1.55;
-    margin:18px 0;
-    padding:0 0 0 18px;
-    border-left:3px solid var(--ember);
-    max-width:580px;
-  }
+  .observation{font-family:var(--body);font-style:italic;font-size:15px;color:var(--ink-2);line-height:1.55;margin:18px 0;padding:0 0 0 18px;border-left:3px solid var(--ember);max-width:580px}
   .observation strong{font-family:var(--serif);font-weight:400;color:var(--ink);font-size:17px;font-style:italic}
 
-  /* Smooth fade-in on load */
-  @keyframes settle{
-    from{opacity:0;transform:translateY(8px)}
-    to{opacity:1;transform:translateY(0)}
-  }
-  .masthead,.dateline,.hero,.sec,.today,.margin-note,.stat-strip,.week-list,.log,.race-feature,.trends,.cal,.colophon,.observation{
-    animation:settle 0.7s ease-out backwards;
-  }
-  .masthead{animation-delay:0.05s}
-  .dateline{animation-delay:0.1s}
-  .hero{animation-delay:0.18s}
+  @keyframes settle{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  .masthead,.dateline,.hero,.sec,.today,.margin-note,.stat-strip,.week-list,.log,.race-feature,.trends,.cal,.colophon,.observation{animation:settle 0.7s ease-out backwards}
+  .masthead{animation-delay:0.05s} .dateline{animation-delay:0.1s} .hero{animation-delay:0.18s}
 
-  /* Selection */
   ::selection{background:var(--ember);color:var(--paper)}
 
-  /* Print friendliness — bonus */
-  @media print{
-    body::before{display:none}
-    .hero{break-inside:avoid}
-  }
+  @media print{body::before{display:none}.hero{break-inside:avoid}}
 </style>
 </head>
 <body>
 
 <div class="page">
 
-  <!-- MASTHEAD -->
   <header class="masthead">
-    <div class="mast-left">Vol. 1 · Cycle I · N°27</div>
+    <div class="mast-left">Vol. 1 · Cycle I · N°147</div>
     <div class="mast-title"><em>The Training Journal</em></div>
     <div class="mast-right">Theo Naicker · Ballito KZN</div>
   </header>
   <div class="dateline">
-    <span>Wednesday the twenty-seventh of May, twenty twenty-six</span>
+    <span>Wednesday the twenty-seventh of May, twenty twenty six</span>
     <em>est. April 2026</em>
   </div>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="contour-bg">
       <svg viewBox="0 0 800 400" preserveAspectRatio="none" aria-hidden="true">
@@ -845,48 +215,16 @@
         </g>
       </svg>
     </div>
-    <div class="hero-kicker">A-Race · Peak Event</div>
+    <div class="hero-kicker">A-Race · MTB · Peak Event</div>
     <div class="hero-number">31</div>
     <div class="hero-word"><em>days until iMfolozi</em></div>
-    <div class="hero-eyebrow">
-      55 kilometres <span class="sep">·</span> mountain bike <span class="sep">·</span> 27 June 2026
-    </div>
-    <div class="hero-quote">
-      Finish strong. Approximately four hours. Fuel and pace right — the first hour wins or loses the day.
-    </div>
+    <div class="hero-eyebrow">55 kilometres <span class='sep'>·</span> mtb <span class='sep'>·</span> Saturday 27 June 2026</div>
+    <div class="hero-quote">Finish strong, ~4 hr The first hour wins or loses the day.</div>
     <div class="hero-attr">— Race plan, revised 27 May</div>
   </section>
 
-  <!-- KEY METRICS STRIP -->
-  <div class="stat-strip">
-    <div class="stat">
-      <span class="stat-label">This Week</span>
-      <div class="stat-value">2.4<small style="font-size:18px;color:var(--muted)">h</small></div>
-      <div class="stat-sub">3 of 7 days complete</div>
-    </div>
-    <div class="stat">
-      <span class="stat-label">4-Wk Run</span>
-      <div class="stat-value">17<small style="font-size:18px;color:var(--muted)">km</small></div>
-      <div class="stat-sub">post-PF rebuild phase</div>
-    </div>
-    <div class="stat">
-      <span class="stat-label">4-Wk Bike</span>
-      <div class="stat-value alert">60<small style="font-size:18px;color:var(--muted)">km</small></div>
-      <div class="stat-sub">ramp begins this week</div>
-    </div>
-    <div class="stat">
-      <span class="stat-label">Longest Ride</span>
-      <div class="stat-value">24<small style="font-size:18px;color:var(--muted)">km</small></div>
-      <div class="stat-sub">25 days ago · iMfolozi needs 50+</div>
-    </div>
-    <div class="stat">
-      <span class="stat-label">Foot</span>
-      <div class="stat-value good">90<small style="font-size:18px;color:var(--muted)">%</small></div>
-      <div class="stat-sub">resolving · 0/10 pain</div>
-    </div>
-  </div>
+  <div class="stat-strip"><div class="stat"><span class="stat-label">This Week</span><div class="stat-value ">2.4<small>h</small></div><div class="stat-sub">3 of 7 days complete</div></div><div class="stat"><span class="stat-label">4-Wk Run</span><div class="stat-value ">17<small>km</small></div><div class="stat-sub">post-PF rebuild phase</div></div><div class="stat"><span class="stat-label">4-Wk Bike</span><div class="stat-value alert">0<small>km</small></div><div class="stat-sub">ramp begins this week</div></div><div class="stat"><span class="stat-label">Longest Ride</span><div class="stat-value ">0<small>km</small></div><div class="stat-sub">0 days ago · iMfolozi needs 50+</div></div><div class="stat"><span class="stat-label">Foot</span><div class="stat-value good">90<small>%</small></div><div class="stat-sub">resolving · 0/10 pain</div></div></div>
 
-  <!-- TODAY SECTION -->
   <div class="sec">
     <span class="sec-num">I.</span>
     <h2 class="sec-title">Today's <em>session</em></h2>
@@ -895,82 +233,34 @@
   </div>
 
   <div class="today">
-    <div class="today-tag">Wednesday · Re-base Week</div>
-    <h3 class="today-session"><em>Bike intervals</em><br>at sub-threshold</h3>
-    <p class="today-detail">
-      Fifteen minutes warm-up, then <span class="accent">four times five minutes at heart rate 165 to 175</span> (Rate of Perceived Effort 7), with two minutes easy between each. Ten minutes cool-down. Approximately fifty minutes total. Indoor on Zwift or outdoor — either works.
-    </p>
-    <div class="today-meta">
-      <div class="today-meta-item">Duration<strong>~50 min</strong></div>
-      <div class="today-meta-item">HR Target<strong>165–175</strong></div>
-      <div class="today-meta-item">RPE<strong>7</strong></div>
-      <div class="today-meta-item">Mode<strong>Bike</strong></div>
-    </div>
+    <div class="today-tag">Wednesday · current week</div>
+    <h3 class="today-session"><em>Bike intervals</em></h3>
+    <p class="today-detail">15 min WU + 4 × 5 min @ HR 165–175 (RPE 7) / 2 min easy + 10 min CD. ~50 min.</p>
+    <div class="today-meta"><div class="today-meta-item">Duration<strong>~15 min</strong></div><div class="today-meta-item">HR Target<strong>165–175</strong></div><div class="today-meta-item">RPE<strong>7</strong></div><div class="today-meta-item">Mode<strong>Bike</strong></div></div>
   </div>
 
-  <p class="observation">
-    <strong>Why this session.</strong> Re-base after the 26-day gap — last ride was 2 May. Four-by-five at sub-threshold rebuilds aerobic depth without overloading the system. Sets up Saturday's 30 kilometre MTB — the first of four progressively longer rides before race day.
-  </p>
+  <p class="observation"><strong>Today.</strong> Today's planned session — follow the structure, respect the heart-rate ceiling, and don't extend on a whim.</p>
 
-  <!-- FOOT MARGIN NOTE -->
   <div class="margin-note">
-    <div class="margin-note-body">
-      <div class="margin-note-label">Foot · Right Plantar Fasciitis</div>
-      Resolving — ninety per cent recovered. The last two runs (10 May and 20 May) were pain-free. Continue daily prehab: plantar fascia stretch, frozen-bottle roll, calf stretches, eccentric heel drops.
-    </div>
-    <div>
-      <div class="margin-note-score">0<span style="font-size:22px;color:var(--forest-2)">/10</span></div>
-      <div class="margin-note-score-sub">morning pain</div>
-    </div>
+  <div class="margin-note-body">
+    <div class="margin-note-label">Foot · Right Plantar Fasciitis</div>
+    Resolving. ~90% recovered. Prehab protocol still daily (plantar fascia stretch, frozen bottle roll, calf stretches, eccentric heel drops). See [PF-Management-Apr-2026](/Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running/PF-Management-Apr-2026.md). Continue daily prehab: plantar fascia stretch, frozen-bottle roll, calf stretches, eccentric heel drops.
   </div>
+  <div>
+    <div class="margin-note-score">0<span style="font-size:22px;color:var(--forest-2)">/10</span></div>
+    <div class="margin-note-score-sub">morning pain</div>
+  </div>
+</div>
 
-  <!-- THE WEEK -->
   <div class="sec">
     <span class="sec-num">II.</span>
     <h2 class="sec-title">The <em>week</em></h2>
     <div class="sec-rule"></div>
-    <span class="sec-meta">25–31 May · Re-base</span>
+    <span class="sec-meta">25–31 May · Re-base after travel/illness gap</span>
   </div>
 
-  <div class="week-list">
-    <div class="week-row">
-      <div class="week-day">Mon<strong>25</strong></div>
-      <div class="week-session"><span class="strike">Gym workout</span> — done 1:36</div>
-      <div class="week-status done">Complete</div>
-    </div>
-    <div class="week-row">
-      <div class="week-day">Tue<strong>26</strong></div>
-      <div class="week-session"><span class="strike">Rest</span></div>
-      <div class="week-status rest">rest</div>
-    </div>
-    <div class="week-row today-row">
-      <div class="week-day today-mark">Wed<strong>27</strong></div>
-      <div class="week-session"><em>Bike intervals</em> — 15 WU + 4×5 min @ HR 165–175 / 2 min easy + 10 CD</div>
-      <div class="week-status today-mark">Today</div>
-    </div>
-    <div class="week-row">
-      <div class="week-day">Thu<strong>28</strong></div>
-      <div class="week-session">Weights — full upper / core, light legs ok</div>
-      <div class="week-status upcoming">Upcoming</div>
-    </div>
-    <div class="week-row">
-      <div class="week-day">Fri<strong>29</strong></div>
-      <div class="week-session">Bike tempo — 15 WU + 25 min steady (HR 155–165) + 10 CD</div>
-      <div class="week-status upcoming">Upcoming</div>
-    </div>
-    <div class="week-row">
-      <div class="week-day">Sat<strong>30</strong></div>
-      <div class="week-session"><em>Long MTB</em> — 30 km, same trails as 2 May ride, RPE 5–6, ~2 hr</div>
-      <div class="week-status upcoming">Upcoming</div>
-    </div>
-    <div class="week-row">
-      <div class="week-day">Sun<strong>31</strong></div>
-      <div class="week-session">Easy run 5 km on grass — HR ≤155, ~36 min, foot check</div>
-      <div class="week-status upcoming">Upcoming</div>
-    </div>
-  </div>
+  <div class="week-list"><div class="week-row"><div class="week-day">Mon<strong>25</strong></div><div class="week-session"><span class="strike">Gym workout 1:36</span></div><div class="week-status done">Complete</div></div><div class="week-row"><div class="week-day">Tue<strong>26</strong></div><div class="week-session"><span class="strike">Rest</span></div><div class="week-status done">Complete</div></div><div class="week-row today-row"><div class="week-day today-mark">Wed<strong>27</strong></div><div class="week-session"><em>Bike intervals</em> — 15 min WU + 4 × 5 min @ HR 165–175 (RPE 7) / 2 min easy + 10 min CD. ~50 min.</div><div class="week-status today-mark">Today</div></div><div class="week-row"><div class="week-day">Thu<strong>28</strong></div><div class="week-session">Weights — Full upper/core. Light legs OK.</div><div class="week-status upcoming">Upcoming</div></div><div class="week-row"><div class="week-day">Fri<strong>29</strong></div><div class="week-session">Bike tempo — 15 min WU + 25 min steady (HR 155–165) + 10 min CD. ~50 min.</div><div class="week-status upcoming">Upcoming</div></div><div class="week-row"><div class="week-day">Sat<strong>30</strong></div><div class="week-session"><em>Long MTB — 30 km</em> — Same trails as 2 May ride. RPE 5–6. ~2 hr.</div><div class="week-status upcoming">Upcoming</div></div><div class="week-row"><div class="week-day">Sun<strong>31</strong></div><div class="week-session">Easy run 5 km on grass — HR ≤155, ~36 min. Foot check.</div><div class="week-status upcoming">Upcoming</div></div></div>
 
-  <!-- RECENT LOG -->
   <div class="sec">
     <span class="sec-num">III.</span>
     <h2 class="sec-title">Recent <em>entries</em></h2>
@@ -978,100 +268,19 @@
     <span class="sec-meta">Past seven days</span>
   </div>
 
-  <div class="log">
-    <div class="log-entry">
-      <div class="log-date"><span class="day">Wed</span><span class="num">27</span></div>
-      <div>
-        <div class="log-title"><span class="log-sport run">Run</span>Morning Run</div>
-        <div class="log-meta">Easy effort · relative effort 166</div>
-      </div>
-      <div class="log-stats">5.24 <span class="sub">km · 33:41</span></div>
-    </div>
-    <div class="log-entry">
-      <div class="log-date"><span class="day">Wed</span><span class="num">27</span></div>
-      <div>
-        <div class="log-title"><span class="log-sport run">Run</span>Morning Run — warm-up</div>
-        <div class="log-meta">Strider · relative effort 15</div>
-      </div>
-      <div class="log-stats">1.62 <span class="sub">km · 11:05</span></div>
-    </div>
-    <div class="log-entry">
-      <div class="log-date"><span class="day">Mon</span><span class="num">25</span></div>
-      <div>
-        <div class="log-title"><span class="log-sport other">Gym</span>Morning Workout</div>
-        <div class="log-meta">Cross-training · relative effort 29</div>
-      </div>
-      <div class="log-stats">1:36 <span class="sub">duration</span></div>
-    </div>
-    <div class="log-entry">
-      <div class="log-date"><span class="day">Thu</span><span class="num">21</span></div>
-      <div>
-        <div class="log-title"><span class="log-sport weights">Weights</span>Morning Weight Training</div>
-        <div class="log-meta">Upper + core · relative effort 13</div>
-      </div>
-      <div class="log-stats">1:00 <span class="sub">duration</span></div>
-    </div>
-    <div class="log-entry">
-      <div class="log-date"><span class="day">Wed</span><span class="num">20</span></div>
-      <div>
-        <div class="log-title"><span class="log-sport run">Run</span>Morning Run</div>
-        <div class="log-meta">Easy 6:50/km · relative effort 136</div>
-      </div>
-      <div class="log-stats">5.02 <span class="sub">km · 34:19</span></div>
-    </div>
-    <div class="log-entry">
-      <div class="log-date"><span class="day">Tue</span><span class="num">19</span></div>
-      <div>
-        <div class="log-title"><span class="log-sport weights">Weights</span>Morning Weight Training</div>
-        <div class="log-meta">Full upper / core · relative effort 21</div>
-      </div>
-      <div class="log-stats">1:00 <span class="sub">duration</span></div>
-    </div>
-  </div>
+  <div class="log"><div class="log-entry"><div class="log-date"><span class="day">Wed</span><span class="num">27</span></div><div><div class="log-title"><span class="log-sport run">Run</span>Morning Run</div><div class="log-meta">Pace 6:25/km · RE 166</div></div><div class="log-stats">5.24 <span class="sub">km · 33:41</span></div></div><div class="log-entry"><div class="log-date"><span class="day">Wed</span><span class="num">27</span></div><div><div class="log-title"><span class="log-sport run">Run</span>Morning Run</div><div class="log-meta">Pace 6:51/km · RE 15</div></div><div class="log-stats">1.62 <span class="sub">km · 11:05</span></div></div><div class="log-entry"><div class="log-date"><span class="day">Mon</span><span class="num">25</span></div><div><div class="log-title"><span class="log-sport gym-other">Other</span>Morning Workout</div><div class="log-meta">RE 29</div></div><div class="log-stats">1:36:44 <span class="sub">duration</span></div></div><div class="log-entry"><div class="log-date"><span class="day">Thu</span><span class="num">21</span></div><div><div class="log-title"><span class="log-sport weights">Weights</span>Morning Weight Training</div><div class="log-meta">RE 13</div></div><div class="log-stats">1:00:29 <span class="sub">duration</span></div></div><div class="log-entry"><div class="log-date"><span class="day">Wed</span><span class="num">20</span></div><div><div class="log-title"><span class="log-sport run">Run</span>Morning Run</div><div class="log-meta">Pace 6:49/km · RE 136</div></div><div class="log-stats">5.03 <span class="sub">km · 34:19</span></div></div></div>
 
-  <p class="observation">
-    <strong>Note from the editor.</strong> A run logged today already — five and a quarter kilometres at six fifty per kilometre, with a strider warm-up. That is not the prescribed bike intervals; either the bike follows this afternoon, or today's plan has substituted run for bike. Either is fine, but the long MTB on Saturday is non-negotiable.
-  </p>
+  <p class="observation"><strong>Note.</strong> Activity log refreshed at 2026-05-27T16:38:33Z.</p>
 
-  <!-- RACES -->
   <div class="sec">
     <span class="sec-num">IV.</span>
     <h2 class="sec-title">The <em>races</em></h2>
     <div class="sec-rule"></div>
-    <span class="sec-meta">Three on the calendar</span>
+    <span class="sec-meta">3 on the calendar</span>
   </div>
 
-  <article class="race-feature">
-    <div class="race-count">31<small>days</small></div>
-    <div>
-      <div class="race-priority">A-Race · Peak Event</div>
-      <h3 class="race-name"><em>iMfolozi</em> 55 km MTB</h3>
-      <div class="race-date">Saturday 27 June 2026 · iMfolozi Game Reserve, KwaZulu-Natal</div>
-      <p class="race-target"><strong>Finish strong, approximately four hours.</strong> First time at this distance. Longest mountain bike ride this season was twenty-four kilometres — bridging that gap is the work of the next four Saturdays. Format (one-day or two-day stage) still to be confirmed with organisers.</p>
-    </div>
-  </article>
+  <article class="race-feature "><div class="race-count ">31<small>days</small></div><div><div class="race-priority">A-Race · Peak Event</div><h3 class="race-name"><em>Imfolozi</em> 55 km MTB</h3><div class="race-date">Saturday 27 June 2026 · iMfolozi Game Reserve, KZN</div><p class="race-target"><strong>Target: Finish strong, ~4 hr</strong> First time at this distance. Format (1-day vs 2-day stage) to be confirmed with organisers.</p></div></article><article class="race-feature b-race"><div class="race-count b-race">44<small>days</small></div><div><div class="race-priority">B-Race · Road</div><h3 class="race-name"><em>Absa</em> 10K Road</h3><div class="race-date">Friday 10 July 2026</div><p class="race-target"><strong>Target: 1:02–1:05 (foot &amp; fitness dependent)</strong> Real road race test post-Imfolozi recovery.</p></div></article><article class="race-feature c-race"><div class="race-count c-race">—<small>days</small></div><div><div class="race-priority">Season Goal</div><h3 class="race-name"><em>Sub</em>-60 10K attempt</h3><div class="race-date">2026-09-30  # TBC — placeholder, update with real race date once chosen</div><p class="race-target"><strong>Target: &lt;60:00</strong> Season goal. Race TBD — likely Sept or Oct 2026.</p></div></article>
 
-  <article class="race-feature b-race">
-    <div class="race-count b-race">44<small>days</small></div>
-    <div>
-      <div class="race-priority">B-Race · Road</div>
-      <h3 class="race-name"><em>Absa</em> 10K Road</h3>
-      <div class="race-date">Friday 10 July 2026</div>
-      <p class="race-target"><strong>Target: 1 hour 02 to 1 hour 05.</strong> Twelve days after iMfolozi — a real test of run fitness once the mountain bike race is behind us. Foot and recovery dependent.</p>
-    </div>
-  </article>
-
-  <article class="race-feature c-race">
-    <div class="race-count c-race">~126<small>days</small></div>
-    <div>
-      <div class="race-priority">Season Goal</div>
-      <h3 class="race-name">Sub-60 <em>10K attempt</em></h3>
-      <div class="race-date">September–October 2026 · race to be chosen</div>
-      <p class="race-target"><strong>The number that started this whole project.</strong> Under sixty minutes, properly trained, on a flat course. Earliest realistic attempt after the May–July block.</p>
-    </div>
-  </article>
-
-  <!-- TRENDS -->
   <div class="sec">
     <span class="sec-num">V.</span>
     <h2 class="sec-title">The <em>trends</em></h2>
@@ -1079,34 +288,8 @@
     <span class="sec-meta">Twelve-week view</span>
   </div>
 
-  <div class="trends">
-    <div>
-      <div class="trend-label">Weekly Hours</div>
-      <div class="trend-value">2.4<span style="font-size:18px;color:var(--muted)">h</span></div>
-      <div class="trend-delta warn">↓ from 5.7h in W6 — bike volume collapsed</div>
-      <div class="trend-chart"><canvas id="chartHours"></canvas></div>
-    </div>
-    <div>
-      <div class="trend-label">Running Kilometres</div>
-      <div class="trend-value">6.9<span style="font-size:18px;color:var(--muted)">km</span></div>
-      <div class="trend-delta good">↑ rebuilding from PF · grass + treadmill only</div>
-      <div class="trend-chart"><canvas id="chartRun"></canvas></div>
-    </div>
-    <div>
-      <div class="trend-label">Bike Kilometres</div>
-      <div class="trend-value" style="color:var(--ember)">0<span style="font-size:18px;color:var(--muted)">km</span></div>
-      <div class="trend-delta warn">3 weeks at zero · today changes that</div>
-      <div class="trend-chart"><canvas id="chartBike"></canvas></div>
-    </div>
-    <div>
-      <div class="trend-label">Longest Session</div>
-      <div class="trend-value">97<span style="font-size:18px;color:var(--muted)">min</span></div>
-      <div class="trend-delta">Monday's gym workout · need 3hr+ rides soon</div>
-      <div class="trend-chart"><canvas id="chartLongest"></canvas></div>
-    </div>
-  </div>
+  <div class="trends"><div><div class="trend-label">Weekly Hours</div><div class="trend-value">2.4<small>h</small></div><div class="trend-delta ">↓ from 2.6h prior week</div><div class="trend-chart"><canvas id="chartHours"></canvas></div></div><div><div class="trend-label">Running Kilometres</div><div class="trend-value">6.9<small>km</small></div><div class="trend-delta good">↑ from 5.0 km prior week</div><div class="trend-chart"><canvas id="chartRun"></canvas></div></div><div><div class="trend-label">Bike Kilometres</div><div class="trend-value" style="color:var(--ember)">0.0<small>km</small></div><div class="trend-delta ">ramping this week</div><div class="trend-chart"><canvas id="chartBike"></canvas></div></div><div><div class="trend-label">Longest Session</div><div class="trend-value">96<small>min</small></div><div class="trend-delta good">need 3 hr+ rides soon</div><div class="trend-chart"><canvas id="chartLongest"></canvas></div></div></div>
 
-  <!-- CALENDAR -->
   <div class="sec">
     <span class="sec-num">VI.</span>
     <h2 class="sec-title">The <em>view from above</em></h2>
@@ -1118,19 +301,16 @@
     <div class="cal-head">
       <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
     </div>
-    <div class="cal-grid" id="calGrid">
-      <!-- populated by JS -->
-    </div>
+    <div class="cal-grid" id="calGrid"></div>
     <div class="cal-legend">
       <span><i class="l-done"></i>Completed</span>
       <span><i class="l-miss"></i>Missed</span>
       <span><i class="l-today"></i>Today</span>
       <span><i class="l-race"></i>A-Race · iMfolozi</span>
-      <span><i class="l-raceb"></i>B-Race · Absa</span>
+      <span><i class="l-raceb"></i>B-Race</span>
     </div>
   </div>
 
-  <!-- COLOPHON -->
   <footer class="colophon">
     <div>
       <em>The Training Journal</em><br>
@@ -1146,20 +326,13 @@
 
 </div>
 
+<script id="__DATA__" type="application/json">{"charts": {"hours": [4.3, 4.4, 2.5, 6.3, 4.8, 4.4, 2.0, 5.7, 1.4, 0, 2.6, 2.4], "runKm": [20.0, 30.1, 21.3, 17.3, 25.0, 14.0, 3.8, 0.0, 5.0, 0, 5.0, 6.9], "bikeKm": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0, 0.0, 0.0], "longestMin": [69, 71, 41, 159, 79, 93, 57, 92, 46, 0, 60, 96]}, "calendar": {"today": "2026-05-27", "activities": {"2026-05-27": "R", "2026-05-25": "\u00b7", "2026-05-21": "W", "2026-05-20": "R", "2026-05-19": "W", "2026-05-10": "R", "2026-05-05": "W", "2026-05-02": "\u00b7", "2026-05-01": "\u00b7", "2026-04-30": "W", "2026-04-29": "\u00b7", "2026-04-28": "\u00b7", "2026-04-23": "W", "2026-04-22": "R", "2026-04-21": "W", "2026-04-19": "\u00b7", "2026-04-18": "R", "2026-04-15": "R", "2026-04-14": "W", "2026-04-11": "R", "2026-04-10": "R", "2026-04-09": "W", "2026-04-08": "R", "2026-04-07": "W", "2026-04-03": "R", "2026-04-02": "W", "2026-04-01": "R", "2026-03-31": "W", "2026-03-30": "R", "2026-03-28": "R", "2026-03-25": "R", "2026-03-24": "R", "2026-03-23": "R", "2026-03-22": "R", "2026-03-19": "W", "2026-03-18": "R", "2026-03-16": "R", "2026-03-14": "\u00b7", "2026-03-13": "R", "2026-03-12": "W", "2026-03-09": "R", "2026-03-07": "\u00b7", "2026-03-05": "W", "2026-03-04": "R", "2026-03-03": "W", "2026-03-02": "R", "2026-03-01": "\u00b7"}, "planned": {}, "races": [{"date": "2026-06-27", "cls": "race", "mark": "RACE"}, {"date": "2026-07-10", "cls": "race-b", "mark": "B-Race"}]}}</script>
 <script>
-  const inkColor = '#1a1812';
-  const emberColor = '#c8421f';
-  const forestColor = '#3a4a2e';
-
-  const weeklyHours   = [5.6,4.3,4.4,2.5,6.3,4.8,4.4,2.0,5.7,1.4,0,2.6,2.4];
-  const weeklyRunKm   = [20,20,30.1,21.3,17.3,25,14,3.8,0,5,0,5,6.9];
-  const weeklyBikeKm  = [17.6,20.8,0,0,0,0,39.4,0,60.1,0,0,0,0];
-  const weeklyLongest = [74,69,72,41,160,80,93,57,92,47,0,60,97];
-  const trimL = arr => arr.slice(-12);
+  const inkColor='#1a1812',emberColor='#c8421f',forestColor='#3a4a2e';
+  const D = JSON.parse(document.getElementById('__DATA__').textContent || '{}');
 
   const baseOpts = {
-    responsive:true,
-    maintainAspectRatio:false,
+    responsive:true,maintainAspectRatio:false,
     plugins:{legend:{display:false},tooltip:{enabled:false}},
     scales:{x:{display:false},y:{display:false,beginAtZero:true}},
     elements:{point:{radius:0}},
@@ -1167,87 +340,61 @@
   };
 
   function makeChart(canvasId, data, color, type){
-    type = type || 'line';
-    const ctx = document.getElementById(canvasId);
+    type=type||'line';
+    const ctx=document.getElementById(canvasId);
     if(!ctx) return;
-    return new Chart(ctx, {
+    return new Chart(ctx,{
       type:type,
-      data:{
-        labels:Array(data.length).fill(''),
-        datasets:[{
-          data:data,
-          borderColor:color,
-          backgroundColor: type==='bar' ? color : 'transparent',
-          borderWidth:1.5,
-          fill:false,
-          tension:0.35,
-          pointBackgroundColor: function(c){return c.dataIndex === data.length-1 ? color : 'transparent'},
-          pointRadius: function(c){return c.dataIndex === data.length-1 ? 3 : 0}
-        }]
-      },
+      data:{labels:Array(data.length).fill(''),datasets:[{
+        data:data,borderColor:color,
+        backgroundColor: type==='bar'?color:'transparent',
+        borderWidth:1.5,fill:false,tension:0.35,
+        pointBackgroundColor:c=>c.dataIndex===data.length-1?color:'transparent',
+        pointRadius:c=>c.dataIndex===data.length-1?3:0
+      }]},
       options:baseOpts
     });
   }
 
-  makeChart('chartHours', trimL(weeklyHours), inkColor);
-  makeChart('chartRun', trimL(weeklyRunKm), forestColor);
-  makeChart('chartBike', trimL(weeklyBikeKm), emberColor);
-  makeChart('chartLongest', trimL(weeklyLongest), inkColor, 'bar');
-
-  // CALENDAR GRID
-  const cal = document.getElementById('calGrid');
-  const today = new Date(2026, 4, 27);
-  const imfolozi = new Date(2026, 5, 27);
-  const absa = new Date(2026, 6, 10);
-
-  const activityDates = {
-    '2026-04-28':'B+W','2026-04-29':'B·I','2026-04-30':'W',
-    '2026-05-01':'B·T','2026-05-02':'MTB','2026-05-05':'W',
-    '2026-05-10':'Run','2026-05-19':'W','2026-05-20':'Run',
-    '2026-05-21':'W','2026-05-25':'Gym','2026-05-27':'Run'
-  };
-  const plannedFuture = {
-    '2026-05-28':'W','2026-05-29':'B·t','2026-05-30':'MTB','2026-05-31':'R',
-    '2026-06-01':'R','2026-06-02':'W','2026-06-03':'B·i','2026-06-04':'W','2026-06-05':'B·t','2026-06-06':'40k','2026-06-07':'·',
-    '2026-06-08':'R','2026-06-09':'W','2026-06-10':'B·i','2026-06-11':'W','2026-06-12':'B·t','2026-06-13':'★50','2026-06-14':'·',
-    '2026-06-15':'R','2026-06-16':'W','2026-06-17':'B','2026-06-18':'W','2026-06-19':'B','2026-06-20':'MTB','2026-06-21':'10k',
-    '2026-06-22':'·','2026-06-23':'W','2026-06-24':'B','2026-06-25':'·','2026-06-26':'sh','2026-06-27':'★','2026-06-28':'·',
-    '2026-06-29':'·','2026-06-30':'W','2026-07-01':'R','2026-07-02':'W','2026-07-03':'R','2026-07-04':'tmp','2026-07-05':'·',
-    '2026-07-06':'R','2026-07-07':'W','2026-07-08':'sh','2026-07-09':'·','2026-07-10':'★','2026-07-11':'·','2026-07-12':'ez'
-  };
-
-  function ymd(d){
-    return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  if(D.charts){
+    makeChart('chartHours', D.charts.hours||[], inkColor);
+    makeChart('chartRun', D.charts.runKm||[], forestColor);
+    makeChart('chartBike', D.charts.bikeKm||[], emberColor);
+    makeChart('chartLongest', D.charts.longestMin||[], inkColor, 'bar');
   }
-  function sameDay(a,b){return a.getFullYear()===b.getFullYear()&&a.getMonth()===b.getMonth()&&a.getDate()===b.getDate()}
 
-  let start = new Date(today); start.setDate(start.getDate() - 30);
-  while(start.getDay() !== 1) start.setDate(start.getDate()-1);
+  // CALENDAR
+  if(D.calendar){
+    const cal = document.getElementById('calGrid');
+    const today = new Date(D.calendar.today + 'T00:00:00');
+    const races = (D.calendar.races||[]).map(r=>({date:new Date(r.date+'T00:00:00'),cls:r.cls,mark:r.mark}));
+    const acts = D.calendar.activities||{};
+    const planned = D.calendar.planned||{};
 
-  for(let i=0; i<13*7; i++){
-    const d = new Date(start); d.setDate(d.getDate()+i);
-    const iso = ymd(d);
-    let cls = '';
-    let mark = '';
-    if(sameDay(d,today)){
-      cls = 'today'; mark = 'now';
-    } else if(sameDay(d,imfolozi)){
-      cls = 'race'; mark = 'race';
-    } else if(sameDay(d,absa)){
-      cls = 'race-b'; mark = '10K';
-    } else if(d < today){
-      if(activityDates[iso] !== undefined){
-        cls = 'past-done'; mark = activityDates[iso];
+    function ymd(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+    function sameDay(a,b){return a.getFullYear()===b.getFullYear()&&a.getMonth()===b.getMonth()&&a.getDate()===b.getDate()}
+
+    let start = new Date(today); start.setDate(start.getDate() - 30);
+    while(start.getDay() !== 1) start.setDate(start.getDate()-1);
+
+    for(let i=0; i<13*7; i++){
+      const d = new Date(start); d.setDate(d.getDate()+i);
+      const iso = ymd(d);
+      let cls='', mark='';
+      const race = races.find(r=>sameDay(r.date,d));
+      if(sameDay(d,today)){cls='today';mark='now';}
+      else if(race){cls=race.cls;mark=race.mark;}
+      else if(d < today){
+        if(acts[iso] !== undefined){cls='past-done';mark=acts[iso];}
+        else {cls='past-rest';mark='';}
       } else {
-        cls = 'past-rest'; mark = '';
+        mark = planned[iso] || '';
       }
-    } else {
-      cls = ''; mark = plannedFuture[iso] || '';
+      const cell = document.createElement('div');
+      cell.className = 'cal-cell ' + cls;
+      cell.innerHTML = '<span class="num">'+d.getDate()+'</span><span class="mark">'+mark+'</span>';
+      cal.appendChild(cell);
     }
-    const cell = document.createElement('div');
-    cell.className = 'cal-cell ' + cls;
-    cell.innerHTML = '<span class="num">'+d.getDate()+'</span><span class="mark">'+mark+'</span>';
-    cal.appendChild(cell);
   }
 </script>
 
