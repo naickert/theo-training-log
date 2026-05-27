@@ -165,6 +165,13 @@ def merge_activities(existing: list[dict], fresh: list[dict]) -> list[dict]:
 
 # ---------- PLAN / RACE PARSING ----------
 
+def _yaml_strip(v: str) -> str:
+    """Strip YAML inline comments and surrounding quotes."""
+    # Remove inline comment after a space-then-hash (preserves URLs containing #)
+    v = re.sub(r"\s+#.*$", "", v).strip()
+    return v.strip('"').strip("'")
+
+
 def parse_race_calendar(text: str) -> list[dict]:
     out: list[dict] = []
     current: dict | None = None
@@ -185,10 +192,10 @@ def parse_race_calendar(text: str) -> list[dict]:
             kv = stripped[2:]
             if ":" in kv:
                 k, v = kv.split(":", 1)
-                current[k.strip()] = v.strip().strip('"').strip("'")
+                current[k.strip()] = _yaml_strip(v)
         elif current is not None and ":" in stripped:
             k, v = stripped.split(":", 1)
-            current[k.strip()] = v.strip().strip('"').strip("'")
+            current[k.strip()] = _yaml_strip(v)
     if current: out.append(current)
     return out
 
@@ -314,23 +321,12 @@ def _esc(s: str) -> str:
     return (s or "").replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
 
 
-def render_stat(label: str, val: str, unit: str, sub: str, cls: str = "") -> str:
-    return (
-        f'<div class="stat">'
-        f'<span class="stat-label">{_esc(label)}</span>'
-        f'<div class="stat-value {cls}">{_esc(val)}<small>{_esc(unit)}</small></div>'
-        f'<div class="stat-sub">{_esc(sub)}</div>'
-        f'</div>'
-    )
-
-
-def render_stats(activities: list[dict], week_rows: list[dict]) -> str:
-    # this-week hours
+def compute_stats(activities: list[dict], week_rows: list[dict]) -> dict:
+    """Returns dict of all top-of-page stat values."""
     week_start = TODAY - timedelta(days=TODAY.weekday())
     week_acts = [a for a in activities if a["date"] >= week_start.isoformat() and a["date"] <= TODAY.isoformat()]
     week_hours = sum(a["duration_sec"] for a in week_acts) / 3600
     week_done = sum(1 for r in week_rows if date.fromisoformat(r["date"]) <= TODAY and r["planned"] not in ("—","Rest"))
-    # 4 week buckets
     cutoff_4w = (TODAY - timedelta(days=28)).isoformat()
     acts_4w = [a for a in activities if a["date"] >= cutoff_4w]
     run_4w = sum(a["distance_km"] for a in acts_4w if a["category"] == "run")
@@ -339,71 +335,85 @@ def render_stats(activities: list[dict], week_rows: list[dict]) -> str:
                   key=lambda x: x["distance_km"], default=None)
     longest_km = longest["distance_km"] if longest else 0
     longest_ago = (TODAY - date.fromisoformat(longest["date"])).days if longest else 0
+    return {
+        "hours": f"{week_hours:.1f}",
+        "hours_sub": f"{week_done} of 7 days done",
+        "run_km": f"{run_4w:.0f}",
+        "run_sub": "post-PF rebuild",
+        "bike_km": f"{bike_4w:.0f}",
+        "bike_sub": "ramp underway" if bike_4w > 30 else "needs ramp",
+        "longest_km": f"{longest_km:.0f}",
+        "longest_sub": f"{longest_ago} days ago",
+        "foot": "90",
+        "foot_sub": "0/10 morning",
+    }
 
-    return "".join([
-        render_stat("This Week", f"{week_hours:.1f}", "h", f"{week_done} of 7 days complete"),
-        render_stat("4-Wk Run", f"{run_4w:.0f}", "km", "post-PF rebuild phase"),
-        render_stat("4-Wk Bike", f"{bike_4w:.0f}", "km", "ramp begins this week", cls="alert" if bike_4w < 80 else ""),
-        render_stat("Longest Ride", f"{longest_km:.0f}", "km", f"{longest_ago} days ago · iMfolozi needs 50+"),
-        render_stat("Foot", "90", "%", "resolving · 0/10 pain", cls="good"),
-    ])
 
-
-def render_today(week_rows: list[dict]) -> tuple[str, str, str, str, str, str]:
-    """Returns (tag, title_html, detail_html, meta_html, sec_meta, observation)."""
+def render_today_card(week_rows: list[dict]) -> dict:
+    """Returns {title, detail_html, pills_html, icon_svg, sec_meta}."""
     today_row = next((r for r in week_rows if r["date"] == TODAY.isoformat()), None)
     if not today_row or today_row["planned"] in ("—",):
-        return ("Rest day", "<em>Rest</em>", "No session prescribed.", "", "", "Recovery is training. Hydrate and sleep.")
-
+        return {
+            "title": "Rest day",
+            "detail_html": "No session prescribed. Recovery is training — sleep, hydrate, stretch.",
+            "pills_html": '<span class="pill">Rest</span>',
+            "icon_svg": '<svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+            "sec_meta": "Rest",
+        }
     planned = today_row["planned"]
     detail = today_row["detail"]
-    # Strip ~~strike~~ markers
     planned_clean = re.sub(r"~~(.+?)~~", r"\1", planned)
-    detail_clean = re.sub(r"~~(.+?)~~", r"\1", detail)
-    # Render bold/italic markdown
-    planned_clean = re.sub(r"\*\*(.+?)\*\*", r"<em>\1</em>", planned_clean)
-    detail_clean = re.sub(r"\*\*(.+?)\*\*", r"<span class='accent'>\1</span>", detail_clean)
+    planned_clean = re.sub(r"\*\*(.+?)\*\*", r"\1", planned_clean)
+    detail_clean = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", detail)
 
-    tag = f"{TODAY.strftime('%A')} · current week"
-    title_html = planned_clean if "<em>" in planned_clean else f"<em>{planned_clean}</em>"
-    detail_html = detail_clean
-
-    # Extract structured meta: look for HR ranges, durations
-    meta_items = []
+    pills = []
     duration_m = re.search(r"~?\s*(\d+)\s*min", detail)
-    if duration_m: meta_items.append(("Duration", f"~{duration_m.group(1)} min"))
+    if duration_m: pills.append(("clock", f"~{duration_m.group(1)} min"))
     hr_m = re.search(r"HR\s*(\d+[\s\-–]+\d+)", detail)
-    if hr_m: meta_items.append(("HR Target", hr_m.group(1).replace(" ","").replace("-","–")))
+    if hr_m: pills.append(("heart", f"HR {hr_m.group(1).replace(' ','').replace('-','–')}"))
     rpe_m = re.search(r"RPE\s*(\d+(?:\s*[–-]\s*\d+)?)", detail)
-    if rpe_m: meta_items.append(("RPE", rpe_m.group(1)))
+    if rpe_m: pills.append(("flame", f"RPE {rpe_m.group(1)}"))
+
     mode_hints = {"bike":"Bike","mtb":"MTB","run":"Run","weights":"Weights","gym":"Gym"}
     mode = next((label for k,label in mode_hints.items() if k in planned.lower()), "Mixed")
-    meta_items.append(("Mode", mode))
+    pills.append(("dot", mode))
 
-    meta_html = "".join(f'<div class="today-meta-item">{k}<strong>{_esc(v)}</strong></div>' for k,v in meta_items)
-    sec_meta = f"Day {to_roman(TODAY.weekday()+1)}"
+    icon_svg_map = {
+        "Bike": '<svg viewBox="0 0 24 24"><circle cx="5" cy="18" r="3"/><circle cx="19" cy="18" r="3"/><path d="M5 18l5-7 4 4 5-8"/></svg>',
+        "MTB": '<svg viewBox="0 0 24 24"><circle cx="5" cy="18" r="3"/><circle cx="19" cy="18" r="3"/><path d="M5 18l5-7 4 4 5-8"/></svg>',
+        "Run": '<svg viewBox="0 0 24 24"><circle cx="14" cy="4" r="2"/><path d="M11 13l-1 4 3 3 3-8-4-3-3 3-1 4M5 17l3-3"/></svg>',
+        "Weights": '<svg viewBox="0 0 24 24"><path d="M6 4v16M18 4v16M2 8v8M22 8v8M6 8h12M6 16h12"/></svg>',
+        "Gym": '<svg viewBox="0 0 24 24"><path d="M6 4v16M18 4v16M2 8v8M22 8v8M6 8h12M6 16h12"/></svg>',
+    }
+    icon_svg = icon_svg_map.get(mode, icon_svg_map["Run"])
 
-    observation = "Today's planned session — follow the structure, respect the heart-rate ceiling, and don't extend on a whim."
-    return (tag, title_html, detail_html, meta_html, sec_meta, observation)
+    pill_html_pieces = []
+    for i, (ico, text) in enumerate(pills):
+        cls = "pill pill-lime" if i == 0 else "pill"
+        ico_svg_map = {
+            "clock": '<svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>',
+            "heart": '<svg class="ico" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+            "flame": '<svg class="ico" viewBox="0 0 24 24"><path d="M12 2s4 4 4 8a4 4 0 0 1-8 0c0-3 4-8 4-8z"/></svg>',
+            "dot": '<svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>',
+        }
+        pill_html_pieces.append(f'<span class="{cls}">{ico_svg_map.get(ico, "")}{_esc(text)}</span>')
+    pills_html = "".join(pill_html_pieces)
+
+    return {
+        "title": planned_clean,
+        "detail_html": detail_clean,
+        "pills_html": pills_html,
+        "icon_svg": icon_svg,
+        "sec_meta": f"Week · Day {TODAY.weekday()+1}",
+    }
 
 
-def render_injury_banner(text: str) -> str:
+def render_foot_text(text: str) -> str:
     status_line = "Resolving — ~90% recovered. Daily prehab continues."
-    score = "0"
-    sub = "morning pain"
     if text:
         m = re.search(r"\*\*Current status:\*\*\s*([^\n]+)", text)
         if m: status_line = m.group(1)
-    return f'''<div class="margin-note">
-  <div class="margin-note-body">
-    <div class="margin-note-label">Foot · Right Plantar Fasciitis</div>
-    {_esc(status_line)} Continue daily prehab: plantar fascia stretch, frozen-bottle roll, calf stretches, eccentric heel drops.
-  </div>
-  <div>
-    <div class="margin-note-score">{score}<span style="font-size:22px;color:var(--forest-2)">/10</span></div>
-    <div class="margin-note-score-sub">{sub}</div>
-  </div>
-</div>'''
+    return f"{_esc(status_line)} Last 2 runs were pain-free."
 
 
 def render_week_rows(week_rows: list[dict], activities_by_date: dict) -> str:
@@ -411,56 +421,55 @@ def render_week_rows(week_rows: list[dict], activities_by_date: dict) -> str:
     for r in week_rows:
         d_iso = r["date"]
         d_obj = date.fromisoformat(d_iso)
-        day_short = r["day"]
+        day_short = r["day"][:3]
         day_num = d_obj.day
         planned = r["planned"]
         detail = r["detail"]
         is_today = (d_obj == TODAY)
-        # Strip strike formatting
         planned_clean = re.sub(r"~~(.+?)~~", r'<span class="strike">\1</span>', planned)
         planned_clean = re.sub(r"\*\*(.+?)\*\*", r"<em>\1</em>", planned_clean)
-        # Combine planned + brief detail
         session_html = planned_clean
-        if detail and detail != "Done" and not detail.startswith("done") and len(detail) < 120:
-            session_html += " — " + re.sub(r"\*\*(.+?)\*\*", r"<em>\1</em>", detail)
-        elif detail and len(detail) >= 120:
-            session_html += " — " + re.sub(r"\*\*(.+?)\*\*", r"<em>\1</em>", detail[:110]) + "…"
-
-        # Status
         actuals = activities_by_date.get(d_iso, [])
         if d_obj < TODAY:
             if planned.lower().startswith("~~") or "done" in detail.lower():
                 status, status_cls = "Complete", "done"
             elif "rest" in planned.lower():
-                status, status_cls = "rest", "rest"
+                status, status_cls = "Rest", "rest"
             elif actuals:
                 status, status_cls = "Complete", "done"
             else:
-                status, status_cls = "Missed", "rest"
+                status, status_cls = "Missed", "miss"
         elif d_obj == TODAY:
             status, status_cls = "Today", "today-mark"
         else:
             if "rest" in planned.lower():
-                status, status_cls = "rest", "rest"
+                status, status_cls = "Rest", "rest"
             else:
                 status, status_cls = "Upcoming", "upcoming"
-
         row_cls = " today-row" if is_today else ""
-        day_cls = " today-mark" if is_today else ""
         out.append(
             f'<div class="week-row{row_cls}">'
-            f'<div class="week-day{day_cls}">{day_short}<strong>{day_num}</strong></div>'
-            f'<div class="week-session">{session_html}</div>'
-            f'<div class="week-status {status_cls}">{status}</div>'
+            f'<div class="week-day-cell"><span class="day">{day_short}</span><span class="num">{day_num}</span></div>'
+            f'<div class="week-session-text">{session_html}</div>'
+            f'<div class="week-status-pill {status_cls}">{status}</div>'
             f'</div>'
         )
     return "".join(out)
 
 
+CATEGORY_ICON = {
+    "run": '<svg viewBox="0 0 24 24"><circle cx="14" cy="4" r="2"/><path d="M11 13l-1 4 3 3 3-8-4-3-3 3-1 4M5 17l3-3"/></svg>',
+    "bike": '<svg viewBox="0 0 24 24"><circle cx="5" cy="18" r="3"/><circle cx="19" cy="18" r="3"/><path d="M5 18l5-7 4 4 5-8"/></svg>',
+    "mtb": '<svg viewBox="0 0 24 24"><circle cx="5" cy="18" r="3"/><circle cx="19" cy="18" r="3"/><path d="M5 18l5-7 4 4 5-8"/></svg>',
+    "weights": '<svg viewBox="0 0 24 24"><path d="M6 4v16M18 4v16M2 8v8M22 8v8M6 8h12M6 16h12"/></svg>',
+    "other": '<svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>',
+    "walk": '<svg viewBox="0 0 24 24"><circle cx="14" cy="4" r="2"/><path d="M11 13l-1 4 3 3 3-8-4-3-3 3-1 4M5 17l3-3"/></svg>',
+}
+
+
 def render_log_entries(activities: list[dict]) -> str:
     seven_days_ago = (TODAY - timedelta(days=7)).isoformat()
     recent = [a for a in activities if a["date"] >= seven_days_ago]
-    # Dedupe by id (handle the duplicates that come from manual scrape + API merge)
     seen = set()
     deduped = []
     for a in recent:
@@ -469,40 +478,38 @@ def render_log_entries(activities: list[dict]) -> str:
         seen.add(key)
         deduped.append(a)
     out = []
-    for a in deduped[:8]:
+    for a in deduped[:7]:
         d_obj = date.fromisoformat(a["date"])
         day = a["day_of_week"]
         num = d_obj.day
         cat = a["category"]
-        sport_label = CATEGORY_LABEL.get(cat, "Other")
-        title = a["title"]
+        title = a["title"][:40]
         meta_bits = []
         if a.get("pace_per_km"):
-            meta_bits.append(f"Pace {a['pace_per_km']}/km")
+            meta_bits.append(f"{a['pace_per_km']}/km")
         elif a.get("avg_speed_kmh"):
-            meta_bits.append(f"Avg {a['avg_speed_kmh']} km/h")
+            meta_bits.append(f"{a['avg_speed_kmh']} km/h")
+        meta_bits.append(f"{day} {num}")
         if a.get("relative_effort"):
             meta_bits.append(f"RE {a['relative_effort']}")
-        meta = " · ".join(meta_bits) if meta_bits else "—"
+        meta = " · ".join(meta_bits)
 
         if a["distance_km"] > 0:
-            stats_main = f'{a["distance_km"]:.2f}'
-            stats_sub = f"km · {a['duration_display']}"
+            stat_val = f'{a["distance_km"]:.1f}'
+            stat_sub = f"km · {a['duration_display']}"
         else:
-            stats_main = a["duration_display"]
-            stats_sub = "duration"
+            stat_val = a["duration_display"]
+            stat_sub = "duration"
 
+        icon = CATEGORY_ICON.get(cat, CATEGORY_ICON["other"])
         out.append(
-            f'<div class="log-entry">'
-            f'<div class="log-date"><span class="day">{day}</span><span class="num">{num}</span></div>'
-            f'<div>'
-            f'<div class="log-title"><span class="log-sport {cat}">{sport_label}</span>{_esc(title)}</div>'
-            f'<div class="log-meta">{_esc(meta)}</div>'
-            f'</div>'
-            f'<div class="log-stats">{stats_main} <span class="sub">{stats_sub}</span></div>'
+            f'<div class="log-row">'
+            f'<div class="log-ico {cat}">{icon}</div>'
+            f'<div class="log-main"><span class="log-title">{_esc(title)}</span><span class="log-sub">{_esc(meta)}</span></div>'
+            f'<div class="log-stat"><span class="val">{stat_val}</span><span class="sub">{stat_sub}</span></div>'
             f'</div>'
         )
-    return "".join(out) if out else '<div class="log-entry"><div></div><div>No activities in the last 7 days.</div><div></div></div>'
+    return "".join(out) if out else '<div class="log-row"><div></div><div class="log-main"><span class="log-sub">No activities in the last 7 days.</span></div></div>'
 
 
 def render_races(races: list[dict]) -> str:
@@ -510,36 +517,31 @@ def render_races(races: list[dict]) -> str:
     for i, r in enumerate(races):
         days = race_days_to(r.get("date",""))
         pri = (r.get("priority") or "").upper()
-        cls_map = {"A": "", "B": "b-race", "C": "c-race"}
-        cls = cls_map.get(pri, "c-race")
-        # First A-race shown first as primary; subsequent A-races demoted visually
-        if pri == "A" and i > 0:
-            cls = "c-race"
-
-        priority_label_map = {"A": "A-Race · Peak Event", "B": "B-Race · Road", "C": "Season Goal"}
-        priority_label = priority_label_map.get(pri, "Season")
-        if pri == "A" and i > 0: priority_label = "Season Goal"
+        # First race = primary (lime), others = secondary
+        if i == 0:
+            cls = "primary"
+            priority_label = "A-Race · Peak"
+        elif pri == "B":
+            cls = "secondary"
+            priority_label = "B-Race"
+        else:
+            cls = "secondary"
+            priority_label = "Season Goal"
 
         name = r.get("name", "")
-        # Try to find an italic-emphasizable token
-        name_html = re.sub(r"^(\w+)", r"<em>\1</em>", name) if " " in name else f"<em>{name}</em>"
         long_dt = long_race_date(r.get("date",""))
         location = r.get("location","")
         date_line = f"{long_dt}{(' · ' + location) if location else ''}"
         target_line = r.get("target", "")
-        notes = r.get("notes", "")
-
         days_str = str(days) if days >= 0 else "—"
         out.append(
-            f'<article class="race-feature {cls}">'
-            f'<div class="race-count {cls}">{days_str}<small>days</small></div>'
-            f'<div>'
-            f'<div class="race-priority">{_esc(priority_label)}</div>'
-            f'<h3 class="race-name">{name_html}</h3>'
+            f'<div class="race-card {cls}">'
+            f'<span class="race-priority">{_esc(priority_label)}</span>'
+            f'<h3 class="race-name">{_esc(name)}</h3>'
             f'<div class="race-date">{_esc(date_line)}</div>'
-            f'<p class="race-target"><strong>Target: {_esc(target_line)}</strong> {_esc(notes)}</p>'
+            f'<div class="race-countdown-row"><span class="race-countdown">{days_str}</span><span class="race-countdown-unit">days to go</span></div>'
+            f'<p class="race-target"><strong>{_esc(target_line)}</strong></p>'
             f'</div>'
-            f'</article>'
         )
     return "".join(out)
 
@@ -571,18 +573,18 @@ def compute_weekly_buckets(activities: list[dict], n_weeks: int = 12) -> dict:
     return series
 
 
-def render_trends(weekly: list[dict]) -> str:
+def render_trends(weekly: list[dict]) -> tuple[str, dict]:
     latest = weekly[-1] if weekly else {"hours":0,"runKm":0,"bikeKm":0,"longestMin":0}
     prev = weekly[-2] if len(weekly) > 1 else latest
     def delta_class(now, then):
-        if now > then * 1.1: return "good"
-        if now < then * 0.9: return "warn"
+        if now > then * 1.1: return "up"
+        if now < then * 0.9 and then > 0: return "down"
         return ""
-    def delta_text(now, then, unit, label):
+    def delta_text(now, then, unit):
         if then == 0:
-            return f"{label} this week"
-        direction = "↑" if now > then else "↓"
-        return f"{direction} from {then:.1f}{unit} prior week"
+            return "+" if now > 0 else "—"
+        direction = "↑" if now > then else ("↓" if now < then else "→")
+        return f"{direction} {abs(now-then):.1f}{unit} vs last wk"
 
     hours_chart = [round(w["hours"],1) for w in weekly]
     run_chart = [round(w["runKm"],1) for w in weekly]
@@ -590,28 +592,28 @@ def render_trends(weekly: list[dict]) -> str:
     longest_chart = [int(w["longestMin"]) for w in weekly]
 
     return (
-        f'<div>'
+        f'<div class="trend-card">'
         f'<div class="trend-label">Weekly Hours</div>'
-        f'<div class="trend-value">{latest["hours"]:.1f}<small>h</small></div>'
-        f'<div class="trend-delta {delta_class(latest["hours"],prev["hours"])}">{delta_text(latest["hours"],prev["hours"],"h","first session")}</div>'
+        f'<div class="trend-val">{latest["hours"]:.1f}<small>h</small></div>'
+        f'<div class="trend-delta {delta_class(latest["hours"],prev["hours"])}">{delta_text(latest["hours"],prev["hours"],"h")}</div>'
         f'<div class="trend-chart"><canvas id="chartHours"></canvas></div>'
         f'</div>'
-        f'<div>'
-        f'<div class="trend-label">Running Kilometres</div>'
-        f'<div class="trend-value">{latest["runKm"]:.1f}<small>km</small></div>'
-        f'<div class="trend-delta {delta_class(latest["runKm"],prev["runKm"])}">{delta_text(latest["runKm"],prev["runKm"]," km","building")}</div>'
+        f'<div class="trend-card">'
+        f'<div class="trend-label">Run · km</div>'
+        f'<div class="trend-val">{latest["runKm"]:.1f}<small>km</small></div>'
+        f'<div class="trend-delta {delta_class(latest["runKm"],prev["runKm"])}">{delta_text(latest["runKm"],prev["runKm"],"km")}</div>'
         f'<div class="trend-chart"><canvas id="chartRun"></canvas></div>'
         f'</div>'
-        f'<div>'
-        f'<div class="trend-label">Bike Kilometres</div>'
-        f'<div class="trend-value" style="color:var(--ember)">{latest["bikeKm"]:.1f}<small>km</small></div>'
-        f'<div class="trend-delta {delta_class(latest["bikeKm"],prev["bikeKm"])}">{delta_text(latest["bikeKm"],prev["bikeKm"]," km","ramping")}</div>'
+        f'<div class="trend-card">'
+        f'<div class="trend-label">Bike · km</div>'
+        f'<div class="trend-val">{latest["bikeKm"]:.1f}<small>km</small></div>'
+        f'<div class="trend-delta {delta_class(latest["bikeKm"],prev["bikeKm"])}">{delta_text(latest["bikeKm"],prev["bikeKm"],"km")}</div>'
         f'<div class="trend-chart"><canvas id="chartBike"></canvas></div>'
         f'</div>'
-        f'<div>'
-        f'<div class="trend-label">Longest Session</div>'
-        f'<div class="trend-value">{int(latest["longestMin"])}<small>min</small></div>'
-        f'<div class="trend-delta {delta_class(latest["longestMin"],prev["longestMin"])}">need 3 hr+ rides soon</div>'
+        f'<div class="trend-card">'
+        f'<div class="trend-label">Longest · min</div>'
+        f'<div class="trend-val">{int(latest["longestMin"])}<small>min</small></div>'
+        f'<div class="trend-delta">need 3hr+ ride soon</div>'
         f'<div class="trend-chart"><canvas id="chartLongest"></canvas></div>'
         f'</div>'
     ), {"hours": hours_chart, "runKm": run_chart, "bikeKm": bike_chart, "longestMin": longest_chart}
@@ -646,6 +648,13 @@ def build_calendar_data(activities: list[dict], races: list[dict]) -> dict:
 
 # ---------- TEMPLATE SUBSTITUTION ----------
 
+def greeting_verb() -> str:
+    h = datetime.now(SAST).hour
+    if h < 12: return "Good morning"
+    if h < 17: return "Good afternoon"
+    return "Good evening"
+
+
 def build_dashboard(activities: list[dict]) -> str:
     template_text = TEMPLATE.read_text()
     plan_text = TRAINING_PLAN.read_text() if TRAINING_PLAN.exists() else ""
@@ -664,47 +673,55 @@ def build_dashboard(activities: list[dict]) -> str:
     for a in activities:
         activities_by_date[a["date"]].append(a)
 
-    today_tag, today_title_html, today_detail_html, today_meta_html, today_sec_meta, today_observation = render_today(week_rows)
-
+    today_card = render_today_card(week_rows)
     weekly = compute_weekly_buckets(activities, 12)
     trends_html, chart_data = render_trends(weekly)
     calendar_data = build_calendar_data(activities, races)
+    stats = compute_stats(activities, week_rows)
 
-    # Short race label
+    # Last 8 weeks of stats for sparklines
+    sparks = {
+        "hours": [round(w["hours"],1) for w in weekly[-8:]],
+        "runKm": [round(w["runKm"],1) for w in weekly[-8:]],
+        "bikeKm": [round(w["bikeKm"],1) for w in weekly[-8:]],
+    }
+
     race_name = primary.get("name", "")
-    hero_race_short = "iMfolozi" if "Imfolozi" in race_name else race_name.split()[0]
-    hero_kicker = f"A-Race · {primary.get('type','')} · Peak Event".strip(" ·")
+    hero_race_short = "iMfolozi" if "Imfolozi" in race_name else (race_name.split()[0] if race_name else "race")
     distance_km = primary.get("distance_km", "")
-    hero_details = f"{distance_km} kilometres <span class='sep'>·</span> {primary.get('type','race').lower()} <span class='sep'>·</span> {long_race_date(primary.get('date',''))}"
+    sport_type = primary.get("type","race").lower()
+    hero_details = f"{distance_km} km {sport_type} · {long_race_date(primary.get('date',''))}"
 
     subs = {
         "{{TITLE_DATE}}": TODAY.strftime("%a %d %b %Y"),
-        "{{CYCLE_ROMAN}}": "I",
-        "{{EDITION_NUM}}": str(TODAY.timetuple().tm_yday % 365),
-        "{{DATE_LONG_WORDS}}": long_date_words(TODAY),
-        "{{HERO_KICKER}}": hero_kicker,
+        "{{DATE_LONG}}": long_date_words(TODAY),
+        "{{GREETING_VERB}}": greeting_verb(),
+        "{{NOW_ISO}}": NOW_ISO,
         "{{HERO_DAYS}}": str(days_primary) if days_primary >= 0 else "—",
+        "{{HERO_RACE_NAME}}": race_name,
         "{{HERO_RACE_SHORT}}": hero_race_short,
-        "{{HERO_DETAILS}}": hero_details,
-        "{{HERO_QUOTE}}": primary.get("target", "Finish strong.") + " The first hour wins or loses the day.",
-        "{{HERO_ATTR}}": f"Race plan, revised {TODAY.strftime('%d %b')}",
-        "{{STATS_HTML}}": render_stats(activities, week_rows),
-        "{{SEC_TODAY_META}}": f"Week {to_roman(week_n)} · {today_sec_meta}" if week_n else today_sec_meta,
-        "{{TODAY_TAG}}": today_tag,
-        "{{TODAY_TITLE_HTML}}": today_title_html,
-        "{{TODAY_DETAIL_HTML}}": today_detail_html,
-        "{{TODAY_META_HTML}}": today_meta_html,
-        "{{TODAY_OBSERVATION}}": f"<strong>Today.</strong> {today_observation}",
-        "{{INJURY_BANNER_HTML}}": render_injury_banner(injury_text),
+        "{{HERO_RACE_DETAILS}}": hero_details,
+        "{{HERO_QUOTE}}": primary.get("target", "Finish strong."),
+        "{{STAT_HOURS}}": stats["hours"],
+        "{{STAT_HOURS_SUB}}": stats["hours_sub"],
+        "{{STAT_RUN_KM}}": stats["run_km"],
+        "{{STAT_RUN_SUB}}": stats["run_sub"],
+        "{{STAT_BIKE_KM}}": stats["bike_km"],
+        "{{STAT_BIKE_SUB}}": stats["bike_sub"],
+        "{{STAT_FOOT}}": stats["foot"],
+        "{{STAT_FOOT_SUB}}": stats["foot_sub"],
+        "{{TODAY_TITLE}}": today_card["title"],
+        "{{TODAY_DETAIL_HTML}}": today_card["detail_html"],
+        "{{TODAY_PILLS}}": today_card["pills_html"],
+        "{{TODAY_ICON_SVG}}": today_card["icon_svg"],
+        "{{FOOT_BODY}}": render_foot_text(injury_text),
         "{{WEEK_META}}": f"{week_range} · {week_label}" if week_n else "Current week",
         "{{WEEK_ROWS_HTML}}": render_week_rows(week_rows, activities_by_date),
         "{{LOG_ENTRIES_HTML}}": render_log_entries(activities),
-        "{{LOG_OBSERVATION_HTML}}": f'<p class="observation"><strong>Note.</strong> Activity log refreshed at {NOW_ISO}.</p>',
         "{{RACES_META}}": f"{len(races)} on the calendar",
         "{{RACES_HTML}}": render_races(races),
         "{{TRENDS_HTML}}": trends_html,
-        "{{EDITION_ROMAN_DATE}}": f"{TODAY.day}.{to_roman(TODAY.month)}.{TODAY.year}",
-        "{{DATA_JSON}}": json.dumps({"charts": chart_data, "calendar": calendar_data}),
+        "{{DATA_JSON}}": json.dumps({"sparks": sparks, "charts": chart_data, "calendar": calendar_data}),
     }
 
     out = template_text
