@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training — Wed 27 May 2026</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0f1c;--card:#111827;--elevated:#1c2538;
+  --primary:#22d3ee;--accent:#a78bfa;--green:#22c55e;--amber:#f59e0b;--red:#ef4444;
+  --run:#22c55e;--bike:#22d3ee;--mtb:#a78bfa;--weights:#f59e0b;--rest:#475569;
+  --t1:#f1f5f9;--t2:#94a3b8;--t3:#475569;--border:#1e293b;
+}
+html{font-size:16px}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--t1);min-height:100vh}
+
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border-bottom:1px solid var(--border);background:rgba(17,24,39,.95);position:sticky;top:0;z-index:20;backdrop-filter:blur(8px)}
+.topbar h1{font-size:1.15rem;font-weight:700;letter-spacing:-.02em}
+.topbar h1 b{color:var(--primary)}
+.topbar .brand{font-size:.55rem;text-transform:uppercase;letter-spacing:.2em;color:var(--t3);margin-top:2px}
+.topbar .meta{font-size:.72rem;color:var(--t2);display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.topbar .meta .dot{width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;margin-right:6px}
+
+.nav{display:flex;gap:4px;padding:8px 20px;border-bottom:1px solid var(--border);background:var(--bg);position:sticky;top:62px;z-index:19;flex-wrap:wrap;overflow-x:auto}
+.nav-btn{font-family:'Outfit',sans-serif;font-size:.72rem;font-weight:600;padding:6px 12px;border:1px solid var(--border);border-radius:5px;background:var(--card);color:var(--t2);cursor:pointer}
+.nav-btn:hover{background:var(--elevated);color:var(--t1)}
+.nav-btn.active{border-color:var(--primary);color:var(--t1);background:rgba(34,211,238,.08)}
+
+.main{padding:14px 20px 40px;max-width:1400px;margin:0 auto}
+.panel{display:none}
+.panel.active{display:block}
+
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;margin-bottom:14px;background:var(--border);border-radius:8px;overflow:hidden}
+.kpi{padding:14px 12px;background:var(--card);text-align:center}
+.kpi .l{font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;color:var(--t3);font-weight:600}
+.kpi .v{font-family:'JetBrains Mono',monospace;font-size:1.3rem;font-weight:600;margin-top:4px}
+.kpi .d{font-size:.62rem;margin-top:3px;color:var(--t2)}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px 16px;overflow-x:auto}
+.card-t{font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:var(--t3);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+
+.today-card{background:linear-gradient(135deg,rgba(34,211,238,.08),rgba(167,139,250,.05));border:1px solid rgba(34,211,238,.25);border-radius:10px;padding:20px 24px;margin-bottom:14px}
+.today-card .label{font-size:.62rem;text-transform:uppercase;letter-spacing:.12em;color:var(--primary);font-weight:600;margin-bottom:6px}
+.today-card .session{font-size:1.5rem;font-weight:700;margin-bottom:6px}
+.today-card .detail{font-size:.88rem;color:var(--t2);line-height:1.55}
+.today-card .meta{display:flex;gap:20px;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--t1);flex-wrap:wrap}
+
+.mt{width:100%;border-collapse:collapse;font-size:.75rem}
+.mt th{font-size:.58rem;text-transform:uppercase;letter-spacing:.08em;color:var(--t3);font-weight:600;text-align:left;padding:6px 8px;border-bottom:1px solid var(--border)}
+.mt td{padding:6px 8px;border-bottom:1px solid rgba(30,41,59,.5)}
+.mt .m{font-family:'JetBrains Mono',monospace;font-size:.7rem}
+.mt tr:hover td{background:rgba(255,255,255,.02)}
+.mt .g{color:var(--green)} .mt .r{color:var(--red)} .mt .warn{color:var(--amber)} .mt .n{color:var(--t3)}
+
+.sport{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.sport.run{background:rgba(34,197,94,.15);color:var(--run)}
+.sport.bike-road{background:rgba(34,211,238,.15);color:var(--bike)}
+.sport.bike-mtb{background:rgba(167,139,250,.15);color:var(--mtb)}
+.sport.weights{background:rgba(245,158,11,.15);color:var(--weights)}
+.sport.gym-other{background:rgba(245,158,11,.15);color:var(--weights)}
+.sport.walk{background:rgba(71,85,105,.2);color:var(--t2)}
+
+.race-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.race-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px 20px;position:relative;overflow:hidden}
+.race-card.priority-a{border-color:rgba(34,211,238,.4)}
+.race-card.priority-b{border-color:rgba(167,139,250,.3)}
+.race-card.priority-c{border-color:rgba(71,85,105,.5)}
+.race-card .race-priority{position:absolute;top:12px;right:14px;font-size:.55rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--t3);padding:2px 6px;border-radius:3px;background:rgba(255,255,255,.04)}
+.race-card .race-priority.a{color:var(--primary);background:rgba(34,211,238,.1)}
+.race-card .race-priority.b{color:var(--accent);background:rgba(167,139,250,.1)}
+.race-card .race-name{font-size:.95rem;font-weight:700;margin-bottom:4px;padding-right:40px}
+.race-card .race-countdown{font-family:'JetBrains Mono',monospace;font-size:2rem;font-weight:700;color:var(--primary);margin:10px 0 4px}
+.race-card.priority-b .race-countdown{color:var(--accent)}
+.race-card .race-date{font-size:.7rem;color:var(--t2)}
+.race-card .race-target{font-size:.72rem;color:var(--t1);margin-top:8px;font-weight:500}
+
+.chart-wrap{position:relative;width:100%;height:200px}
+
+.injury-banner{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.2);border-radius:8px;padding:14px 18px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.injury-banner.warn{background:rgba(245,158,11,.06);border-color:rgba(245,158,11,.2)}
+.injury-banner.alert{background:rgba(239,68,68,.06);border-color:rgba(239,68,68,.2)}
+.injury-banner .t{font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--green);font-weight:600;margin-bottom:4px}
+.injury-banner.warn .t{color:var(--amber)} .injury-banner.alert .t{color:var(--red)}
+.injury-banner .c{font-size:.88rem;color:var(--t1)}
+.injury-banner .sub{font-size:.7rem;color:var(--t2);margin-top:3px}
+
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;font-family:'JetBrains Mono',monospace}
+.cal-cell{aspect-ratio:1;border:1px solid var(--border);border-radius:4px;padding:4px;font-size:.55rem;background:var(--card);display:flex;flex-direction:column;justify-content:space-between;min-height:50px}
+.cal-cell.past-done{background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.3)}
+.cal-cell.past-miss{background:rgba(239,68,68,.06);border-color:rgba(239,68,68,.2)}
+.cal-cell.past-rest{background:rgba(71,85,105,.06);border-color:var(--border)}
+.cal-cell.today{border-color:var(--primary);border-width:2px;background:rgba(34,211,238,.12)}
+.cal-cell.race{background:rgba(245,158,11,.15);border-color:var(--amber);border-width:2px}
+.cal-cell .d{font-weight:600;color:var(--t2)}
+.cal-cell.today .d{color:var(--primary)}
+.cal-cell.race .d{color:var(--amber)}
+.cal-cell .s{font-size:.5rem;color:var(--t3);margin-top:auto;font-weight:600}
+.cal-cell.past-done .s{color:var(--green)}
+.cal-cell.race .s{color:var(--amber)}
+.cal-hdr{font-size:.55rem;text-transform:uppercase;letter-spacing:.08em;color:var(--t3);font-weight:600;text-align:center;padding:4px 0}
+
+.evolution{background:rgba(34,211,238,.04);border:1px solid rgba(34,211,238,.18);border-radius:6px;padding:14px 16px;margin-top:16px}
+.evolution .t{font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--primary);font-weight:600;margin-bottom:6px}
+.evolution .c{font-size:.78rem;color:var(--t1);line-height:1.55}
+
+.footer{margin-top:24px;padding:12px 0;border-top:1px solid var(--border);font-size:.6rem;color:var(--t3);text-align:center}
+
+@media(max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.grid2{grid-template-columns:1fr}}
+@media(max-width:600px){html{font-size:14px}.main{padding:10px 12px}.kpis{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div>
+    <h1><b>my-training</b> <span style="color:var(--t3);font-weight:400;font-size:.85rem">Theo · Week 10 — Re-base</span></h1>
+    <div class="brand">Cycle 1 · Wed 27 May 2026</div>
+  </div>
+  <div class="meta">
+    <span><span class="dot"></span>Synced 2026-05-27 08:30 UTC</span>
+    <span>Imfolozi <b style="color:var(--primary)">31d</b></span>
+    <span>Absa <b style="color:var(--accent)">44d</b></span>
+  </div>
+</div>
+
+<div class="nav" role="tablist">
+  <button class="nav-btn active" onclick="show('today',this)">Today</button>
+  <button class="nav-btn" onclick="show('week',this)">This Week</button>
+  <button class="nav-btn" onclick="show('recent',this)">Last 7 Days</button>
+  <button class="nav-btn" onclick="show('races',this)">Races</button>
+  <button class="nav-btn" onclick="show('trends',this)">Trends</button>
+  <button class="nav-btn" onclick="show('next',this)">Next 4 Weeks</button>
+  <button class="nav-btn" onclick="show('overview',this)">3-Month Overview</button>
+</div>
+
+<div class="main">
+
+<!-- KPIs -->
+<div class="kpis">
+  <div class="kpi"><div class="l">This Week</div><div class="v">1.6h</div><div class="d">0 km · 1/7 done</div></div>
+  <div class="kpi"><div class="l">Adherence 4wk</div><div class="v" style="color:var(--amber)">40%</div><div class="d">10/25 sessions</div></div>
+  <div class="kpi"><div class="l">Run KM (4wk)</div><div class="v">10.0</div><div class="d" style="color:var(--red)">↓ from 18 in W14</div></div>
+  <div class="kpi"><div class="l">Bike KM (4wk)</div><div class="v">60.1</div><div class="d" style="color:var(--amber)">flat — needs ramp</div></div>
+  <div class="kpi"><div class="l">Foot PF</div><div class="v" style="color:var(--green)">90%</div><div class="d">Resolving · Wed 20 May pain-free</div></div>
+</div>
+
+<!-- Foot/Injury banner -->
+<div class="injury-banner">
+  <div>
+    <div class="t">Foot Status — Right Plantar Fasciitis</div>
+    <div class="c">Resolving — ~90% recovered. Last 2 runs (10 May, 20 May) pain-free.</div>
+    <div class="sub">Continue daily prehab. Stop signs in <a style="color:var(--primary)" href="file:///Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running/PF-Management-Apr-2026.md">PF-Management protocol</a>.</div>
+  </div>
+  <div style="font-family:'JetBrains Mono',monospace;font-size:1.3rem;color:var(--green);font-weight:700">0/10</div>
+</div>
+
+<!-- PANEL: Today -->
+<div class="panel active" id="panel-today">
+  <div class="today-card">
+    <div class="label">Today's session — Wed 27 May 2026</div>
+    <div class="session">Bike intervals</div>
+    <div class="detail">15 min WU + 4 × 5 min @ HR 165–175 (RPE 7) / 2 min easy + 10 min CD. ~50 min total. Indoor (Zwift) or outdoor.</div>
+    <div class="meta">
+      <span>⏱ ~50 min</span>
+      <span>💓 HR 165–175 on reps</span>
+      <span>🚴 Bike</span>
+      <span>📋 Re-base week — first hard session back</span>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <div class="card-t">Pre-Session Checklist</div>
+      <ul style="font-size:.8rem;color:var(--t2);line-height:1.8;padding-left:18px">
+        <li>Bike setup, bottle filled, towel out</li>
+        <li>HR strap fitted</li>
+        <li>15 min spin-up warmup — do NOT skip</li>
+        <li>Plantar fascia stretch first (3 × 30s)</li>
+        <li>RPE 7 on reps means: hard but sustainable, can speak 2–3 words</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-t">Why this session</div>
+      <div style="font-size:.8rem;color:var(--t2);line-height:1.55">
+        Re-base after the 26-day gap (last bike was 2 May MTB). 4×5min at sub-threshold rebuilds aerobic depth without overloading. This sets up the long ride on Saturday (30 km MTB) and the Imfolozi build over the next 4 weekends.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PANEL: This Week -->
+<div class="panel" id="panel-week">
+  <div class="card">
+    <div class="card-t">Plan vs Actual — Week 10 (25–31 May)</div>
+    <table class="mt">
+      <thead>
+        <tr><th>Day</th><th>Planned</th><th>Actual</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Mon 25</td><td>Gym workout</td><td>Morning Workout 1:36:44</td><td class="g">✅ done</td></tr>
+        <tr><td>Tue 26</td><td>Rest</td><td>—</td><td class="n">💤 rest</td></tr>
+        <tr><td>Wed 27</td><td><b>Bike intervals 50 min</b></td><td>—</td><td class="warn">▶ today</td></tr>
+        <tr><td>Thu 28</td><td>Weights</td><td>—</td><td class="n">pending</td></tr>
+        <tr><td>Fri 29</td><td>Bike tempo 50 min</td><td>—</td><td class="n">pending</td></tr>
+        <tr><td>Sat 30</td><td>Long MTB 30 km / ~2 hr</td><td>—</td><td class="n">pending</td></tr>
+        <tr><td>Sun 31</td><td>Easy run 5 km on grass</td><td>—</td><td class="n">pending</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- PANEL: Last 7 Days -->
+<div class="panel" id="panel-recent">
+  <div class="card">
+    <div class="card-t">Activities — Last 7 Days (20–27 May)</div>
+    <table class="mt">
+      <thead>
+        <tr><th>Date</th><th>Sport</th><th>Title</th><th>Time</th><th>Distance</th><th>Pace/Speed</th><th>RE</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Mon 25/05</td><td><span class="sport gym-other">Gym</span></td><td>Morning Workout</td><td class="m">1:36:44</td><td class="m">—</td><td class="m">—</td><td class="m">29</td></tr>
+        <tr><td>Thu 21/05</td><td><span class="sport weights">Weights</span></td><td>Morning Weight Training</td><td class="m">1:00:29</td><td class="m">—</td><td class="m">—</td><td class="m">13</td></tr>
+        <tr><td>Wed 20/05</td><td><span class="sport run">Run</span></td><td>Morning Run</td><td class="m">34:19</td><td class="m">5.02 km</td><td class="m">6:50/km</td><td class="m">136</td></tr>
+        <tr><td>Tue 19/05</td><td><span class="sport weights">Weights</span></td><td>Morning Weight Training</td><td class="m">1:00:15</td><td class="m">—</td><td class="m">—</td><td class="m">21</td></tr>
+      </tbody>
+    </table>
+    <div style="font-size:.7rem;color:var(--t2);margin-top:10px;line-height:1.5">
+      <b>Observation:</b> No cardio between Thu 21 and Mon 25. Wed 27 bike intervals (today) is the first cardio session in 7 days. Pattern flag: weekend long ride missing — Sat 23 May had no recorded ride.
+    </div>
+  </div>
+</div>
+
+<!-- PANEL: Races -->
+<div class="panel" id="panel-races">
+  <div class="race-cards">
+    <div class="race-card priority-a">
+      <div class="race-priority a">A · Peak</div>
+      <div class="race-name">Imfolozi 55 km MTB</div>
+      <div class="race-countdown">31d</div>
+      <div class="race-date">Sat 27 Jun 2026 · iMfolozi GR, KZN</div>
+      <div class="race-target">Target: Finish strong, ~4 hr</div>
+      <div style="font-size:.68rem;color:var(--t2);margin-top:8px;line-height:1.5">First time at this distance. Longest MTB so far: 24 km. Need 4 progressive long rides: 30 → 40 → 50 km.</div>
+    </div>
+    <div class="race-card priority-b">
+      <div class="race-priority b">B · Real Race</div>
+      <div class="race-name">Absa 10K Road</div>
+      <div class="race-countdown">44d</div>
+      <div class="race-date">Fri 10 Jul 2026</div>
+      <div class="race-target">Target: 1:02–1:05</div>
+      <div style="font-size:.68rem;color:var(--t2);margin-top:8px;line-height:1.5">12 days after Imfolozi. Real test of run fitness post-MTB recovery.</div>
+    </div>
+    <div class="race-card priority-c">
+      <div class="race-priority">Season</div>
+      <div class="race-name">Sub-60 10K attempt</div>
+      <div class="race-countdown" style="color:var(--t2)">~126d</div>
+      <div class="race-date">Sept/Oct 2026 — date TBC</div>
+      <div class="race-target">Target: &lt;60:00</div>
+      <div style="font-size:.68rem;color:var(--t2);margin-top:8px;line-height:1.5">Season goal. Race TBD. Earliest realistic date for properly trained sub-60 attempt.</div>
+    </div>
+  </div>
+</div>
+
+<!-- PANEL: Trends -->
+<div class="panel" id="panel-trends">
+  <div class="grid2">
+    <div class="card"><div class="card-t">Weekly Volume (hrs)</div><div class="chart-wrap"><canvas id="chartVolume"></canvas></div></div>
+    <div class="card"><div class="card-t">Running KM / week</div><div class="chart-wrap"><canvas id="chartRunKm"></canvas></div></div>
+    <div class="card"><div class="card-t">Bike KM / week (road + MTB)</div><div class="chart-wrap"><canvas id="chartBikeKm"></canvas></div></div>
+    <div class="card"><div class="card-t">Longest Session / week (min)</div><div class="chart-wrap"><canvas id="chartLongest"></canvas></div></div>
+  </div>
+  <div style="font-size:.72rem;color:var(--t2);margin-top:10px;line-height:1.5">
+    <b>Trend reading:</b> Bike volume cratered after 2 May (24 km MTB → zero). W18 (11–17 May) was a travel week → no activities. Running volume halved from W14 to W19. Need immediate ramp — bike must be back in rotation Wed/Fri/Sat starting this week.
+  </div>
+</div>
+
+<!-- PANEL: Next 4 Weeks -->
+<div class="panel" id="panel-next">
+  <div class="card">
+    <div class="card-t">Upcoming — Next 4 Weeks</div>
+    <table class="mt">
+      <thead>
+        <tr><th>Week</th><th>Theme</th><th>Long Session</th><th>Quality Days</th><th>Race</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>W10 · 25–31 May</b></td><td>Re-base</td><td>Sat 30 km MTB / 2 hr</td><td>Wed bike intervals · Fri bike tempo</td><td>—</td></tr>
+        <tr><td><b>W11 · 1–7 Jun</b></td><td>Bike volume build</td><td>Sat 40 km MTB / 2:30</td><td>Wed 5×4min · Fri tempo · 2 runs</td><td>—</td></tr>
+        <tr><td><b>W12 · 8–14 Jun</b></td><td>Peak Imfolozi prep</td><td><b>Sat 50 km dress rehearsal</b></td><td>Wed 4×8min · Fri tempo · 2 runs</td><td>—</td></tr>
+        <tr><td><b>W13 · 15–21 Jun</b></td><td>Imfolozi freshen</td><td>Sat 25–30 km moderate · <b>Sun 8–10 km foot test run</b></td><td>Wed last hard bike</td><td>—</td></tr>
+        <tr><td><b>W14 · 22–28 Jun</b></td><td>RACE WEEK</td><td><b>Sat 27 Jun — IMFOLOZI 55 km</b></td><td>Light openers only</td><td style="color:var(--amber);font-weight:700">⭐ Imfolozi</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- PANEL: 3-Month Overview -->
+<div class="panel" id="panel-overview">
+  <div class="card">
+    <div class="card-t">3-Month Calendar — Apr 27 to Jul 31, 2026</div>
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin-bottom:4px">
+      <div class="cal-hdr">Mon</div><div class="cal-hdr">Tue</div><div class="cal-hdr">Wed</div><div class="cal-hdr">Thu</div><div class="cal-hdr">Fri</div><div class="cal-hdr">Sat</div><div class="cal-hdr">Sun</div>
+    </div>
+    <div class="cal-grid">
+      <!-- W6: 27 Apr - 3 May -->
+      <div class="cal-cell past-rest"><div class="d">27</div><div class="s">PF dx</div></div>
+      <div class="cal-cell past-done"><div class="d">28</div><div class="s">B+W</div></div>
+      <div class="cal-cell past-done"><div class="d">29</div><div class="s">B int</div></div>
+      <div class="cal-cell past-done"><div class="d">30</div><div class="s">W</div></div>
+      <div class="cal-cell past-done"><div class="d">1</div><div class="s">B tmp</div></div>
+      <div class="cal-cell past-done"><div class="d">2</div><div class="s">MTB 24</div></div>
+      <div class="cal-cell past-rest"><div class="d">3</div><div class="s">rest</div></div>
+      <!-- W7: 4-10 May -->
+      <div class="cal-cell past-rest"><div class="d">4</div><div class="s">rest</div></div>
+      <div class="cal-cell past-done"><div class="d">5</div><div class="s">W</div></div>
+      <div class="cal-cell past-miss"><div class="d">6</div><div class="s">miss</div></div>
+      <div class="cal-cell past-miss"><div class="d">7</div><div class="s">miss</div></div>
+      <div class="cal-cell past-rest"><div class="d">8</div><div class="s">rest</div></div>
+      <div class="cal-cell past-miss"><div class="d">9</div><div class="s">miss</div></div>
+      <div class="cal-cell past-done"><div class="d">10</div><div class="s">Run 5</div></div>
+      <!-- W8: 11-17 May (travel) -->
+      <div class="cal-cell past-rest"><div class="d">11</div><div class="s">trav</div></div>
+      <div class="cal-cell past-rest"><div class="d">12</div><div class="s">trav</div></div>
+      <div class="cal-cell past-rest"><div class="d">13</div><div class="s">trav</div></div>
+      <div class="cal-cell past-rest"><div class="d">14</div><div class="s">trav</div></div>
+      <div class="cal-cell past-rest"><div class="d">15</div><div class="s">trav</div></div>
+      <div class="cal-cell past-rest"><div class="d">16</div><div class="s">trav</div></div>
+      <div class="cal-cell past-rest"><div class="d">17</div><div class="s">trav</div></div>
+      <!-- W9: 18-24 May -->
+      <div class="cal-cell past-miss"><div class="d">18</div><div class="s">—</div></div>
+      <div class="cal-cell past-done"><div class="d">19</div><div class="s">W</div></div>
+      <div class="cal-cell past-done"><div class="d">20</div><div class="s">Run 5</div></div>
+      <div class="cal-cell past-done"><div class="d">21</div><div class="s">W</div></div>
+      <div class="cal-cell past-miss"><div class="d">22</div><div class="s">—</div></div>
+      <div class="cal-cell past-miss"><div class="d">23</div><div class="s">—</div></div>
+      <div class="cal-cell past-miss"><div class="d">24</div><div class="s">—</div></div>
+      <!-- W10: 25-31 May (current) -->
+      <div class="cal-cell past-done"><div class="d">25</div><div class="s">Gym</div></div>
+      <div class="cal-cell past-rest"><div class="d">26</div><div class="s">rest</div></div>
+      <div class="cal-cell today"><div class="d">27</div><div class="s">B int</div></div>
+      <div class="cal-cell"><div class="d">28</div><div class="s">W</div></div>
+      <div class="cal-cell"><div class="d">29</div><div class="s">B tmp</div></div>
+      <div class="cal-cell"><div class="d">30</div><div class="s">MTB 30</div></div>
+      <div class="cal-cell"><div class="d">31</div><div class="s">Run 5</div></div>
+      <!-- W11: 1-7 Jun -->
+      <div class="cal-cell"><div class="d">1</div><div class="s">Run 5</div></div>
+      <div class="cal-cell"><div class="d">2</div><div class="s">W</div></div>
+      <div class="cal-cell"><div class="d">3</div><div class="s">B int</div></div>
+      <div class="cal-cell"><div class="d">4</div><div class="s">W</div></div>
+      <div class="cal-cell"><div class="d">5</div><div class="s">B tmp</div></div>
+      <div class="cal-cell"><div class="d">6</div><div class="s">MTB 40</div></div>
+      <div class="cal-cell"><div class="d">7</div><div class="s">Run/rest</div></div>
+      <!-- W12: 8-14 Jun (dress rehearsal) -->
+      <div class="cal-cell"><div class="d">8</div><div class="s">Run 6</div></div>
+      <div class="cal-cell"><div class="d">9</div><div class="s">W</div></div>
+      <div class="cal-cell"><div class="d">10</div><div class="s">B int</div></div>
+      <div class="cal-cell"><div class="d">11</div><div class="s">W</div></div>
+      <div class="cal-cell"><div class="d">12</div><div class="s">B tmp</div></div>
+      <div class="cal-cell race"><div class="d">13</div><div class="s">★ MTB 50</div></div>
+      <div class="cal-cell"><div class="d">14</div><div class="s">spin</div></div>
+      <!-- W13: 15-21 Jun (freshen) -->
+      <div class="cal-cell"><div class="d">15</div><div class="s">Run 5</div></div>
+      <div class="cal-cell"><div class="d">16</div><div class="s">W lt</div></div>
+      <div class="cal-cell"><div class="d">17</div><div class="s">B hard</div></div>
+      <div class="cal-cell"><div class="d">18</div><div class="s">W</div></div>
+      <div class="cal-cell"><div class="d">19</div><div class="s">B easy</div></div>
+      <div class="cal-cell"><div class="d">20</div><div class="s">MTB 25</div></div>
+      <div class="cal-cell"><div class="d">21</div><div class="s">Run 8–10</div></div>
+      <!-- W14: 22-28 Jun (race week) -->
+      <div class="cal-cell"><div class="d">22</div><div class="s">spin</div></div>
+      <div class="cal-cell"><div class="d">23</div><div class="s">W lt</div></div>
+      <div class="cal-cell"><div class="d">24</div><div class="s">B+opn</div></div>
+      <div class="cal-cell"><div class="d">25</div><div class="s">rest</div></div>
+      <div class="cal-cell"><div class="d">26</div><div class="s">shake</div></div>
+      <div class="cal-cell race"><div class="d">27</div><div class="s">⭐ IMFOLOZI</div></div>
+      <div class="cal-cell"><div class="d">28</div><div class="s">rest</div></div>
+      <!-- W15: 29 Jun - 5 Jul -->
+      <div class="cal-cell"><div class="d">29</div><div class="s">rest</div></div>
+      <div class="cal-cell"><div class="d">30</div><div class="s">W lt</div></div>
+      <div class="cal-cell"><div class="d">1</div><div class="s">Run 5</div></div>
+      <div class="cal-cell"><div class="d">2</div><div class="s">W</div></div>
+      <div class="cal-cell"><div class="d">3</div><div class="s">Run 6</div></div>
+      <div class="cal-cell"><div class="d">4</div><div class="s">tempo</div></div>
+      <div class="cal-cell"><div class="d">5</div><div class="s">rest</div></div>
+      <!-- W16: 6-10 Jul (Absa) -->
+      <div class="cal-cell"><div class="d">6</div><div class="s">Run 4</div></div>
+      <div class="cal-cell"><div class="d">7</div><div class="s">W lt</div></div>
+      <div class="cal-cell"><div class="d">8</div><div class="s">shake</div></div>
+      <div class="cal-cell"><div class="d">9</div><div class="s">rest</div></div>
+      <div class="cal-cell race"><div class="d">10</div><div class="s">⭐ ABSA 10K</div></div>
+      <div class="cal-cell"><div class="d">11</div><div class="s">rest</div></div>
+      <div class="cal-cell"><div class="d">12</div><div class="s">easy</div></div>
+    </div>
+    <div style="font-size:.65rem;color:var(--t2);margin-top:10px;display:flex;gap:14px;flex-wrap:wrap">
+      <span><span style="display:inline-block;width:10px;height:10px;background:rgba(34,197,94,.3);border-radius:2px;vertical-align:middle"></span> Completed</span>
+      <span><span style="display:inline-block;width:10px;height:10px;background:rgba(239,68,68,.2);border-radius:2px;vertical-align:middle"></span> Missed</span>
+      <span><span style="display:inline-block;width:10px;height:10px;background:rgba(71,85,105,.2);border-radius:2px;vertical-align:middle"></span> Rest/Travel</span>
+      <span><span style="display:inline-block;width:10px;height:10px;background:rgba(34,211,238,.2);border:1px solid var(--primary);border-radius:2px;vertical-align:middle"></span> Today</span>
+      <span><span style="display:inline-block;width:10px;height:10px;background:rgba(245,158,11,.2);border:1px solid var(--amber);border-radius:2px;vertical-align:middle"></span> Race / Dress Rehearsal</span>
+    </div>
+  </div>
+</div>
+
+<div class="evolution">
+  <div class="t">Cycle 1 · Bootstrap note · 2026-05-27</div>
+  <div class="c">First dashboard cycle. Baseline: 2 runs + 5 bike sessions + 5 weight sessions in last 30 days. Adherence 40%, dragged down by W18 travel week and W7 partial. Bike volume cratered after 2 May — Imfolozi prep starts NOW with Wed bike intervals + Sat 30 km MTB. Foot at 90% green. Next cycle should: (1) validate plan-vs-actual logic against W10 sessions as they land; (2) compute first weekly volume trend with at least 7 days of fresh data; (3) check if Imfolozi dress rehearsal Sat 13 Jun is achievable from current fitness curve.</div>
+</div>
+
+<div class="footer">
+  my-training · Cycle 1 · Generated 2026-05-27 08:30 UTC · Synced from Strava · Pushed to <a href="https://github.com/naickert/theo-training-log" style="color:var(--t2)">theo-training-log</a>
+</div>
+
+</div>
+
+<script>
+function show(id, btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+// Charts data — weeks W14..W20 (Apr 13 to May 27)
+const weekLabels = ['W14','W15','W16','W17','W18','W19','W20'];
+const weekDates = ['Apr 13','Apr 20','Apr 27','May 4','May 11','May 18','May 25'];
+
+const commonOpts = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins:{legend:{display:false}, tooltip:{titleFont:{family:'JetBrains Mono'}, bodyFont:{family:'JetBrains Mono',size:11}}},
+  scales:{
+    x:{ticks:{color:'#94a3b8',font:{size:10}},grid:{color:'rgba(30,41,59,0.4)'}},
+    y:{ticks:{color:'#94a3b8',font:{size:10}},grid:{color:'rgba(30,41,59,0.4)'},beginAtZero:true}
+  }
+};
+
+// Volume hours
+new Chart(document.getElementById('chartVolume'), {
+  type:'bar',
+  data:{
+    labels: weekDates,
+    datasets:[{
+      label:'Hours',
+      data:[3.4, 1.95, 5.4, 1.4, 0, 2.6, 1.6],
+      backgroundColor:'rgba(34,211,238,0.5)',
+      borderColor:'#22d3ee',
+      borderWidth:1
+    }]
+  },
+  options: commonOpts
+});
+
+// Running KM
+new Chart(document.getElementById('chartRunKm'), {
+  type:'line',
+  data:{
+    labels: weekDates,
+    datasets:[{
+      label:'Run KM',
+      data:[18.0, 3.81, 0, 5.01, 0, 5.02, 0],
+      borderColor:'#22c55e',
+      backgroundColor:'rgba(34,197,94,0.15)',
+      tension:0.3,
+      fill:true,
+      pointRadius:4
+    }]
+  },
+  options: commonOpts
+});
+
+// Bike KM (road + MTB)
+new Chart(document.getElementById('chartBikeKm'), {
+  type:'line',
+  data:{
+    labels: weekDates,
+    datasets:[
+      {
+        label:'Road/Virtual',
+        data:[39.34, 0, 35.67, 0, 0, 0, 0],
+        borderColor:'#22d3ee',
+        backgroundColor:'rgba(34,211,238,0.1)',
+        tension:0.3,
+        pointRadius:3
+      },
+      {
+        label:'MTB',
+        data:[0, 0, 24.38, 0, 0, 0, 0],
+        borderColor:'#a78bfa',
+        backgroundColor:'rgba(167,139,250,0.1)',
+        tension:0.3,
+        pointRadius:3
+      }
+    ]
+  },
+  options: {...commonOpts, plugins:{...commonOpts.plugins, legend:{display:true,labels:{color:'#94a3b8',font:{size:10}}}}}
+});
+
+// Longest session
+new Chart(document.getElementById('chartLongest'), {
+  type:'bar',
+  data:{
+    labels: weekDates,
+    datasets:[{
+      label:'Min',
+      data:[93, 79, 92, 47, 0, 60, 97],
+      backgroundColor:'rgba(167,139,250,0.5)',
+      borderColor:'#a78bfa',
+      borderWidth:1
+    }]
+  },
+  options: commonOpts
+});
+</script>
+
+</body>
+</html>
