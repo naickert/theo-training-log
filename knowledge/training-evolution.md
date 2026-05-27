@@ -28,3 +28,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Initial concern:** Bike volume since 2 May is zero. Imfolozi prep requires immediate ramp.
 - **Dashboard structure (v1):** 8 panels — Today / This Week / Last 7 Days / Race Countdown / Trends / Foot Status / Next 4 Weeks / 3-Month Overview.
 - **Next cycle should:** Test the plan-vs-actual diff logic against the actual W10 sessions (Wed bike intervals, Sat 30 km MTB, Sun 5 km run).
+
+
+---
+
+## Cycle 2 — 2026-05-27 (auto-generated)
+
+- **Sync at:** 2026-05-27T06:56:09Z
+- **Activity baseline:** 6 activities in last 7 days, 61 in 90-day window.
+- **Today's planned session:** parsed from plan
+- **Notes:** Auto-cycle. Patterns and observations to be added by manual review or by next /my-training session.
