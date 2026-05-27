@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training — {{DATE}}</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0f1c;--card:#111827;--elevated:#1c2538;
+  --primary:#22d3ee;--accent:#a78bfa;--green:#22c55e;--amber:#f59e0b;--red:#ef4444;
+  --run:#22c55e;--bike:#22d3ee;--mtb:#a78bfa;--weights:#f59e0b;--rest:#475569;
+  --t1:#f1f5f9;--t2:#94a3b8;--t3:#475569;--border:#1e293b;
+}
+html{font-size:16px}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--t1);min-height:100vh}
+
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border-bottom:1px solid var(--border);background:rgba(17,24,39,.95);position:sticky;top:0;z-index:20;backdrop-filter:blur(8px)}
+.topbar h1{font-size:1.15rem;font-weight:700;letter-spacing:-.02em}
+.topbar h1 b{color:var(--primary)}
+.topbar .brand{font-size:.55rem;text-transform:uppercase;letter-spacing:.2em;color:var(--t3);margin-top:2px}
+.topbar .meta{font-size:.72rem;color:var(--t2);display:flex;gap:14px;align-items:center}
+.topbar .meta .dot{width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;margin-right:6px}
+
+.nav{display:flex;gap:4px;padding:8px 20px;border-bottom:1px solid var(--border);background:var(--bg);position:sticky;top:62px;z-index:19;flex-wrap:wrap;overflow-x:auto}
+.nav-btn{font-family:'Outfit',sans-serif;font-size:.72rem;font-weight:600;padding:6px 12px;border:1px solid var(--border);border-radius:5px;background:var(--card);color:var(--t2);cursor:pointer}
+.nav-btn:hover{background:var(--elevated);color:var(--t1)}
+.nav-btn.active{border-color:var(--primary);color:var(--t1);background:rgba(34,211,238,.08)}
+
+.main{padding:14px 20px 40px;max-width:1400px;margin:0 auto}
+.panel{display:none}
+.panel.active{display:block}
+
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;margin-bottom:14px;background:var(--border);border-radius:8px;overflow:hidden}
+.kpi{padding:14px 12px;background:var(--card);text-align:center}
+.kpi .l{font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;color:var(--t3);font-weight:600}
+.kpi .v{font-family:'JetBrains Mono',monospace;font-size:1.3rem;font-weight:600;margin-top:4px}
+.kpi .d{font-size:.62rem;margin-top:3px;color:var(--t2)}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px 16px;overflow-x:auto}
+.card-t{font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:var(--t3);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+
+.sec-h{font-size:.95rem;font-weight:700;margin:18px 0 10px;display:flex;align-items:center;gap:10px;color:var(--primary)}
+.sec-h::after{content:'';flex:1;height:1px;background:var(--border)}
+
+.today-card{background:linear-gradient(135deg,rgba(34,211,238,.06),rgba(167,139,250,.04));border:1px solid rgba(34,211,238,.2);border-radius:10px;padding:18px 22px}
+.today-card .label{font-size:.62rem;text-transform:uppercase;letter-spacing:.12em;color:var(--primary);font-weight:600;margin-bottom:6px}
+.today-card .session{font-size:1.4rem;font-weight:700;margin-bottom:4px}
+.today-card .detail{font-size:.85rem;color:var(--t2);line-height:1.5}
+.today-card .meta{display:flex;gap:18px;margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--t1)}
+
+.mt{width:100%;border-collapse:collapse;font-size:.75rem}
+.mt th{font-size:.58rem;text-transform:uppercase;letter-spacing:.08em;color:var(--t3);font-weight:600;text-align:left;padding:6px 8px;border-bottom:1px solid var(--border)}
+.mt td{padding:6px 8px;border-bottom:1px solid rgba(30,41,59,.5)}
+.mt .m{font-family:'JetBrains Mono',monospace;font-size:.7rem}
+.mt tr:hover td{background:rgba(255,255,255,.02)}
+.mt .g{color:var(--green)} .mt .r{color:var(--red)} .mt .warn{color:var(--amber)} .mt .n{color:var(--t3)}
+
+.sport{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.sport.run{background:rgba(34,197,94,.15);color:var(--run)}
+.sport.bike-road{background:rgba(34,211,238,.15);color:var(--bike)}
+.sport.bike-mtb{background:rgba(167,139,250,.15);color:var(--mtb)}
+.sport.weights{background:rgba(245,158,11,.15);color:var(--weights)}
+.sport.walk{background:rgba(71,85,105,.2);color:var(--t2)}
+
+.race-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.race-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;position:relative;overflow:hidden}
+.race-card.priority-a{border-color:rgba(34,211,238,.4)}
+.race-card.priority-b{border-color:rgba(167,139,250,.3)}
+.race-card.priority-c{border-color:rgba(71,85,105,.5)}
+.race-card .race-priority{position:absolute;top:10px;right:12px;font-size:.55rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--t3)}
+.race-card .race-priority.a{color:var(--primary)}
+.race-card .race-priority.b{color:var(--accent)}
+.race-card .race-name{font-size:.95rem;font-weight:700;margin-bottom:4px;padding-right:30px}
+.race-card .race-countdown{font-family:'JetBrains Mono',monospace;font-size:1.6rem;font-weight:700;color:var(--primary);margin:8px 0}
+.race-card .race-date{font-size:.7rem;color:var(--t2)}
+.race-card .race-target{font-size:.72rem;color:var(--t1);margin-top:6px;font-weight:500}
+
+.chart-wrap{position:relative;width:100%;height:200px}
+
+.injury-banner{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.2);border-radius:8px;padding:14px 18px;margin-bottom:14px}
+.injury-banner.warn{background:rgba(245,158,11,.06);border-color:rgba(245,158,11,.2)}
+.injury-banner.alert{background:rgba(239,68,68,.06);border-color:rgba(239,68,68,.2)}
+.injury-banner .t{font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--green);font-weight:600;margin-bottom:4px}
+.injury-banner.warn .t{color:var(--amber)} .injury-banner.alert .t{color:var(--red)}
+.injury-banner .c{font-size:.85rem;color:var(--t1)}
+.injury-banner .sub{font-size:.7rem;color:var(--t2);margin-top:4px}
+
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;font-family:'JetBrains Mono',monospace}
+.cal-cell{aspect-ratio:1;border:1px solid var(--border);border-radius:4px;padding:4px;font-size:.55rem;background:var(--card);display:flex;flex-direction:column;justify-content:space-between}
+.cal-cell.past-done{background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.3)}
+.cal-cell.past-miss{background:rgba(239,68,68,.06);border-color:rgba(239,68,68,.2)}
+.cal-cell.today{border-color:var(--primary);background:rgba(34,211,238,.1)}
+.cal-cell.race{background:rgba(245,158,11,.12);border-color:var(--amber)}
+.cal-cell .d{font-weight:600;color:var(--t2)}
+.cal-cell .s{font-size:.5rem;color:var(--t3);margin-top:auto}
+
+.evolution{background:rgba(34,211,238,.04);border:1px solid rgba(34,211,238,.18);border-radius:6px;padding:14px 16px;margin-top:16px}
+.evolution .t{font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--primary);font-weight:600;margin-bottom:6px}
+.evolution .c{font-size:.78rem;color:var(--t1);line-height:1.55}
+
+.footer{margin-top:24px;padding:12px 0;border-top:1px solid var(--border);font-size:.6rem;color:var(--t3);text-align:center}
+
+@media(max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}}
+@media(max-width:600px){html{font-size:14px}.main{padding:10px 12px}.kpis{grid-template-columns:repeat(2,1fr)}.cal-cell{font-size:.5rem}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div>
+    <h1><b>my-training</b> <span style="color:var(--t3);font-weight:400;font-size:.85rem">Theo · {{WEEK_LABEL}}</span></h1>
+    <div class="brand">Cycle {{CYCLE_N}} · {{DATE}}</div>
+  </div>
+  <div class="meta">
+    <span><span class="dot"></span>Synced {{ASOF}}</span>
+    <span>Imfolozi <b style="color:var(--primary)">{{DAYS_TO_IMFOLOZI}}d</b></span>
+    <span>Absa <b style="color:var(--accent)">{{DAYS_TO_ABSA}}d</b></span>
+  </div>
+</div>
+
+<div class="nav" role="tablist">
+  <button class="nav-btn active" onclick="show('today',this)">Today</button>
+  <button class="nav-btn" onclick="show('week',this)">This Week</button>
+  <button class="nav-btn" onclick="show('recent',this)">Last 7 Days</button>
+  <button class="nav-btn" onclick="show('races',this)">Races</button>
+  <button class="nav-btn" onclick="show('trends',this)">Trends</button>
+  <button class="nav-btn" onclick="show('next',this)">Next 4 Weeks</button>
+  <button class="nav-btn" onclick="show('overview',this)">3-Month Overview</button>
+</div>
+
+<div class="main">
+
+<!-- KPIs always visible -->
+<div class="kpis">
+  <div class="kpi"><div class="l">This Week</div><div class="v">{{WEEK_HOURS}}h</div><div class="d">{{WEEK_KM}} km</div></div>
+  <div class="kpi"><div class="l">Adherence</div><div class="v">{{ADHERENCE_PCT}}%</div><div class="d">{{ADHERENCE_FRAC}} sessions</div></div>
+  <div class="kpi"><div class="l">Run KM (4wk)</div><div class="v">{{RUN_KM_4WK}}</div><div class="d">{{RUN_KM_TREND}}</div></div>
+  <div class="kpi"><div class="l">Bike KM (4wk)</div><div class="v">{{BIKE_KM_4WK}}</div><div class="d">{{BIKE_KM_TREND}}</div></div>
+  <div class="kpi"><div class="l">Foot</div><div class="v" style="color:var(--green)">{{FOOT_STATUS}}</div><div class="d">{{FOOT_LAST}}</div></div>
+</div>
+
+<!-- Foot/Injury banner -->
+{{INJURY_BANNER}}
+
+<!-- PANEL: Today -->
+<div class="panel active" id="panel-today">
+  <div class="today-card">
+    <div class="label">Today's session — {{DATE}}</div>
+    <div class="session">{{TODAY_SESSION_NAME}}</div>
+    <div class="detail">{{TODAY_SESSION_DETAIL}}</div>
+    <div class="meta">
+      <span>⏱ {{TODAY_SESSION_DURATION}}</span>
+      <span>💓 {{TODAY_SESSION_INTENSITY}}</span>
+    </div>
+  </div>
+</div>
+
+<!-- PANEL: This Week -->
+<div class="panel" id="panel-week">
+  <div class="card">
+    <div class="card-t">Plan vs Actual — Current Week</div>
+    <table class="mt">
+      <thead>
+        <tr><th>Day</th><th>Planned</th><th>Actual</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        {{WEEK_TABLE_ROWS}}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- PANEL: Last 7 Days -->
+<div class="panel" id="panel-recent">
+  <div class="card">
+    <div class="card-t">Activities — Last 7 Days</div>
+    <table class="mt">
+      <thead>
+        <tr><th>Date</th><th>Sport</th><th>Title</th><th>Time</th><th>Distance</th><th>Pace/Speed</th><th>RE</th></tr>
+      </thead>
+      <tbody>
+        {{ACTIVITY_TABLE_ROWS}}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- PANEL: Races -->
+<div class="panel" id="panel-races">
+  <div class="race-cards">
+    {{RACE_CARDS}}
+  </div>
+</div>
+
+<!-- PANEL: Trends -->
+<div class="panel" id="panel-trends">
+  <div class="grid2">
+    <div class="card"><div class="card-t">Weekly Volume (hrs)</div><div class="chart-wrap"><canvas id="chartVolume"></canvas></div></div>
+    <div class="card"><div class="card-t">Running KM / week</div><div class="chart-wrap"><canvas id="chartRunKm"></canvas></div></div>
+    <div class="card"><div class="card-t">Bike KM / week (road + MTB)</div><div class="chart-wrap"><canvas id="chartBikeKm"></canvas></div></div>
+    <div class="card"><div class="card-t">Longest Session / week (min)</div><div class="chart-wrap"><canvas id="chartLongest"></canvas></div></div>
+  </div>
+</div>
+
+<!-- PANEL: Next 4 Weeks -->
+<div class="panel" id="panel-next">
+  <div class="card">
+    <div class="card-t">Upcoming — Next 4 Weeks</div>
+    <table class="mt">
+      <thead>
+        <tr><th>Week</th><th>Key Sessions</th><th>Long Ride/Run</th><th>Race</th></tr>
+      </thead>
+      <tbody>
+        {{NEXT_4_WEEKS_TABLE}}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- PANEL: 3-Month Overview -->
+<div class="panel" id="panel-overview">
+  <div class="card">
+    <div class="card-t">3-Month Calendar (planned + completed)</div>
+    <div class="cal-grid">
+      {{CALENDAR_GRID}}
+    </div>
+  </div>
+</div>
+
+<div class="evolution">
+  <div class="t">Cycle {{CYCLE_N}} note</div>
+  <div class="c">{{EVOLUTION_NOTE}}</div>
+</div>
+
+<div class="footer">
+  my-training · Cycle {{CYCLE_N}} · Generated {{ASOF}} · Synced from Strava · Pushed to theo-training-log
+</div>
+
+</div>
+
+<script>
+function show(id, btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+// Chart.js config inlined by build
+{{CHARTS_SCRIPT}}
+</script>
+
+</body>
+</html>
