@@ -4,8 +4,7 @@ on:
   schedule:
     # 02:07 UTC = 04:07 SAST. Off the :00 minute mark on purpose (less GitHub Actions queue contention).
     - cron: "7 2 * * *"
-  workflow_dispatch:
-    # Allow manual run from the Actions tab
+  workflow_dispatch: {}
 
 permissions:
   contents: write
