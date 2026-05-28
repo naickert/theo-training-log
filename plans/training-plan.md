@@ -1,7 +1,7 @@
 ---
 date: 2026-04-18
-updated: 2026-05-27
-tags: [running, cycling, mtb, 10k, training-plan, fitness, ballito, imfolozi, plantar-fasciitis]
+updated: 2026-05-28
+tags: [running, cycling, mtb, 10k, road-cycling, training-plan, fitness, ballito, imfolozi, amashova, hollywoodbets, plantar-fasciitis]
 source: /Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running
 type: plan
 created_by: Claude
@@ -9,14 +9,16 @@ supersedes: [[10K-Sub60-Training-Calendar-Apr-Jun-2026]]
 related: [[PF-Management-Apr-2026]], [[Imfolozi-55km-Race-Prep]]
 ---
 
-# Theo Training Plan — May to July 2026
+# Theo Training Plan — May to August 2026
 
 > [!warning]
-> **Major revision 27 May 2026.** Race calendar restructured. Only two real events on the calendar now:
-> - **A-race:** Imfolozi 55 km MTB — Sat/Sun 27–28 Jun (first time at this distance)
-> - **B-race:** Absa 10K Road Run — Fri 10 Jul
+> **Major revision 28 May 2026.** Race calendar expanded — **four races now booked through end of August**:
+> - **Imfolozi 55 km MTB** — Sat 27 Jun (A) · 30 days
+> - **Absa 10K Road Run** — Fri 10 Jul (C tune-up) · 43 days
+> - **Amashova National Classic 106 km Road Cycling** — Sun 19 Jul (A peak) · 52 days
+> - **Hollywoodbets Durban 10K** — Sun 30 Aug (A — sub-60 attempt) · 94 days
 >
-> The original 20 Jun "race day" was an aspirational target date with no actual event — removed. Original 10K sub-60 attempt deferred to Sept/Oct 2026.
+> The June-July block now has **two big endurance A-races** 22 days apart. August focuses on run base to peak for sub-60 Hollywoodbets.
 
 > [!info]
 > **Foot update (27 May):** PF ~90% better. Runs on 10 May and 20 May both felt good. Daily prehab from [[PF-Management-Apr-2026]] continues — non-negotiable until cleared by physio.
@@ -27,11 +29,16 @@ related: [[PF-Management-Apr-2026]], [[Imfolozi-55km-Race-Prep]]
 
 | Date | Event | Priority | Target |
 |---|---|---|---|
-| **Sat 27 Jun*** | **Imfolozi 55 km MTB** | **A — peak event** | Finish strong, ~4 hr, fuel + pace right |
-| **Fri 10 Jul** | Absa 10K Road | B — real race | ~1:02–1:05 if foot & fitness hold |
-| Sept/Oct | Real sub-60 10K attempt | Season goal | <60:00 |
+| **Sat 27 Jun** | **Imfolozi 55 km MTB** | **A — peak event** | Finish strong, ~4 hr, fuel + pace right |
+| Fri 10 Jul | Absa 10K Road | C — tune-up only | Easy effort, ~1:08–1:10, prep for Amashova 9 days later |
+| **Sun 19 Jul** | **Amashova 106 km Road Cycling** | **A — peak event** | Finish strong, ~4–4.5 hr, fuel discipline |
+| **Sun 30 Aug** | **Hollywoodbets Durban 10K** | **A — season goal** | **Sub-60:00** (5:59/km) |
 
-*Assumed single-day Saturday — **confirm Imfolozi format** (1 day vs 2-day stage) and update if wrong.
+**Notes:**
+- *Imfolozi format* — single day Sat (assumed) — confirm with organisers
+- *Amashova* — registered Open/Seeded, PMB → Durban, R800 entry, race pack collection 17–18 Jul at expo
+- *Hollywoodbets* — registered, race pack 27–29 Aug at Hollywoodbets Kingsmead, race number via SMS/WhatsApp race week
+- *Absa* — was originally a B-race target; now demoted to a recovery tune-up between Imfolozi and Amashova
 
 ---
 
@@ -175,91 +182,182 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 
 ---
 
-## Week 15 (29 Jun – 5 Jul) — Recovery + Absa 10K build
+## Phase 4 — Amashova Road Cycling Build (29 Jun – 19 Jul)
 
-> [!warning]
-> **Bike drops to recovery only this week.** Running gets emphasis for Absa 10K on Fri 10 Jul. Listen to the body — if MTB race was hard, push run sessions back a day.
+> [!important]
+> **Pivot from MTB to road cycling immediately after Imfolozi.** Amashova is 106 km of road, hilly, ~4–4.5 hr. You need 2 long road rides at 80+ km before race day. Absa 10K is a recovery tune-up — DO NOT race it.
+
+### Week 15 (29 Jun – 5 Jul) — Recovery + Amashova road build start
 
 | Day | Date | Session | Details |
 |---|---|---|---|
-| Mon | 29 Jun | Rest | |
-| Tue | 30 Jun | Weights — light | |
+| Mon | 29 Jun | Rest | Recovery from Imfolozi |
+| Tue | 30 Jun | Weights — light upper/core | No legs |
 | Wed | 1 Jul | Easy run 5 km on grass | HR ≤155 — foot test post-MTB |
 | Thu | 2 Jul | Weights | |
-| Fri | 3 Jul | Easy run 6 km | HR ≤160 |
-| Sat | 4 Jul | Run — short tempo | 2 km WU + 4 km @ 6:15–6:30/km + 2 km CD. **First quality run since April — go easy if anything twinges.** |
-| Sun | 5 Jul | Rest OR 30 min easy spin | |
+| Fri | 3 Jul | Easy road bike 60 min | HR ≤155, road bike (not MTB) — get reacquainted |
+| Sat | 4 Jul | **Long road bike — 70 km** | Hilly route, RPE 5–6, nutrition rehearsal. **First long road ride for Amashova.** |
+| Sun | 5 Jul | Easy 30 min run OR rest | Recovery |
 
----
-
-## Week 16 (6–10 Jul) — ABSA 10K RACE WEEK
+### Week 16 (6–12 Jul) — Amashova volume peak
 
 | Day | Date | Session | Details |
 |---|---|---|---|
 | Mon | 6 Jul | Easy run 4 km | HR ≤155 |
 | Tue | 7 Jul | Weights — light | |
-| Wed | 8 Jul | 3 km easy + 4 × 100m strides | Race pace feels |
-| Thu | 9 Jul | Rest | Hydrate, sleep |
-| Fri | 10 Jul | **ABSA 10K ROAD RACE** | See pacing below |
-| Sat | 11 Jul | Rest | |
-| Sun | 12 Jul | Easy 30 min run or spin | Recovery |
+| Wed | 8 Jul | Bike intervals — 5 × 5 min @ HR 165–175 / 2 min easy | ~70 min total |
+| Thu | 9 Jul | Rest | Pre-Absa shake |
+| Fri | 10 Jul | **ABSA 10K — tune-up only** | Easy effort ~6:50/km, HR ≤160. **Do not race.** Treat as supported long run. |
+| Sat | 11 Jul | Easy 30 min spin | Active recovery |
+| Sun | 12 Jul | **Long road bike — 85–90 km** | Race-similar terrain. Race kit dress rehearsal. Eat the full plan. |
+
+### Week 17 (13–19 Jul) — AMASHOVA RACE WEEK
+
+| Day | Date | Session | Details |
+|---|---|---|---|
+| Mon | 13 Jul | Easy 30 min spin | |
+| Tue | 14 Jul | Weights — light upper only | |
+| Wed | 15 Jul | Bike 45 min + 3 × 2 min openers | Race pace feel |
+| Thu | 16 Jul | Rest | |
+| Fri | 17 Jul | 30 min easy spin + openers | Pack collection at expo |
+| Sat | 18 Jul | Rest. Travel to start area. | Hydrate, sleep |
+| Sun | 19 Jul | **AMASHOVA 106 km ROAD CYCLING** | See pacing below |
 
 ---
 
-## Race Day Pacing — Fri 10 Jul Absa 10K
+## Phase 5 — Hollywoodbets Sub-60 Run Build (20 Jul – 30 Aug)
 
-> [!note]
-> Target depends on how the foot and the W15 tempo went. Three scenarios:
->
-> | Scenario | Target | Av pace |
-> |---|---|---|
-> | Foot clean + W15 tempo felt strong | **1:02:00** | 6:12/km |
-> | Foot ok + W15 tempo manageable | **1:05:00** | 6:30/km |
-> | Anything grumbling | **Finish ~1:08** | 6:48/km, RPE control |
+> [!important]
+> **6 weeks to peak for sub-60.** Two weeks of run rebuild after Amashova, then 4 weeks of run-specific work culminating in the race. Sub-60 means **5:59/km average pace for 10K** — non-trivial. Need to do real interval and tempo work.
+
+### Week 18 (20–26 Jul) — Recovery + run reintroduction
+
+| Day | Date | Session | Details |
+|---|---|---|---|
+| Mon | 20 Jul | Rest | Day 1 recovery from Amashova |
+| Tue | 21 Jul | Easy 30 min spin OR walk | Active recovery only |
+| Wed | 22 Jul | Easy run 4 km on grass | HR ≤155 — first run back |
+| Thu | 23 Jul | Weights — light | |
+| Fri | 24 Jul | Easy run 5 km | HR ≤155 |
+| Sat | 25 Jul | Easy 30 min spin OR rest | Foot recovery |
+| Sun | 26 Jul | Easy run 6 km | HR ≤160 |
+
+### Week 19 (27 Jul – 2 Aug) — Run base build
+
+| Day | Date | Session | Details |
+|---|---|---|---|
+| Mon | 27 Jul | Easy run 6 km | HR ≤155 |
+| Tue | 28 Jul | Weights | |
+| Wed | 29 Jul | **Strides + form** | 3 km easy + 6 × 100m strides + 1 km CD |
+| Thu | 30 Jul | Weights | |
+| Fri | 31 Jul | Easy run 6 km | HR ≤160 |
+| Sat | 1 Aug | **Long run — 10 km** | First long run since pre-PF |
+| Sun | 2 Aug | Rest OR 30 min easy spin | |
+
+### Week 20 (3–9 Aug) — Lactate threshold + intervals
+
+| Day | Date | Session | Details |
+|---|---|---|---|
+| Mon | 3 Aug | Easy run 6 km | HR ≤155 |
+| Tue | 4 Aug | Weights | |
+| Wed | 5 Aug | **Intervals: 5 × 800m @ 5:30/km** | 90 sec jog recovery. WU + CD. ~55 min total. **Key sub-60 session.** |
+| Thu | 6 Aug | Weights | |
+| Fri | 7 Aug | Tempo — 4 km @ 6:00–6:15/km | WU 2 km + tempo + 1 km CD |
+| Sat | 8 Aug | Long run 11 km — last 3 km @ 6:15/km | Race-pace finish |
+| Sun | 9 Aug | Easy 5 km OR rest | |
+
+### Week 21 (10–16 Aug) — Race-pace specificity
+
+| Day | Date | Session | Details |
+|---|---|---|---|
+| Mon | 10 Aug | Easy run 5 km | HR ≤155 |
+| Tue | 11 Aug | Weights | |
+| Wed | 12 Aug | **Intervals: 4 × 1 km @ 5:55–6:05/km** | 2 min recovery. **Race-pace rehearsal.** |
+| Thu | 13 Aug | Weights | |
+| Fri | 14 Aug | Tempo — 5 km @ 6:00/km | |
+| Sat | 15 Aug | Long run 12 km — last 4 km @ 6:00/km | |
+| Sun | 16 Aug | Rest | |
+
+### Week 22 (17–23 Aug) — Sharpening
+
+| Day | Date | Session | Details |
+|---|---|---|---|
+| Mon | 17 Aug | Easy run 5 km | HR ≤155 |
+| Tue | 18 Aug | Weights — light | |
+| Wed | 19 Aug | **Intervals: 6 × 400m @ 5:30–5:45/km** | 60 sec recovery. Sharpen the top end. |
+| Thu | 20 Aug | Weights — light | |
+| Fri | 21 Aug | Easy 4 km + 4 × 100m strides | |
+| Sat | 22 Aug | **Short tune-up: 5 km @ 6:00/km** | Solo TT. Gauge sub-60 readiness. |
+| Sun | 23 Aug | Rest | |
+
+### Week 23 (24–30 Aug) — HOLLYWOODBETS RACE WEEK
+
+| Day | Date | Session | Details |
+|---|---|---|---|
+| Mon | 24 Aug | Easy 4 km | HR ≤155 |
+| Tue | 25 Aug | Weights — very light | |
+| Wed | 26 Aug | 3 km easy + 4 × 100m strides | |
+| Thu | 27 Aug | Rest. **Race pack collection at Kingsmead.** | |
+| Fri | 28 Aug | 2 km shakeout + 2 × 30 sec at race pace | Hydrate, carb-up dinner |
+| Sat | 29 Aug | Rest. Light walk only. | Sleep early. |
+| Sun | 30 Aug | **HOLLYWOODBETS DURBAN 10K** | See sub-60 pacing below |
+
+---
+
+## Race Day Pacing — Sun 30 Aug Hollywoodbets Durban 10K (Sub-60)
+
+> [!important]
+> **Target: <60:00. Average pace 5:59/km.** This is the season's A-goal. Pacing must be disciplined.
 
 ### Pre-Race Protocol
-- 2 hr before: light breakfast (banana + toast/honey OR rugby bar)
-- 90 min before: 500 ml water over the hour
-- 20 min before: 10 min easy jog (HR 130–145) + 4 × 100m strides + 2 min walk
-- 3 min before: final strides, get to start line
+- 2.5 hr before: full breakfast (oats + honey + banana + coffee)
+- 90 min before: 500 ml water
+- 30 min before: 10 min easy jog + 4 × 100m strides
+- 1 gel 15 min before start
 
-### Primary Pacing — Target 1:05:00 (6:30/km)
+### Primary Pacing — Sub-60 (5:59/km)
 
-| Km | Target Pace | HR Cap | Cumulative | Notes |
+| Km | Target | HR Cap | Cumulative | Notes |
 |---|---|---|---|---|
-| 1 | **6:45** | ≤170 | 6:45 | **Deliberately easy.** Resist adrenaline. |
-| 2 | 6:35 | ≤175 | 13:20 | Settle in |
-| 3 | 6:30 | ≤180 | 19:50 | Locked in |
-| 4 | 6:30 | ≤180 | 26:20 | Halfway approaches |
-| 5 | 6:30 | ≤182 | 32:50 | Halfway done |
-| 6 | 6:28 | ≤183 | 39:18 | Slight squeeze |
-| 7 | 6:28 | ≤185 | 45:46 | **This is where you broke on 18 Apr. Hold form.** |
-| 8 | 6:25 | ≤187 | 52:11 | Start building |
-| 9 | 6:20 | ≤190 | 58:31 | Push |
-| 10 | 6:15 | ≤198 | 1:04:46 | Empty tank |
+| 1 | **6:10** | ≤175 | 6:10 | **Controlled.** Ignore adrenaline. |
+| 2 | 6:05 | ≤180 | 12:15 | Settle in |
+| 3 | 6:00 | ≤183 | 18:15 | Race pace |
+| 4 | 6:00 | ≤185 | 24:15 | Stay present |
+| 5 | 6:00 | ≤186 | 30:15 | Halfway — controlled |
+| 6 | 5:58 | ≤188 | 36:13 | Slight push |
+| 7 | 5:58 | ≤189 | 42:11 | **The wall day — DO NOT slow** |
+| 8 | 5:55 | ≤192 | 48:06 | Build |
+| 9 | 5:50 | ≤195 | 53:56 | Dig |
+| 10 | 5:45 | ≤198 | 59:41 | Empty tank |
 
-**Target: 1:05:00. Buffer: 14 sec.**
+**Projected: 59:41. Buffer under 60:00: 19 sec.**
 
-### Stretch — 1:02:00 (only if W15 tempo felt comfortable)
+### Sub-60 Discipline Rules
+1. **Km 1 MUST be 6:10 or slower.** If you hit under 6:00 in km 1, pull back hard.
+2. **HR ceiling until km 7 = 189.** Above that, slow down.
+3. **Push only after km 7.** The back half wins the race.
+4. **No surge before km 6.** Adrenaline lies.
 
-| Km | Target | Cum |
-|---|---|---|
-| 1 | 6:25 | 6:25 |
-| 2 | 6:15 | 12:40 |
-| 3 | 6:12 | 18:52 |
-| 4 | 6:12 | 25:04 |
-| 5 | 6:10 | 31:14 |
-| 6 | 6:10 | 37:24 |
-| 7 | 6:08 | 43:32 |
-| 8 | 6:05 | 49:37 |
-| 9 | 6:00 | 55:37 |
-| 10 | 5:50 | 1:01:27 |
+---
 
-### Pace Discipline Rules
-1. **Km 1 MUST be slower than target average.**
-2. **HR ceiling until km 7 = 188.** Above that, slow down.
-3. **Only push after km 7.** Earn the back-half surge.
-4. **GPS drift is 2–3% long.** Check at km markers.
+## Race Day Pacing — Sun 19 Jul Amashova 106 km
+
+> [!important]
+> **Target: finish strong, ~4–4.5 hr.** First-time 106 km road. Pacing first hour is everything.
+
+### Effort plan
+| Phase | Km | Effort | HR | Feel |
+|---|---|---|---|---|
+| Settle | 0–30 (Hr 0–1) | RPE 5–6 | ≤150 | Conversational, stay in groups |
+| Steady | 30–70 (Hr 1–2.5) | RPE 6–7 | 150–165 | Working, eating & drinking |
+| Race | 70–95 (Hr 2.5–3.5) | RPE 7 | 160–170 | Picking off riders |
+| Empty | 95–106 (Hr 3.5+) | RPE 8 | 165+ | Last 10 km — give what's left |
+
+### Discipline
+1. **First hour HR ≤150.** Set Garmin alarm.
+2. **Eat by clock**, every 30 min from 0:30. Gel/bar/banana.
+3. **Drink** 1 bottle/hr minimum.
+4. **No hero moves at km 40–60.** Most blow-ups happen there.
 
 ---
 
@@ -272,18 +370,27 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 - [ ] **Sat 13 Jun (W12)** — 50 km dress rehearsal, kit + nutrition tested
 - [ ] **Sun 21 Jun (W13)** — 8–10 km foot test run, finished healthy
 - [ ] **Sat 27 Jun (W14)** — **IMFOLOZI 55 km MTB**
-- [ ] **Fri 10 Jul (W16)** — Absa 10K (target 1:02–1:05)
+- [ ] **Sat 4 Jul (W15)** — 70 km road bike completed (Amashova build start)
+- [ ] **Fri 10 Jul (W16)** — Absa 10K easy (≤1:10), foot clean
+- [ ] **Sun 12 Jul (W16)** — 85–90 km road bike (Amashova dress rehearsal)
+- [ ] **Sun 19 Jul (W17)** — **AMASHOVA 106 km ROAD CYCLING**
+- [ ] **Wed 5 Aug (W20)** — 5 × 800m sub-60 session at 5:30/km
+- [ ] **Wed 12 Aug (W21)** — 4 × 1 km at 5:55–6:05/km (race pace)
+- [ ] **Sat 22 Aug (W22)** — 5 km tune-up @ 6:00/km
+- [ ] **Sun 30 Aug (W23)** — **HOLLYWOODBETS 10K · SUB-60 ATTEMPT**
 
 ---
 
 ## What Will Derail This Plan
 
-1. **Turning the Sun 21 Jun long run into a time trial.** It's a foot test, not a race. Easy pace only — Imfolozi is 6 days later.
+1. **Treating Absa 10K as a real race.** It's a recovery tune-up between Imfolozi and Amashova 9 days later. Easy effort only.
 2. **Going too hard at Imfolozi km 5–15.** First-time 55 km MTB → most blow-ups are in the first hour. Conversational effort.
-3. **Skipping nutrition rehearsal on 13 Jun.** First time you fuel a 3+ hr ride is NOT on race day.
-4. **Re-flaring the foot** by skipping prehab or running too fast on "easy" days. HR ≤155 is the rule.
-5. **Compounding fatigue from back-to-back hard days.** Tue/Thu = weights only by design. Don't add cardio on those days.
-6. **Going back to the Mar–Apr running-heavy schedule too soon.** Sub-60 is in Sept/Oct, not 10 Jul.
+3. **Going too hard at Amashova km 30–60.** Same rule on the road bike. First hour HR ≤150.
+4. **Skipping the long road rides 4 Jul and 12 Jul.** First 90 km road ride must NOT be Amashova race day.
+5. **Skipping the sub-60 interval sessions (Wed 5 Aug, Wed 12 Aug).** Lactate tolerance is what holds 5:59/km past km 7.
+6. **Going out too fast on Hollywoodbets km 1.** Same lesson as 18 Apr — must be 6:10 or slower.
+7. **Re-flaring the foot** by skipping prehab or running too fast on "easy" days. HR ≤155 is the rule.
+8. **Compounding fatigue from back-to-back hard days.** Tue/Thu = weights only by design. Don't add cardio on those days.
 
 ---
 
