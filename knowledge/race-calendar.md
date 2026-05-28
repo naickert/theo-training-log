@@ -30,7 +30,17 @@ Each race is a YAML entry. Required fields: `name`, `date` (YYYY-MM-DD), `type`,
   distance_km: 10
   priority: B
   target: 1:02–1:05 (foot & fitness dependent)
-  notes: Real road race test post-Imfolozi recovery.
+  notes: Real road race test post-Imfolozi recovery. Tune-up before Amashova 9 days later.
+
+- name: Amashova National Classic
+  date: 2026-07-19
+  type: Road Cycling
+  distance_km: 106
+  priority: A
+  location: Pietermaritzburg → Durban, KZN
+  start_time: Sunday morning (TBC)
+  target: Finish strong, ~4-4.5 hr
+  notes: Registered Open/Seeded (R800). Entry WEB-5235-854733, Payment WEB_2143719. R140 permanent FinishTime board + R70 CSA day licence. Famous PMB→Durban road race. 22 days after Imfolozi MTB, 9 days after Absa 10K.
 
 - name: Hollywoodbets Durban 10K
   date: 2026-08-30
