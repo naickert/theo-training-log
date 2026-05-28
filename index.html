@@ -133,10 +133,9 @@
   @media(max-width:900px){.today-row{grid-template-columns:1fr}}
   .today-row > .today-card,.today-row > .foot-banner{margin-bottom:0;align-self:stretch}
 
-  /* MAIN 3-COLUMN: Week | Races | Calendar */
-  .main-3col{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:10px;margin-bottom:10px;align-items:start}
-  @media(max-width:1200px){.main-3col{grid-template-columns:1fr 1fr}.main-3col .col:nth-child(3){grid-column:span 2}}
-  @media(max-width:760px){.main-3col{grid-template-columns:1fr}.main-3col .col:nth-child(3){grid-column:1}}
+  /* MAIN 2-COLUMN: Week | Races */
+  .main-3col{display:grid;grid-template-columns:2fr 1fr;gap:10px;margin-bottom:10px;align-items:start}
+  @media(max-width:760px){.main-3col{grid-template-columns:1fr}}
   .main-3col .col{min-width:0;display:flex;flex-direction:column}
   .main-3col .col > .week-card,.main-3col .col > .race-grid,.main-3col .col > .cal-card{margin-bottom:0}
   .main-3col .race-grid{grid-template-columns:1fr;gap:8px}
@@ -600,22 +599,10 @@
         <div class="race-card primary"><span class="race-priority">A-Race · Peak</span><h3 class="race-name">Imfolozi 55 km MTB</h3><div class="race-date">Saturday 27 June 2026 · iMfolozi Game Reserve, KZN</div><div class="race-countdown-row"><span class="race-countdown">30</span><span class="race-countdown-unit">days to go</span></div><p class="race-target"><strong>Finish strong, ~4 hr</strong></p></div><div class="race-card secondary"><span class="race-priority">B-Race</span><h3 class="race-name">Absa 10K Road</h3><div class="race-date">Friday 10 July 2026</div><div class="race-countdown-row"><span class="race-countdown">43</span><span class="race-countdown-unit">days to go</span></div><p class="race-target"><strong>1:02–1:05 (foot &amp; fitness dependent)</strong></p></div><div class="race-card secondary"><span class="race-priority">Season Goal</span><h3 class="race-name">Sub-60 10K attempt</h3><div class="race-date">Wednesday 30 September 2026</div><div class="race-countdown-row"><span class="race-countdown">125</span><span class="race-countdown-unit">days to go</span></div><p class="race-target"><strong>&lt;60:00</strong></p></div>
       </div>
     </div>
-    <div class="col">
-      <div class="sec">
-        <h3>90-day overview</h3>
-        <span class="sec-meta">Past · today · upcoming</span>
-      </div>
-      <div class="cal-card">
-        <div class="cal-head">
-          <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
-        </div>
-        <div class="cal-grid" id="calGrid"></div>
-      </div>
-    </div>
   </div>
 
   <div class="footer">
-    Updated 2026-05-28T04:40:10Z · Strava → GitHub Actions · <a href="https://github.com/naickert/theo-training-log">theo-training-log</a>
+    Updated 2026-05-28T04:42:08Z · Strava → GitHub Actions · <a href="https://github.com/naickert/theo-training-log">theo-training-log</a>
   </div>
 
 </div>

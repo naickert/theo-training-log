@@ -133,10 +133,9 @@
   @media(max-width:900px){.today-row{grid-template-columns:1fr}}
   .today-row > .today-card,.today-row > .foot-banner{margin-bottom:0;align-self:stretch}
 
-  /* MAIN 3-COLUMN: Week | Races | Calendar */
-  .main-3col{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:10px;margin-bottom:10px;align-items:start}
-  @media(max-width:1200px){.main-3col{grid-template-columns:1fr 1fr}.main-3col .col:nth-child(3){grid-column:span 2}}
-  @media(max-width:760px){.main-3col{grid-template-columns:1fr}.main-3col .col:nth-child(3){grid-column:1}}
+  /* MAIN 2-COLUMN: Week | Races */
+  .main-3col{display:grid;grid-template-columns:2fr 1fr;gap:10px;margin-bottom:10px;align-items:start}
+  @media(max-width:760px){.main-3col{grid-template-columns:1fr}}
   .main-3col .col{min-width:0;display:flex;flex-direction:column}
   .main-3col .col > .week-card,.main-3col .col > .race-grid,.main-3col .col > .cal-card{margin-bottom:0}
   .main-3col .race-grid{grid-template-columns:1fr;gap:8px}
@@ -598,18 +597,6 @@
       </div>
       <div class="race-grid">
         {{RACES_HTML}}
-      </div>
-    </div>
-    <div class="col">
-      <div class="sec">
-        <h3>90-day overview</h3>
-        <span class="sec-meta">Past · today · upcoming</span>
-      </div>
-      <div class="cal-card">
-        <div class="cal-head">
-          <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
-        </div>
-        <div class="cal-grid" id="calGrid"></div>
       </div>
     </div>
   </div>
