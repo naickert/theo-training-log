@@ -418,15 +418,15 @@ def render_foot_text(text: str) -> str:
     status_line = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", status_line)
     # Strip "See [doc]" trailing fragments
     status_line = re.sub(r"\s*See\s+[A-Z][\w-]+.*$", "", status_line, flags=re.IGNORECASE)
-    # Cap at ~140 chars on a sentence boundary if longer
-    if len(status_line) > 140:
+    # Cap at ~90 chars on a sentence boundary
+    if len(status_line) > 90:
         sentences = re.split(r"(?<=[.!?])\s+", status_line)
         out, total = [], 0
         for s in sentences:
-            if total + len(s) > 140:
+            if total + len(s) > 90 and out:
                 break
             out.append(s); total += len(s) + 1
-        status_line = " ".join(out) if out else status_line[:140] + "…"
+        status_line = " ".join(out)
     return _esc(status_line.strip())
 
 

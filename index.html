@@ -169,7 +169,7 @@
   .today-circle svg{width:60px;height:60px;stroke:#0a0d0c;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
   @media(max-width:560px){.today-card{grid-template-columns:1fr}.today-circle{width:90px;height:90px;margin:0 auto}.today-circle svg{width:46px;height:46px}}
 
-  /* FOOT STATUS BANNER — always stacked on narrow, side-by-side on wide */
+  /* FOOT STATUS BANNER — always stacked: text on top, scale full-width below */
   .foot-banner{
     background:var(--card);
     border:1px solid var(--line);
@@ -181,14 +181,6 @@
     flex-direction:column;
     gap:14px;
   }
-  @media(min-width:760px){
-    .foot-banner-interactive{
-      display:grid;
-      grid-template-columns:1fr auto;
-      gap:24px;
-      align-items:center;
-    }
-  }
   .foot-info{min-width:0}
   .foot-label{font-size:11px;color:var(--lime);font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:4px}
   .foot-text{font-size:13px;color:var(--text);line-height:1.45}
@@ -198,9 +190,8 @@
   .foot-score small{font-size:14px;color:var(--text-2);font-weight:600}
   .foot-score-sub{font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-top:2px}
 
-  /* Pain scale */
-  .foot-scale{display:flex;flex-direction:column;gap:6px;width:100%}
-  @media(min-width:760px){.foot-scale{min-width:340px}}
+  /* Pain scale — full width below the text */
+  .foot-scale{display:flex;flex-direction:column;gap:6px;width:100%;padding-top:8px;border-top:1px dashed var(--line)}
   .foot-scale-row{display:grid;grid-template-columns:repeat(11,1fr);gap:4px}
   .pain-btn{
     -webkit-appearance:none;appearance:none;
@@ -491,7 +482,7 @@
   <div class="foot-banner foot-banner-interactive">
     <div class="foot-info">
       <div class="foot-label">Foot · Right Plantar Fasciitis</div>
-      <div class="foot-text">Resolving. ~90% recovered. Prehab protocol still daily (plantar fascia stretch, frozen bottle roll, calf stretches, eccentric heel drops).</div>
+      <div class="foot-text">Resolving. ~90% recovered.</div>
       <div class="foot-meta" id="footMeta">Tap a number to log today's pain</div>
     </div>
     <div class="foot-scale">
@@ -580,7 +571,7 @@
   </div>
 
   <div class="footer">
-    Updated 2026-05-28T03:25:23Z · Strava → GitHub Actions · <a href="https://github.com/naickert/theo-training-log">theo-training-log</a>
+    Updated 2026-05-28T04:14:44Z · Strava → GitHub Actions · <a href="https://github.com/naickert/theo-training-log">theo-training-log</a>
   </div>
 
 </div>
