@@ -14,15 +14,16 @@ Each race is a YAML entry. Required fields: `name`, `date` (YYYY-MM-DD), `type`,
 ## Active Races
 
 ```yaml
-- name: Imfolozi 55 km MTB
+- name: Imfolozi 55 km MTB (Stage Race)
   date: 2026-06-27
   type: MTB
   distance_km: 55
   priority: A
-  target: Finish strong, ~4 hr
-  location: iMfolozi Game Reserve, KZN
+  target: Finish strong both stages
+  location: Hluhluwe-iMfolozi Game Reserve, KZN
+  start_time: 07h30 both days
   prep_doc: /Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running/Imfolozi-55km-Race-Prep.md
-  notes: First time at this distance. Format (1-day vs 2-day stage) to be confirmed with organisers.
+  notes: CONFIRMED 2-day stage race. Stage 1 Sat 27 Jun = 40km. Stage 2 Sun 28 Jun = 15km. Registration Fri 26 Jun 13h00-20h00 at race village. R1650 entry. Water tables + medical on route. Sundowners + live music Saturday evening.
 
 - name: Absa 10K Road
   date: 2026-07-10

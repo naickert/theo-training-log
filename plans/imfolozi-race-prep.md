@@ -10,9 +10,15 @@ related: [[Theo 3 Month Training Plan]], [[PF-Management-Apr-2026]]
 # Imfolozi 55 km MTB — Race Prep
 
 > [!important]
-> **Race date:** Sat 27 Jun 2026 (assumed single-day — **confirm format with race organisers**)
-> **Distance:** 55 km MTB
-> **First time at this distance.** Longest ride this year: 24 km / 1:32 on 2 May. Plan bridges that gap with 4 progressive long rides (30 → 40 → 50 km) over the 4 Saturdays before race day.
+> **CONFIRMED format (28 May 2026, source: imfolozimtb.co.za/race-info):**
+> - **Stage 1: Sat 27 Jun 2026 — 40 km · 07h30 start**
+> - **Stage 2: Sun 28 Jun 2026 — 15 km · 07h30 start**
+> - **Two-day stage race, total 55 km.**
+>
+> Registration Fri 26 Jun 13h00–20h00 at race village (Hluhluwe-iMfolozi Game Reserve).
+> R1,650 entry (paid). Water tables both days. Medical on route. Sundowners + live music Saturday evening.
+>
+> First time at this distance. Longest ride this year: 24 km / 1:32 on 2 May. Plan bridges to 40 km Saturday + 15 km Sunday via a stage-simulation dress rehearsal on 13–14 Jun.
 
 ---
 
@@ -31,13 +37,15 @@ The plan is conservative on purpose:
 
 ## Long-Ride Progression
 
-| Sat | Distance | Time est | Focus |
+| Date | Distance | Time est | Focus |
 |---|---|---|---|
-| 30 May (W10) | 30 km | ~2 hr | Re-base. RPE 5–6. Same terrain as 2 May. |
-| 6 Jun (W11) | 40 km | ~2:30 | Add elevation. Start nutrition practice. |
-| 13 Jun (W12) | **48–50 km** | **~3 hr** | **DRESS REHEARSAL** — race kit, race bike, race nutrition. |
-| 20 Jun (W13) | 25–30 km | ~1:45 | Moderate ride, race-route familiarisation if possible. Freshen for race. |
-| 27 Jun (W14) | **55 km RACE** | ~4 hr | Imfolozi |
+| Sat 30 May (W10) | 30 km | ~2 hr | Re-base. RPE 5–6. Same terrain as 2 May. |
+| Sat 6 Jun (W11) | 40 km | ~2:30 | Add elevation. Start nutrition practice. |
+| **Sat 13 Jun (W12)** | **40 km** | **~2:30** | **STAGE 1 SIM — dress rehearsal in race kit.** |
+| **Sun 14 Jun (W12)** | **15 km** | **~1:00** | **STAGE 2 SIM — back-to-back rhythm test.** |
+| Sat 20 Jun (W13) | 25–30 km | ~1:45 | Moderate ride. Freshen for race. |
+| **Sat 27 Jun (W14)** | **STAGE 1 — 40 km** | **~2:30** | **RACE DAY 1** |
+| **Sun 28 Jun (W14)** | **STAGE 2 — 15 km** | **~1:00** | **RACE DAY 2** |
 
 **The W12 ride is the most important session in this whole block.** Anything you discover doesn't work — chamois cream, saddle position, gels you can't stomach, hydration shortfall — you fix in the 2 weeks before race day. Discover it on race morning and your race is over.
 

@@ -27,12 +27,12 @@ related: [[PF-Management-Apr-2026]], [[Imfolozi-55km-Race-Prep]]
 
 ## Race Calendar
 
-| Date | Event | Priority | Target |
-|---|---|---|---|
-| **Sat 27 Jun** | **Imfolozi 55 km MTB** | **A — peak event** | Finish strong, ~4 hr, fuel + pace right |
-| Fri 10 Jul | Absa 10K Road | C — tune-up only | Easy effort, ~1:08–1:10, prep for Amashova 9 days later |
-| **Sun 19 Jul** | **Amashova 106 km Road Cycling** | **A — peak event** | Finish strong, ~4–4.5 hr, fuel discipline |
-| **Sun 30 Aug** | **Hollywoodbets Durban 10K** | **A — season goal** | **Sub-60:00** (5:59/km) |
+| Date | Event | Priority | Target | Readiness req. |
+|---|---|---|---|---|
+| **Sat 27 Jun** | **Imfolozi 55 km MTB** | **A — peak event** | Finish strong, ~4 hr | Longest MTB 50 km · 150 km bike/4wk · nutrition rehearsed |
+| Fri 10 Jul | Absa 10K Road | C — tune-up only | Easy effort, ~1:08–1:10 | 8+ km easy run done · foot ≥85% |
+| **Sun 19 Jul** | **Amashova 106 km Road Cycling** | **A — peak event** | Finish strong, ~4–4.5 hr | Longest road 90 km · 200 km bike/4wk · nutrition + spares rehearsed |
+| **Sun 30 Aug** | **Hollywoodbets Durban 10K** | **A — season goal** | **Sub-60:00** (5:59/km) | 5 km @ 6:00/km solo · 1km intervals @ 5:55 done · 30 km run/4wk |
 
 **Notes:**
 - *Imfolozi format* — single day Sat (assumed) — confirm with organisers
@@ -127,10 +127,10 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 
 ---
 
-## Week 12 (8–14 Jun) — Peak Imfolozi prep week
+## Week 12 (8–14 Jun) — Peak Imfolozi prep week (STAGE SIMULATION)
 
 > [!important]
-> **Saturday is the dress rehearsal.** 48–50 km MTB at race-similar terrain, fully kitted as you'd race. Nutrition, hydration, spares — test everything.
+> **Stage-race dress rehearsal weekend.** Sat = Stage 1 simulation (40 km), Sun = Stage 2 simulation (15 km). Race kit, race bike, race nutrition. This is the ONLY back-to-back ride before race day.
 
 | Day | Date | Session | Details |
 |---|---|---|---|
@@ -139,7 +139,8 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 | Wed | 10 Jun | **Bike intervals** | 15 min WU + 4 × 8 min @ HR 165–175 (RPE 7–8) / 3 min easy + 10 min CD. ~70 min. |
 | Thu | 11 Jun | Weights | |
 | Fri | 12 Jun | Bike tempo | 15 min WU + 30 min steady + 10 min CD |
-| Sat | 13 Jun | **Long MTB — 48–50 km / DRESS REHEARSAL** | Race kit, race bike, race nutrition. RPE 5–6 first 2 hr then RPE 6–7 last 30 min. ~3 hr. |
+| Sat | 13 Jun | **STAGE 1 SIM — 40 km MTB / DRESS REHEARSAL** | Race kit, race bike, race nutrition. RPE 5–6 first half then RPE 6–7 last third. ~2:30. |
+| Sun | 14 Jun | **STAGE 2 SIM — 15 km MTB** | 07h30 start to simulate race-day rhythm. RPE 6–7, ~1 hr. **Test back-to-back legs.** |
 | Sun | 14 Jun | Easy 30 min spin recovery | Legs only |
 
 ---
@@ -165,20 +166,20 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 
 ---
 
-## Week 14 (22–28 Jun) — IMFOLOZI RACE WEEK
+## Week 14 (22–28 Jun) — IMFOLOZI RACE WEEK (2-DAY STAGE RACE)
 
 > [!success]
-> **Race day: Sat 27 Jun.** Full race prep, gear, and pacing in [[Imfolozi-55km-Race-Prep]].
+> **Confirmed 2-day stage race.** Stage 1 Saturday = **40 km**, Stage 2 Sunday = **15 km**. 07h30 starts both days. Registration Fri 26 Jun 13h00–20h00 at race village. Full race prep in [[Imfolozi-55km-Race-Prep]].
 
 | Day | Date | Session | Details |
 |---|---|---|---|
 | Mon | 22 Jun | Easy 30 min spin OR rest | Recovery from Sun long run |
 | Tue | 23 Jun | Weights — light | Upper/core only |
 | Wed | 24 Jun | Bike — 45 min easy + 3 × 1 min openers | Spin legs out |
-| Thu | 25 Jun | Rest | |
-| Fri | 26 Jun | Bike — 30 min easy + 2 × 30 sec openers | Pre-race shake |
-| Sat | 27 Jun | **IMFOLOZI 55 km MTB** | See race-prep doc. |
-| Sun | 28 Jun | Rest OR very easy 30 min spin | Active recovery only if legs allow |
+| Thu | 25 Jun | Rest | Pack bike + kit, hydrate |
+| Fri | 26 Jun | Travel to race village + Registration 13h00–20h00 | 20 min easy spin + 2 × 30 sec openers. Optional Friday dinner (R220 lasagne). |
+| Sat | 27 Jun | **STAGE 1 — 40 km MTB** | 07h30 start. RPE 6–7 first 2/3, RPE 7–8 last third. Save legs for Sunday. Sundowners + live music evening. |
+| Sun | 28 Jun | **STAGE 2 — 15 km MTB** | 07h30 start. Lighter day but still race effort. Bacon & egg rolls at water stations. Travel home post-race. |
 
 ---
 

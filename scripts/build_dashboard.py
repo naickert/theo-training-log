@@ -647,17 +647,18 @@ def compute_race_readiness(race: dict, activities: list[dict]) -> dict:
 
     foot_factor = 0.9  # could read from injury-log later
 
-    if "Imfolozi" in name or ("MTB" in name and race.get("distance_km", "").startswith("5")):
-        # 55km MTB — need long MTBs + bike volume
+    if "Imfolozi" in name or ("MTB" in name and str(race.get("distance_km", "")).startswith("5")):
+        # 2-day stage race: Stage 1 = 40km, Stage 2 = 15km
+        # Need: longest MTB >= 40km, bike vol, back-to-back capability
         longest_mtb = max(longest({"mtb"}), longest({"bike", "mtb"}) * 0.6)
-        long_ratio = clamp(longest_mtb / 50)
+        long_ratio = clamp(longest_mtb / 40)  # Stage 1 distance
         vol_ratio = clamp(vol_4w({"bike", "mtb"}) / 150)
-        time_ratio = clamp(days_to / 28)  # 28 days = enough prep window
+        time_ratio = clamp(days_to / 28)
         pct = (long_ratio * 40 + vol_ratio * 30 + time_ratio * 20 + foot_factor * 10)
         breakdown = [
-            ("Longest MTB", f"{longest_mtb:.0f}/50 km"),
+            ("Stage 1 readiness", f"{longest_mtb:.0f}/40 km"),
             ("Bike vol 4wk", f"{vol_4w({'bike','mtb'}):.0f}/150 km"),
-            ("Time remaining", f"{days_to} days"),
+            ("Days to start", f"{days_to}"),
         ]
     elif "Amashova" in name or ("106" in str(race.get("distance_km", ""))):
         # 106km road — need long road rides + volume
