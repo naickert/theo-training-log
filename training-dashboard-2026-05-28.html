@@ -128,6 +128,44 @@
   .spark-row{margin-top:6px;height:24px}
   .spark-row canvas{width:100% !important;height:100% !important}
 
+  /* ARC — 3-month phase strip */
+  .arc-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px}
+  @media(max-width:760px){.arc-row{grid-template-columns:1fr}}
+  .arc-phase{
+    background:var(--card);
+    border-radius:14px;
+    padding:12px 14px;
+    border:1px solid var(--line);
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    overflow:hidden;
+  }
+  .arc-phase.current{
+    background:linear-gradient(135deg,rgba(197,255,61,0.1),rgba(197,255,61,0.04));
+    border-color:var(--lime);
+  }
+  .arc-phase.done{opacity:0.6}
+  .arc-state{
+    position:absolute;top:10px;right:12px;
+    font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--text-3);
+  }
+  .arc-phase.current .arc-state{color:var(--lime)}
+  .arc-phase.done .arc-state{color:var(--text-3)}
+  .arc-name{font-size:14px;font-weight:700;letter-spacing:-0.01em;color:var(--text);padding-right:50px}
+  .arc-phase.current .arc-name{color:var(--lime)}
+  .arc-dates{font-size:10px;color:var(--text-3);font-weight:500}
+  .arc-goal{font-size:11px;color:var(--text-2);line-height:1.35;margin-top:2px}
+  .arc-progress{height:4px;background:var(--card-2);border-radius:999px;margin-top:8px;overflow:hidden}
+  .arc-progress-fill{height:100%;background:var(--lime);border-radius:999px;transition:width 1s ease-out}
+  .arc-phase.upcoming .arc-progress-fill{background:var(--text-4)}
+  .arc-phase.done .arc-progress-fill{background:var(--text-3)}
+  .arc-race{display:flex;align-items:center;gap:6px;margin-top:8px;font-size:11px;color:var(--text-2);font-weight:600;padding-top:8px;border-top:1px solid var(--line)}
+  .arc-race-icon{color:var(--amber);font-size:13px}
+  .arc-phase.current .arc-race-icon{color:var(--lime)}
+
   /* TOP ROW: Today + Foot */
   .today-row{display:grid;grid-template-columns:1.5fr 1fr;gap:10px;margin-bottom:10px}
   @media(max-width:900px){.today-row{grid-template-columns:1fr}}
@@ -544,6 +582,15 @@
 
   </div>
 
+  <!-- 3-MONTH ARC -->
+  <div class="sec">
+    <h3>The arc · May → August</h3>
+    <span class="sec-meta">3-month plan</span>
+  </div>
+  <div class="arc-row">
+    <div class="arc-phase p3 current"><div class="arc-state">Active</div><div class="arc-name">Phase 3 · Imfolozi build</div><div class="arc-dates">25 May – 28 Jun · W10–W14</div><div class="arc-goal">Build to 40 km MTB · stage rehearsal</div><div class="arc-progress"><div class="arc-progress-fill" style="width:0%"></div></div><div class="arc-race"><span class="arc-race-icon">★</span><span>Imfolozi · 27 Jun</span></div></div><div class="arc-phase p4 upcoming"><div class="arc-state">Upcoming</div><div class="arc-name">Phase 4 · Amashova pivot</div><div class="arc-dates">29 Jun – 19 Jul · W15–W17</div><div class="arc-goal">MTB → road bike · build to 90 km road</div><div class="arc-progress"><div class="arc-progress-fill" style="width:0%"></div></div><div class="arc-race"><span class="arc-race-icon">★</span><span>Amashova · 19 Jul</span></div></div><div class="arc-phase p5 upcoming"><div class="arc-state">Upcoming</div><div class="arc-name">Phase 5 · Sub-60 build</div><div class="arc-dates">20 Jul – 30 Aug · W18–W23</div><div class="arc-goal">Run base → intervals → race pace</div><div class="arc-progress"><div class="arc-progress-fill" style="width:0%"></div></div><div class="arc-race"><span class="arc-race-icon">★</span><span>Hollywoodbets · 30 Aug</span></div></div>
+  </div>
+
   <!-- TODAY + FOOT side by side on wide -->
   <div class="today-row">
     <div class="today-card">
@@ -623,7 +670,7 @@
   </div>
 
   <div class="footer">
-    Updated 2026-05-28T06:20:36Z · Strava → GitHub Actions · <a href="https://github.com/naickert/theo-training-log">theo-training-log</a>
+    Updated 2026-05-28T06:30:44Z · Strava → GitHub Actions · <a href="https://github.com/naickert/theo-training-log">theo-training-log</a>
   </div>
 
 </div>

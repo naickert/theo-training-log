@@ -894,6 +894,73 @@ def greeting_verb() -> str:
     return "Good evening"
 
 
+def render_arc(week_n: int) -> str:
+    """Render the 3-month phase timeline. week_n is the current week number."""
+    phases = [
+        {
+            "name": "Phase 3 · Imfolozi build",
+            "weeks": list(range(10, 15)),
+            "label": "W10–W14",
+            "dates": "25 May – 28 Jun",
+            "goal": "Build to 40 km MTB · stage rehearsal",
+            "race": {"name": "Imfolozi", "date": "27 Jun", "icon": "★"},
+            "class": "p3",
+        },
+        {
+            "name": "Phase 4 · Amashova pivot",
+            "weeks": list(range(15, 18)),
+            "label": "W15–W17",
+            "dates": "29 Jun – 19 Jul",
+            "goal": "MTB → road bike · build to 90 km road",
+            "race": {"name": "Amashova", "date": "19 Jul", "icon": "★"},
+            "class": "p4",
+        },
+        {
+            "name": "Phase 5 · Sub-60 build",
+            "weeks": list(range(18, 24)),
+            "label": "W18–W23",
+            "dates": "20 Jul – 30 Aug",
+            "goal": "Run base → intervals → race pace",
+            "race": {"name": "Hollywoodbets", "date": "30 Aug", "icon": "★"},
+            "class": "p5",
+        },
+    ]
+
+    cards = []
+    for p in phases:
+        is_current = week_n in p["weeks"]
+        is_past = week_n > max(p["weeks"])
+        if is_current:
+            state = "current"
+            state_label = "Active"
+        elif is_past:
+            state = "done"
+            state_label = "Done"
+        else:
+            state = "upcoming"
+            state_label = "Upcoming"
+        # Progress within phase
+        if is_current:
+            done_weeks = (week_n - min(p["weeks"]))
+            total_weeks = len(p["weeks"])
+            progress = int(round(100 * done_weeks / max(total_weeks, 1)))
+        elif is_past:
+            progress = 100
+        else:
+            progress = 0
+        cards.append(
+            f'<div class="arc-phase {p["class"]} {state}">'
+            f'<div class="arc-state">{state_label}</div>'
+            f'<div class="arc-name">{p["name"]}</div>'
+            f'<div class="arc-dates">{p["dates"]} · {p["label"]}</div>'
+            f'<div class="arc-goal">{p["goal"]}</div>'
+            f'<div class="arc-progress"><div class="arc-progress-fill" style="width:{progress}%"></div></div>'
+            f'<div class="arc-race"><span class="arc-race-icon">{p["race"]["icon"]}</span><span>{p["race"]["name"]} · {p["race"]["date"]}</span></div>'
+            f'</div>'
+        )
+    return "".join(cards)
+
+
 def build_dashboard(activities: list[dict]) -> str:
     template_text = TEMPLATE.read_text()
     plan_text = TRAINING_PLAN.read_text() if TRAINING_PLAN.exists() else ""
@@ -961,6 +1028,7 @@ def build_dashboard(activities: list[dict]) -> str:
         "{{RACES_HTML}}": render_races(races, activities),
         "{{TRENDS_HTML}}": trends_html,
         "{{DATA_JSON}}": json.dumps({"sparks": sparks, "charts": chart_data, "calendar": calendar_data}),
+        "{{ARC_HTML}}": render_arc(week_n),
     }
 
     out = template_text
