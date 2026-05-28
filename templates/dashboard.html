@@ -46,13 +46,13 @@
   .page{
     position:relative;z-index:2;
     width:100%;
-    max-width:1600px;
+    max-width:1700px;
     margin:0 auto;
-    padding:clamp(16px,3vw,40px) clamp(14px,3vw,48px) clamp(60px,8vw,120px);
+    padding:clamp(10px,1.4vw,18px) clamp(12px,1.6vw,24px);
   }
 
   /* TOP BAR — logo + tabs + profile */
-  .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:clamp(14px,1.6vw,22px)}
+  .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:10px}
   .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;letter-spacing:-0.01em}
   .brand-mark{width:32px;height:32px;border-radius:9px;background:var(--lime);display:grid;place-items:center;color:#0a0d0c;font-weight:800;font-size:14px}
   .brand-mark svg{width:18px;height:18px;stroke:#0a0d0c;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
@@ -66,10 +66,10 @@
   .avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--lime),var(--lime-2));display:grid;place-items:center;color:#0a0d0c;font-weight:700;font-size:14px;border:2px solid var(--bg)}
 
   /* GREETING + DATE */
-  .greeting-row{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;margin-bottom:clamp(18px,2vw,32px)}
-  .greeting h1{font-size:clamp(24px,3.4vw,44px);font-weight:700;letter-spacing:-0.02em;line-height:1.05}
+  .greeting-row{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;margin-bottom:10px}
+  .greeting h1{font-size:clamp(20px,2vw,28px);font-weight:700;letter-spacing:-0.02em;line-height:1.05}
   .greeting h1 .lime{color:var(--lime)}
-  .greeting-sub{font-size:14px;color:var(--text-2);margin-top:6px}
+  .greeting-sub{font-size:12px;color:var(--text-2);margin-top:2px}
   .add-event{
     display:inline-flex;align-items:center;gap:8px;
     padding:10px 16px;border-radius:999px;
@@ -88,11 +88,10 @@
 
   .card{
     background:var(--card);
-    border-radius:18px;
-    padding:clamp(14px,1.4vw,22px);
+    border-radius:14px;
+    padding:12px 14px;
     box-shadow:var(--shadow);
     position:relative;
-    transition:transform 0.2s ease;
     min-width:0;
   }
   .card.hero{
@@ -108,60 +107,50 @@
     pointer-events:none;
   }
 
-  .card-label{display:flex;align-items:center;gap:8px;color:var(--text-3);font-size:clamp(10px,0.78vw,12px);font-weight:600;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:10px}
-  .card-label .ico{width:14px;height:14px;stroke:var(--text-3);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
-  .card-value{font-size:clamp(22px,2.2vw,32px);font-weight:700;letter-spacing:-0.025em;line-height:1;color:var(--text)}
-  .card-value small{font-size:clamp(12px,1vw,16px);font-weight:600;color:var(--text-2);margin-left:2px;letter-spacing:0}
+  .card-label{display:flex;align-items:center;gap:6px;color:var(--text-3);font-size:9px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px}
+  .card-label .ico{width:12px;height:12px;stroke:var(--text-3);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+  .card-value{font-size:24px;font-weight:700;letter-spacing:-0.025em;line-height:1;color:var(--text)}
+  .card-value small{font-size:12px;font-weight:600;color:var(--text-2);margin-left:2px;letter-spacing:0}
   .card-value.lime{color:var(--lime)}
-  .card-meta{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:11px;color:var(--text-3)}
+  .card-meta{display:flex;align-items:center;gap:6px;margin-top:4px;font-size:10px;color:var(--text-3)}
   .card-meta .change-up{color:var(--lime);font-weight:600}
   .card-meta .change-dn{color:var(--rose);font-weight:600}
 
   /* Hero countdown */
-  .hero-label{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--lime);margin-bottom:10px;position:relative;z-index:1}
-  .hero-num{font-size:clamp(56px,7vw,96px);font-weight:800;color:var(--text);letter-spacing:-0.05em;line-height:0.9;position:relative;z-index:1}
-  .hero-num small{font-size:clamp(18px,1.8vw,26px);color:var(--text-2);font-weight:600;letter-spacing:-0.02em;margin-left:6px}
-  .hero-detail{font-size:clamp(12px,1vw,15px);color:var(--text-2);margin-top:8px;position:relative;z-index:1;line-height:1.4}
+  .hero-label{font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--lime);margin-bottom:4px;position:relative;z-index:1}
+  .hero-num{font-size:clamp(42px,4.4vw,60px);font-weight:800;color:var(--text);letter-spacing:-0.05em;line-height:0.9;position:relative;z-index:1}
+  .hero-num small{font-size:clamp(14px,1.2vw,18px);color:var(--text-2);font-weight:600;letter-spacing:-0.02em;margin-left:4px}
+  .hero-detail{font-size:11px;color:var(--text-2);margin-top:4px;position:relative;z-index:1;line-height:1.35}
   .hero-detail strong{color:var(--text)}
-  .hero-quote{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:clamp(11px,0.9vw,13px);color:var(--text-3);font-style:italic;line-height:1.45;position:relative;z-index:1}
+  .hero-quote{display:none}
 
   /* Sparkline cards inline */
-  .spark-row{margin-top:10px;height:36px}
+  .spark-row{margin-top:6px;height:24px}
   .spark-row canvas{width:100% !important;height:100% !important}
 
-  /* MAIN GRID — adaptive multi-section layout */
-  .main-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,1.4vw,18px);margin-bottom:clamp(10px,1.4vw,18px)}
-  @media(max-width:900px){.main-grid{grid-template-columns:1fr}}
-
-  /* Today + Foot side by side on wide screens */
-  .today-row{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(10px,1.4vw,18px);margin-bottom:clamp(10px,1.4vw,18px)}
+  /* TOP ROW: Today + Foot */
+  .today-row{display:grid;grid-template-columns:1.5fr 1fr;gap:10px;margin-bottom:10px}
   @media(max-width:900px){.today-row{grid-template-columns:1fr}}
-  .today-row > .today-card{margin-bottom:0}
-  .today-row > .foot-banner{margin-bottom:0;align-self:start}
+  .today-row > .today-card,.today-row > .foot-banner{margin-bottom:0;align-self:stretch}
 
-  /* Week + Races side by side on wide */
-  .week-races-row{display:grid;grid-template-columns:1.6fr 1fr;gap:clamp(10px,1.4vw,18px);margin-bottom:clamp(10px,1.4vw,18px)}
-  @media(max-width:1100px){.week-races-row{grid-template-columns:1fr}}
-  .week-races-row .race-grid{grid-template-columns:1fr;margin-bottom:0}
-
-  /* Trends + Calendar side by side on wide */
-  .trends-cal-row{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(10px,1.4vw,18px);margin-bottom:clamp(10px,1.4vw,18px)}
-  @media(max-width:1100px){.trends-cal-row{grid-template-columns:1fr}}
-  .trends-cal-row .trend-grid{grid-template-columns:repeat(2,1fr);margin-bottom:0}
-
-  /* Compact section header for inline sections */
-  .sec{margin:18px 0 10px}
+  /* MAIN 3-COLUMN: Week | Races | Calendar */
+  .main-3col{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:10px;margin-bottom:10px;align-items:start}
+  @media(max-width:1200px){.main-3col{grid-template-columns:1fr 1fr}.main-3col .col:nth-child(3){grid-column:span 2}}
+  @media(max-width:760px){.main-3col{grid-template-columns:1fr}.main-3col .col:nth-child(3){grid-column:1}}
+  .main-3col .col{min-width:0;display:flex;flex-direction:column}
+  .main-3col .col > .week-card,.main-3col .col > .race-grid,.main-3col .col > .cal-card{margin-bottom:0}
+  .main-3col .race-grid{grid-template-columns:1fr;gap:8px}
 
   /* TODAY'S SESSION — featured card */
   .today-card{
     background:linear-gradient(135deg,#1c2620 0%,#161c1a 80%);
     border:1px solid var(--line);
-    border-radius:18px;
-    padding:clamp(16px,1.6vw,22px);
-    margin-bottom:clamp(10px,1.4vw,18px);
+    border-radius:14px;
+    padding:14px 16px;
+    margin-bottom:10px;
     display:grid;
     grid-template-columns:1fr auto;
-    gap:clamp(14px,1.6vw,20px);
+    gap:14px;
     overflow:hidden;
     position:relative;
   }
@@ -172,9 +161,9 @@
     background:radial-gradient(circle,rgba(197,255,61,0.1),transparent 70%);
     pointer-events:none;
   }
-  .today-card-label{display:inline-flex;align-items:center;gap:8px;background:var(--lime-soft);color:var(--lime);font-size:11px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;padding:5px 11px;border-radius:999px;border:1px solid var(--lime-mid);margin-bottom:14px}
-  .today-card h2{font-size:clamp(20px,1.9vw,28px);font-weight:700;letter-spacing:-0.02em;line-height:1.15;margin-bottom:6px;color:var(--text)}
-  .today-card-detail{font-size:clamp(12px,0.9vw,14px);color:var(--text-2);line-height:1.45;max-width:680px;margin-bottom:10px}
+  .today-card-label{display:inline-flex;align-items:center;gap:6px;background:var(--lime-soft);color:var(--lime);font-size:9px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;border:1px solid var(--lime-mid);margin-bottom:6px}
+  .today-card h2{font-size:20px;font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-bottom:4px;color:var(--text)}
+  .today-card-detail{font-size:12px;color:var(--text-2);line-height:1.4;max-width:680px;margin-bottom:8px}
   .today-card-detail strong{color:var(--lime);font-weight:600}
   .today-pills{display:flex;flex-wrap:wrap;gap:8px;position:relative;z-index:1}
   .pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;background:var(--card-3);color:var(--text);padding:7px 12px;border-radius:999px;border:1px solid var(--line)}
@@ -182,15 +171,16 @@
   .pill-lime{background:var(--lime);color:#0a0d0c;border-color:var(--lime)}
   .pill-lime .ico{stroke:#0a0d0c}
   .today-circle{
-    width:clamp(90px,9vw,140px);height:clamp(90px,9vw,140px);border-radius:50%;
+    width:74px;height:74px;border-radius:50%;
     background:radial-gradient(circle at 30% 30%,var(--lime) 0%,var(--lime-2) 80%);
     display:grid;place-items:center;
     color:#0a0d0c;font-weight:800;font-size:14px;
     text-align:center;line-height:1.2;
     flex-shrink:0;position:relative;z-index:1;
-    box-shadow:0 10px 30px rgba(197,255,61,0.2);
+    box-shadow:0 8px 24px rgba(197,255,61,0.2);
+    align-self:center;
   }
-  .today-circle svg{width:50%;height:50%;stroke:#0a0d0c;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .today-circle svg{width:48%;height:48%;stroke:#0a0d0c;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
   @media(max-width:560px){.today-card{grid-template-columns:1fr}.today-circle{margin:0 auto}}
 
   /* FOOT STATUS BANNER */
@@ -198,30 +188,30 @@
     background:var(--card);
     border:1px solid var(--line);
     border-left:3px solid var(--lime);
-    border-radius:18px;
-    padding:clamp(14px,1.4vw,18px);
-    margin-bottom:14px;
+    border-radius:14px;
+    padding:12px 14px;
+    margin-bottom:10px;
     display:flex;
     flex-direction:column;
-    gap:10px;
+    gap:8px;
   }
   .foot-info{min-width:0}
-  .foot-label{font-size:11px;color:var(--lime);font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:4px}
-  .foot-text{font-size:13px;color:var(--text);line-height:1.45}
-  .foot-meta{font-size:11px;color:var(--text-3);margin-top:6px;font-weight:500}
+  .foot-label{font-size:9px;color:var(--lime);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px}
+  .foot-text{font-size:12px;color:var(--text);line-height:1.35}
+  .foot-meta{font-size:10px;color:var(--text-3);margin-top:4px;font-weight:500}
   .foot-meta.saved{color:var(--lime)}
   .foot-score{font-size:28px;font-weight:800;color:var(--lime);letter-spacing:-0.03em;line-height:1}
   .foot-score small{font-size:14px;color:var(--text-2);font-weight:600}
   .foot-score-sub{font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-top:2px}
 
   /* Pain scale — full width below the text */
-  .foot-scale{display:flex;flex-direction:column;gap:6px;width:100%;padding-top:8px;border-top:1px dashed var(--line)}
-  .foot-scale-row{display:grid;grid-template-columns:repeat(11,1fr);gap:4px}
+  .foot-scale{display:flex;flex-direction:column;gap:4px;width:100%;padding-top:6px;border-top:1px dashed var(--line)}
+  .foot-scale-row{display:grid;grid-template-columns:repeat(11,1fr);gap:3px}
   .pain-btn{
     -webkit-appearance:none;appearance:none;
     background:var(--card-2);border:1px solid var(--line);
-    color:var(--text-2);font-family:inherit;font-weight:600;font-size:12px;
-    padding:0;height:30px;border-radius:7px;cursor:pointer;
+    color:var(--text-2);font-family:inherit;font-weight:600;font-size:11px;
+    padding:0;height:24px;border-radius:6px;cursor:pointer;
     min-width:0;
     transition:transform 0.12s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
   }
@@ -245,21 +235,21 @@
   .foot-log-btn:hover{background:var(--lime);color:#0a0d0c;border-color:var(--lime)}
   .foot-log-btn[hidden]{display:none}
 
-  /* SECTION HEADERS — compact */
-  .sec{margin:0 0 8px;display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:0 4px}
-  .sec h3{font-size:14px;font-weight:700;letter-spacing:-0.01em;color:var(--text)}
-  .sec .sec-meta{font-size:11px;color:var(--text-3);font-weight:500}
+  /* SECTION HEADERS — ultra-compact */
+  .sec{margin:0 0 6px;display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:0 2px}
+  .sec h3{font-size:12px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--text-2)}
+  .sec .sec-meta{font-size:10px;color:var(--text-3);font-weight:500}
   .sec-link{font-size:12px;color:var(--text-2);font-weight:500;text-decoration:none}
   .sec-link:hover{color:var(--lime)}
 
   /* THE WEEK — single combined table */
-  .week-card{background:var(--card);border-radius:18px;padding:8px;margin-bottom:14px;overflow:hidden}
+  .week-card{background:var(--card);border-radius:14px;padding:4px;margin-bottom:10px;overflow:hidden}
   .week-table-head{
     display:grid;
-    grid-template-columns:64px 1.4fr 1.4fr auto;
-    gap:14px;
-    padding:10px 14px 8px;
-    font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);
+    grid-template-columns:48px 1.2fr 1.4fr auto;
+    gap:8px;
+    padding:6px 10px 4px;
+    font-size:9px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-3);
     border-bottom:1px solid var(--line);
   }
   .week-table-head .wt-status{text-align:right}
@@ -267,47 +257,47 @@
 
   .week-row{
     display:grid;
-    grid-template-columns:64px 1.4fr 1.4fr auto;
-    gap:14px;
+    grid-template-columns:48px 1.2fr 1.4fr auto;
+    gap:8px;
     align-items:start;
-    padding:14px;
-    border-radius:12px;
+    padding:8px 10px;
+    border-radius:8px;
     transition:background 0.2s ease;
   }
   .week-row+.week-row{border-top:1px solid var(--line)}
   .week-row.today-row{background:linear-gradient(90deg,rgba(197,255,61,0.07) 0%,rgba(197,255,61,0) 70%)}
 
-  .week-day-cell{display:flex;flex-direction:column;gap:2px;padding-top:1px}
-  .week-day-cell .day{font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-3)}
-  .week-day-cell .num{font-size:22px;font-weight:700;color:var(--text);letter-spacing:-0.02em;line-height:1}
+  .week-day-cell{display:flex;flex-direction:column;gap:1px;padding-top:1px}
+  .week-day-cell .day{font-size:9px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-3)}
+  .week-day-cell .num{font-size:16px;font-weight:700;color:var(--text);letter-spacing:-0.02em;line-height:1}
   .week-row.today-row .week-day-cell .day,.week-row.today-row .week-day-cell .num{color:var(--lime)}
   .week-row.future-row .week-day-cell .day,.week-row.future-row .week-day-cell .num{color:var(--text-4)}
 
-  .week-planned{font-size:14px;color:var(--text);line-height:1.4;padding-top:3px}
+  .week-planned{font-size:12px;color:var(--text);line-height:1.3;padding-top:2px}
   .week-planned em{font-style:normal;color:var(--lime);font-weight:600}
   .week-planned .strike{color:var(--text-3);text-decoration:line-through}
   .week-planned.rest{color:var(--text-4);font-style:italic}
 
-  .week-actual{display:flex;flex-direction:column;gap:8px;padding-top:1px}
-  .week-actual-item{display:flex;align-items:flex-start;gap:10px;min-width:0}
-  .week-actual-ico{flex-shrink:0;width:24px;height:24px;border-radius:7px;display:inline-grid;place-items:center}
-  .week-actual-ico svg{width:13px;height:13px;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .week-actual{display:flex;flex-direction:column;gap:4px;padding-top:1px}
+  .week-actual-item{display:flex;align-items:flex-start;gap:6px;min-width:0}
+  .week-actual-ico{flex-shrink:0;width:18px;height:18px;border-radius:5px;display:inline-grid;place-items:center}
+  .week-actual-ico svg{width:10px;height:10px;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
   .week-actual-ico.run{background:rgba(197,255,61,0.12)} .week-actual-ico.run svg{stroke:var(--lime)}
   .week-actual-ico.bike{background:rgba(255,181,71,0.12)} .week-actual-ico.bike svg{stroke:var(--amber)}
   .week-actual-ico.mtb{background:rgba(255,93,122,0.12)} .week-actual-ico.mtb svg{stroke:var(--rose)}
   .week-actual-ico.weights,.week-actual-ico.other,.week-actual-ico.walk{background:rgba(168,179,172,0.12)}
   .week-actual-ico.weights svg,.week-actual-ico.other svg,.week-actual-ico.walk svg{stroke:var(--text-2)}
-  .week-actual-text{display:flex;flex-direction:column;gap:1px;min-width:0;flex:1}
-  .week-actual-title{font-size:13px;font-weight:600;color:var(--text);line-height:1.25}
-  .week-actual-meta{font-size:11px;color:var(--text-3);line-height:1.3;display:flex;gap:6px;flex-wrap:wrap}
+  .week-actual-text{display:flex;flex-direction:column;gap:0;min-width:0;flex:1}
+  .week-actual-title{font-size:11px;font-weight:600;color:var(--text);line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .week-actual-meta{font-size:10px;color:var(--text-3);line-height:1.25;display:flex;gap:4px;flex-wrap:wrap}
   .week-actual-meta .val{color:var(--text-2);font-weight:600}
-  .week-actual.empty{font-size:13px;color:var(--text-4);font-style:italic;padding-top:3px}
+  .week-actual.empty{font-size:11px;color:var(--text-4);font-style:italic;padding-top:2px}
 
   .week-status-pill{
-    display:inline-flex;align-items:center;gap:6px;
-    font-size:11px;font-weight:600;letter-spacing:0.02em;
-    padding:5px 10px;border-radius:999px;white-space:nowrap;
-    margin-top:2px;
+    display:inline-flex;align-items:center;gap:4px;
+    font-size:9px;font-weight:600;letter-spacing:0.02em;
+    padding:3px 7px;border-radius:999px;white-space:nowrap;
+    margin-top:1px;
   }
   .week-status-pill.done{background:rgba(197,255,61,0.08);color:var(--lime)}
   .week-status-pill.today-mark{background:var(--lime);color:#0a0d0c}
@@ -358,7 +348,7 @@
   /* RACES */
   .race-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(10px,1.4vw,18px);margin-bottom:14px}
   .race-card{
-    background:var(--card);border-radius:20px;padding:20px;
+    background:var(--card);border-radius:14px;padding:12px 14px;
     position:relative;overflow:hidden;
     border:1px solid var(--line);
   }
@@ -373,15 +363,15 @@
     background:radial-gradient(circle,rgba(255,255,255,0.18),transparent 70%);
   }
   .race-card.secondary{background:linear-gradient(135deg,var(--card-2),var(--card))}
-  .race-priority{display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:14px}
+  .race-priority{display:inline-block;font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:2px 8px;border-radius:999px;margin-bottom:6px}
   .race-card .race-priority{background:rgba(0,0,0,0.12);color:#0a0d0c}
   .race-card.secondary .race-priority{background:var(--card-3);color:var(--text-2)}
-  .race-name{font-size:clamp(17px,1.6vw,24px);font-weight:700;letter-spacing:-0.02em;line-height:1.15;margin-bottom:6px}
-  .race-date{font-size:clamp(11px,0.85vw,13px);opacity:0.7;margin-bottom:12px}
-  .race-countdown-row{display:flex;align-items:baseline;gap:10px;margin-bottom:10px}
-  .race-countdown{font-size:clamp(44px,4.6vw,68px);font-weight:800;letter-spacing:-0.05em;line-height:0.9}
-  .race-countdown-unit{font-size:clamp(12px,1vw,16px);font-weight:600;opacity:0.7}
-  .race-target{font-size:clamp(11px,0.9vw,14px);line-height:1.5;opacity:0.85}
+  .race-name{font-size:14px;font-weight:700;letter-spacing:-0.01em;line-height:1.1;margin-bottom:2px}
+  .race-date{font-size:10px;opacity:0.7;margin-bottom:6px}
+  .race-countdown-row{display:flex;align-items:baseline;gap:6px;margin-bottom:4px}
+  .race-countdown{font-size:32px;font-weight:800;letter-spacing:-0.04em;line-height:0.9}
+  .race-countdown-unit{font-size:10px;font-weight:600;opacity:0.7}
+  .race-target{font-size:10px;line-height:1.35;opacity:0.85}
   .race-target strong{font-weight:700;opacity:1}
 
   /* TRENDS GRID */
@@ -398,35 +388,34 @@
   .trend-chart canvas{width:100% !important;height:100% !important}
 
   /* CALENDAR */
-  .cal-card{background:var(--card);border-radius:18px;padding:clamp(16px,2vw,28px)}
-  .cal-head{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:8px}
-  .cal-head span{text-align:center;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-3);padding:6px 0}
-  .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+  .cal-card{background:var(--card);border-radius:14px;padding:12px}
+  .cal-head{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin-bottom:4px}
+  .cal-head span{text-align:center;font-size:9px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-3);padding:2px 0}
+  .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
   .cal-cell{
-    aspect-ratio:1;border-radius:10px;
+    aspect-ratio:1;border-radius:6px;
     background:var(--card-2);
     display:flex;flex-direction:column;justify-content:space-between;
-    padding:clamp(3px,0.5vw,8px);min-height:44px;
-    font-size:10px;color:var(--text-3);
+    padding:2px 3px;min-height:28px;
+    font-size:9px;color:var(--text-3);
     border:1px solid transparent;
-    transition:transform 0.2s ease;
   }
-  .cal-cell .num{font-size:clamp(10px,0.9vw,14px);font-weight:600;color:var(--text-3);line-height:1}
-  .cal-cell .mark{font-size:clamp(8px,0.7vw,11px);font-weight:600;color:var(--text-3);line-height:1;letter-spacing:0.04em;text-transform:uppercase;text-align:right}
+  .cal-cell .num{font-size:10px;font-weight:600;color:var(--text-3);line-height:1}
+  .cal-cell .mark{font-size:8px;font-weight:600;color:var(--text-3);line-height:1;letter-spacing:0.02em;text-transform:uppercase;text-align:right}
   .cal-cell.past-done{background:rgba(197,255,61,0.12)}
   .cal-cell.past-done .num,.cal-cell.past-done .mark{color:var(--lime)}
   .cal-cell.past-rest{opacity:0.5}
   .cal-cell.today{background:var(--lime);border-color:var(--lime);transform:scale(1.05);box-shadow:0 4px 20px rgba(197,255,61,0.3)}
-  .cal-cell.today .num{color:#0a0d0c;font-weight:800;font-size:13px}
+  .cal-cell.today .num{color:#0a0d0c;font-weight:800;font-size:11px}
   .cal-cell.today .mark{color:#0a0d0c;font-weight:700}
   .cal-cell.race{background:var(--lime);border-color:var(--lime)}
-  .cal-cell.race .num{color:#0a0d0c;font-weight:800}
-  .cal-cell.race .mark{color:#0a0d0c;font-weight:800;letter-spacing:0.08em}
+  .cal-cell.race .num{color:#0a0d0c;font-weight:800;font-size:11px}
+  .cal-cell.race .mark{color:#0a0d0c;font-weight:800;letter-spacing:0.06em;font-size:7px}
   .cal-cell.race-b{background:var(--amber)}
   .cal-cell.race-b .num,.cal-cell.race-b .mark{color:#0a0d0c;font-weight:700}
   .cal-cell.future{}
   .cal-cell.future .num{color:var(--text-3)} .cal-cell.future .mark{color:var(--text-3)}
-  .cal-legend{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:14px;font-size:11px;color:var(--text-3);font-weight:500}
+  .cal-legend{display:none}
   .cal-legend span{display:flex;align-items:center;gap:6px}
   .cal-legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
   .cal-legend .l-done{background:rgba(197,255,61,0.4)}
@@ -435,7 +424,7 @@
   .cal-legend .l-raceb{background:var(--amber)}
 
   /* FOOTER */
-  .footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);text-align:center;font-size:11px;color:var(--text-3);font-weight:500;letter-spacing:0.02em}
+  .footer{margin-top:10px;padding-top:8px;border-top:1px solid var(--line);text-align:center;font-size:9px;color:var(--text-3);font-weight:500;letter-spacing:0.02em}
   .footer a{color:var(--text-2);text-decoration:none}
   .footer a:hover{color:var(--lime)}
 
@@ -585,9 +574,9 @@
     </div>
   </div>
 
-  <!-- WEEK + RACES side by side on wide -->
-  <div class="week-races-row">
-    <div>
+  <!-- 3-COLUMN MAIN: Week table | Races | Calendar -->
+  <div class="main-3col">
+    <div class="col">
       <div class="sec">
         <h3>This week</h3>
         <span class="sec-meta">{{WEEK_META}}</span>
@@ -602,7 +591,7 @@
         {{WEEK_ROWS_HTML}}
       </div>
     </div>
-    <div>
+    <div class="col">
       <div class="sec">
         <h3>Races</h3>
         <span class="sec-meta">{{RACES_META}}</span>
@@ -611,35 +600,16 @@
         {{RACES_HTML}}
       </div>
     </div>
-  </div>
-
-  <!-- TRENDS + CALENDAR side by side on wide -->
-  <div class="trends-cal-row">
-    <div>
-      <div class="sec">
-        <h3>Trends</h3>
-        <span class="sec-meta">12 weeks</span>
-      </div>
-      <div class="trend-grid">
-        {{TRENDS_HTML}}
-      </div>
-    </div>
-    <div>
+    <div class="col">
       <div class="sec">
         <h3>90-day overview</h3>
         <span class="sec-meta">Past · today · upcoming</span>
       </div>
       <div class="cal-card">
         <div class="cal-head">
-          <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+          <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
         </div>
         <div class="cal-grid" id="calGrid"></div>
-        <div class="cal-legend">
-          <span><i class="l-done"></i>Done</span>
-          <span><i class="l-today"></i>Today</span>
-          <span><i class="l-race"></i>A-Race</span>
-          <span><i class="l-raceb"></i>B-Race</span>
-        </div>
       </div>
     </div>
   </div>
