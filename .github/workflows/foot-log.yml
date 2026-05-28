@@ -1,0 +1,80 @@
+name: Append foot-log issue to injury log
+
+on:
+  issues:
+    types: [opened, labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  append:
+    if: contains(github.event.issue.labels.*.name, 'foot-log')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Append entry to injury-log.md
+        env:
+          TITLE: ${{ github.event.issue.title }}
+          BODY: ${{ github.event.issue.body }}
+          NUMBER: ${{ github.event.issue.number }}
+        run: |
+          set -e
+          # Extract score and date from title "Foot pain log: X/10 — YYYY-MM-DD"
+          SCORE=$(echo "$TITLE" | grep -oE '[0-9]+/10' | head -1 || echo "?/10")
+          DATE=$(echo "$TITLE" | grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}' | head -1 || date -u +%Y-%m-%d)
+
+          # Build the entry — short, dated
+          ENTRY="- **${DATE}** — Pain score **${SCORE}**. Logged via dashboard (issue #${NUMBER})."
+
+          # Append to the "Active" section of injury-log.md
+          FILE="knowledge/injury-log.md"
+          if [ ! -f "$FILE" ]; then
+            echo "Injury log file not found"; exit 1
+          fi
+
+          # Insert before the "## Stop signs" line (or append at end if not found)
+          if grep -q "^## Stop signs" "$FILE"; then
+            awk -v entry="$ENTRY" '
+              /^## Stop signs/ && !inserted { print entry "\n"; inserted=1 }
+              { print }
+            ' "$FILE" > "$FILE.new"
+            mv "$FILE.new" "$FILE"
+          else
+            echo "" >> "$FILE"
+            echo "$ENTRY" >> "$FILE"
+          fi
+
+          # Also update the **Current status** line
+          sed -i.bak -E "s|(\*\*Current status:\*\*).*|\1 Pain ${SCORE} as of ${DATE}. Updated automatically from dashboard.|" "$FILE"
+          rm -f "$FILE.bak"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$FILE"
+          if git diff --staged --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git commit -m "Foot log: ${SCORE} on ${DATE} (issue #${NUMBER})"
+          git push
+
+      - name: Close issue with confirmation
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} \
+            --repo ${{ github.repository }} \
+            --body "✅ Logged to \`knowledge/injury-log.md\`. Dashboard will reflect this on the next build."
+          gh issue close ${{ github.event.issue.number }} --repo ${{ github.repository }}
+
+      - name: Trigger dashboard rebuild
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run daily-dashboard.yml --repo ${{ github.repository }}
