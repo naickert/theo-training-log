@@ -32,13 +32,15 @@ Each race is a YAML entry. Required fields: `name`, `date` (YYYY-MM-DD), `type`,
   target: 1:02–1:05 (foot & fitness dependent)
   notes: Real road race test post-Imfolozi recovery.
 
-- name: Sub-60 10K attempt
-  date: 2026-09-30  # TBC — placeholder, update with real race date once chosen
+- name: Hollywoodbets Durban 10K
+  date: 2026-08-30
   type: Run
   distance_km: 10
   priority: A
-  target: "<60:00"
-  notes: Season goal. Race TBD — likely Sept or Oct 2026.
+  location: Durban, KZN
+  start_time: Sunday morning (TBC)
+  target: Sub-60 attempt — under 60:00
+  notes: Registered. Order HB-20260528-ZLJMZD. Race pack collection 27-29 Aug at Hollywoodbets Kingsmead. Race number via SMS/WhatsApp in race week. This is the season's sub-60 target — replaces the Sept/Oct placeholder.
 ```
 
 ## How to add a new race
