@@ -52,7 +52,7 @@
   }
 
   /* TOP BAR — logo + tabs + profile */
-  .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}
+  .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:clamp(14px,1.6vw,22px)}
   .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;letter-spacing:-0.01em}
   .brand-mark{width:32px;height:32px;border-radius:9px;background:var(--lime);display:grid;place-items:center;color:#0a0d0c;font-weight:800;font-size:14px}
   .brand-mark svg{width:18px;height:18px;stroke:#0a0d0c;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
@@ -129,20 +129,39 @@
   .spark-row{margin-top:10px;height:36px}
   .spark-row canvas{width:100% !important;height:100% !important}
 
-  /* TWO COLUMN LAYOUT FOR MAIN */
-  .main-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+  /* MAIN GRID — adaptive multi-section layout */
+  .main-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,1.4vw,18px);margin-bottom:clamp(10px,1.4vw,18px)}
   @media(max-width:900px){.main-grid{grid-template-columns:1fr}}
+
+  /* Today + Foot side by side on wide screens */
+  .today-row{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(10px,1.4vw,18px);margin-bottom:clamp(10px,1.4vw,18px)}
+  @media(max-width:900px){.today-row{grid-template-columns:1fr}}
+  .today-row > .today-card{margin-bottom:0}
+  .today-row > .foot-banner{margin-bottom:0;align-self:start}
+
+  /* Week + Races side by side on wide */
+  .week-races-row{display:grid;grid-template-columns:1.6fr 1fr;gap:clamp(10px,1.4vw,18px);margin-bottom:clamp(10px,1.4vw,18px)}
+  @media(max-width:1100px){.week-races-row{grid-template-columns:1fr}}
+  .week-races-row .race-grid{grid-template-columns:1fr;margin-bottom:0}
+
+  /* Trends + Calendar side by side on wide */
+  .trends-cal-row{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(10px,1.4vw,18px);margin-bottom:clamp(10px,1.4vw,18px)}
+  @media(max-width:1100px){.trends-cal-row{grid-template-columns:1fr}}
+  .trends-cal-row .trend-grid{grid-template-columns:repeat(2,1fr);margin-bottom:0}
+
+  /* Compact section header for inline sections */
+  .sec{margin:18px 0 10px}
 
   /* TODAY'S SESSION — featured card */
   .today-card{
     background:linear-gradient(135deg,#1c2620 0%,#161c1a 80%);
     border:1px solid var(--line);
-    border-radius:20px;
-    padding:clamp(18px,2vw,28px);
+    border-radius:18px;
+    padding:clamp(16px,1.6vw,22px);
     margin-bottom:clamp(10px,1.4vw,18px);
     display:grid;
     grid-template-columns:1fr auto;
-    gap:clamp(14px,2vw,24px);
+    gap:clamp(14px,1.6vw,20px);
     overflow:hidden;
     position:relative;
   }
@@ -154,8 +173,8 @@
     pointer-events:none;
   }
   .today-card-label{display:inline-flex;align-items:center;gap:8px;background:var(--lime-soft);color:var(--lime);font-size:11px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;padding:5px 11px;border-radius:999px;border:1px solid var(--lime-mid);margin-bottom:14px}
-  .today-card h2{font-size:clamp(22px,2.4vw,36px);font-weight:700;letter-spacing:-0.02em;line-height:1.15;margin-bottom:8px;color:var(--text)}
-  .today-card-detail{font-size:clamp(13px,1vw,16px);color:var(--text-2);line-height:1.5;max-width:680px;margin-bottom:14px}
+  .today-card h2{font-size:clamp(20px,1.9vw,28px);font-weight:700;letter-spacing:-0.02em;line-height:1.15;margin-bottom:6px;color:var(--text)}
+  .today-card-detail{font-size:clamp(12px,0.9vw,14px);color:var(--text-2);line-height:1.45;max-width:680px;margin-bottom:10px}
   .today-card-detail strong{color:var(--lime);font-weight:600}
   .today-pills{display:flex;flex-wrap:wrap;gap:8px;position:relative;z-index:1}
   .pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;background:var(--card-3);color:var(--text);padding:7px 12px;border-radius:999px;border:1px solid var(--line)}
@@ -174,17 +193,17 @@
   .today-circle svg{width:50%;height:50%;stroke:#0a0d0c;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
   @media(max-width:560px){.today-card{grid-template-columns:1fr}.today-circle{margin:0 auto}}
 
-  /* FOOT STATUS BANNER — always stacked: text on top, scale full-width below */
+  /* FOOT STATUS BANNER */
   .foot-banner{
     background:var(--card);
     border:1px solid var(--line);
     border-left:3px solid var(--lime);
-    border-radius:14px;
-    padding:16px 18px;
+    border-radius:18px;
+    padding:clamp(14px,1.4vw,18px);
     margin-bottom:14px;
     display:flex;
     flex-direction:column;
-    gap:14px;
+    gap:10px;
   }
   .foot-info{min-width:0}
   .foot-label{font-size:11px;color:var(--lime);font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:4px}
@@ -201,8 +220,8 @@
   .pain-btn{
     -webkit-appearance:none;appearance:none;
     background:var(--card-2);border:1px solid var(--line);
-    color:var(--text-2);font-family:inherit;font-weight:600;font-size:13px;
-    padding:0;height:34px;border-radius:8px;cursor:pointer;
+    color:var(--text-2);font-family:inherit;font-weight:600;font-size:12px;
+    padding:0;height:30px;border-radius:7px;cursor:pointer;
     min-width:0;
     transition:transform 0.12s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
   }
@@ -226,10 +245,10 @@
   .foot-log-btn:hover{background:var(--lime);color:#0a0d0c;border-color:var(--lime)}
   .foot-log-btn[hidden]{display:none}
 
-  /* SECTION HEADERS */
-  .sec{margin:24px 0 14px;display:flex;align-items:center;justify-content:space-between;gap:14px}
-  .sec h3{font-size:18px;font-weight:700;letter-spacing:-0.01em;color:var(--text)}
-  .sec .sec-meta{font-size:12px;color:var(--text-3);font-weight:500}
+  /* SECTION HEADERS — compact */
+  .sec{margin:0 0 8px;display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:0 4px}
+  .sec h3{font-size:14px;font-weight:700;letter-spacing:-0.01em;color:var(--text)}
+  .sec .sec-meta{font-size:11px;color:var(--text-3);font-weight:500}
   .sec-link{font-size:12px;color:var(--text-2);font-weight:500;text-decoration:none}
   .sec-link:hover{color:var(--lime)}
 
@@ -516,108 +535,117 @@
 
   </div>
 
-  <!-- TODAY'S SESSION -->
-  <div class="today-card">
+  <!-- TODAY + FOOT side by side on wide -->
+  <div class="today-row">
+    <div class="today-card">
+      <div>
+        <span class="today-card-label">
+          <svg style="width:11px;height:11px;stroke:var(--lime);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Today's prescribed session
+        </span>
+        <h2>Weights</h2>
+        <p class="today-card-detail">Full upper/core. Light legs OK.</p>
+        <div class="today-pills">
+          <span class="pill pill-lime"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>Weights</span>
+        </div>
+      </div>
+      <div class="today-circle">
+        <svg viewBox="0 0 24 24"><path d="M6 4v16M18 4v16M2 8v8M22 8v8M6 8h12M6 16h12"/></svg>
+      </div>
+    </div>
+
+    <div class="foot-banner foot-banner-interactive">
+      <div class="foot-info">
+        <div class="foot-label">Foot · Right Plantar Fasciitis</div>
+        <div class="foot-text">Resolving. ~90% recovered.</div>
+        <div class="foot-meta" id="footMeta">Tap a number to log today's pain</div>
+      </div>
+      <div class="foot-scale">
+        <div class="foot-scale-row" id="footScale" role="radiogroup" aria-label="Today's morning pain score">
+          <button class="pain-btn" data-val="0" role="radio">0</button>
+          <button class="pain-btn" data-val="1" role="radio">1</button>
+          <button class="pain-btn" data-val="2" role="radio">2</button>
+          <button class="pain-btn" data-val="3" role="radio">3</button>
+          <button class="pain-btn" data-val="4" role="radio">4</button>
+          <button class="pain-btn" data-val="5" role="radio">5</button>
+          <button class="pain-btn" data-val="6" role="radio">6</button>
+          <button class="pain-btn" data-val="7" role="radio">7</button>
+          <button class="pain-btn" data-val="8" role="radio">8</button>
+          <button class="pain-btn" data-val="9" role="radio">9</button>
+          <button class="pain-btn" data-val="10" role="radio">10</button>
+        </div>
+        <div class="foot-scale-labels">
+          <span>none</span><span>severe</span>
+        </div>
+        <a href="#" id="footLogBtn" class="foot-log-btn" hidden>
+          <svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Log on GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK + RACES side by side on wide -->
+  <div class="week-races-row">
     <div>
-      <span class="today-card-label">
-        <svg style="width:11px;height:11px;stroke:var(--lime);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-        Today's prescribed session
-      </span>
-      <h2>Weights</h2>
-      <p class="today-card-detail">Full upper/core. Light legs OK.</p>
-      <div class="today-pills">
-        <span class="pill pill-lime"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></svg>Weights</span>
+      <div class="sec">
+        <h3>This week</h3>
+        <span class="sec-meta">25–31 May · Re-base after travel/illness gap</span>
+      </div>
+      <div class="week-card">
+        <div class="week-table-head">
+          <div class="wt-day">Day</div>
+          <div class="wt-planned">Planned</div>
+          <div class="wt-actual">Actual</div>
+          <div class="wt-status">Status</div>
+        </div>
+        <div class="week-row"><div class="week-day-cell"><span class="day">MON</span><span class="num">25</span></div><div class="week-planned"><span class="strike">Gym workout 1:36</span></div><div class="week-actual"><div class="week-actual-item"><span class="week-actual-ico other"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span><div class="week-actual-text"><span class="week-actual-title">Morning Workout</span><span class="week-actual-meta">1:36:44 · RE 29</span></div></div></div><div class="week-status-pill done">Complete</div></div><div class="week-row"><div class="week-day-cell"><span class="day">TUE</span><span class="num">26</span></div><div class="week-planned"><span class="strike">Rest</span></div><div class="week-actual empty">Rest taken</div><div class="week-status-pill rest">Rest</div></div><div class="week-row"><div class="week-day-cell"><span class="day">WED</span><span class="num">27</span></div><div class="week-planned"><em>Bike intervals</em></div><div class="week-actual"><div class="week-actual-item"><span class="week-actual-ico run"><svg viewBox="0 0 24 24"><circle cx="14" cy="4" r="2"/><path d="M11 13l-1 4 3 3 3-8-4-3-3 3-1 4M5 17l3-3"/></svg></span><div class="week-actual-text"><span class="week-actual-title">Morning Run</span><span class="week-actual-meta"><span class="val">5.2 km</span> · 33:41 · 6:25/km · RE 166</span></div></div><div class="week-actual-item"><span class="week-actual-ico run"><svg viewBox="0 0 24 24"><circle cx="14" cy="4" r="2"/><path d="M11 13l-1 4 3 3 3-8-4-3-3 3-1 4M5 17l3-3"/></svg></span><div class="week-actual-text"><span class="week-actual-title">Morning Run</span><span class="week-actual-meta"><span class="val">1.6 km</span> · 11:05 · 6:51/km · RE 15</span></div></div></div><div class="week-status-pill substituted">Substituted</div></div><div class="week-row today-row"><div class="week-day-cell"><span class="day">THU</span><span class="num">28</span></div><div class="week-planned">Weights</div><div class="week-actual empty">No activity yet</div><div class="week-status-pill today-mark">Today</div></div><div class="week-row future-row"><div class="week-day-cell"><span class="day">FRI</span><span class="num">29</span></div><div class="week-planned">Bike tempo</div><div class="week-actual empty"></div><div class="week-status-pill upcoming">Upcoming</div></div><div class="week-row future-row"><div class="week-day-cell"><span class="day">SAT</span><span class="num">30</span></div><div class="week-planned"><em>Long MTB — 30 km</em></div><div class="week-actual empty"></div><div class="week-status-pill upcoming">Upcoming</div></div><div class="week-row future-row"><div class="week-day-cell"><span class="day">SUN</span><span class="num">31</span></div><div class="week-planned">Easy run 5 km on grass</div><div class="week-actual empty"></div><div class="week-status-pill upcoming">Upcoming</div></div>
       </div>
     </div>
-    <div class="today-circle">
-      <svg viewBox="0 0 24 24"><path d="M6 4v16M18 4v16M2 8v8M22 8v8M6 8h12M6 16h12"/></svg>
-    </div>
-  </div>
-
-  <!-- FOOT STATUS -->
-  <div class="foot-banner foot-banner-interactive">
-    <div class="foot-info">
-      <div class="foot-label">Foot · Right Plantar Fasciitis</div>
-      <div class="foot-text">Resolving. ~90% recovered.</div>
-      <div class="foot-meta" id="footMeta">Tap a number to log today's pain</div>
-    </div>
-    <div class="foot-scale">
-      <div class="foot-scale-row" id="footScale" role="radiogroup" aria-label="Today's morning pain score">
-        <button class="pain-btn" data-val="0" role="radio">0</button>
-        <button class="pain-btn" data-val="1" role="radio">1</button>
-        <button class="pain-btn" data-val="2" role="radio">2</button>
-        <button class="pain-btn" data-val="3" role="radio">3</button>
-        <button class="pain-btn" data-val="4" role="radio">4</button>
-        <button class="pain-btn" data-val="5" role="radio">5</button>
-        <button class="pain-btn" data-val="6" role="radio">6</button>
-        <button class="pain-btn" data-val="7" role="radio">7</button>
-        <button class="pain-btn" data-val="8" role="radio">8</button>
-        <button class="pain-btn" data-val="9" role="radio">9</button>
-        <button class="pain-btn" data-val="10" role="radio">10</button>
+    <div>
+      <div class="sec">
+        <h3>Races</h3>
+        <span class="sec-meta">3 on the calendar</span>
       </div>
-      <div class="foot-scale-labels">
-        <span>none</span><span>severe</span>
+      <div class="race-grid">
+        <div class="race-card primary"><span class="race-priority">A-Race · Peak</span><h3 class="race-name">Imfolozi 55 km MTB</h3><div class="race-date">Saturday 27 June 2026 · iMfolozi Game Reserve, KZN</div><div class="race-countdown-row"><span class="race-countdown">30</span><span class="race-countdown-unit">days to go</span></div><p class="race-target"><strong>Finish strong, ~4 hr</strong></p></div><div class="race-card secondary"><span class="race-priority">B-Race</span><h3 class="race-name">Absa 10K Road</h3><div class="race-date">Friday 10 July 2026</div><div class="race-countdown-row"><span class="race-countdown">43</span><span class="race-countdown-unit">days to go</span></div><p class="race-target"><strong>1:02–1:05 (foot &amp; fitness dependent)</strong></p></div><div class="race-card secondary"><span class="race-priority">Season Goal</span><h3 class="race-name">Sub-60 10K attempt</h3><div class="race-date">Wednesday 30 September 2026</div><div class="race-countdown-row"><span class="race-countdown">125</span><span class="race-countdown-unit">days to go</span></div><p class="race-target"><strong>&lt;60:00</strong></p></div>
       </div>
-      <a href="#" id="footLogBtn" class="foot-log-btn" hidden>
-        <svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        Log permanently on GitHub
-      </a>
     </div>
   </div>
 
-  <!-- THIS WEEK — single combined table -->
-  <div class="sec">
-    <h3>This week</h3>
-    <span class="sec-meta">25–31 May · Re-base after travel/illness gap</span>
-  </div>
-  <div class="week-card">
-    <div class="week-table-head">
-      <div class="wt-day">Day</div>
-      <div class="wt-planned">Planned</div>
-      <div class="wt-actual">Actual</div>
-      <div class="wt-status">Status</div>
+  <!-- TRENDS + CALENDAR side by side on wide -->
+  <div class="trends-cal-row">
+    <div>
+      <div class="sec">
+        <h3>Trends</h3>
+        <span class="sec-meta">12 weeks</span>
+      </div>
+      <div class="trend-grid">
+        <div class="trend-card"><div class="trend-label">Weekly Hours</div><div class="trend-val">2.4<small>h</small></div><div class="trend-delta ">↓ 0.2h vs last wk</div><div class="trend-chart"><canvas id="chartHours"></canvas></div></div><div class="trend-card"><div class="trend-label">Run · km</div><div class="trend-val">6.9<small>km</small></div><div class="trend-delta up">↑ 1.8km vs last wk</div><div class="trend-chart"><canvas id="chartRun"></canvas></div></div><div class="trend-card"><div class="trend-label">Bike · km</div><div class="trend-val">0.0<small>km</small></div><div class="trend-delta ">—</div><div class="trend-chart"><canvas id="chartBike"></canvas></div></div><div class="trend-card"><div class="trend-label">Longest · min</div><div class="trend-val">96<small>min</small></div><div class="trend-delta">need 3hr+ ride soon</div><div class="trend-chart"><canvas id="chartLongest"></canvas></div></div>
+      </div>
     </div>
-    <div class="week-row"><div class="week-day-cell"><span class="day">MON</span><span class="num">25</span></div><div class="week-planned"><span class="strike">Gym workout 1:36</span></div><div class="week-actual"><div class="week-actual-item"><span class="week-actual-ico other"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span><div class="week-actual-text"><span class="week-actual-title">Morning Workout</span><span class="week-actual-meta">1:36:44 · RE 29</span></div></div></div><div class="week-status-pill done">Complete</div></div><div class="week-row"><div class="week-day-cell"><span class="day">TUE</span><span class="num">26</span></div><div class="week-planned"><span class="strike">Rest</span></div><div class="week-actual empty">Rest taken</div><div class="week-status-pill rest">Rest</div></div><div class="week-row"><div class="week-day-cell"><span class="day">WED</span><span class="num">27</span></div><div class="week-planned"><em>Bike intervals</em></div><div class="week-actual"><div class="week-actual-item"><span class="week-actual-ico run"><svg viewBox="0 0 24 24"><circle cx="14" cy="4" r="2"/><path d="M11 13l-1 4 3 3 3-8-4-3-3 3-1 4M5 17l3-3"/></svg></span><div class="week-actual-text"><span class="week-actual-title">Morning Run</span><span class="week-actual-meta"><span class="val">5.2 km</span> · 33:41 · 6:25/km · RE 166</span></div></div><div class="week-actual-item"><span class="week-actual-ico run"><svg viewBox="0 0 24 24"><circle cx="14" cy="4" r="2"/><path d="M11 13l-1 4 3 3 3-8-4-3-3 3-1 4M5 17l3-3"/></svg></span><div class="week-actual-text"><span class="week-actual-title">Morning Run</span><span class="week-actual-meta"><span class="val">1.6 km</span> · 11:05 · 6:51/km · RE 15</span></div></div></div><div class="week-status-pill substituted">Substituted</div></div><div class="week-row today-row"><div class="week-day-cell"><span class="day">THU</span><span class="num">28</span></div><div class="week-planned">Weights</div><div class="week-actual empty">No activity yet</div><div class="week-status-pill today-mark">Today</div></div><div class="week-row future-row"><div class="week-day-cell"><span class="day">FRI</span><span class="num">29</span></div><div class="week-planned">Bike tempo</div><div class="week-actual empty"></div><div class="week-status-pill upcoming">Upcoming</div></div><div class="week-row future-row"><div class="week-day-cell"><span class="day">SAT</span><span class="num">30</span></div><div class="week-planned"><em>Long MTB — 30 km</em></div><div class="week-actual empty"></div><div class="week-status-pill upcoming">Upcoming</div></div><div class="week-row future-row"><div class="week-day-cell"><span class="day">SUN</span><span class="num">31</span></div><div class="week-planned">Easy run 5 km on grass</div><div class="week-actual empty"></div><div class="week-status-pill upcoming">Upcoming</div></div>
-  </div>
-
-  <!-- RACES -->
-  <div class="sec">
-    <h3>Races on the calendar</h3>
-    <span class="sec-meta">3 on the calendar</span>
-  </div>
-  <div class="race-grid">
-    <div class="race-card primary"><span class="race-priority">A-Race · Peak</span><h3 class="race-name">Imfolozi 55 km MTB</h3><div class="race-date">Saturday 27 June 2026 · iMfolozi Game Reserve, KZN</div><div class="race-countdown-row"><span class="race-countdown">30</span><span class="race-countdown-unit">days to go</span></div><p class="race-target"><strong>Finish strong, ~4 hr</strong></p></div><div class="race-card secondary"><span class="race-priority">B-Race</span><h3 class="race-name">Absa 10K Road</h3><div class="race-date">Friday 10 July 2026</div><div class="race-countdown-row"><span class="race-countdown">43</span><span class="race-countdown-unit">days to go</span></div><p class="race-target"><strong>1:02–1:05 (foot &amp; fitness dependent)</strong></p></div><div class="race-card secondary"><span class="race-priority">Season Goal</span><h3 class="race-name">Sub-60 10K attempt</h3><div class="race-date">Wednesday 30 September 2026</div><div class="race-countdown-row"><span class="race-countdown">125</span><span class="race-countdown-unit">days to go</span></div><p class="race-target"><strong>&lt;60:00</strong></p></div>
-  </div>
-
-  <!-- TRENDS -->
-  <div class="sec">
-    <h3>Trends</h3>
-    <span class="sec-meta">12-week view</span>
-  </div>
-  <div class="trend-grid">
-    <div class="trend-card"><div class="trend-label">Weekly Hours</div><div class="trend-val">2.4<small>h</small></div><div class="trend-delta ">↓ 0.2h vs last wk</div><div class="trend-chart"><canvas id="chartHours"></canvas></div></div><div class="trend-card"><div class="trend-label">Run · km</div><div class="trend-val">6.9<small>km</small></div><div class="trend-delta up">↑ 1.8km vs last wk</div><div class="trend-chart"><canvas id="chartRun"></canvas></div></div><div class="trend-card"><div class="trend-label">Bike · km</div><div class="trend-val">0.0<small>km</small></div><div class="trend-delta ">—</div><div class="trend-chart"><canvas id="chartBike"></canvas></div></div><div class="trend-card"><div class="trend-label">Longest · min</div><div class="trend-val">96<small>min</small></div><div class="trend-delta">need 3hr+ ride soon</div><div class="trend-chart"><canvas id="chartLongest"></canvas></div></div>
-  </div>
-
-  <!-- CALENDAR -->
-  <div class="sec">
-    <h3>90-day overview</h3>
-    <span class="sec-meta">Past · today · upcoming</span>
-  </div>
-  <div class="cal-card">
-    <div class="cal-head">
-      <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
-    </div>
-    <div class="cal-grid" id="calGrid"></div>
-    <div class="cal-legend">
-      <span><i class="l-done"></i>Completed</span>
-      <span><i class="l-today"></i>Today</span>
-      <span><i class="l-race"></i>A-Race · iMfolozi</span>
-      <span><i class="l-raceb"></i>B-Race</span>
+    <div>
+      <div class="sec">
+        <h3>90-day overview</h3>
+        <span class="sec-meta">Past · today · upcoming</span>
+      </div>
+      <div class="cal-card">
+        <div class="cal-head">
+          <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+        </div>
+        <div class="cal-grid" id="calGrid"></div>
+        <div class="cal-legend">
+          <span><i class="l-done"></i>Done</span>
+          <span><i class="l-today"></i>Today</span>
+          <span><i class="l-race"></i>A-Race</span>
+          <span><i class="l-raceb"></i>B-Race</span>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="footer">
-    Updated 2026-05-28T04:27:27Z · Strava → GitHub Actions · <a href="https://github.com/naickert/theo-training-log">theo-training-log</a>
+    Updated 2026-05-28T04:31:16Z · Strava → GitHub Actions · <a href="https://github.com/naickert/theo-training-log">theo-training-log</a>
   </div>
 
 </div>
