@@ -169,21 +169,29 @@
   .today-circle svg{width:60px;height:60px;stroke:#0a0d0c;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
   @media(max-width:560px){.today-card{grid-template-columns:1fr}.today-circle{width:90px;height:90px;margin:0 auto}.today-circle svg{width:46px;height:46px}}
 
-  /* FOOT STATUS BANNER */
+  /* FOOT STATUS BANNER — always stacked on narrow, side-by-side on wide */
   .foot-banner{
     background:var(--card);
     border:1px solid var(--line);
     border-left:3px solid var(--lime);
     border-radius:14px;
-    padding:14px 18px;
+    padding:16px 18px;
     margin-bottom:14px;
-    display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
   }
-  .foot-banner-interactive{grid-template-columns:1fr minmax(220px,360px)}
-  @media(max-width:680px){.foot-banner,.foot-banner-interactive{grid-template-columns:1fr;gap:14px}}
+  @media(min-width:760px){
+    .foot-banner-interactive{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:24px;
+      align-items:center;
+    }
+  }
   .foot-info{min-width:0}
   .foot-label{font-size:11px;color:var(--lime);font-weight:700;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:4px}
-  .foot-text{font-size:13px;color:var(--text);line-height:1.4}
+  .foot-text{font-size:13px;color:var(--text);line-height:1.45}
   .foot-meta{font-size:11px;color:var(--text-3);margin-top:6px;font-weight:500}
   .foot-meta.saved{color:var(--lime)}
   .foot-score{font-size:28px;font-weight:800;color:var(--lime);letter-spacing:-0.03em;line-height:1}
@@ -191,36 +199,32 @@
   .foot-score-sub{font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-top:2px}
 
   /* Pain scale */
-  .foot-scale{display:flex;flex-direction:column;gap:6px}
-  .foot-scale-row{display:grid;grid-template-columns:repeat(11,1fr);gap:3px}
+  .foot-scale{display:flex;flex-direction:column;gap:6px;width:100%}
+  @media(min-width:760px){.foot-scale{min-width:340px}}
+  .foot-scale-row{display:grid;grid-template-columns:repeat(11,1fr);gap:4px}
   .pain-btn{
     -webkit-appearance:none;appearance:none;
     background:var(--card-2);border:1px solid var(--line);
-    color:var(--text-2);font-family:inherit;font-weight:600;font-size:12px;
-    padding:0;height:32px;border-radius:7px;cursor:pointer;
+    color:var(--text-2);font-family:inherit;font-weight:600;font-size:13px;
+    padding:0;height:34px;border-radius:8px;cursor:pointer;
+    min-width:0;
     transition:transform 0.12s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
   }
   .pain-btn:hover{background:var(--card-3);color:var(--text);border-color:var(--line-2)}
   .pain-btn:active{transform:scale(0.94)}
-  .pain-btn.selected{background:var(--lime);color:#0a0d0c;border-color:var(--lime);font-weight:800;box-shadow:0 2px 8px rgba(197,255,61,0.3)}
-  /* Color gradient on hover/selected by value range */
-  .pain-btn[data-val="0"].selected,.pain-btn[data-val="1"].selected,.pain-btn[data-val="2"].selected{background:var(--lime);border-color:var(--lime)}
+  .pain-btn.selected{background:var(--lime);color:#0a0d0c;border-color:var(--lime);font-weight:800;box-shadow:0 2px 10px rgba(197,255,61,0.35)}
   .pain-btn[data-val="3"].selected,.pain-btn[data-val="4"].selected{background:#dde930;border-color:#dde930}
   .pain-btn[data-val="5"].selected,.pain-btn[data-val="6"].selected{background:var(--amber);border-color:var(--amber)}
   .pain-btn[data-val="7"].selected,.pain-btn[data-val="8"].selected{background:#ff8a4a;border-color:#ff8a4a}
   .pain-btn[data-val="9"].selected,.pain-btn[data-val="10"].selected{background:var(--rose);border-color:var(--rose);color:#fff}
-  .foot-scale-labels{display:grid;grid-template-columns:repeat(4,1fr);font-size:9px;color:var(--text-3);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-top:2px}
-  .foot-scale-labels span:nth-child(1){text-align:left}
-  .foot-scale-labels span:nth-child(2){text-align:left;padding-left:18%}
-  .foot-scale-labels span:nth-child(3){text-align:right;padding-right:14%}
-  .foot-scale-labels span:nth-child(4){text-align:right}
+  .foot-scale-labels{display:flex;justify-content:space-between;font-size:9px;color:var(--text-3);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-top:2px;padding:0 4px}
 
   .foot-log-btn{
     display:inline-flex;align-items:center;gap:6px;
     font-size:11px;font-weight:600;color:var(--text-2);
     background:var(--card-2);border:1px solid var(--line);
-    padding:7px 12px;border-radius:999px;text-decoration:none;
-    margin-top:6px;align-self:flex-start;
+    padding:8px 14px;border-radius:999px;text-decoration:none;
+    margin-top:4px;align-self:flex-start;
     transition:background 0.15s ease,color 0.15s ease,border-color 0.15s ease;
   }
   .foot-log-btn:hover{background:var(--lime);color:#0a0d0c;border-color:var(--lime)}
@@ -487,7 +491,7 @@
   <div class="foot-banner foot-banner-interactive">
     <div class="foot-info">
       <div class="foot-label">Foot · Right Plantar Fasciitis</div>
-      <div class="foot-text">Resolving. ~90% recovered. Prehab protocol still daily (plantar fascia stretch, frozen bottle roll, calf stretches, eccentric heel drops). See [PF-Management-Apr-2026](/Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running/PF-Management-Apr-2026.md). Last 2 runs were pain-free.</div>
+      <div class="foot-text">Resolving. ~90% recovered. Prehab protocol still daily (plantar fascia stretch, frozen bottle roll, calf stretches, eccentric heel drops).</div>
       <div class="foot-meta" id="footMeta">Tap a number to log today's pain</div>
     </div>
     <div class="foot-scale">
@@ -505,7 +509,7 @@
         <button class="pain-btn" data-val="10" role="radio">10</button>
       </div>
       <div class="foot-scale-labels">
-        <span>none</span><span>mild</span><span>moderate</span><span>severe</span>
+        <span>none</span><span>severe</span>
       </div>
       <a href="#" id="footLogBtn" class="foot-log-btn" hidden>
         <svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
@@ -576,7 +580,7 @@
   </div>
 
   <div class="footer">
-    Updated 2026-05-28T03:01:33Z · Strava → GitHub Actions · <a href="https://github.com/naickert/theo-training-log">theo-training-log</a>
+    Updated 2026-05-28T03:05:49Z · Strava → GitHub Actions · <a href="https://github.com/naickert/theo-training-log">theo-training-log</a>
   </div>
 
 </div>

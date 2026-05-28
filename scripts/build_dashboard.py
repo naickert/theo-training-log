@@ -412,8 +412,22 @@ def render_foot_text(text: str) -> str:
     status_line = "Resolving — ~90% recovered. Daily prehab continues."
     if text:
         m = re.search(r"\*\*Current status:\*\*\s*([^\n]+)", text)
-        if m: status_line = m.group(1)
-    return f"{_esc(status_line)} Last 2 runs were pain-free."
+        if m:
+            status_line = m.group(1)
+    # Strip markdown links: [label](url) -> label
+    status_line = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", status_line)
+    # Strip "See [doc]" trailing fragments
+    status_line = re.sub(r"\s*See\s+[A-Z][\w-]+.*$", "", status_line, flags=re.IGNORECASE)
+    # Cap at ~140 chars on a sentence boundary if longer
+    if len(status_line) > 140:
+        sentences = re.split(r"(?<=[.!?])\s+", status_line)
+        out, total = [], 0
+        for s in sentences:
+            if total + len(s) > 140:
+                break
+            out.append(s); total += len(s) + 1
+        status_line = " ".join(out) if out else status_line[:140] + "…"
+    return _esc(status_line.strip())
 
 
 def render_week_rows(week_rows: list[dict], activities_by_date: dict) -> str:
