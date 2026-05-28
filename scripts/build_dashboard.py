@@ -623,21 +623,126 @@ def render_week_actuals(week_rows: list[dict], activities_by_date: dict) -> str:
     return "".join(out)
 
 
-def render_races(races: list[dict]) -> str:
+def compute_race_readiness(race: dict, activities: list[dict]) -> dict:
+    """Returns {pct, breakdown, status}. 0-100. Race-type specific scoring."""
+    name = race.get("name", "")
+    days_to = race_days_to(race.get("date", ""))
+    if days_to < 0:
+        return {"pct": 100, "breakdown": [], "status": "past"}
+
+    # Compute helpers from activities (deduped)
+    seen = set()
+    acts = []
+    for a in activities:
+        k = (a["date"], a["title"], a["duration_sec"])
+        if k in seen: continue
+        seen.add(k); acts.append(a)
+    cutoff_4w = (TODAY - timedelta(days=28)).isoformat()
+    acts_4w = [a for a in acts if a["date"] >= cutoff_4w]
+
+    def clamp(x): return max(0.0, min(1.0, x))
+    longest = lambda cats: max((a["distance_km"] for a in acts if a["category"] in cats), default=0)
+    vol_4w = lambda cats: sum(a["distance_km"] for a in acts_4w if a["category"] in cats)
+    count_4w = lambda cats: sum(1 for a in acts_4w if a["category"] in cats)
+
+    foot_factor = 0.9  # could read from injury-log later
+
+    if "Imfolozi" in name or ("MTB" in name and race.get("distance_km", "").startswith("5")):
+        # 55km MTB — need long MTBs + bike volume
+        longest_mtb = max(longest({"mtb"}), longest({"bike", "mtb"}) * 0.6)
+        long_ratio = clamp(longest_mtb / 50)
+        vol_ratio = clamp(vol_4w({"bike", "mtb"}) / 150)
+        time_ratio = clamp(days_to / 28)  # 28 days = enough prep window
+        pct = (long_ratio * 40 + vol_ratio * 30 + time_ratio * 20 + foot_factor * 10)
+        breakdown = [
+            ("Longest MTB", f"{longest_mtb:.0f}/50 km"),
+            ("Bike vol 4wk", f"{vol_4w({'bike','mtb'}):.0f}/150 km"),
+            ("Time remaining", f"{days_to} days"),
+        ]
+    elif "Amashova" in name or ("106" in str(race.get("distance_km", ""))):
+        # 106km road — need long road rides + volume
+        longest_road = longest({"bike"})
+        long_ratio = clamp(longest_road / 90)
+        vol_ratio = clamp(vol_4w({"bike", "mtb"}) / 200)
+        # specificity: post-Imfolozi window for road bike build
+        imf_recovery_days = 8  # need ~8 days after Imfolozi before resume
+        usable_days = max(0, days_to - imf_recovery_days)
+        time_ratio = clamp(usable_days / 28)
+        pct = (long_ratio * 45 + vol_ratio * 25 + time_ratio * 20 + foot_factor * 10)
+        breakdown = [
+            ("Longest road ride", f"{longest_road:.0f}/90 km"),
+            ("Bike vol 4wk", f"{vol_4w({'bike','mtb'}):.0f}/200 km"),
+            ("Usable days post-Imfolozi", f"{usable_days}"),
+        ]
+    elif "Hollywoodbets" in name or "Sub-60" in name or (race.get("target", "").startswith("Sub-60") or "<60" in race.get("target", "")):
+        # 10K sub-60 — need run base + intervals + speed
+        run_4w = vol_4w({"run"})
+        longest_run = longest({"run"})
+        # Best recent 10K pace estimate from longest run pace
+        best_run = max((a for a in acts if a["category"] == "run" and a["distance_km"] >= 5),
+                       key=lambda x: x["distance_km"], default=None)
+        if best_run and best_run.get("pace_per_km"):
+            mins, secs = best_run["pace_per_km"].split(":")
+            best_pace_sec = int(mins) * 60 + int(secs)
+        else:
+            best_pace_sec = 420  # 7:00/km default
+        target_pace_sec = 359  # 5:59/km
+        # pace gap: how far from target we are
+        pace_gap = max(0, best_pace_sec - target_pace_sec)
+        pace_ratio = clamp(1 - (pace_gap / 90))  # 90 sec/km gap = 0% readiness
+        vol_ratio = clamp(run_4w / 30)
+        long_ratio = clamp(longest_run / 10)
+        time_ratio = clamp(days_to / 56)  # 8 weeks proper prep
+        pct = (pace_ratio * 35 + vol_ratio * 25 + long_ratio * 15 + time_ratio * 15 + foot_factor * 10)
+        breakdown = [
+            ("Run vol 4wk", f"{run_4w:.0f}/30 km"),
+            ("Longest run", f"{longest_run:.1f}/10 km"),
+            ("Best pace", f"{best_run['pace_per_km'] if best_run and best_run.get('pace_per_km') else '—'}/km vs 5:59"),
+            ("Time remaining", f"{days_to} days"),
+        ]
+    elif "Absa" in name or "10K" in name:
+        # Easy 10K — low bar
+        run_4w = vol_4w({"run"})
+        longest_run = longest({"run"})
+        vol_ratio = clamp(run_4w / 20)
+        long_ratio = clamp(longest_run / 8)
+        time_ratio = clamp(days_to / 21)
+        pct = (long_ratio * 35 + vol_ratio * 25 + time_ratio * 20 + foot_factor * 20)
+        breakdown = [
+            ("Longest run", f"{longest_run:.1f}/8 km"),
+            ("Run vol 4wk", f"{run_4w:.0f}/20 km"),
+            ("Foot", f"{int(foot_factor*100)}%"),
+        ]
+    else:
+        # Generic
+        vol_ratio = clamp(vol_4w({"run", "bike", "mtb"}) / 100)
+        pct = (vol_ratio * 50 + clamp(days_to / 28) * 30 + foot_factor * 20)
+        breakdown = [("Total vol 4wk", f"{vol_4w({'run','bike','mtb'}):.0f} km")]
+
+    pct_int = int(round(pct))
+    if pct_int >= 75: status = "on-track"
+    elif pct_int >= 50: status = "behind"
+    else: status = "at-risk"
+    return {"pct": pct_int, "breakdown": breakdown, "status": status}
+
+
+def render_races(races: list[dict], activities: list[dict]) -> str:
     out = []
     for i, r in enumerate(races):
         days = race_days_to(r.get("date",""))
         pri = (r.get("priority") or "").upper()
-        # First race = primary (lime), others = secondary
         if i == 0:
             cls = "primary"
             priority_label = "A-Race · Peak"
         elif pri == "B":
             cls = "secondary"
             priority_label = "B-Race"
+        elif pri == "C":
+            cls = "secondary"
+            priority_label = "Tune-up"
         else:
             cls = "secondary"
-            priority_label = "Season Goal"
+            priority_label = "A-Race"
 
         name = r.get("name", "")
         long_dt = long_race_date(r.get("date",""))
@@ -645,13 +750,35 @@ def render_races(races: list[dict]) -> str:
         date_line = f"{long_dt}{(' · ' + location) if location else ''}"
         target_line = r.get("target", "")
         days_str = str(days) if days >= 0 else "—"
+
+        readiness = compute_race_readiness(r, activities)
+        # Inline SVG progress ring
+        pct = readiness["pct"]
+        circ_circumference = 100.5  # 2 * pi * r=16
+        offset = circ_circumference * (1 - pct / 100)
+        status_cls = readiness["status"]
+        ring_color = {"on-track": "currentColor", "behind": "currentColor", "at-risk": "currentColor"}[status_cls]
+        breakdown_html = "".join(f'<span class="ready-bd-item"><span class="ready-bd-k">{_esc(k)}</span><span class="ready-bd-v">{_esc(v)}</span></span>' for k, v in readiness["breakdown"])
+
+        ring_svg = (
+            f'<svg viewBox="0 0 40 40" class="ready-ring">'
+            f'<circle cx="20" cy="20" r="16" class="ready-ring-bg"></circle>'
+            f'<circle cx="20" cy="20" r="16" class="ready-ring-fg" '
+            f'stroke-dasharray="{circ_circumference}" stroke-dashoffset="{offset:.1f}"></circle>'
+            f'</svg>'
+        )
+
         out.append(
-            f'<div class="race-card {cls}">'
+            f'<div class="race-card {cls}" data-readiness="{status_cls}">'
+            f'<div class="race-card-top">'
             f'<span class="race-priority">{_esc(priority_label)}</span>'
+            f'<div class="ready-badge">{ring_svg}<span class="ready-pct">{pct}<small>%</small></span></div>'
+            f'</div>'
             f'<h3 class="race-name">{_esc(name)}</h3>'
             f'<div class="race-date">{_esc(date_line)}</div>'
-            f'<div class="race-countdown-row"><span class="race-countdown">{days_str}</span><span class="race-countdown-unit">days to go</span></div>'
+            f'<div class="race-countdown-row"><span class="race-countdown">{days_str}</span><span class="race-countdown-unit">days · ready</span></div>'
             f'<p class="race-target"><strong>{_esc(target_line)}</strong></p>'
+            f'<div class="ready-breakdown">{breakdown_html}</div>'
             f'</div>'
         )
     return "".join(out)
@@ -830,7 +957,7 @@ def build_dashboard(activities: list[dict]) -> str:
         "{{WEEK_ROWS_HTML}}": render_week_rows(week_rows, activities_by_date),
         # LOG_ENTRIES_HTML no longer used — actuals merged into week table
         "{{RACES_META}}": f"{len(races)} on the calendar",
-        "{{RACES_HTML}}": render_races(races),
+        "{{RACES_HTML}}": render_races(races, activities),
         "{{TRENDS_HTML}}": trends_html,
         "{{DATA_JSON}}": json.dumps({"sparks": sparks, "charts": chart_data, "calendar": calendar_data}),
     }

@@ -362,7 +362,28 @@
     background:radial-gradient(circle,rgba(255,255,255,0.18),transparent 70%);
   }
   .race-card.secondary{background:linear-gradient(135deg,var(--card-2),var(--card))}
-  .race-priority{display:inline-block;font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:2px 8px;border-radius:999px;margin-bottom:6px}
+  .race-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px}
+  .race-priority{display:inline-block;font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:2px 8px;border-radius:999px}
+
+  /* READINESS RING */
+  .ready-badge{display:flex;align-items:center;gap:6px}
+  .ready-ring{width:32px;height:32px;transform:rotate(-90deg);flex-shrink:0}
+  .ready-ring-bg{fill:none;stroke:currentColor;stroke-opacity:0.18;stroke-width:4}
+  .ready-ring-fg{fill:none;stroke:currentColor;stroke-width:4;stroke-linecap:round;transition:stroke-dashoffset 0.8s ease-out}
+  .race-card.primary .ready-ring{color:#0a0d0c}
+  .race-card.secondary[data-readiness="on-track"] .ready-ring{color:var(--lime)}
+  .race-card.secondary[data-readiness="behind"] .ready-ring{color:var(--amber)}
+  .race-card.secondary[data-readiness="at-risk"] .ready-ring{color:var(--rose)}
+  .ready-pct{font-size:13px;font-weight:800;line-height:1;letter-spacing:-0.02em}
+  .ready-pct small{font-size:9px;font-weight:600;opacity:0.7;margin-left:1px}
+  .race-card.primary .ready-pct{color:#0a0d0c}
+
+  /* READINESS BREAKDOWN */
+  .ready-breakdown{display:flex;flex-direction:column;gap:2px;margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.08)}
+  .race-card.primary .ready-breakdown{border-top-color:rgba(0,0,0,0.12)}
+  .ready-bd-item{display:flex;justify-content:space-between;font-size:10px;line-height:1.3;opacity:0.85}
+  .ready-bd-k{opacity:0.7}
+  .ready-bd-v{font-weight:600;font-variant-numeric:tabular-nums}
   .race-card .race-priority{background:rgba(0,0,0,0.12);color:#0a0d0c}
   .race-card.secondary .race-priority{background:var(--card-3);color:var(--text-2)}
   .race-name{font-size:14px;font-weight:700;letter-spacing:-0.01em;line-height:1.1;margin-bottom:2px}
@@ -596,13 +617,13 @@
         <span class="sec-meta">4 on the calendar</span>
       </div>
       <div class="race-grid">
-        <div class="race-card primary"><span class="race-priority">A-Race · Peak</span><h3 class="race-name">Imfolozi 55 km MTB</h3><div class="race-date">Saturday 27 June 2026 · iMfolozi Game Reserve, KZN</div><div class="race-countdown-row"><span class="race-countdown">30</span><span class="race-countdown-unit">days to go</span></div><p class="race-target"><strong>Finish strong, ~4 hr</strong></p></div><div class="race-card secondary"><span class="race-priority">B-Race</span><h3 class="race-name">Absa 10K Road</h3><div class="race-date">Friday 10 July 2026</div><div class="race-countdown-row"><span class="race-countdown">43</span><span class="race-countdown-unit">days to go</span></div><p class="race-target"><strong>1:02–1:05 (foot &amp; fitness dependent)</strong></p></div><div class="race-card secondary"><span class="race-priority">Season Goal</span><h3 class="race-name">Amashova National Classic</h3><div class="race-date">Sunday 19 July 2026 · Pietermaritzburg → Durban, KZN</div><div class="race-countdown-row"><span class="race-countdown">52</span><span class="race-countdown-unit">days to go</span></div><p class="race-target"><strong>Finish strong, ~4-4.5 hr</strong></p></div><div class="race-card secondary"><span class="race-priority">Season Goal</span><h3 class="race-name">Hollywoodbets Durban 10K</h3><div class="race-date">Sunday 30 August 2026 · Durban, KZN</div><div class="race-countdown-row"><span class="race-countdown">94</span><span class="race-countdown-unit">days to go</span></div><p class="race-target"><strong>Sub-60 attempt — under 60:00</strong></p></div>
+        <div class="race-card primary" data-readiness="at-risk"><div class="race-card-top"><span class="race-priority">A-Race · Peak</span><div class="ready-badge"><svg viewBox="0 0 40 40" class="ready-ring"><circle cx="20" cy="20" r="16" class="ready-ring-bg"></circle><circle cx="20" cy="20" r="16" class="ready-ring-fg" stroke-dasharray="100.5" stroke-dashoffset="52.3"></circle></svg><span class="ready-pct">48<small>%</small></span></div></div><h3 class="race-name">Imfolozi 55 km MTB</h3><div class="race-date">Saturday 27 June 2026 · iMfolozi Game Reserve, KZN</div><div class="race-countdown-row"><span class="race-countdown">30</span><span class="race-countdown-unit">days · ready</span></div><p class="race-target"><strong>Finish strong, ~4 hr</strong></p><div class="ready-breakdown"><span class="ready-bd-item"><span class="ready-bd-k">Longest MTB</span><span class="ready-bd-v">24/50 km</span></span><span class="ready-bd-item"><span class="ready-bd-k">Bike vol 4wk</span><span class="ready-bd-v">0/150 km</span></span><span class="ready-bd-item"><span class="ready-bd-k">Time remaining</span><span class="ready-bd-v">30 days</span></span></div></div><div class="race-card secondary" data-readiness="on-track"><div class="race-card-top"><span class="race-priority">B-Race</span><div class="ready-badge"><svg viewBox="0 0 40 40" class="ready-ring"><circle cx="20" cy="20" r="16" class="ready-ring-bg"></circle><circle cx="20" cy="20" r="16" class="ready-ring-fg" stroke-dasharray="100.5" stroke-dashoffset="6.0"></circle></svg><span class="ready-pct">94<small>%</small></span></div></div><h3 class="race-name">Absa 10K Road</h3><div class="race-date">Friday 10 July 2026</div><div class="race-countdown-row"><span class="race-countdown">43</span><span class="race-countdown-unit">days · ready</span></div><p class="race-target"><strong>1:02–1:05 (foot &amp; fitness dependent)</strong></p><div class="ready-breakdown"><span class="ready-bd-item"><span class="ready-bd-k">Longest run</span><span class="ready-bd-v">11.0/8 km</span></span><span class="ready-bd-item"><span class="ready-bd-k">Run vol 4wk</span><span class="ready-bd-v">17/20 km</span></span><span class="ready-bd-item"><span class="ready-bd-k">Foot</span><span class="ready-bd-v">90%</span></span></div></div><div class="race-card secondary" data-readiness="at-risk"><div class="race-card-top"><span class="race-priority">A-Race</span><div class="ready-badge"><svg viewBox="0 0 40 40" class="ready-ring"><circle cx="20" cy="20" r="16" class="ready-ring-bg"></circle><circle cx="20" cy="20" r="16" class="ready-ring-fg" stroke-dasharray="100.5" stroke-dashoffset="51.3"></circle></svg><span class="ready-pct">49<small>%</small></span></div></div><h3 class="race-name">Amashova National Classic</h3><div class="race-date">Sunday 19 July 2026 · Pietermaritzburg → Durban, KZN</div><div class="race-countdown-row"><span class="race-countdown">52</span><span class="race-countdown-unit">days · ready</span></div><p class="race-target"><strong>Finish strong, ~4-4.5 hr</strong></p><div class="ready-breakdown"><span class="ready-bd-item"><span class="ready-bd-k">Longest road ride</span><span class="ready-bd-v">39/90 km</span></span><span class="ready-bd-item"><span class="ready-bd-k">Bike vol 4wk</span><span class="ready-bd-v">0/200 km</span></span><span class="ready-bd-item"><span class="ready-bd-k">Usable days post-Imfolozi</span><span class="ready-bd-v">44</span></span></div></div><div class="race-card secondary" data-readiness="behind"><div class="race-card-top"><span class="race-priority">A-Race</span><div class="ready-badge"><svg viewBox="0 0 40 40" class="ready-ring"><circle cx="20" cy="20" r="16" class="ready-ring-bg"></circle><circle cx="20" cy="20" r="16" class="ready-ring-fg" stroke-dasharray="100.5" stroke-dashoffset="41.2"></circle></svg><span class="ready-pct">59<small>%</small></span></div></div><h3 class="race-name">Hollywoodbets Durban 10K</h3><div class="race-date">Sunday 30 August 2026 · Durban, KZN</div><div class="race-countdown-row"><span class="race-countdown">94</span><span class="race-countdown-unit">days · ready</span></div><p class="race-target"><strong>Sub-60 attempt — under 60:00</strong></p><div class="ready-breakdown"><span class="ready-bd-item"><span class="ready-bd-k">Run vol 4wk</span><span class="ready-bd-v">17/30 km</span></span><span class="ready-bd-item"><span class="ready-bd-k">Longest run</span><span class="ready-bd-v">11.0/10 km</span></span><span class="ready-bd-item"><span class="ready-bd-k">Best pace</span><span class="ready-bd-v">7:13/km vs 5:59</span></span><span class="ready-bd-item"><span class="ready-bd-k">Time remaining</span><span class="ready-bd-v">94 days</span></span></div></div>
       </div>
     </div>
   </div>
 
   <div class="footer">
-    Updated 2026-05-28T05:00:24Z · Strava → GitHub Actions · <a href="https://github.com/naickert/theo-training-log">theo-training-log</a>
+    Updated 2026-05-28T06:14:04Z · Strava → GitHub Actions · <a href="https://github.com/naickert/theo-training-log">theo-training-log</a>
   </div>
 
 </div>
