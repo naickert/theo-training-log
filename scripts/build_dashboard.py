@@ -432,39 +432,110 @@ def render_foot_text(text: str) -> str:
 
 def render_week_rows(week_rows: list[dict], activities_by_date: dict) -> str:
     out = []
+    seen = set()
     for r in week_rows:
         d_iso = r["date"]
         d_obj = date.fromisoformat(d_iso)
-        day_short = r["day"][:3]
+        day_short = r["day"][:3].upper()
         day_num = d_obj.day
         planned = r["planned"]
         detail = r["detail"]
         is_today = (d_obj == TODAY)
+        is_future = (d_obj > TODAY)
+
+        # Planned column
         planned_clean = re.sub(r"~~(.+?)~~", r'<span class="strike">\1</span>', planned)
         planned_clean = re.sub(r"\*\*(.+?)\*\*", r"<em>\1</em>", planned_clean)
-        session_html = planned_clean
-        actuals = activities_by_date.get(d_iso, [])
+        planned_cls = "week-planned"
+        if "rest" in planned.lower() and "<span" not in planned_clean:
+            planned_cls += " rest"
+
+        # Actual column — dedupe activities for this date
+        day_acts = []
+        for a in activities_by_date.get(d_iso, []):
+            key = (a["date"], a["title"], a["duration_sec"])
+            if key in seen: continue
+            seen.add(key)
+            day_acts.append(a)
+
+        if day_acts:
+            items = []
+            for a in day_acts:
+                cat = a["category"]
+                title = a["title"][:32]
+                meta_bits = []
+                if a["distance_km"] > 0:
+                    meta_bits.append(f'<span class="val">{a["distance_km"]:.1f} km</span>')
+                meta_bits.append(a["duration_display"])
+                if a.get("pace_per_km"):
+                    meta_bits.append(f"{a['pace_per_km']}/km")
+                elif a.get("avg_speed_kmh"):
+                    meta_bits.append(f"{a['avg_speed_kmh']} km/h")
+                if a.get("relative_effort"):
+                    meta_bits.append(f"RE {a['relative_effort']}")
+                icon = CATEGORY_ICON.get(cat, CATEGORY_ICON["other"])
+                items.append(
+                    f'<div class="week-actual-item">'
+                    f'<span class="week-actual-ico {cat}">{icon}</span>'
+                    f'<div class="week-actual-text">'
+                    f'<span class="week-actual-title">{_esc(title)}</span>'
+                    f'<span class="week-actual-meta">{" · ".join(meta_bits)}</span>'
+                    f'</div>'
+                    f'</div>'
+                )
+            actual_html = f'<div class="week-actual">{"".join(items)}</div>'
+        else:
+            if is_today:
+                empty_text = "No activity yet"
+            elif is_future:
+                empty_text = ""
+            elif "rest" in planned.lower() or "rest" in detail.lower():
+                empty_text = "Rest taken"
+            else:
+                empty_text = "—"
+            actual_html = f'<div class="week-actual empty">{empty_text}</div>'
+
+        # Status pill
         if d_obj < TODAY:
-            if planned.lower().startswith("~~") or "done" in detail.lower():
-                status, status_cls = "Complete", "done"
-            elif "rest" in planned.lower():
+            if day_acts and "rest" not in planned.lower():
+                # Did the actual match the planned type? Simple keyword match
+                planned_lower = planned.lower()
+                act_cats = {a["category"] for a in day_acts}
+                planned_match = False
+                if ("bike" in planned_lower or "ride" in planned_lower) and act_cats & {"bike", "mtb"}:
+                    planned_match = True
+                elif "mtb" in planned_lower and "mtb" in act_cats:
+                    planned_match = True
+                elif "run" in planned_lower and "run" in act_cats:
+                    planned_match = True
+                elif "weight" in planned_lower and "weights" in act_cats:
+                    planned_match = True
+                elif "gym" in planned_lower and ("other" in act_cats or "weights" in act_cats):
+                    planned_match = True
+                if planned_match:
+                    status, status_cls = "Complete", "done"
+                else:
+                    status, status_cls = "Substituted", "substituted"
+            elif "rest" in planned.lower() or planned.lower().startswith("~~"):
                 status, status_cls = "Rest", "rest"
-            elif actuals:
+            elif "done" in detail.lower():
                 status, status_cls = "Complete", "done"
             else:
                 status, status_cls = "Missed", "miss"
-        elif d_obj == TODAY:
+        elif is_today:
             status, status_cls = "Today", "today-mark"
         else:
             if "rest" in planned.lower():
                 status, status_cls = "Rest", "rest"
             else:
                 status, status_cls = "Upcoming", "upcoming"
-        row_cls = " today-row" if is_today else ""
+
+        row_cls = " today-row" if is_today else (" future-row" if is_future else "")
         out.append(
             f'<div class="week-row{row_cls}">'
             f'<div class="week-day-cell"><span class="day">{day_short}</span><span class="num">{day_num}</span></div>'
-            f'<div class="week-session-text">{session_html}</div>'
+            f'<div class="{planned_cls}">{planned_clean}</div>'
+            f'{actual_html}'
             f'<div class="week-status-pill {status_cls}">{status}</div>'
             f'</div>'
         )
@@ -757,7 +828,7 @@ def build_dashboard(activities: list[dict]) -> str:
         "{{FOOT_BODY}}": render_foot_text(injury_text),
         "{{WEEK_META}}": f"{week_range} · {week_label}" if week_n else "Current week",
         "{{WEEK_ROWS_HTML}}": render_week_rows(week_rows, activities_by_date),
-        "{{LOG_ENTRIES_HTML}}": render_week_actuals(week_rows, activities_by_date),
+        # LOG_ENTRIES_HTML no longer used — actuals merged into week table
         "{{RACES_META}}": f"{len(races)} on the calendar",
         "{{RACES_HTML}}": render_races(races),
         "{{TRENDS_HTML}}": trends_html,
