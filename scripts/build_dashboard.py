@@ -481,49 +481,75 @@ CATEGORY_ICON = {
 }
 
 
-def render_log_entries(activities: list[dict]) -> str:
-    seven_days_ago = (TODAY - timedelta(days=7)).isoformat()
-    recent = [a for a in activities if a["date"] >= seven_days_ago]
-    seen = set()
-    deduped = []
-    for a in recent:
-        key = (a["date"], a["title"], a["duration_sec"])
-        if key in seen: continue
-        seen.add(key)
-        deduped.append(a)
+def render_week_actuals(week_rows: list[dict], activities_by_date: dict) -> str:
+    """One row per day of this week, aligned with the plan column on the left."""
     out = []
-    for a in deduped[:7]:
-        d_obj = date.fromisoformat(a["date"])
-        day = a["day_of_week"]
-        num = d_obj.day
-        cat = a["category"]
-        title = a["title"][:40]
-        meta_bits = []
-        if a.get("pace_per_km"):
-            meta_bits.append(f"{a['pace_per_km']}/km")
-        elif a.get("avg_speed_kmh"):
-            meta_bits.append(f"{a['avg_speed_kmh']} km/h")
-        meta_bits.append(f"{day} {num}")
-        if a.get("relative_effort"):
-            meta_bits.append(f"RE {a['relative_effort']}")
-        meta = " · ".join(meta_bits)
-
-        if a["distance_km"] > 0:
-            stat_val = f'{a["distance_km"]:.1f}'
-            stat_sub = f"km · {a['duration_display']}"
-        else:
-            stat_val = a["duration_display"]
-            stat_sub = "duration"
-
-        icon = CATEGORY_ICON.get(cat, CATEGORY_ICON["other"])
-        out.append(
-            f'<div class="log-row">'
-            f'<div class="log-ico {cat}">{icon}</div>'
-            f'<div class="log-main"><span class="log-title">{_esc(title)}</span><span class="log-sub">{_esc(meta)}</span></div>'
-            f'<div class="log-stat"><span class="val">{stat_val}</span><span class="sub">{stat_sub}</span></div>'
-            f'</div>'
-        )
-    return "".join(out) if out else '<div class="log-row"><div></div><div class="log-main"><span class="log-sub">No activities in the last 7 days.</span></div></div>'
+    seen = set()
+    for r in week_rows:
+        d_iso = r["date"]
+        d_obj = date.fromisoformat(d_iso)
+        day_short = r["day"][:3].upper()
+        day_num = d_obj.day
+        is_today = (d_obj == TODAY)
+        is_future = (d_obj > TODAY)
+        # dedupe activities for this date
+        day_acts = []
+        for a in activities_by_date.get(d_iso, []):
+            key = (a["date"], a["title"], a["duration_sec"])
+            if key in seen: continue
+            seen.add(key)
+            day_acts.append(a)
+        row_cls = " today-row" if is_today else ""
+        day_cls = ""
+        if is_today: day_cls = " today-day"
+        elif is_future: day_cls = " future-day"
+        if not day_acts:
+            # Empty row — still rendered to align with plan
+            empty_label = "Today — no activity yet" if is_today else ("Upcoming" if is_future else "No activity")
+            out.append(
+                f'<div class="actual-row{row_cls}">'
+                f'<div class="actual-day{day_cls}"><span class="day">{day_short}</span><span class="num">{day_num}</span></div>'
+                f'<div class="actual-body actual-empty">{empty_label}</div>'
+                f'<div class="actual-stat"></div>'
+                f'</div>'
+            )
+            continue
+        # Render one row per activity (multiple per day will stack with shared day cell on first only)
+        for i, a in enumerate(day_acts):
+            cat = a["category"]
+            title = a["title"][:36]
+            meta_bits = []
+            if a.get("pace_per_km"):
+                meta_bits.append(f"{a['pace_per_km']}/km")
+            elif a.get("avg_speed_kmh"):
+                meta_bits.append(f"{a['avg_speed_kmh']} km/h")
+            if a.get("relative_effort"):
+                meta_bits.append(f"RE {a['relative_effort']}")
+            meta = " · ".join(meta_bits) if meta_bits else CATEGORY_LABEL.get(cat, "Activity")
+            if a["distance_km"] > 0:
+                stat_val = f'{a["distance_km"]:.1f}'
+                stat_sub = f"km · {a['duration_display']}"
+            else:
+                stat_val = a["duration_display"]
+                stat_sub = "duration"
+            icon = CATEGORY_ICON.get(cat, CATEGORY_ICON["other"])
+            # Only first row of a multi-activity day shows the date label
+            day_html = (
+                f'<div class="actual-day{day_cls}"><span class="day">{day_short}</span><span class="num">{day_num}</span></div>'
+                if i == 0 else
+                f'<div class="actual-day actual-day-empty"></div>'
+            )
+            out.append(
+                f'<div class="actual-row{row_cls}">'
+                f'{day_html}'
+                f'<div class="actual-body">'
+                f'<div class="actual-title"><span class="actual-ico {cat}">{icon}</span>{_esc(title)}</div>'
+                f'<div class="actual-meta">{_esc(meta)}</div>'
+                f'</div>'
+                f'<div class="actual-stat"><span class="val">{stat_val}</span><span class="sub">{stat_sub}</span></div>'
+                f'</div>'
+            )
+    return "".join(out)
 
 
 def render_races(races: list[dict]) -> str:
@@ -731,7 +757,7 @@ def build_dashboard(activities: list[dict]) -> str:
         "{{FOOT_BODY}}": render_foot_text(injury_text),
         "{{WEEK_META}}": f"{week_range} · {week_label}" if week_n else "Current week",
         "{{WEEK_ROWS_HTML}}": render_week_rows(week_rows, activities_by_date),
-        "{{LOG_ENTRIES_HTML}}": render_log_entries(activities),
+        "{{LOG_ENTRIES_HTML}}": render_week_actuals(week_rows, activities_by_date),
         "{{RACES_META}}": f"{len(races)} on the calendar",
         "{{RACES_HTML}}": render_races(races),
         "{{TRENDS_HTML}}": trends_html,

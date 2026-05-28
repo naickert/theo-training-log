@@ -256,27 +256,31 @@
   .week-status-pill.rest{background:transparent;color:var(--text-3)}
   .week-status-pill.miss{background:rgba(255,93,122,0.1);color:var(--rose)}
 
-  /* RECENT ACTIVITIES */
+  /* THIS WEEK — ACTUALS (aligned to plan rows on the left) */
   .log-card{background:var(--card);border-radius:18px;padding:8px}
-  .log-row{display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center;padding:12px 14px;border-radius:12px}
-  .log-row+.log-row{border-top:1px solid var(--line)}
-  .log-ico{
-    width:38px;height:38px;border-radius:11px;
-    display:grid;place-items:center;
-    background:var(--card-3);
-  }
-  .log-ico svg{width:18px;height:18px;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
-  .log-ico.run{background:rgba(197,255,61,0.12)} .log-ico.run svg{stroke:var(--lime)}
-  .log-ico.bike{background:rgba(255,181,71,0.12)} .log-ico.bike svg{stroke:var(--amber)}
-  .log-ico.mtb{background:rgba(255,93,122,0.12)} .log-ico.mtb svg{stroke:var(--rose)}
-  .log-ico.weights{background:rgba(168,179,172,0.12)} .log-ico.weights svg{stroke:var(--text-2)}
-  .log-ico.other{background:var(--card-3)} .log-ico.other svg{stroke:var(--text-2)}
-  .log-main{display:flex;flex-direction:column;gap:2px;min-width:0}
-  .log-title{font-size:14px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .log-sub{font-size:12px;color:var(--text-3)}
-  .log-stat{text-align:right;display:flex;flex-direction:column;gap:1px}
-  .log-stat .val{font-size:15px;font-weight:700;color:var(--text);letter-spacing:-0.01em}
-  .log-stat .sub{font-size:11px;color:var(--text-3);font-weight:500}
+  .actual-row{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;padding:12px 14px;border-radius:12px}
+  .actual-row+.actual-row{border-top:1px solid var(--line)}
+  .actual-row.today-row{background:linear-gradient(90deg,rgba(197,255,61,0.06) 0%,rgba(197,255,61,0) 100%)}
+  .actual-day{display:flex;flex-direction:column;gap:2px}
+  .actual-day .day{font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-3)}
+  .actual-day .num{font-size:20px;font-weight:700;color:var(--text);letter-spacing:-0.02em;line-height:1}
+  .actual-day.today-day .day,.actual-day.today-day .num{color:var(--lime)}
+  .actual-day.future-day .day,.actual-day.future-day .num{color:var(--text-4)}
+  .actual-day-empty{visibility:hidden}
+  .actual-body{min-width:0;display:flex;flex-direction:column;gap:3px}
+  .actual-title{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--text);min-width:0}
+  .actual-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .actual-ico{flex-shrink:0;width:22px;height:22px;border-radius:6px;display:inline-grid;place-items:center}
+  .actual-ico svg{width:13px;height:13px;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .actual-ico.run{background:rgba(197,255,61,0.12)} .actual-ico.run svg{stroke:var(--lime)}
+  .actual-ico.bike{background:rgba(255,181,71,0.12)} .actual-ico.bike svg{stroke:var(--amber)}
+  .actual-ico.mtb{background:rgba(255,93,122,0.12)} .actual-ico.mtb svg{stroke:var(--rose)}
+  .actual-ico.weights,.actual-ico.other,.actual-ico.walk{background:rgba(168,179,172,0.12)} .actual-ico.weights svg,.actual-ico.other svg,.actual-ico.walk svg{stroke:var(--text-2)}
+  .actual-meta{font-size:12px;color:var(--text-3)}
+  .actual-empty{font-size:13px;color:var(--text-4);font-style:italic}
+  .actual-stat{text-align:right;display:flex;flex-direction:column;gap:1px}
+  .actual-stat .val{font-size:15px;font-weight:700;color:var(--text);letter-spacing:-0.01em}
+  .actual-stat .sub{font-size:11px;color:var(--text-3);font-weight:500}
 
   /* RACES */
   .race-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:14px}
@@ -525,11 +529,11 @@
 
     <div>
       <div class="sec">
-        <h3>Recent activities</h3>
-        <span class="sec-meta">Past 7 days</span>
+        <h3>This week — actuals</h3>
+        <span class="sec-meta">Day by day</span>
       </div>
       <div class="log-card">
-        <div class="log-row"><div class="log-ico run"><svg viewBox="0 0 24 24"><circle cx="14" cy="4" r="2"/><path d="M11 13l-1 4 3 3 3-8-4-3-3 3-1 4M5 17l3-3"/></svg></div><div class="log-main"><span class="log-title">Morning Run</span><span class="log-sub">6:25/km · Wed 27 · RE 166</span></div><div class="log-stat"><span class="val">5.2</span><span class="sub">km · 33:41</span></div></div><div class="log-row"><div class="log-ico run"><svg viewBox="0 0 24 24"><circle cx="14" cy="4" r="2"/><path d="M11 13l-1 4 3 3 3-8-4-3-3 3-1 4M5 17l3-3"/></svg></div><div class="log-main"><span class="log-title">Morning Run</span><span class="log-sub">6:51/km · Wed 27 · RE 15</span></div><div class="log-stat"><span class="val">1.6</span><span class="sub">km · 11:05</span></div></div><div class="log-row"><div class="log-ico other"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div class="log-main"><span class="log-title">Morning Workout</span><span class="log-sub">Mon 25 · RE 29</span></div><div class="log-stat"><span class="val">1:36:44</span><span class="sub">duration</span></div></div><div class="log-row"><div class="log-ico weights"><svg viewBox="0 0 24 24"><path d="M6 4v16M18 4v16M2 8v8M22 8v8M6 8h12M6 16h12"/></svg></div><div class="log-main"><span class="log-title">Morning Weight Training</span><span class="log-sub">Thu 21 · RE 13</span></div><div class="log-stat"><span class="val">1:00:29</span><span class="sub">duration</span></div></div>
+        <div class="actual-row"><div class="actual-day"><span class="day">MON</span><span class="num">25</span></div><div class="actual-body"><div class="actual-title"><span class="actual-ico other"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span>Morning Workout</div><div class="actual-meta">RE 29</div></div><div class="actual-stat"><span class="val">1:36:44</span><span class="sub">duration</span></div></div><div class="actual-row"><div class="actual-day"><span class="day">TUE</span><span class="num">26</span></div><div class="actual-body actual-empty">No activity</div><div class="actual-stat"></div></div><div class="actual-row"><div class="actual-day"><span class="day">WED</span><span class="num">27</span></div><div class="actual-body"><div class="actual-title"><span class="actual-ico run"><svg viewBox="0 0 24 24"><circle cx="14" cy="4" r="2"/><path d="M11 13l-1 4 3 3 3-8-4-3-3 3-1 4M5 17l3-3"/></svg></span>Morning Run</div><div class="actual-meta">6:25/km · RE 166</div></div><div class="actual-stat"><span class="val">5.2</span><span class="sub">km · 33:41</span></div></div><div class="actual-row"><div class="actual-day actual-day-empty"></div><div class="actual-body"><div class="actual-title"><span class="actual-ico run"><svg viewBox="0 0 24 24"><circle cx="14" cy="4" r="2"/><path d="M11 13l-1 4 3 3 3-8-4-3-3 3-1 4M5 17l3-3"/></svg></span>Morning Run</div><div class="actual-meta">6:51/km · RE 15</div></div><div class="actual-stat"><span class="val">1.6</span><span class="sub">km · 11:05</span></div></div><div class="actual-row today-row"><div class="actual-day today-day"><span class="day">THU</span><span class="num">28</span></div><div class="actual-body actual-empty">Today — no activity yet</div><div class="actual-stat"></div></div><div class="actual-row"><div class="actual-day future-day"><span class="day">FRI</span><span class="num">29</span></div><div class="actual-body actual-empty">Upcoming</div><div class="actual-stat"></div></div><div class="actual-row"><div class="actual-day future-day"><span class="day">SAT</span><span class="num">30</span></div><div class="actual-body actual-empty">Upcoming</div><div class="actual-stat"></div></div><div class="actual-row"><div class="actual-day future-day"><span class="day">SUN</span><span class="num">31</span></div><div class="actual-body actual-empty">Upcoming</div><div class="actual-stat"></div></div>
       </div>
     </div>
 
@@ -572,7 +576,7 @@
   </div>
 
   <div class="footer">
-    Updated 2026-05-28T04:16:57Z · Strava → GitHub Actions · <a href="https://github.com/naickert/theo-training-log">theo-training-log</a>
+    Updated 2026-05-28T04:20:03Z · Strava → GitHub Actions · <a href="https://github.com/naickert/theo-training-log">theo-training-log</a>
   </div>
 
 </div>
