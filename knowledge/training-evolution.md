@@ -297,3 +297,12 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Dashboard changes:** added avg HR to run rows (surfaces easy/threshold creep); fixed readiness-breakdown bugs (Imfolozi bike 0→24/150, Amashova → "Road bike 4wk", Hollywoodbets best pace 7:13→6:25); fixed Phase-3 arc 0%→12%; null-guarded the calendar JS.
 - **Flagged for user:** (1) two competing pipelines (this Chrome skill vs the GitHub Actions job that spammed this journal) — reconcile to one; (2) readiness % formula undocumented + had display bugs — needs a defined model.
 - **Next cycle:** confirm Sat 30 May 30 km MTB; flag Sun 31 easy run if HR >160; resolve pipeline + readiness-formula decisions.
+
+
+---
+
+## Cycle auto — 2026-05-29
+
+- **Sync at:** 2026-05-29T03:22:56Z
+- **Activity baseline:** 4 activities in last 7 days, 52 in 90-day window.
+- **Notes:** Auto-cycle.
