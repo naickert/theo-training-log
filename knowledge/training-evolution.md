@@ -50,3 +50,12 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Engine fixes shipped to build_dashboard.py:** MTB-by-title categorization (2 May was mis-typed "bike" by Strava); avg HR on week-table rows; consistent rolling-28-day 4wk window (stats + readiness now agree); idempotent journal (≤1 auto entry/day — kills the spam vector). Also pruned the 25 spam entries from the repo journal and re-rendered today's dashboard from the fixed engine.
 - **Readiness recalculated (v2):** Imfolozi **44** (at-risk), Absa **92** (on-track), Amashova **29** (at-risk), Hollywoodbets **73** (behind). Lower than the old padded 53/94/49/59 because the time term is gone — these now reflect actual physical prep, which honestly exposes the bike-volume gap (the real Imfolozi risk).
 - **Next cycle should:** Confirm Sat 30 May 30 km MTB done (the bike ramp); flag Sun 31 easy run if avg HR >160.
+
+
+---
+
+## Cycle auto — 2026-05-29
+
+- **Sync at:** 2026-05-29T06:03:58Z
+- **Activity baseline:** 5 activities in last 7 days, 53 in 90-day window.
+- **Notes:** Auto-cycle (GitHub Actions). Manual /my-training cycles are logged separately.
