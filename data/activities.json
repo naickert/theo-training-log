@@ -70,20 +70,6 @@
     "synced_at": "2026-05-28T06:20:36Z"
   },
   {
-    "id": "2026-05-21_weight-training_1-00-29",
-    "date": "2026-05-21",
-    "day_of_week": "Thu",
-    "sport": "Weight Training",
-    "category": "weights",
-    "title": "Morning Weight Training",
-    "duration_sec": 3629,
-    "duration_display": "1:00:29",
-    "distance_km": 0,
-    "elevation_m": 0,
-    "relative_effort": 13,
-    "synced_at": "2026-05-27T08:30:00Z"
-  },
-  {
     "id": "2026-05-21_morning-weight-training_1-00-29",
     "strava_id": 18590469497,
     "date": "2026-05-21",
@@ -117,20 +103,6 @@
     "max_hr": 184,
     "synced_at": "2026-05-28T06:20:36Z",
     "pace_per_km": "6:49"
-  },
-  {
-    "id": "2026-05-19_weight-training_1-00-15",
-    "date": "2026-05-19",
-    "day_of_week": "Tue",
-    "sport": "Weight Training",
-    "category": "weights",
-    "title": "Morning Weight Training",
-    "duration_sec": 3615,
-    "duration_display": "1:00:15",
-    "distance_km": 0,
-    "elevation_m": 0,
-    "relative_effort": 21,
-    "synced_at": "2026-05-27T08:30:00Z"
   },
   {
     "id": "2026-05-19_morning-weight-training_1-00-15",
@@ -168,20 +140,6 @@
     "pace_per_km": "6:59"
   },
   {
-    "id": "2026-05-05_weight-training_46-48",
-    "date": "2026-05-05",
-    "day_of_week": "Tue",
-    "sport": "Weight Training",
-    "category": "weights",
-    "title": "Morning Weight Training",
-    "duration_sec": 2808,
-    "duration_display": "46:48",
-    "distance_km": 0,
-    "elevation_m": 0,
-    "relative_effort": 9,
-    "synced_at": "2026-05-27T08:30:00Z"
-  },
-  {
     "id": "2026-05-05_morning-weight-training_46-48",
     "strava_id": 18380430320,
     "date": "2026-05-05",
@@ -197,21 +155,6 @@
     "avg_hr": 104,
     "max_hr": 134,
     "synced_at": "2026-05-28T06:20:36Z"
-  },
-  {
-    "id": "2026-05-02_morning-mtb_1-32-15",
-    "date": "2026-05-02",
-    "day_of_week": "Sat",
-    "sport": "Mountain Bike Ride",
-    "category": "bike-mtb",
-    "title": "Morning Mountain Bike Ride",
-    "duration_sec": 5535,
-    "duration_display": "1:32:15",
-    "distance_km": 24.38,
-    "elevation_m": 197,
-    "relative_effort": 102,
-    "avg_speed_kmh": 15.9,
-    "synced_at": "2026-05-27T08:30:00Z"
   },
   {
     "id": "2026-05-02_morning-mountain-bike-ride_1-32-15",
@@ -232,21 +175,6 @@
     "avg_speed_kmh": 15.9
   },
   {
-    "id": "2026-05-01_zwift-ac-sweet-spot_1-02-10",
-    "date": "2026-05-01",
-    "day_of_week": "Fri",
-    "sport": "Virtual Ride",
-    "category": "bike-road",
-    "title": "Zwift - AC + Sweet Spot #1",
-    "duration_sec": 3730,
-    "duration_display": "1:02:10",
-    "distance_km": 19.57,
-    "elevation_m": 232,
-    "relative_effort": 217,
-    "avg_speed_kmh": 18.9,
-    "synced_at": "2026-05-27T08:30:00Z"
-  },
-  {
     "id": "2026-05-01_zwift-ac-sweet-spot-1_1-02-10",
     "strava_id": 18330568783,
     "date": "2026-05-01",
@@ -263,20 +191,6 @@
     "max_hr": 181,
     "synced_at": "2026-05-28T06:20:36Z",
     "avg_speed_kmh": 18.9
-  },
-  {
-    "id": "2026-04-30_weight-training_46-01",
-    "date": "2026-04-30",
-    "day_of_week": "Thu",
-    "sport": "Weight Training",
-    "category": "weights",
-    "title": "Morning Weight Training",
-    "duration_sec": 2761,
-    "duration_display": "46:01",
-    "distance_km": 0,
-    "elevation_m": 0,
-    "relative_effort": 6,
-    "synced_at": "2026-05-27T08:30:00Z"
   },
   {
     "id": "2026-04-30_morning-weight-training_46-01",
@@ -332,20 +246,6 @@
     "avg_speed_kmh": 23.4
   },
   {
-    "id": "2026-04-28_weight-training_51-24",
-    "date": "2026-04-28",
-    "day_of_week": "Tue",
-    "sport": "Weight Training",
-    "category": "weights",
-    "title": "Morning Weight Training",
-    "duration_sec": 3084,
-    "duration_display": "51:24",
-    "distance_km": 0,
-    "elevation_m": 0,
-    "relative_effort": 9,
-    "synced_at": "2026-05-27T08:30:00Z"
-  },
-  {
     "id": "2026-04-28_morning-weight-training_51-24",
     "strava_id": 18287087847,
     "date": "2026-04-28",
@@ -378,20 +278,6 @@
     "avg_hr": 121,
     "max_hr": 138,
     "synced_at": "2026-05-28T06:20:36Z"
-  },
-  {
-    "id": "2026-04-23_weight-training_34-23",
-    "date": "2026-04-23",
-    "day_of_week": "Thu",
-    "sport": "Weight Training",
-    "category": "weights",
-    "title": "Morning Weight Training",
-    "duration_sec": 2063,
-    "duration_display": "34:23",
-    "distance_km": 0,
-    "elevation_m": 0,
-    "relative_effort": 7,
-    "synced_at": "2026-05-27T08:30:00Z"
   },
   {
     "id": "2026-04-23_morning-weight-training_34-23",
@@ -427,20 +313,6 @@
     "max_hr": 183,
     "synced_at": "2026-05-28T06:20:36Z",
     "pace_per_km": "6:49"
-  },
-  {
-    "id": "2026-04-21_weight-training_57-13",
-    "date": "2026-04-21",
-    "day_of_week": "Tue",
-    "sport": "Weight Training",
-    "category": "weights",
-    "title": "Morning Weight Training",
-    "duration_sec": 3433,
-    "duration_display": "57:13",
-    "distance_km": 0,
-    "elevation_m": 0,
-    "relative_effort": 33,
-    "synced_at": "2026-05-27T08:30:00Z"
   },
   {
     "id": "2026-04-21_morning-weight-training_57-13",
@@ -512,20 +384,6 @@
     "max_hr": 167,
     "synced_at": "2026-05-28T06:20:36Z",
     "pace_per_km": "7:10"
-  },
-  {
-    "id": "2026-04-14_weight-training_1-00-13",
-    "date": "2026-04-14",
-    "day_of_week": "Tue",
-    "sport": "Weight Training",
-    "category": "weights",
-    "title": "Morning Weight Training",
-    "duration_sec": 3613,
-    "duration_display": "1:00:13",
-    "distance_km": 0,
-    "elevation_m": 0,
-    "relative_effort": 24,
-    "synced_at": "2026-05-27T08:30:00Z"
   },
   {
     "id": "2026-04-14_morning-weight-training_1-00-13",

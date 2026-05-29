@@ -281,3 +281,19 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Sync at:** 2026-05-28T06:32:41Z
 - **Activity baseline:** 6 activities in last 7 days, 62 in 90-day window.
 - **Notes:** Auto-cycle.
+
+> The 25 entries above between Cycle 0 and here are auto-generated noise from the GitHub Actions Strava-API job firing repeatedly on 27–28 May. Flagged for cleanup — see Cycle 1.
+
+---
+
+## Cycle 1 — 2026-05-29 (manual /my-training, Chrome sync)
+
+- **Plan gate:** No revision needed (all 5 staleness triggers passed).
+- **Sync:** Chrome scrape, reconciled against repo Strava-API dataset (has HR). No new activities vs 28 May; today's Bike tempo not yet done.
+- **W10 so far:** Mon 25 Workout ✅ · Tue 26 rest 💤 · Wed 27 🔁 substituted · Thu 28 Weights ✅. Fri 29 = Bike tempo prescribed.
+- **Key deviation — Wed 27:** prescribed bike intervals; ran 5.24 km @ 6:25/km **avg HR 182** instead. Threshold effort on a 90% PF foot, against the easy-only protocol. Foot held (no flare).
+- **Trend watch:** Bike 4wk 44→24 km (1 May Zwift aged out; nothing since 2 May). Imfolozi 29d out → **Sat 30 May 30 km MTB is the critical ramp start.**
+- **Data fix:** deduped activities.json 62→52 (bootstrap vs API ID-scheme collision; kept strava_id+HR records).
+- **Dashboard changes:** added avg HR to run rows (surfaces easy/threshold creep); fixed readiness-breakdown bugs (Imfolozi bike 0→24/150, Amashova → "Road bike 4wk", Hollywoodbets best pace 7:13→6:25); fixed Phase-3 arc 0%→12%; null-guarded the calendar JS.
+- **Flagged for user:** (1) two competing pipelines (this Chrome skill vs the GitHub Actions job that spammed this journal) — reconcile to one; (2) readiness % formula undocumented + had display bugs — needs a defined model.
+- **Next cycle:** confirm Sat 30 May 30 km MTB; flag Sun 31 easy run if HR >160; resolve pipeline + readiness-formula decisions.
