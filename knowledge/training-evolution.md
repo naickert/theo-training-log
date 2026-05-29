@@ -59,3 +59,15 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Sync at:** 2026-05-29T06:03:58Z
 - **Activity baseline:** 5 activities in last 7 days, 53 in 90-day window.
 - **Notes:** Auto-cycle (GitHub Actions). Manual /my-training cycles are logged separately.
+
+
+---
+
+## Cycle 2 — 2026-05-29 (manual /my-training "update with latest strava data" · automated pipeline)
+
+- **Mode:** First run under automated-only mode. Triggered `daily-dashboard.yml` (run 26621085636) → the **fixed** engine fetched fresh Strava, rebuilt, and pushed (`f058b79`); then pulled + reviewed.
+- **New since this morning:** Fri 29 **bike tempo DONE** — "Zwift - Flat Out Fast in Watopia", 50:12, 16.82 km, **avg HR 136**. Indoor ride; avg HR 136 is aerobic-build (below the 155–165 tempo target, but consistent with the "not threshold" intent, and bike HR runs ~10 bpm under run HR). Counts as completed.
+- **W10 status:** Mon workout ✅ · Tue rest 💤 · Wed 🔁 (ran hard, HR 182) · Thu weights ✅ · Fri bike tempo ✅ (Zwift). Sat 30 = 30 km MTB · Sun 31 = easy 5 km remain.
+- **Trend movement:** Bike 4wk **24→41 km** (today's ride). Readiness: Imfolozi **44→49** (bike volume climbing toward 150), Amashova **29→32** (Zwift counts as road volume), Hollywoodbets 73, Absa 92 unchanged. Run vol flat 17 km.
+- **Engine confirmed in CI:** the Action ran v2 readiness + mtb-by-title + idempotent journal correctly — 2 May re-categorised to mtb, 53 activities, zero dups, single auto entry/day. Automated-only handover successful.
+- **Next:** **Sat 30 May 30 km MTB** is the key bike-ramp session — watch it lands. Flag Sun 31 easy run if avg HR >160 (the Wed-27 creep pattern).
