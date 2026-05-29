@@ -122,6 +122,10 @@ def normalize_activity(a: dict) -> dict:
     duration_sec = a.get("moving_time") or a.get("elapsed_time") or 0
     sport = (a.get("type") or "Other").replace(" ", "")
     category = SPORT_CATEGORY.get(sport, "other")
+    # Strava sometimes records an MTB ride under the generic "Ride" type; recover
+    # MTB from the activity title so road vs MTB stays distinct for race readiness.
+    if category == "bike" and "mountain bike" in (a.get("name", "") or "").lower():
+        category = "mtb"
     rec: dict = {
         "id": f"{d.date().isoformat()}_{slugify(a.get('name','activity'))}_{fmt_duration(duration_sec).replace(':','-')}",
         "strava_id": a.get("id"),
@@ -322,28 +326,35 @@ def _esc(s: str) -> str:
 
 
 def compute_stats(activities: list[dict], week_rows: list[dict]) -> dict:
-    """Returns dict of all top-of-page stat values."""
+    """Returns dict of all top-of-page stat values.
+
+    '4wk' windows use a rolling 28-day window (today + the prior 27 days), kept
+    consistent with compute_race_readiness so the stat tiles and the race
+    breakdowns never disagree.
+    """
     week_start = TODAY - timedelta(days=TODAY.weekday())
-    week_acts = [a for a in activities if a["date"] >= week_start.isoformat() and a["date"] <= TODAY.isoformat()]
+    week_acts = [a for a in activities if week_start.isoformat() <= a["date"] <= TODAY.isoformat()]
     week_hours = sum(a["duration_sec"] for a in week_acts) / 3600
-    week_done = sum(1 for r in week_rows if date.fromisoformat(r["date"]) <= TODAY and r["planned"] not in ("—","Rest"))
-    cutoff_4w = (TODAY - timedelta(days=28)).isoformat()
+    active_days = len({a["date"] for a in week_acts})
+    cutoff_4w = (TODAY - timedelta(days=27)).isoformat()
     acts_4w = [a for a in activities if a["date"] >= cutoff_4w]
     run_4w = sum(a["distance_km"] for a in acts_4w if a["category"] == "run")
-    bike_4w = sum(a["distance_km"] for a in acts_4w if a["category"] in ("bike","mtb"))
-    longest = max((a for a in activities if a["category"] in ("bike","mtb") and a["distance_km"] > 0),
-                  key=lambda x: x["distance_km"], default=None)
-    longest_km = longest["distance_km"] if longest else 0
-    longest_ago = (TODAY - date.fromisoformat(longest["date"])).days if longest else 0
+    bike_4w = sum(a["distance_km"] for a in acts_4w if a["category"] in ("bike", "mtb"))
+    rides = [a for a in activities if a["category"] in ("bike", "mtb") and a["distance_km"] > 0]
+    last_ride = max(rides, key=lambda x: x["date"], default=None)
+    if last_ride:
+        days_since = (TODAY - date.fromisoformat(last_ride["date"])).days
+        n_rides_4w = sum(1 for a in acts_4w if a["category"] in ("bike", "mtb") and a["distance_km"] > 0)
+        bike_sub = f"{n_rides_4w} ride{'s' if n_rides_4w != 1 else ''} · last {days_since}d ago"
+    else:
+        bike_sub = "no rides logged"
     return {
         "hours": f"{week_hours:.1f}",
-        "hours_sub": f"{week_done} of 7 days done",
+        "hours_sub": f"{active_days} active day{'s' if active_days != 1 else ''} this week",
         "run_km": f"{run_4w:.0f}",
         "run_sub": "post-PF rebuild",
         "bike_km": f"{bike_4w:.0f}",
-        "bike_sub": "ramp underway" if bike_4w > 30 else "needs ramp",
-        "longest_km": f"{longest_km:.0f}",
-        "longest_sub": f"{longest_ago} days ago",
+        "bike_sub": bike_sub,
         "foot": "90",
         "foot_sub": "0/10 morning",
     }
@@ -367,8 +378,10 @@ def render_today_card(week_rows: list[dict]) -> dict:
     detail_clean = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", detail)
 
     pills = []
-    duration_m = re.search(r"~?\s*(\d+)\s*min", detail)
-    if duration_m: pills.append(("clock", f"~{duration_m.group(1)} min"))
+    # Total session duration = the largest "N min" in the detail (components like
+    # "15 min WU" are smaller than the "~50 min" total), not the first match.
+    duration_vals = [int(x) for x in re.findall(r"(\d+)\s*min", detail)]
+    if duration_vals: pills.append(("clock", f"~{max(duration_vals)} min"))
     hr_m = re.search(r"HR\s*(\d+[\s\-–]+\d+)", detail)
     if hr_m: pills.append(("heart", f"HR {hr_m.group(1).replace(' ','').replace('-','–')}"))
     rpe_m = re.search(r"RPE\s*(\d+(?:\s*[–-]\s*\d+)?)", detail)
@@ -473,6 +486,8 @@ def render_week_rows(week_rows: list[dict], activities_by_date: dict) -> str:
                     meta_bits.append(f"{a['avg_speed_kmh']} km/h")
                 if a.get("relative_effort"):
                     meta_bits.append(f"RE {a['relative_effort']}")
+                if a.get("avg_hr"):
+                    meta_bits.append(f"HR {a['avg_hr']}")
                 icon = CATEGORY_ICON.get(cat, CATEGORY_ICON["other"])
                 items.append(
                     f'<div class="week-actual-item">'
@@ -624,106 +639,103 @@ def render_week_actuals(week_rows: list[dict], activities_by_date: dict) -> str:
 
 
 def compute_race_readiness(race: dict, activities: list[dict]) -> dict:
-    """Returns {pct, breakdown, status}. 0-100. Race-type specific scoring."""
-    name = race.get("name", "")
+    """Race readiness, 0-100.
+
+    Documented model (v2 — 2026-05-29). Readiness is a weighted blend of
+    physical-preparedness components, each a ratio of (current / race-specific
+    target) clamped to [0, 1]:
+
+        pct = round(100 * Σ weightᵢ · clamp(actualᵢ / targetᵢ))
+
+    Per-race weights sum to 1.0 (see each branch). Design rules:
+      • NO "time remaining" term in the score. Time is shown separately as the
+        countdown; padding the score with it (the v1 bug) inflated far-off races
+        and masked real gaps such as low bike volume.
+      • '4wk' = rolling 28-day window (today + prior 27 days), identical to
+        compute_stats so tiles and breakdowns agree.
+      • Road vs MTB are distinct categories (see normalize_activity); Amashova
+        counts road only, Imfolozi counts bike+MTB.
+      • 'fastest pace' = quickest run ≥3 km in the window (NOT the longest run's
+        pace, which was the v1 'best pace 7:13' bug).
+      • Foot factor = 0.90 (PF resolving; see injury-log).
+    Status: ≥75 on-track · 50-74 behind · <50 at-risk.
+    """
     days_to = race_days_to(race.get("date", ""))
     if days_to < 0:
         return {"pct": 100, "breakdown": [], "status": "past"}
+    name = race.get("name", "")
+    target = race.get("target", "") or ""
 
-    # Compute helpers from activities (deduped)
-    seen = set()
-    acts = []
+    # Dedup, then build the rolling 28-day window
+    seen, acts = set(), []
     for a in activities:
         k = (a["date"], a["title"], a["duration_sec"])
-        if k in seen: continue
+        if k in seen:
+            continue
         seen.add(k); acts.append(a)
-    cutoff_4w = (TODAY - timedelta(days=28)).isoformat()
+    cutoff_4w = (TODAY - timedelta(days=27)).isoformat()
     acts_4w = [a for a in acts if a["date"] >= cutoff_4w]
 
     def clamp(x): return max(0.0, min(1.0, x))
-    longest = lambda cats: max((a["distance_km"] for a in acts if a["category"] in cats), default=0)
-    vol_4w = lambda cats: sum(a["distance_km"] for a in acts_4w if a["category"] in cats)
-    count_4w = lambda cats: sum(1 for a in acts_4w if a["category"] in cats)
-
-    foot_factor = 0.9  # could read from injury-log later
+    def longest(cats): return max((a["distance_km"] for a in acts if a["category"] in cats), default=0.0)
+    def vol4w(cats): return sum(a["distance_km"] for a in acts_4w if a["category"] in cats)
+    def fastest_pace_sec():
+        paces = []
+        for a in acts_4w:
+            if a["category"] == "run" and a["distance_km"] >= 3 and a.get("pace_per_km"):
+                mm, ss = a["pace_per_km"].split(":")
+                paces.append(int(mm) * 60 + int(ss))
+        return min(paces) if paces else None
+    def blend(parts): return 100.0 * sum(w * clamp(r) for w, r in parts)
+    FOOT = 0.90
 
     if "Imfolozi" in name or ("MTB" in name and str(race.get("distance_km", "")).startswith("5")):
-        # 2-day stage race: Stage 1 = 40km, Stage 2 = 15km
-        # Need: longest MTB >= 40km, bike vol, back-to-back capability
-        longest_mtb = max(longest({"mtb"}), longest({"bike", "mtb"}) * 0.6)
-        long_ratio = clamp(longest_mtb / 40)  # Stage 1 distance
-        vol_ratio = clamp(vol_4w({"bike", "mtb"}) / 150)
-        time_ratio = clamp(days_to / 28)
-        pct = (long_ratio * 40 + vol_ratio * 30 + time_ratio * 20 + foot_factor * 10)
+        longest_mtb = longest({"mtb"})
+        bike_vol = vol4w({"bike", "mtb"})
+        pct = blend([(0.45, longest_mtb / 40), (0.45, bike_vol / 150), (0.10, FOOT)])
         breakdown = [
-            ("Stage 1 readiness", f"{longest_mtb:.0f}/40 km"),
-            ("Bike vol 4wk", f"{vol_4w({'bike','mtb'}):.0f}/150 km"),
+            ("Longest MTB", f"{longest_mtb:.0f}/40 km"),
+            ("Bike vol 4wk", f"{bike_vol:.0f}/150 km"),
             ("Days to start", f"{days_to}"),
         ]
-    elif "Amashova" in name or ("106" in str(race.get("distance_km", ""))):
-        # 106km road — need long road rides + volume
-        longest_road = longest({"bike"})
-        long_ratio = clamp(longest_road / 90)
-        vol_ratio = clamp(vol_4w({"bike", "mtb"}) / 200)
-        # specificity: post-Imfolozi window for road bike build
-        imf_recovery_days = 8  # need ~8 days after Imfolozi before resume
-        usable_days = max(0, days_to - imf_recovery_days)
-        time_ratio = clamp(usable_days / 28)
-        pct = (long_ratio * 45 + vol_ratio * 25 + time_ratio * 20 + foot_factor * 10)
+    elif "Amashova" in name or "106" in str(race.get("distance_km", "")):
+        longest_road = longest({"bike"})           # road == non-MTB bike
+        road_vol = vol4w({"bike"})
+        pct = blend([(0.45, longest_road / 90), (0.45, road_vol / 200), (0.10, FOOT)])
         breakdown = [
             ("Longest road ride", f"{longest_road:.0f}/90 km"),
-            ("Bike vol 4wk", f"{vol_4w({'bike','mtb'}):.0f}/200 km"),
-            ("Usable days post-Imfolozi", f"{usable_days}"),
+            ("Road bike 4wk", f"{road_vol:.0f}/200 km"),
+            ("Days to start", f"{days_to}"),
         ]
-    elif "Hollywoodbets" in name or "Sub-60" in name or (race.get("target", "").startswith("Sub-60") or "<60" in race.get("target", "")):
-        # 10K sub-60 — need run base + intervals + speed
-        run_4w = vol_4w({"run"})
+    elif "Hollywoodbets" in name or "Sub-60" in target or "<60" in target:
+        run_vol = vol4w({"run"})
         longest_run = longest({"run"})
-        # Best recent 10K pace estimate from longest run pace
-        best_run = max((a for a in acts if a["category"] == "run" and a["distance_km"] >= 5),
-                       key=lambda x: x["distance_km"], default=None)
-        if best_run and best_run.get("pace_per_km"):
-            mins, secs = best_run["pace_per_km"].split(":")
-            best_pace_sec = int(mins) * 60 + int(secs)
-        else:
-            best_pace_sec = 420  # 7:00/km default
-        target_pace_sec = 359  # 5:59/km
-        # pace gap: how far from target we are
-        pace_gap = max(0, best_pace_sec - target_pace_sec)
-        pace_ratio = clamp(1 - (pace_gap / 90))  # 90 sec/km gap = 0% readiness
-        vol_ratio = clamp(run_4w / 30)
-        long_ratio = clamp(longest_run / 10)
-        time_ratio = clamp(days_to / 56)  # 8 weeks proper prep
-        pct = (pace_ratio * 35 + vol_ratio * 25 + long_ratio * 15 + time_ratio * 15 + foot_factor * 10)
+        fp = fastest_pace_sec()
+        pace_disp = fmt_pace(fp) if fp else "—"
+        pace_ratio = clamp(1 - max(0, (fp or 450) - 359) / 91)   # 7:30/km -> 0%, 5:59/km -> 100%
+        pct = blend([(0.40, pace_ratio), (0.30, run_vol / 30), (0.15, longest_run / 12), (0.15, FOOT)])
         breakdown = [
-            ("Run vol 4wk", f"{run_4w:.0f}/30 km"),
-            ("Longest run", f"{longest_run:.1f}/10 km"),
-            ("Best pace", f"{best_run['pace_per_km'] if best_run and best_run.get('pace_per_km') else '—'}/km vs 5:59"),
-            ("Time remaining", f"{days_to} days"),
+            ("Run vol 4wk", f"{run_vol:.0f}/30 km"),
+            ("Longest run", f"{longest_run:.1f}/12 km"),
+            ("Fastest pace 4wk", f"{pace_disp}/km vs 5:59"),
+            ("Days to start", f"{days_to}"),
         ]
     elif "Absa" in name or "10K" in name:
-        # Easy 10K — low bar
-        run_4w = vol_4w({"run"})
+        run_vol = vol4w({"run"})
         longest_run = longest({"run"})
-        vol_ratio = clamp(run_4w / 20)
-        long_ratio = clamp(longest_run / 8)
-        time_ratio = clamp(days_to / 21)
-        pct = (long_ratio * 35 + vol_ratio * 25 + time_ratio * 20 + foot_factor * 20)
+        pct = blend([(0.40, longest_run / 10), (0.30, run_vol / 20), (0.30, FOOT)])
         breakdown = [
             ("Longest run", f"{longest_run:.1f}/8 km"),
-            ("Run vol 4wk", f"{run_4w:.0f}/20 km"),
-            ("Foot", f"{int(foot_factor*100)}%"),
+            ("Run vol 4wk", f"{run_vol:.0f}/20 km"),
+            ("Foot", f"{int(FOOT * 100)}%"),
         ]
     else:
-        # Generic
-        vol_ratio = clamp(vol_4w({"run", "bike", "mtb"}) / 100)
-        pct = (vol_ratio * 50 + clamp(days_to / 28) * 30 + foot_factor * 20)
-        breakdown = [("Total vol 4wk", f"{vol_4w({'run','bike','mtb'}):.0f} km")]
+        total_vol = vol4w({"run", "bike", "mtb"})
+        pct = blend([(0.70, total_vol / 100), (0.30, FOOT)])
+        breakdown = [("Total vol 4wk", f"{total_vol:.0f} km")]
 
     pct_int = int(round(pct))
-    if pct_int >= 75: status = "on-track"
-    elif pct_int >= 50: status = "behind"
-    else: status = "at-risk"
+    status = "on-track" if pct_int >= 75 else ("behind" if pct_int >= 50 else "at-risk")
     return {"pct": pct_int, "breakdown": breakdown, "status": status}
 
 
@@ -1038,6 +1050,13 @@ def build_dashboard(activities: list[dict]) -> str:
 
 
 def append_evolution_entry(activities: list[dict]) -> None:
+    if not EVOLUTION.exists():
+        return
+    existing = EVOLUTION.read_text()
+    # Idempotent: at most one auto entry per day, even if the workflow runs/dispatches
+    # multiple times. (The 27-28 May journal spam came from repeated dispatches.)
+    if f"## Cycle auto — {TODAY.isoformat()}" in existing:
+        return
     last_7 = [a for a in activities if a["date"] >= (TODAY - timedelta(days=7)).isoformat()]
     summary = f"{len(last_7)} activities in last 7 days, {len(activities)} in 90-day window."
     entry = f"""
@@ -1048,10 +1067,9 @@ def append_evolution_entry(activities: list[dict]) -> None:
 
 - **Sync at:** {NOW_ISO}
 - **Activity baseline:** {summary}
-- **Notes:** Auto-cycle.
+- **Notes:** Auto-cycle (GitHub Actions). Manual /my-training cycles are logged separately.
 """
-    if EVOLUTION.exists():
-        EVOLUTION.write_text(EVOLUTION.read_text() + entry)
+    EVOLUTION.write_text(existing + entry)
 
 
 def write_outputs(html: str, activities: list[dict]) -> None:
