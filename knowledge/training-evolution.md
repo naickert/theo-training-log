@@ -71,3 +71,12 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Trend movement:** Bike 4wk **24→41 km** (today's ride). Readiness: Imfolozi **44→49** (bike volume climbing toward 150), Amashova **29→32** (Zwift counts as road volume), Hollywoodbets 73, Absa 92 unchanged. Run vol flat 17 km.
 - **Engine confirmed in CI:** the Action ran v2 readiness + mtb-by-title + idempotent journal correctly — 2 May re-categorised to mtb, 53 activities, zero dups, single auto entry/day. Automated-only handover successful.
 - **Next:** **Sat 30 May 30 km MTB** is the key bike-ramp session — watch it lands. Flag Sun 31 easy run if avg HR >160 (the Wed-27 creep pattern).
+
+
+---
+
+## Cycle auto — 2026-05-30
+
+- **Sync at:** 2026-05-30T03:19:54Z
+- **Activity baseline:** 5 activities in last 7 days, 53 in 90-day window.
+- **Notes:** Auto-cycle (GitHub Actions). Manual /my-training cycles are logged separately.
