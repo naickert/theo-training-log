@@ -80,3 +80,15 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Sync at:** 2026-05-30T03:19:54Z
 - **Activity baseline:** 5 activities in last 7 days, 53 in 90-day window.
 - **Notes:** Auto-cycle (GitHub Actions). Manual /my-training cycles are logged separately.
+
+
+---
+
+## Cycle 3 — 2026-05-30 (manual /my-training · automated pipeline)
+
+- **Plan gate:** No revision (W10 covers today; injury 27 May < plan 28 May; Imfolozi 28d out; no new race).
+- **The big one landed:** Sat 30 **Long MTB DONE** — 29.14 km, 2:02:06, **avg HR 146, RE 258**. Matches the prescribed 30 km / ~2 hr / RPE 5–6 (aerobic). This is THE bike-ramp session flagged since Cycle 0 — captured by a midday manual trigger (the 05:19 scheduled run was too early).
+- **W10 nearly complete:** Mon workout ✅ · Tue rest 💤 · Wed 🔁 (hard run, HR 182) · Thu weights ✅ · Fri bike tempo ✅ (Zwift) · Sat long MTB ✅. Only Sun 31 easy 5 km run left.
+- **Trends:** This week **6.1h / 5 active days**. Bike 4wk **41→46 km** (2 May MTB aged out, 30 May MTB in); longest MTB **24→29 km**. Imfolozi readiness **49→56 — crossed at-risk → behind**. Amashova 32, Hollywoodbets 73, Absa 92. Run vol flat 17 km.
+- **Observation:** Two solid bike days back-to-back (Fri Zwift + Sat 29 km MTB) — exactly the volume Imfolozi needs. Foot untested on the run since Wed; Sun's easy run is the next foot check.
+- **Next:** Sun 31 easy 5 km — flag if avg HR >160 (the Wed-27 creep pattern). Then W11 (1–7 Jun): bike build, 40 km MTB on Sat 6 Jun. Readiness should keep climbing if the long rides land.
