@@ -92,3 +92,12 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Trends:** This week **6.1h / 5 active days**. Bike 4wk **41→46 km** (2 May MTB aged out, 30 May MTB in); longest MTB **24→29 km**. Imfolozi readiness **49→56 — crossed at-risk → behind**. Amashova 32, Hollywoodbets 73, Absa 92. Run vol flat 17 km.
 - **Observation:** Two solid bike days back-to-back (Fri Zwift + Sat 29 km MTB) — exactly the volume Imfolozi needs. Foot untested on the run since Wed; Sun's easy run is the next foot check.
 - **Next:** Sun 31 easy 5 km — flag if avg HR >160 (the Wed-27 creep pattern). Then W11 (1–7 Jun): bike build, 40 km MTB on Sat 6 Jun. Readiness should keep climbing if the long rides land.
+
+
+---
+
+## Cycle auto — 2026-05-31
+
+- **Sync at:** 2026-05-31T03:23:00Z
+- **Activity baseline:** 6 activities in last 7 days, 53 in 90-day window.
+- **Notes:** Auto-cycle (GitHub Actions). Manual /my-training cycles are logged separately.
