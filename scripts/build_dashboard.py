@@ -487,7 +487,15 @@ def render_week_rows(week_rows: list[dict], activities_by_date: dict) -> str:
                 if a.get("relative_effort"):
                     meta_bits.append(f"RE {a['relative_effort']}")
                 if a.get("avg_hr"):
-                    meta_bits.append(f"HR {a['avg_hr']}")
+                    # Flag easy-run HR creep (tendency #1): a run on a non-quality day with
+                    # avg HR above the 155 easy cap (use 160 to allow surges) gets an amber
+                    # warning. Prescribed quality runs (intervals/tempo/race) are exempt.
+                    quality = any(w in planned.lower() for w in
+                                  ("interval", "tempo", "threshold", "race", "stride", "800m", "400m", "1 km"))
+                    if cat == "run" and a["avg_hr"] > 160 and not quality:
+                        meta_bits.append(f'<span style="color:var(--amber);font-weight:600">HR {a["avg_hr"]} ⚠</span>')
+                    else:
+                        meta_bits.append(f"HR {a['avg_hr']}")
                 icon = CATEGORY_ICON.get(cat, CATEGORY_ICON["other"])
                 items.append(
                     f'<div class="week-actual-item">'

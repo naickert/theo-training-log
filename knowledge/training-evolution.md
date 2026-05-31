@@ -101,3 +101,15 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Sync at:** 2026-05-31T03:23:00Z
 - **Activity baseline:** 6 activities in last 7 days, 53 in 90-day window.
 - **Notes:** Auto-cycle (GitHub Actions). Manual /my-training cycles are logged separately.
+
+
+---
+
+## Cycle 4 — 2026-05-31 (manual /my-training · automated pipeline)
+
+- **Plan gate:** No revision (W10's last day; injury 27 May < plan 28 May; Imfolozi 27d; no new race).
+- **W10 COMPLETE:** Mon workout ✅ · Tue rest 💤 · Wed 🔁 (hard run, HR 182) · Thu weights ✅ · Fri bike tempo ✅ · Sat long MTB ✅ · Sun easy run ⚠️ partial. Every key bike session landed — strong week for Imfolozi prep.
+- **⚠️ Pattern fired again — easy-HR creep:** Sun 31 "easy 5 km" (target HR ≤155) run at **6:03/km, avg HR 177 / max 196** — the SECOND threshold-HR "easy" run this week (Wed 182, Sun 177). Tendency #1, twice in a week, on a 90%-PF foot. ⚠️ partial (right distance, wrong intensity). No pain logged (foot tolerating it), but easy-pace discipline (plan rule #1 / derailer #7) is the week's clear theme.
+- **Dashboard evolution:** Added an **amber "HR n ⚠" flag** on week-table runs done on easy-prescribed days with avg HR >160 (prescribed interval/tempo/race runs exempt). Surfaces the creep at a glance; first triggered today. (`build_dashboard.py` → `render_week_rows`.)
+- **Trends:** 6.6h / 6 active days. Run vol 17→22 km (Sun +5). Bike 46. Readiness: Imfolozi 56 (behind), Amashova 32 (at-risk), **Absa 92→97**, **Hollywoodbets 73→87** — both jumped because the fast 6:03/km run added run volume + a quick-pace data point. Caveat: the Hollywoodbets bump is partly a one-fast-5 km artifact; sub-60 still needs the structured Aug intervals, not fast "easy" runs.
+- **Next (W11, 1–7 Jun · bike build):** Mon easy run · Wed bike intervals · Sat 40 km MTB. **Coaching priority: keep easy runs actually easy (HR ≤155)** — bank aerobic base + protect the foot; save speed for the prescribed sessions.
