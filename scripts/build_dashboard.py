@@ -254,6 +254,47 @@ def detect_week_block(plan_text: str, today: date) -> tuple[int, str, str, list[
     return (week_n, label, date_range, rows)
 
 
+def parse_plan_days(plan_text: str, year: int) -> dict:
+    """Map EVERY plan day-row (across all week tables) to its prescription.
+    Returns {iso_date: {"planned": str, "detail": str}}. Used by the rolling window
+    so the table can span more than one plan week (history + next week's plan)."""
+    months = {"jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
+              "jul": 7, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12}
+    # Detail group is .*? (may be empty, e.g. "| Weights | |")
+    row_re = re.compile(
+        r"^\|\s*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s*\|\s*(\d{1,2})\s+([A-Za-z]{3,})\s*\|\s*(.*?)\s*\|\s*(.*?)\s*\|",
+        re.MULTILINE)
+    out: dict = {}
+    for m in row_re.finditer(plan_text):
+        mon = months.get(m.group(3)[:3].lower())
+        if not mon:
+            continue
+        try:
+            d = date(year, mon, int(m.group(2)))
+        except ValueError:
+            continue
+        out[d.isoformat()] = {"planned": m.group(4).strip(), "detail": m.group(5).strip()}
+    return out
+
+
+def build_rolling_window(plan_text: str, today: date, back: int = 7, ahead: int = 7) -> list[dict]:
+    """Rolling window: `back` days of history + today + `ahead` days of plan ahead.
+    Row shape matches detect_week_block so render_week_rows / render_today_card work unchanged."""
+    daymap = parse_plan_days(plan_text, today.year)
+    rows = []
+    for off in range(-back, ahead + 1):
+        d = today + timedelta(days=off)
+        info = daymap.get(d.isoformat(), {})
+        rows.append({
+            "day": d.strftime("%a"),
+            "date": d.isoformat(),
+            "date_label": f"{d.day} {d.strftime('%b')}",
+            "planned": info.get("planned") or "—",
+            "detail": info.get("detail", ""),
+        })
+    return rows
+
+
 # ---------- WORD HELPERS ----------
 
 UNITS_WORDS = ["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"]
@@ -520,7 +561,10 @@ def render_week_rows(week_rows: list[dict], activities_by_date: dict) -> str:
 
         # Status pill
         if d_obj < TODAY:
-            if day_acts and "rest" not in planned.lower():
+            if planned.strip() in ("—", ""):
+                # Nothing prescribed that day (e.g. before the plan starts) — never "missed"
+                status, status_cls = ("Logged", "done") if day_acts else ("", "rest")
+            elif day_acts and "rest" not in planned.lower():
                 # Did the actual match the planned type? Simple keyword match
                 planned_lower = planned.lower()
                 act_cats = {a["category"] for a in day_acts}
@@ -994,12 +1038,14 @@ def build_dashboard(activities: list[dict]) -> str:
 
     days_primary = race_days_to(primary.get("date",""))
     week_n, week_label, week_range, week_rows = detect_week_block(plan_text, TODAY)
+    # Rolling window for the main table: last 7 days + today + next 7 planned days.
+    rolling_rows = build_rolling_window(plan_text, TODAY, back=7, ahead=7)
 
     activities_by_date = defaultdict(list)
     for a in activities:
         activities_by_date[a["date"]].append(a)
 
-    today_card = render_today_card(week_rows)
+    today_card = render_today_card(rolling_rows)
     weekly = compute_weekly_buckets(activities, 12)
     trends_html, chart_data = render_trends(weekly)
     calendar_data = build_calendar_data(activities, races)
@@ -1041,8 +1087,9 @@ def build_dashboard(activities: list[dict]) -> str:
         "{{TODAY_PILLS}}": today_card["pills_html"],
         "{{TODAY_ICON_SVG}}": today_card["icon_svg"],
         "{{FOOT_BODY}}": render_foot_text(injury_text),
-        "{{WEEK_META}}": f"{week_range} · {week_label}" if week_n else "Current week",
-        "{{WEEK_ROWS_HTML}}": render_week_rows(week_rows, activities_by_date),
+        "{{WEEK_TITLE}}": "Last 7 days · today · next 7",
+        "{{WEEK_META}}": f"{rolling_rows[0]['date_label']} → {rolling_rows[-1]['date_label']} · history + plan ahead",
+        "{{WEEK_ROWS_HTML}}": render_week_rows(rolling_rows, activities_by_date),
         # LOG_ENTRIES_HTML no longer used — actuals merged into week table
         "{{RACES_META}}": f"{len(races)} on the calendar",
         "{{RACES_HTML}}": render_races(races, activities),

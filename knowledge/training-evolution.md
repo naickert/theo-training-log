@@ -113,3 +113,14 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Dashboard evolution:** Added an **amber "HR n ⚠" flag** on week-table runs done on easy-prescribed days with avg HR >160 (prescribed interval/tempo/race runs exempt). Surfaces the creep at a glance; first triggered today. (`build_dashboard.py` → `render_week_rows`.)
 - **Trends:** 6.6h / 6 active days. Run vol 17→22 km (Sun +5). Bike 46. Readiness: Imfolozi 56 (behind), Amashova 32 (at-risk), **Absa 92→97**, **Hollywoodbets 73→87** — both jumped because the fast 6:03/km run added run volume + a quick-pace data point. Caveat: the Hollywoodbets bump is partly a one-fast-5 km artifact; sub-60 still needs the structured Aug intervals, not fast "easy" runs.
 - **Next (W11, 1–7 Jun · bike build):** Mon easy run · Wed bike intervals · Sat 40 km MTB. **Coaching priority: keep easy runs actually easy (HR ≤155)** — bank aerobic base + protect the foot; save speed for the prescribed sessions.
+
+
+---
+
+## Cycle 5 — 2026-05-31 (manual /my-training · dashboard evolution)
+
+- **User request:** the week table should show "7-day history · today · 7 days plan ahead" instead of the fixed Mon–Sun calendar week (with a screenshot of the old view).
+- **Change shipped** (`build_dashboard.py` + `templates/dashboard.html`): replaced the single-week table with a **rolling ±7-day window** (today−7 … today … today+7 = 15 rows). New `parse_plan_days()` maps every plan day-row across all week tables (and handles empty-detail rows like `| Weights | |`); new `build_rolling_window()` assembles the window. Section retitled **"Last 7 days · today · next 7"** with a date-range meta. Past days show actuals + status, today is highlighted in the middle, the next 7 show the upcoming plan (now spanning into W11). Days with no prescription (e.g. 24 May, pre-plan) render blank, never "Missed".
+- **Why it's better:** one glance shows both what just happened and what's coming — the old Mon–Sun view showed zero days ahead on a Sunday.
+- **Verified:** 15 rows (24 May → 7 Jun), today centred, amber HR-creep flag still fires on Sun (177), next-7 includes Sat 6 Jun 40 km MTB; 7 Jun "OR rest" styled as Rest.
+- **No new training data this run** (same 54 activities as Cycle 4 — layout change only). W10 complete; W11 bike-build starts tomorrow.
