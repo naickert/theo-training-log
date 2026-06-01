@@ -124,3 +124,12 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Why it's better:** one glance shows both what just happened and what's coming — the old Mon–Sun view showed zero days ahead on a Sunday.
 - **Verified:** 15 rows (24 May → 7 Jun), today centred, amber HR-creep flag still fires on Sun (177), next-7 includes Sat 6 Jun 40 km MTB; 7 Jun "OR rest" styled as Rest.
 - **No new training data this run** (same 54 activities as Cycle 4 — layout change only). W10 complete; W11 bike-build starts tomorrow.
+
+
+---
+
+## Cycle auto — 2026-06-01
+
+- **Sync at:** 2026-06-01T03:25:04Z
+- **Activity baseline:** 7 activities in last 7 days, 53 in 90-day window.
+- **Notes:** Auto-cycle (GitHub Actions). Manual /my-training cycles are logged separately.
