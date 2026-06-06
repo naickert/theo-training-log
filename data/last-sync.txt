@@ -1,3 +1,4 @@
-OK 2026-06-06T17:12:52Z
-source: Strava API
+WARN 2026-06-06T17:13:50Z
+source: cached (Strava unreachable)
+reason: HTTP Error 403: Forbidden
 activities_synced: 52
