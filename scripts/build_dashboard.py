@@ -18,6 +18,8 @@ import json
 import os
 import re
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from collections import defaultdict
@@ -42,8 +44,47 @@ WINDOW_DAYS = 90
 STRAVA_TOKEN_URL = "https://www.strava.com/oauth/token"
 STRAVA_ACTIVITIES_URL = "https://www.strava.com/api/v3/athlete/activities"
 
+# Resilience: how many times to retry a transient Strava error before giving up
+# and falling back to the cached activities.json. The build must NEVER hard-fail
+# on a transient Strava hiccup (that is what fired the daily "Run failed" emails).
+HTTP_RETRIES = 4
+# Status codes worth retrying: Strava 403s/429s on its OAuth + API endpoints are
+# overwhelmingly transient rate-limit / edge blips, not real auth errors (the same
+# credentials succeed minutes later). 5xx are server-side. 401 = genuinely bad token
+# → fail fast, don't waste retries.
+RETRYABLE_STATUS = {403, 429, 500, 502, 503, 504}
+
+# Set when Strava could not be reached after retries; the dashboard then renders
+# from the cached activities.json and shows a "cached data" banner instead of dying.
+DATA_STALE = False
+STALE_REASON = ""
+
 
 # ---------- STRAVA ----------
+
+def _http_read(req: urllib.request.Request, timeout: int = 30, what: str = "request") -> bytes:
+    """urlopen with exponential backoff on transient failures. Raises only after
+    exhausting HTTP_RETRIES (or immediately on a non-retryable HTTP status)."""
+    last_err: Exception | None = None
+    for attempt in range(HTTP_RETRIES):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            last_err = e
+            if e.code not in RETRYABLE_STATUS:
+                raise
+            wait = min(2 ** attempt, 8)
+            print(f"  ⚠ {what}: HTTP {e.code} — retry {attempt + 1}/{HTTP_RETRIES} in {wait}s",
+                  file=sys.stderr)
+        except (urllib.error.URLError, TimeoutError, OSError) as e:
+            last_err = e
+            wait = min(2 ** attempt, 8)
+            print(f"  ⚠ {what}: {e} — retry {attempt + 1}/{HTTP_RETRIES} in {wait}s",
+                  file=sys.stderr)
+        time.sleep(wait)
+    raise last_err if last_err else RuntimeError(f"{what} failed after {HTTP_RETRIES} attempts")
+
 
 def strava_refresh_access_token() -> str:
     client_id = os.environ["STRAVA_CLIENT_ID"]
@@ -56,8 +97,7 @@ def strava_refresh_access_token() -> str:
         "grant_type": "refresh_token",
     }).encode()
     req = urllib.request.Request(STRAVA_TOKEN_URL, data=body, method="POST")
-    with urllib.request.urlopen(req, timeout=30) as r:
-        data = json.loads(r.read())
+    data = json.loads(_http_read(req, what="token refresh"))
     return data["access_token"]
 
 
@@ -70,8 +110,7 @@ def strava_fetch_activities(access_token: str, after_ts: int) -> list[dict]:
             f"{STRAVA_ACTIVITIES_URL}?{params}",
             headers={"Authorization": f"Bearer {access_token}"},
         )
-        with urllib.request.urlopen(req, timeout=30) as r:
-            batch = json.loads(r.read())
+        batch = json.loads(_http_read(req, what=f"activities page {page}"))
         if not batch:
             break
         activities.extend(batch)
@@ -949,6 +988,133 @@ def build_calendar_data(activities: list[dict], races: list[dict]) -> dict:
     }
 
 
+# ---------- ANALYTICS: LOAD · ADHERENCE · INSIGHT ----------
+
+def _dedup(activities: list[dict]) -> list[dict]:
+    seen, out = set(), []
+    for a in activities:
+        k = (a["date"], a["title"], a["duration_sec"])
+        if k in seen:
+            continue
+        seen.add(k)
+        out.append(a)
+    return out
+
+
+def compute_training_load(activities: list[dict]) -> dict:
+    """Acute:Chronic Workload Ratio (ACWR) — the gold-standard injury-risk gauge.
+
+    acute   = training load over the last 7 days
+    chronic = average weekly load over the last 28 days
+    ratio   = acute / chronic
+
+    Load uses Strava Relative Effort (HR-based suffer score) when the 28-day window
+    has meaningful coverage; otherwise it falls back to moving-time minutes so the
+    gauge still works on days without HR. Zones (sports-science consensus):
+        0.8–1.3  Optimal   ·  1.3–1.5 Caution  ·  >1.5 High (spike → injury risk)
+        <0.8     Detraining (load decaying)
+    Especially load-bearing here given the plantar-fasciitis return."""
+    acts = _dedup(activities)
+
+    def in_window(a, days):
+        return a["date"] >= (TODAY - timedelta(days=days - 1)).isoformat()
+
+    re_28 = sum((a.get("relative_effort") or 0) for a in acts if in_window(a, 28))
+    use_re = re_28 >= 50
+
+    def load(a):
+        return (a.get("relative_effort") or 0) if use_re else round(a["duration_sec"] / 60)
+
+    acute = sum(load(a) for a in acts if in_window(a, 7))
+    chronic_28 = sum(load(a) for a in acts if in_window(a, 28))
+    chronic = chronic_28 / 4.0
+    ratio = (acute / chronic) if chronic > 0 else 0.0
+    unit = "RE" if use_re else "min"
+
+    if chronic == 0:
+        zone, status = "Building", "building"
+    elif ratio > 1.5:
+        zone, status = "High", "at-risk"
+    elif ratio > 1.3:
+        zone, status = "Caution", "behind"
+    elif ratio < 0.8:
+        zone, status = "Detraining", "behind"
+    else:
+        zone, status = "Optimal", "on-track"
+
+    return {
+        "acute": int(round(acute)),
+        "chronic": int(round(chronic)),
+        "ratio": ratio,
+        "ratio_disp": f"{ratio:.2f}" if chronic > 0 else "—",
+        "unit": unit,
+        "zone": zone,
+        "status": status,
+        # gauge position 0..100 (1.0 ratio sits at 50%, capped at ratio 2.0)
+        "gauge": int(round(min(ratio, 2.0) / 2.0 * 100)),
+    }
+
+
+def compute_adherence(plan_text: str, activities: list[dict], days: int = 28) -> dict:
+    """Rolling plan-adherence: of the planned (non-rest) sessions in the last `days`,
+    how many had a matching real session logged. A loose, honest match — any logged
+    training session on a planned day counts as 'hit'."""
+    daymap = parse_plan_days(plan_text, TODAY.year)
+    by_date: dict = defaultdict(list)
+    for a in _dedup(activities):
+        by_date[a["date"]].append(a)
+    planned = done = 0
+    for off in range(1, days + 1):
+        d = TODAY - timedelta(days=off)
+        info = daymap.get(d.isoformat())
+        if not info:
+            continue
+        p = (info.get("planned") or "").strip()
+        if not p or p == "—" or "rest" in p.lower() or p.startswith("~~"):
+            continue
+        planned += 1
+        if any(a["category"] in ("run", "bike", "mtb", "weights", "other")
+               for a in by_date.get(d.isoformat(), [])):
+            done += 1
+    pct = int(round(100 * done / planned)) if planned else 0
+    status = "on-track" if pct >= 80 else ("behind" if pct >= 60 else "at-risk")
+    return {"done": done, "planned": planned, "pct": pct, "status": status}
+
+
+def coach_insight(load: dict, adherence: dict, primary: dict, days_primary: int,
+                  activities: list[dict]) -> str:
+    """One adaptive sentence of coaching, assembled from the live signals — the
+    line a good coach would text after reading today's numbers."""
+    bits: list[str] = []
+    z = load["zone"]
+    r = load["ratio_disp"]
+    if z == "Optimal":
+        bits.append(f"Load balanced — ACWR {r}, right in the safe band.")
+    elif z == "High":
+        bits.append(f"⚠ Load spiking (ACWR {r}) — keep the next 2–3 days easy to protect the foot.")
+    elif z == "Caution":
+        bits.append(f"Load climbing (ACWR {r}) — hold steady, avoid stacking hard days.")
+    elif z == "Detraining":
+        bits.append(f"Load light (ACWR {r}) — room to add volume.")
+    else:
+        bits.append("Base still rebuilding — bank consistent weeks.")
+
+    if adherence["planned"]:
+        bits.append(f"{adherence['done']}/{adherence['planned']} planned sessions hit (4 wks, {adherence['pct']}%).")
+
+    # Highlight a recent milestone: the single longest session in the last 10 days.
+    recent = [a for a in _dedup(activities)
+              if a["date"] >= (TODAY - timedelta(days=10)).isoformat() and a["distance_km"] > 0]
+    if recent:
+        big = max(recent, key=lambda a: a["distance_km"])
+        if big["distance_km"] >= 20:
+            bits.append(f"Standout: {big['distance_km']:.0f} km {CATEGORY_LABEL.get(big['category'], '')} on {big['day_of_week']}.")
+
+    if days_primary >= 0:
+        bits.append(f"{days_primary} days to {primary.get('name', 'race')}.")
+    return " ".join(bits)
+
+
 # ---------- TEMPLATE SUBSTITUTION ----------
 
 def greeting_verb() -> str:
@@ -1050,6 +1216,24 @@ def build_dashboard(activities: list[dict]) -> str:
     trends_html, chart_data = render_trends(weekly)
     calendar_data = build_calendar_data(activities, races)
     stats = compute_stats(activities, week_rows)
+    load = compute_training_load(activities)
+    adherence = compute_adherence(plan_text, activities)
+    insight = coach_insight(load, adherence, primary, days_primary, activities)
+
+    # Cached-data banner — only shown when this run could not reach Strava.
+    if DATA_STALE:
+        last_act = activities[0]["date"] if activities else "—"
+        stale_banner = (
+            '<div class="stale-banner">'
+            '<svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01"/>'
+            '<path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>'
+            '<div><strong>Showing cached data.</strong> Strava didn’t respond on this run — '
+            f'figures are from the last successful sync (latest activity {last_act}). '
+            'Countdowns and the plan are current; volumes refresh automatically next run.</div>'
+            '</div>'
+        )
+    else:
+        stale_banner = ""
 
     # Last 8 weeks of stats for sparklines
     sparks = {
@@ -1069,6 +1253,18 @@ def build_dashboard(activities: list[dict]) -> str:
         "{{DATE_LONG}}": long_date_words(TODAY),
         "{{GREETING_VERB}}": greeting_verb(),
         "{{NOW_ISO}}": NOW_ISO,
+        "{{STALE_BANNER}}": stale_banner,
+        "{{COACH_INSIGHT}}": _esc(insight),
+        "{{LOAD_RATIO}}": load["ratio_disp"],
+        "{{LOAD_ZONE}}": load["zone"],
+        "{{LOAD_STATUS}}": load["status"],
+        "{{LOAD_ACUTE}}": str(load["acute"]),
+        "{{LOAD_CHRONIC}}": str(load["chronic"]),
+        "{{LOAD_UNIT}}": load["unit"],
+        "{{LOAD_GAUGE}}": str(load["gauge"]),
+        "{{ADHERENCE_PCT}}": str(adherence["pct"]),
+        "{{ADHERENCE_FRAC}}": f"{adherence['done']}/{adherence['planned']}",
+        "{{ADHERENCE_STATUS}}": adherence["status"],
         "{{HERO_DAYS}}": str(days_primary) if days_primary >= 0 else "—",
         "{{HERO_RACE_NAME}}": race_name,
         "{{HERO_RACE_SHORT}}": hero_race_short,
@@ -1114,6 +1310,7 @@ def append_evolution_entry(activities: list[dict]) -> None:
         return
     last_7 = [a for a in activities if a["date"] >= (TODAY - timedelta(days=7)).isoformat()]
     summary = f"{len(last_7)} activities in last 7 days, {len(activities)} in 90-day window."
+    source = "cached (Strava unreachable)" if DATA_STALE else "Strava API"
     entry = f"""
 
 ---
@@ -1121,8 +1318,9 @@ def append_evolution_entry(activities: list[dict]) -> None:
 ## Cycle auto — {TODAY.isoformat()}
 
 - **Sync at:** {NOW_ISO}
+- **Data source:** {source}
 - **Activity baseline:** {summary}
-- **Notes:** Auto-cycle (GitHub Actions). Manual /my-training cycles are logged separately.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
 """
     EVOLUTION.write_text(existing + entry)
 
@@ -1132,28 +1330,54 @@ def write_outputs(html: str, activities: list[dict]) -> None:
     dashboard_path = DASHBOARDS_DIR / f"training-dashboard-{TODAY.isoformat()}.html"
     dashboard_path.write_text(html)
     (DASHBOARDS_DIR / "index.html").write_text(html)
-    LAST_SYNC.write_text(f"OK {NOW_ISO}\nsource: Strava API\nactivities_synced: {len(activities)}\n")
+    if DATA_STALE:
+        LAST_SYNC.write_text(
+            f"WARN {NOW_ISO}\nsource: cached (Strava unreachable)\n"
+            f"reason: {STALE_REASON}\nactivities_synced: {len(activities)}\n"
+        )
+    else:
+        LAST_SYNC.write_text(
+            f"OK {NOW_ISO}\nsource: Strava API\nactivities_synced: {len(activities)}\n"
+        )
 
 
 def main() -> int:
-    print(f"my-training build · {NOW_ISO}", file=sys.stderr)
-    try:
-        token = strava_refresh_access_token()
-        print("✓ Strava token refreshed", file=sys.stderr)
-    except Exception as e:
-        print(f"✗ Strava token refresh failed: {e}", file=sys.stderr)
-        return 2
-    after_ts = int((datetime.now(timezone.utc) - timedelta(days=WINDOW_DAYS)).timestamp())
-    try:
-        raw = strava_fetch_activities(token, after_ts)
-        print(f"✓ Strava activities fetched: {len(raw)}", file=sys.stderr)
-    except Exception as e:
-        print(f"✗ Strava fetch failed: {e}", file=sys.stderr)
-        return 3
-    fresh = [normalize_activity(a) for a in raw]
+    """Resilient build. Tries Strava; on any failure after retries it falls back to
+    the cached activities.json and still renders a current dashboard. Exits non-zero
+    ONLY when there is genuinely nothing to render (no fresh data AND no cache) — so a
+    transient Strava blip no longer fails the run or fires a 'Run failed' email."""
+    global DATA_STALE, STALE_REASON
+    render_only = "--render-only" in sys.argv or os.environ.get("RENDER_ONLY") == "1"
+    print(f"my-training build · {NOW_ISO}{' · render-only' if render_only else ''}", file=sys.stderr)
+
     existing = load_existing()
+    fresh: list[dict] = []
+
+    if render_only:
+        DATA_STALE = True
+        STALE_REASON = "render-only (no fetch requested)"
+        print("• Render-only: skipping Strava, rebuilding from cache.", file=sys.stderr)
+    else:
+        try:
+            token = strava_refresh_access_token()
+            print("✓ Strava token refreshed", file=sys.stderr)
+            after_ts = int((datetime.now(timezone.utc) - timedelta(days=WINDOW_DAYS)).timestamp())
+            raw = strava_fetch_activities(token, after_ts)
+            print(f"✓ Strava activities fetched: {len(raw)}", file=sys.stderr)
+            fresh = [normalize_activity(a) for a in raw]
+        except Exception as e:
+            DATA_STALE = True
+            STALE_REASON = str(e).splitlines()[0][:140]
+            print(f"✗ Strava unreachable after {HTTP_RETRIES} retries: {e}", file=sys.stderr)
+            print("→ Falling back to cached activities.json — dashboard still builds.", file=sys.stderr)
+
     merged = merge_activities(existing, fresh)
-    print(f"✓ Merged: {len(merged)} activities in {WINDOW_DAYS}-day window", file=sys.stderr)
+    if not merged:
+        print("✗ No fresh data and no usable cache — nothing to render.", file=sys.stderr)
+        return 1
+
+    print(f"✓ {len(merged)} activities in {WINDOW_DAYS}-day window "
+          f"({'cached' if DATA_STALE else 'fresh'})", file=sys.stderr)
     html = build_dashboard(merged)
     write_outputs(html, merged)
     append_evolution_entry(merged)

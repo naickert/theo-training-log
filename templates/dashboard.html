@@ -272,6 +272,35 @@
   .foot-log-btn:hover{background:var(--lime);color:#0a0d0c;border-color:var(--lime)}
   .foot-log-btn[hidden]{display:none}
 
+  /* STALE-DATA BANNER */
+  .stale-banner{display:flex;align-items:flex-start;gap:10px;background:rgba(255,181,71,0.08);border:1px solid rgba(255,181,71,0.3);border-radius:12px;padding:11px 14px;margin-bottom:10px;font-size:12px;color:var(--text-2);line-height:1.4}
+  .stale-banner strong{color:var(--amber)}
+  .stale-banner svg{width:18px;height:18px;stroke:var(--amber);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:1px}
+
+  /* COACH STRIP — training load (ACWR) + adherence + coach's read */
+  .coach-strip{display:grid;grid-template-columns:1.1fr 1.1fr 2fr;gap:10px;margin-bottom:10px}
+  @media(max-width:900px){.coach-strip{grid-template-columns:1fr 1fr}.coach-strip .coach-read{grid-column:span 2}}
+  @media(max-width:520px){.coach-strip{grid-template-columns:1fr}.coach-strip .coach-read{grid-column:span 1}}
+  .metric-card{background:var(--card);border-radius:14px;padding:12px 14px;border:1px solid var(--line);display:flex;flex-direction:column;gap:7px;min-width:0}
+  .metric-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+  .metric-label{display:flex;align-items:center;gap:6px;font-size:9px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-3)}
+  .metric-label .ico{width:12px;height:12px;stroke:var(--text-3);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .metric-val{font-size:26px;font-weight:800;letter-spacing:-0.03em;line-height:1;color:var(--text)}
+  .metric-val small{font-size:12px;font-weight:600;color:var(--text-2);margin-left:1px}
+  .zone-badge{font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;white-space:nowrap}
+  .zone-on-track{background:rgba(197,255,61,0.12);color:var(--lime)}
+  .zone-behind{background:rgba(255,181,71,0.14);color:var(--amber)}
+  .zone-at-risk{background:rgba(255,93,122,0.14);color:var(--rose)}
+  .zone-building{background:var(--card-3);color:var(--text-2)}
+  .metric-sub{font-size:10px;color:var(--text-3);font-weight:500}
+  /* ACWR gauge: 0..2 ratio mapped to 0..100%. Bands: detrain | OPTIMAL | caution | high */
+  .gauge{position:relative;height:7px;border-radius:999px;margin-top:1px;
+    background:linear-gradient(90deg,#3a4a42 0%,#3a4a42 40%,rgba(197,255,61,0.55) 40%,rgba(197,255,61,0.55) 65%,var(--amber) 65%,var(--amber) 75%,var(--rose) 75%)}
+  .gauge-marker{position:absolute;top:50%;width:3px;height:13px;background:var(--text);border-radius:2px;transform:translate(-50%,-50%);box-shadow:0 0 0 2px var(--card)}
+  .coach-read{background:linear-gradient(135deg,var(--card-2),var(--card));border:1px solid var(--line);border-radius:14px;padding:12px 16px;display:flex;flex-direction:column;justify-content:center;gap:5px}
+  .coach-read .metric-label{color:var(--lime)}
+  .coach-read .coach-text{font-size:13px;color:var(--text);line-height:1.45;font-weight:500}
+
   /* SECTION HEADERS — ultra-compact */
   .sec{margin:0 0 6px;display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:0 2px}
   .sec h3{font-size:12px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--text-2)}
@@ -451,15 +480,16 @@
   .cal-head span{text-align:center;font-size:9px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-3);padding:2px 0}
   .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
   .cal-cell{
-    aspect-ratio:1;border-radius:6px;
+    min-height:46px;border-radius:7px;
     background:var(--card-2);
     display:flex;flex-direction:column;justify-content:space-between;
-    padding:2px 3px;min-height:28px;
+    padding:5px 7px;
     font-size:9px;color:var(--text-3);
     border:1px solid transparent;
   }
-  .cal-cell .num{font-size:10px;font-weight:600;color:var(--text-3);line-height:1}
-  .cal-cell .mark{font-size:8px;font-weight:600;color:var(--text-3);line-height:1;letter-spacing:0.02em;text-transform:uppercase;text-align:right}
+  @media(max-width:600px){.cal-cell{min-height:36px;padding:3px 4px}}
+  .cal-cell .num{font-size:11px;font-weight:700;color:var(--text-3);line-height:1}
+  .cal-cell .mark{font-size:9px;font-weight:700;color:var(--text-3);line-height:1;letter-spacing:0.02em;text-transform:uppercase;text-align:right}
   .cal-cell.past-done{background:rgba(197,255,61,0.12)}
   .cal-cell.past-done .num,.cal-cell.past-done .mark{color:var(--lime)}
   .cal-cell.past-rest{opacity:0.5}
@@ -530,6 +560,9 @@
       Add event
     </a>
   </div>
+
+  <!-- STALE-DATA BANNER (only present when Strava was unreachable) -->
+  {{STALE_BANNER}}
 
   <!-- TOP STAT GRID -->
   <div class="stat-grid">
@@ -632,6 +665,43 @@
     </div>
   </div>
 
+  <!-- COACH STRIP: training load (ACWR) · adherence · coach's read -->
+  <div class="coach-strip">
+    <div class="metric-card">
+      <div class="metric-top">
+        <span class="metric-label">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+          Training Load
+        </span>
+        <span class="zone-badge zone-{{LOAD_STATUS}}">{{LOAD_ZONE}}</span>
+      </div>
+      <div class="metric-val">{{LOAD_RATIO}}<small> ACWR</small></div>
+      <div class="gauge"><span class="gauge-marker" style="left:{{LOAD_GAUGE}}%"></span></div>
+      <div class="metric-sub">Acute {{LOAD_ACUTE}} · chronic {{LOAD_CHRONIC}} {{LOAD_UNIT}}/wk · safe band 0.8–1.3</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-top">
+        <span class="metric-label">
+          <svg class="ico" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Adherence · 4 wks
+        </span>
+        <span class="zone-badge zone-{{ADHERENCE_STATUS}}">{{ADHERENCE_FRAC}}</span>
+      </div>
+      <div class="metric-val">{{ADHERENCE_PCT}}<small>%</small></div>
+      <div class="gauge" style="background:var(--card-3)"><span class="gauge-marker" style="left:{{ADHERENCE_PCT}}%;background:var(--lime)"></span></div>
+      <div class="metric-sub">planned sessions completed</div>
+    </div>
+
+    <div class="coach-read">
+      <span class="metric-label">
+        <svg class="ico" viewBox="0 0 24 24" style="stroke:var(--lime)"><path d="M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2z"/><path d="M9 21h6"/></svg>
+        Coach's read
+      </span>
+      <div class="coach-text">{{COACH_INSIGHT}}</div>
+    </div>
+  </div>
+
   <!-- 3-COLUMN MAIN: Week table | Races | Calendar -->
   <div class="main-3col">
     <div class="col">
@@ -669,8 +739,27 @@
     {{ARC_HTML}}
   </div>
 
+  <!-- TRENDS · 12 weeks -->
+  <div class="sec">
+    <h3>Trends · 12 weeks</h3>
+    <span class="sec-meta">weekly volume &amp; longest session</span>
+  </div>
+  <div class="trend-grid">
+    {{TRENDS_HTML}}
+  </div>
+
+  <!-- 13-WEEK CALENDAR -->
+  <div class="sec">
+    <h3>Calendar · 13 weeks</h3>
+    <span class="sec-meta">done · planned · races</span>
+  </div>
+  <div class="cal-card">
+    <div class="cal-head"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+    <div class="cal-grid" id="calGrid"></div>
+  </div>
+
   <div class="footer">
-    Updated {{NOW_ISO}} · Strava → GitHub Actions · <a href="https://github.com/naickert/theo-training-log">theo-training-log</a>
+    Updated {{NOW_ISO}} · Strava → resilient build → Claude daily routine · <a href="https://github.com/naickert/theo-training-log">theo-training-log</a>
   </div>
 
 </div>
@@ -679,6 +768,14 @@
 <script>
   const lime='#c5ff3d', amber='#ffb547', rose='#ff5d7a', text2='#a8b3ac';
   const D = JSON.parse(document.getElementById('__DATA__').textContent || '{}');
+
+  // #rrggbb -> rgba(r,g,b,a). (Replaces the old buggy inline parser that produced
+  // "NaN,186,NaN..." and threw, halting every chart + the calendar below it.)
+  function hexToRgba(hex, a){
+    const h = String(hex).replace('#','');
+    const r = parseInt(h.slice(0,2),16), g = parseInt(h.slice(2,4),16), b = parseInt(h.slice(4,6),16);
+    return `rgba(${r},${g},${b},${a})`;
+  }
 
   const baseOpts = {
     responsive:true,maintainAspectRatio:false,
@@ -697,11 +794,11 @@
       type:type,
       data:{labels:Array(data.length).fill(''),datasets:[{
         data:data,borderColor:color,
-        backgroundColor: type==='bar' ? color : (function(){
+        backgroundColor: type==='bar' ? hexToRgba(color,0.65) : (function(){
           const c = ctx.getContext('2d');
           const g = c.createLinearGradient(0,0,0,80);
-          g.addColorStop(0, color.replace('#','rgba(').replace(/(..)(..)(..)/, (_,r,g,b)=>parseInt(r,16)+','+parseInt(g,16)+','+parseInt(b,16))+',0.3)');
-          g.addColorStop(1, 'rgba(0,0,0,0)');
+          g.addColorStop(0, hexToRgba(color,0.32));
+          g.addColorStop(1, hexToRgba(color,0));
           return g;
         })(),
         borderWidth:1.8,fill:type==='line',tension:0.4,
@@ -712,17 +809,19 @@
     });
   }
 
-  if(D.sparks){
-    spark('sparkHours', D.sparks.hours||[], lime);
-    spark('sparkRun', D.sparks.runKm||[], lime);
-    spark('sparkBike', D.sparks.bikeKm||[], amber);
-  }
-  if(D.charts){
-    spark('chartHours', D.charts.hours||[], lime);
-    spark('chartRun', D.charts.runKm||[], lime);
-    spark('chartBike', D.charts.bikeKm||[], amber);
-    spark('chartLongest', D.charts.longestMin||[], rose, 'bar');
-  }
+  try{
+    if(D.sparks){
+      spark('sparkHours', D.sparks.hours||[], lime);
+      spark('sparkRun', D.sparks.runKm||[], lime);
+      spark('sparkBike', D.sparks.bikeKm||[], amber);
+    }
+    if(D.charts){
+      spark('chartHours', D.charts.hours||[], lime);
+      spark('chartRun', D.charts.runKm||[], lime);
+      spark('chartBike', D.charts.bikeKm||[], amber);
+      spark('chartLongest', D.charts.longestMin||[], rose, 'bar');
+    }
+  }catch(e){ console.warn('chart render skipped:', e); }
 
   // FOOT PAIN SELECTOR
   (function(){

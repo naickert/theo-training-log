@@ -1,12 +1,26 @@
-name: Daily training dashboard
+name: Build training dashboard (on-demand)
+
+# SCHEDULING MOVED TO CLAUDE (2026-06-06).
+# This workflow no longer self-fires on a cron — the daily *scheduler* is now a
+# Claude cloud routine (see SKILL.md), which dispatches this build on demand,
+# pulls the result, runs the intelligent review, and push-notifies. Keeping the
+# cron here is what produced the daily "Run failed" emails on transient Strava
+# 403s. This is now purely an on-demand, secret-bearing data worker.
+#
+# The build itself is resilient: build_dashboard.py retries Strava and, if it is
+# still unreachable, renders from the cached activities.json and exits 0 — so a
+# transient blip can never fail this run.
 
 on:
-  schedule:
-    - cron: "7 2 * * *"
   workflow_dispatch: {}
 
 permissions:
   contents: write
+
+# Never run two builds at once (Claude may dispatch while a scheduled-ish run is mid-flight).
+concurrency:
+  group: training-dashboard
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -23,7 +37,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Build dashboard
+      - name: Build dashboard (resilient — never hard-fails on Strava blips)
         env:
           STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
           STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
@@ -41,5 +55,6 @@ jobs:
           fi
           DATE=$(date -u +%Y-%m-%d)
           N=$(python -c "import json; print(len(json.load(open('data/activities.json'))))")
-          git commit -m "Daily training update ${DATE} - ${N} activities"
+          SRC=$(head -1 data/last-sync.txt | awk '{print $1}')
+          git commit -m "Daily training update ${DATE} - ${N} activities (${SRC})"
           git push
