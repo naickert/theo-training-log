@@ -1,4 +1,4 @@
-WARN 2026-06-06T17:13:50Z
+WARN 2026-06-06T17:18:09Z
 source: cached (Strava unreachable)
-reason: HTTP Error 403: Forbidden
+reason: render-only (no fetch requested)
 activities_synced: 52
