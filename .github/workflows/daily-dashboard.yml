@@ -10,9 +10,19 @@ name: Build training dashboard (on-demand)
 # The build itself is resilient: build_dashboard.py retries Strava and, if it is
 # still unreachable, renders from the cached activities.json and exits 0 — so a
 # transient blip can never fail this run.
+#
+# HOW THE CLOUD ROUTINE TRIGGERS THIS: the remote sandbox can `git push` but
+# cannot `gh workflow run` (no actions:write). So the routine "pokes" a build by
+# committing `data/.sync-request`; the push-trigger below fires this build, which
+# fetches Strava with the secrets and pushes fresh data back. The build's own
+# commit never touches `.sync-request`, and bot pushes don't re-trigger workflows,
+# so there is no loop.
 
 on:
   workflow_dispatch: {}
+  push:
+    paths:
+      - "data/.sync-request"
 
 permissions:
   contents: write
