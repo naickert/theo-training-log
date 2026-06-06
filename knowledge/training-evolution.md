@@ -169,3 +169,16 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Sync at:** 2026-06-06T03:19:51Z
 - **Activity baseline:** 4 activities in last 7 days, 51 in 90-day window.
 - **Notes:** Auto-cycle (GitHub Actions). Manual /my-training cycles are logged separately.
+
+
+---
+
+## Cycle 6 — 2026-06-06 (manual /my-training · automated pipeline)
+
+- **Plan gate:** No revision (W11 covers today; injury 27 May < plan 28 May; Imfolozi 21d; no new race). 6-day gap since Cycle 5 — daily auto-builds ran fine (1–6 Jun commits all present).
+- **Today landed:** Sat 6 **Long MTB ✅** — 36.86 km, 2:12:21, avg HR 141 (92% of the 40 km target, aerobic). Second big MTB in 8 days.
+- **⚠️ But W11 was light/disrupted:** Mon 1 easy run ❌ · Tue 2 weights → short 30 min ride (substituted) · Wed 3 bike intervals → easy 31 min ride HR 133 (not intervals) · Thu 4 weights ❌ · Fri 5 bike tempo ❌ · Sat 6 MTB ✅. Three missed sessions; weekly volume halved (6.6→3.2 h); no running since 31 May.
+- **Net effect — Imfolozi fine:** the two long MTBs (30 May 29 km + 6 Jun 37 km) pushed **Imfolozi readiness 56→75 (now on-track)** — longest MTB 37/40, bike vol 83/150. For a "finish strong" stage race the long aerobic rides are what count, so the missed weekday quality matters less here.
+- **What the misses cost:** run base + foot work stalled (no run since 31 May) — a Hollywoodbets/sub-60 concern, but that's 85 days out. Absa 97, Hollywoodbets 87 (carried from late-May runs), Amashova 32 (laggard — needs road rides post-Imfolozi).
+- **No dashboard change this cycle** — the rolling window + Missed/Substituted flags already surface the light week clearly; no gratuitous change.
+- **Next:** Sun 7 easy run OR rest — first run in a week; flag if HR >160. **W12 (8–14 Jun) = Imfolozi stage-sim weekend** (Sat 40 km dress rehearsal + Sun 15 km back-to-back). If weekday sessions keep slipping, protect the long rides — they're carrying the prep.
