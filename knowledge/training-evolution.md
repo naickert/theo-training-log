@@ -182,3 +182,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **What the misses cost:** run base + foot work stalled (no run since 31 May) — a Hollywoodbets/sub-60 concern, but that's 85 days out. Absa 97, Hollywoodbets 87 (carried from late-May runs), Amashova 32 (laggard — needs road rides post-Imfolozi).
 - **No dashboard change this cycle** — the rolling window + Missed/Substituted flags already surface the light week clearly; no gratuitous change.
 - **Next:** Sun 7 easy run OR rest — first run in a week; flag if HR >160. **W12 (8–14 Jun) = Imfolozi stage-sim weekend** (Sat 40 km dress rehearsal + Sun 15 km back-to-back). If weekday sessions keep slipping, protect the long rides — they're carrying the prep.
+
+
+---
+
+## Cycle auto — 2026-06-07
+
+- **Sync at:** 2026-06-07T03:10:13Z
+- **Data source:** Strava API
+- **Activity baseline:** 4 activities in last 7 days, 52 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
