@@ -202,3 +202,15 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 3 activities in last 7 days, 51 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+
+---
+
+## Cycle 7 — 2026-06-08 (manual · W12 stage-sim week start)
+
+- **Plan calibration (trigger e):** `race-calendar.md` had Absa 10K at priority B / target 1:02–1:05, contradicting the plan (updated 2026-05-28) which demoted it to C tune-up / ~1:08–1:10. Calendar corrected; plan `updated:` bumped to 2026-06-08. Obsidian local mirror needs manual sync.
+- **ACWR 1.02** — optimal (acute RE 295, chronic weekly avg 290). No spike.
+- **W11 adherence 3/7** (Tue bike, Wed short ride, Sat MTB 36.9 km) — mirrors W11 pattern flagged in Cycle 6. No run since 31 May (8 days).
+- **W12 kicks off today** — the critical stage-sim week. Sat 13 Jun = 40 km dress rehearsal, Sun 14 Jun = 15 km back-to-back. Imfolozi 19 days away. If weekday sessions slip again, protect the Sat/Sun simulation blocks — they are the non-negotiable.
+- **⚠️ Easy-run HR pattern persists:** May 20 HR 168, May 27 HR 182, May 31 HR 177 — all prescribed "easy" runs, all above the 155 ceiling, two well above 170. No foot pain reported since 27 May, but the re-flare window is still open given PF history. If today's Mon easy 6 km run lands, flag the HR.
+- **Next:** Watch today's Mon easy run HR + Sat/Sun Stage 1/2 sim completion.
