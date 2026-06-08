@@ -1,6 +1,6 @@
 ---
 date: 2026-04-18
-updated: 2026-05-28
+updated: 2026-06-08
 tags: [running, cycling, mtb, 10k, road-cycling, training-plan, fitness, ballito, imfolozi, amashova, hollywoodbets, plantar-fasciitis]
 source: /Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running
 type: plan

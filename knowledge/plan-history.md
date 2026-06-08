@@ -45,6 +45,12 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
   - Imfolozi readiness immediately improves due to lower per-stage threshold
 - **Race village logistics added:** Registration Fri 13h00-20h00, optional dinners R220/R250, Sundowners + live music Saturday evening
 
+## 2026-06-08 — Calendar calibration: Absa 10K priority corrected
+
+- **Trigger (e) — stale cross-document:** `race-calendar.md` still listed Absa 10K as priority B with target "1:02–1:05" despite the plan demoting it to C (tune-up, easy effort ~1:08–1:10) on 2026-05-28.
+- **Change:** `race-calendar.md` updated — priority B → C, target corrected to match plan. No weekly tables changed; plan content was already correct.
+- **Note:** Obsidian local mirror needs manual sync (cloud session cannot reach it).
+
 ## Current — 2026-05-28 onwards
 
 - **File:** /Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running/Theo 3 Month Training Plan.md

@@ -29,9 +29,9 @@ Each race is a YAML entry. Required fields: `name`, `date` (YYYY-MM-DD), `type`,
   date: 2026-07-10
   type: Run
   distance_km: 10
-  priority: B
-  target: 1:02–1:05 (foot & fitness dependent)
-  notes: Real road race test post-Imfolozi recovery. Tune-up before Amashova 9 days later.
+  priority: C
+  target: Easy effort ~1:08–1:10 (tune-up only; do not race)
+  notes: Recovery tune-up between Imfolozi (22 days prior) and Amashova (9 days after). Demoted B→C on 2026-05-28 when Amashova was added. Absa 10K must not be raced — use as supported long run.
 
 - name: Amashova National Classic
   date: 2026-07-19
