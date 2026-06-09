@@ -224,3 +224,16 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 4 activities in last 7 days, 52 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+
+---
+
+## Cycle 8 — 2026-06-09 (manual · W12 stage-sim week · Mon HR flag fired)
+
+- **Plan gate:** No revision. W12 (8–14 Jun) covers today; injury log (27 May) older than plan (8 Jun); Imfolozi 18d (not <7); all races in plan.
+- **Mon Jun 8 easy-run HR breach confirmed:** 5.03 km @ 5:48/km, avg HR **180** / max 199. Plan: easy 6 km, HR ≤155. This is the 4th consecutive easy-run HR breach (May 20: 168 · May 27: 182 · May 31: 177 · Jun 8: 180) — all prescribed Z2 runs executed at Z4/LT. Critical given active PF recovery. No foot pain reported, but the re-flare window is open until physio clearance.
+- **ACWR 1.28** — jumped from 1.02 yesterday as Mon's run (RE 138) entered the 7-day acute window. Still inside the safe band (0.8–1.3) but at the upper edge; a hard session today would push it borderline.
+- **W11 adherence 1/5** key cardio sessions to standard (Sat MTB 37 km ✅; Mon run missed; Wed intervals → easy ride HR 133; Fri tempo missed; Thu weights missed). Long MTBs (29 km + 37 km) are carrying Imfolozi readiness despite the mid-week gaps.
+- **Imfolozi 18 days out:** readiness ~75% (Cycle 6). Non-negotiables this week: Wed bike intervals (4×8 min @HR 165–175) + Sat Stage 1 Sim 40 km dress rehearsal + Sun Stage 2 Sim 15 km back-to-back. If weekday sessions slip again, protect Sat/Sun — they are the race-prep deliverables.
+- **Foot status:** no new entry in injury-log since 27 May ("90% better"). Foot tolerating the hard easy-runs without logged pain, but the consistent HR overshoot is the structural risk factor.
+- **Next:** Watch Sat 13 Jun Stage 1 Sim completion (40 km) and HR discipline on Wed bike intervals.
