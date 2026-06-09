@@ -214,3 +214,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **W12 kicks off today** — the critical stage-sim week. Sat 13 Jun = 40 km dress rehearsal, Sun 14 Jun = 15 km back-to-back. Imfolozi 19 days away. If weekday sessions slip again, protect the Sat/Sun simulation blocks — they are the non-negotiable.
 - **⚠️ Easy-run HR pattern persists:** May 20 HR 168, May 27 HR 182, May 31 HR 177 — all prescribed "easy" runs, all above the 155 ceiling, two well above 170. No foot pain reported since 27 May, but the re-flare window is still open given PF history. If today's Mon easy 6 km run lands, flag the HR.
 - **Next:** Watch today's Mon easy run HR + Sat/Sun Stage 1/2 sim completion.
+
+
+---
+
+## Cycle auto — 2026-06-09
+
+- **Sync at:** 2026-06-09T03:09:06Z
+- **Data source:** Strava API
+- **Activity baseline:** 4 activities in last 7 days, 52 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
