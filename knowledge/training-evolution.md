@@ -237,3 +237,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Imfolozi 18 days out:** readiness ~75% (Cycle 6). Non-negotiables this week: Wed bike intervals (4×8 min @HR 165–175) + Sat Stage 1 Sim 40 km dress rehearsal + Sun Stage 2 Sim 15 km back-to-back. If weekday sessions slip again, protect Sat/Sun — they are the race-prep deliverables.
 - **Foot status:** no new entry in injury-log since 27 May ("90% better"). Foot tolerating the hard easy-runs without logged pain, but the consistent HR overshoot is the structural risk factor.
 - **Next:** Watch Sat 13 Jun Stage 1 Sim completion (40 km) and HR discipline on Wed bike intervals.
+
+
+---
+
+## Cycle auto — 2026-06-10
+
+- **Sync at:** 2026-06-10T04:25:07Z
+- **Data source:** Strava API
+- **Activity baseline:** 4 activities in last 7 days, 53 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
