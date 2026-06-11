@@ -257,3 +257,16 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 4 activities in last 7 days, 53 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+
+---
+
+## Cycle 9 — 2026-06-11 (manual · W12 Stage-Sim eve · ACWR Caution)
+
+- **Plan gate:** No revision. W12 (8–14 Jun) covers today; injury log (27 May) older than plan (8 Jun); Imfolozi 16 days out (not <7); all races reflected.
+- **⚠️ ACWR 1.47 — Caution zone** (acute RE 537, chronic avg 366/wk). Jumped from 1.28 on Jun 9 as Jun 6 MTB (RE 232) now anchors the acute week alongside Mon run (RE 138) and Wed Zwift (RE 146). Safe band = 0.8–1.3; 1.47 approaches the 1.5 injury-risk spike threshold. This is the worst timing: Stage Sim weekend (Sat 40 km + Sun 15 km) is 2 days away and will spike ACWR further.
+- **Risk mitigation:** Stage Sim is non-negotiable — execute at RPE 5–6 first two-thirds (not harder), no hero efforts. Today's (Thu) weights session should proceed but no added cardio. Fri bike tempo — keep HR ≤155, treat as active recovery not an extra quality day.
+- **W12 so far:** Mon run ⚠️ HR 180 (≤155 target, 4th breach), Tue weights ✅, Wed bike intervals ⚠️ (Zwift "Threshold Hold" 52:49 avg HR 152 — shorter and lower-intensity than 4×8min @165–175 prescribed). The quality stimulus for Stage Sim week was underdelivered mid-week.
+- **Adherence 11/14** (4-week, 79%) — long MTBs (29, 37 km) carrying Imfolozi readiness to **81%** (on-track). Mid-week sessions (bike intervals, Fri tempos) continue to slip.
+- **Foot:** No new injury-log entry since 27 May ("90% better"). Prehab must stay daily through Stage Sim and race week — ACWR near-spike + PF history = elevated re-flare risk.
+- **Next:** Sat 13 Jun Stage 1 Sim 40 km + Sun 14 Jun Stage 2 Sim 15 km. Execute controlled. Watch HR on back-to-back to avoid additional overreach.
