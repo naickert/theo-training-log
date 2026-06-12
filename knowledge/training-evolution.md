@@ -270,3 +270,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Adherence 11/14** (4-week, 79%) — long MTBs (29, 37 km) carrying Imfolozi readiness to **81%** (on-track). Mid-week sessions (bike intervals, Fri tempos) continue to slip.
 - **Foot:** No new injury-log entry since 27 May ("90% better"). Prehab must stay daily through Stage Sim and race week — ACWR near-spike + PF history = elevated re-flare risk.
 - **Next:** Sat 13 Jun Stage 1 Sim 40 km + Sun 14 Jun Stage 2 Sim 15 km. Execute controlled. Watch HR on back-to-back to avoid additional overreach.
+
+
+---
+
+## Cycle auto — 2026-06-12
+
+- **Sync at:** 2026-06-12T00:12:05Z
+- **Data source:** Strava API
+- **Activity baseline:** 5 activities in last 7 days, 53 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
