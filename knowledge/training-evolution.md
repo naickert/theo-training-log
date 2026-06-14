@@ -300,3 +300,17 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 5 activities in last 7 days, 53 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+
+---
+
+## Cycle 10 — 2026-06-14 (manual · W12 final day · Stage 1 Sim miss · Imfolozi 13d)
+
+- **Plan gate:** Current. W12 (8–14 Jun) covers today; injury log (27 May) older than plan (8 Jun); Imfolozi 13d out (not <7 — next week is the taper); all 4 races in plan.
+- **⚠️ STAGE 1 DRESS REHEARSAL MISSED:** Sat 13 Jun plan = 40 km outdoor MTB, race kit, race bike, race nutrition — the ONLY back-to-back ride scheduled before Imfolozi. Actual = Zwift "Big Loop in Watopia" 20.09 km, 1:37, avg HR 146. Race nutrition has NOT been rehearsed; race-kit fit on bike has NOT been tested outdoors. Imfolozi 13 days away.
+- **ACWR 1.25 — recovered into safe band** (acute 529, chronic avg 422). Cycle 9 flagged 1.47 caution; Jun 6 MTB (RE 232) aged out of the acute window and Jun 13 Zwift (RE 209) replaced it. No current load spike, but Stage 2 Sim today + Imfolozi race week will continue loading.
+- **W12 adherence (6 of 7 days done):** Mon run ⚠️ HR 180 (4th consecutive easy-run breach, ≤155 target) · Tue weights ✅ · Wed Zwift threshold 52:49 ⚠️ (shorter than 4×8 min prescribed) · Thu weights ✅ · Fri tempo ❌ · Sat Stage 1 Sim ⚠️ (Zwift 20 km indoor, not 40 km outdoor dress rehearsal) · Sun Stage 2 Sim TBD.
+- **4-week adherence ~68%:** W9 43% · W10 100% · W11 57% · W12 71% (partial). Mid-week quality sessions (Fri tempos, full bike intervals) are the consistent gap; long rides are carrying Imfolozi readiness.
+- **Bike vol 4wk: 122.9 km / 150 km target.** Longest outdoor MTB: 36.86 km (Jun 6) — not yet at the 40–50 km dress-rehearsal standard. The Zwift rides are supplementing but not substituting for trail-specific prep.
+- **Foot:** No new injury-log entry since 27 May. Tolerating high-HR runs without logged pain, but the 4 consecutive easy-run HR breaches (168, 182, 177, 180) on a PF-recovering foot remain the primary re-flare risk.
+- **Priority actions before Imfolozi:** (1) Complete Stage 2 Sim today (15 km outdoor MTB, 07:30). (2) Do a short outdoor nutrition rehearsal ride in W13 (20–25 km is enough to test the gel/bottle protocol). (3) Keep W13 easy bike + foot prehab daily — ACWR will naturally peak from race-week loading.
