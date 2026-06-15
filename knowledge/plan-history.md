@@ -51,6 +51,17 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
 - **Change:** `race-calendar.md` updated — priority B → C, target corrected to match plan. No weekly tables changed; plan content was already correct.
 - **Note:** Obsidian local mirror needs manual sync (cloud session cannot reach it).
 
+## 2026-06-15 — Health-screen integration + dress-rehearsal reschedule
+
+- **Trigger:** User ran `/my-training` asking to update the plan and fold in the 15 Jun executive health screen ([[theo-health-screen-review-2026-06-15]]). Plan gate otherwise current (W13 covers today; no new race; injury log older than plan).
+- **Health screen → plan changes:**
+  - Added **Non-Negotiable Rule 4** — daily Vitamin D3 1000–2000 IU (level insufficient at 19.92 ng/ml; bone/stress-fracture cover for the block + resolving PF) and iron-aware fuelling (ferritin 68.8 adequate but not buffered).
+  - Added **cardiac safety-net** (derail #9) — normal ECG, but exertional chest pain/syncope/palpitations → stop & assess, given two endurance A-races. Plus derail #10 (don't skip the vitamin D/iron insurance).
+  - Recorded that the bloods **confirm good systemic load tolerance** (normal FT3 & testosterone, adequate iron, no anaemia, ESR 2, normal ECG) → green light to continue the block.
+- **Training change:** the W12 dress rehearsal (13–14 Jun) was ridden **indoors on Zwift**, not outdoors on the MTB — so **Sat 20 Jun (W13) upgraded** to the outdoor race-kit + nutrition rehearsal, kept to 25–30 km (ACWR 1.46, freshen week — no added volume). W12 table annotated with the actual sessions.
+- **No change to:** race calendar, phase structure, weekly templates beyond W13 Sat, or any race targets.
+- **Mirrored to:** repo `plans/training-plan.md`, human copy, and Obsidian `Health & Fitness/Running/Theo 3 Month Training Plan.md` (all three identical, `updated: 2026-06-15`).
+
 ## Current — 2026-05-28 onwards
 
 - **File:** /Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running/Theo 3 Month Training Plan.md

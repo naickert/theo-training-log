@@ -1,12 +1,12 @@
 ---
 date: 2026-04-18
-updated: 2026-06-08
+updated: 2026-06-15
 tags: [running, cycling, mtb, 10k, road-cycling, training-plan, fitness, ballito, imfolozi, amashova, hollywoodbets, plantar-fasciitis]
 source: /Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running
 type: plan
 created_by: Claude
 supersedes: [[10K-Sub60-Training-Calendar-Apr-Jun-2026]]
-related: [[PF-Management-Apr-2026]], [[Imfolozi-55km-Race-Prep]]
+related: [[PF-Management-Apr-2026]], [[Imfolozi-55km-Race-Prep]], [[theo-health-screen-review-2026-06-15]]
 ---
 
 # Theo Training Plan — May to August 2026
@@ -22,6 +22,9 @@ related: [[PF-Management-Apr-2026]], [[Imfolozi-55km-Race-Prep]]
 
 > [!info]
 > **Foot update (27 May):** PF ~90% better. Runs on 10 May and 20 May both felt good. Daily prehab from [[PF-Management-Apr-2026]] continues — non-negotiable until cleared by physio.
+
+> [!check]
+> **Revision 15 Jun 2026 — health screen reviewed; dress rehearsal rescheduled.** Full executive health screen (bloods + abdominal ultrasound + ECG, ref. Dr Ehlers) reviewed — broadly clean, and it **confirms good systemic load tolerance**: normal FT3 (argues against energy deficiency), healthy testosterone, ferritin 68.8 (adequate iron), no anaemia, ESR 2, and a normal ECG. **Green light to continue the block.** Three items folded into the plan — **daily vitamin D3**, iron-aware fuelling, and a cardiac safety-net (see below). Note: the 13–14 Jun stage rehearsal was ridden **indoors on Zwift**, so the outdoor race-kit + nutrition rehearsal moves to **Sat 20 Jun** (kept short — ACWR is 1.46 and W13 is freshen week). Full detail: [[theo-health-screen-review-2026-06-15]].
 
 ---
 
@@ -91,6 +94,9 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 >
 > **3. Foot protocol stays daily.**
 > Plantar fascia stretch, frozen bottle roll, calf stretches, eccentric heel drops. Even at 90%. See [[PF-Management-Apr-2026]].
+>
+> **4. Daily vitamin D3 + iron-aware fuelling (added 15 Jun).**
+> Vitamin D3 **1000–2000 IU with food daily** — level was insufficient at 19.92 ng/ml; matters for bone/stress-fracture cover through the block and the resolving PF. Recheck 25-OH vitamin D in ~3 months. Keep iron honest — regular red meat/poultry/fish, pair plant iron with vitamin C, keep tea/coffee away from iron-rich meals (ferritin 68.8 is adequate but **not** in the buffered zone for a runner). See [[theo-health-screen-review-2026-06-15]].
 
 ---
 
@@ -143,6 +149,9 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 | Sun | 14 Jun | **STAGE 2 SIM — 15 km MTB** | 07h30 start to simulate race-day rhythm. RPE 6–7, ~1 hr. **Test back-to-back legs.** |
 | Sun | 14 Jun | Easy 30 min spin recovery | Legs only |
 
+> [!warning]
+> **Actual (logged):** both sims were ridden **indoors on Zwift**, not outdoors on the MTB — Sat 13 Jun = Zwift 20 km (HR 146); Sun 14 Jun = Zwift 42.6 km (HR 155). Good aerobic volume (Sun exceeded target) and bike-volume readiness is now met (165 km/4wk ✓), but **race kit and nutrition were not rehearsed outdoors** — that carries to Sat 20 Jun (W13).
+
 ---
 
 ## Week 13 (15–21 Jun) — Imfolozi freshen week + foot maintenance
@@ -157,7 +166,7 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 | Wed | 17 Jun | **Bike — last hard session** | 15 WU + 4 × 4 min @ HR 170–180 (RPE 8) / 2 min easy + 10 CD. ~50 min. |
 | Thu | 18 Jun | Weights | |
 | Fri | 19 Jun | Easy bike 30 min + openers | 3 × 30 sec at race pace |
-| Sat | 20 Jun | MTB 25–30 km moderate | RPE 5–6, ~1:45. Recovery-from-rehearsal + race-route familiarisation if possible. |
+| Sat | 20 Jun | **MTB 25–30 km — OUTDOOR RACE-KIT + NUTRITION REHEARSAL** | RPE 5–6, ~1:45. Replaces the missed outdoor dress rehearsal: **race bike, race kit, full nutrition** (gel at 45 min, bottle every 45 min, test the gut). Kept to 25–30 km — ACWR is 1.46 and this is freshen week, so do **not** stretch to 40 km. Route familiarisation if possible. |
 | Sun | 21 Jun | **Run 8–10 km easy on grass** | HR ≤155, 7:00–7:30/km. Pre-Absa foot test. Walk if anything twinges. |
 
 **Decision after Sun 21 Jun:**
@@ -392,6 +401,8 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 6. **Going out too fast on Hollywoodbets km 1.** Same lesson as 18 Apr — must be 6:10 or slower.
 7. **Re-flaring the foot** by skipping prehab or running too fast on "easy" days. HR ≤155 is the rule.
 8. **Compounding fatigue from back-to-back hard days.** Tue/Thu = weights only by design. Don't add cardio on those days.
+9. **Ignoring cardiac warning signs.** The resting ECG is normal, but with two endurance A-races in the block, any new **exertional chest pain, blackout/near-blackout, sustained palpitations, or breathlessness out of proportion to effort** → stop and get assessed before continuing. (Safety-net from the 15 Jun health screen — not a current finding.)
+10. **Skipping vitamin D / under-fuelling iron.** Both are now cheap insurance for bone and blood through a heavy block on a foot that's still healing — see Non-Negotiable Rule 4.
 
 ---
 

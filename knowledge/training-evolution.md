@@ -337,3 +337,14 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **4-week adherence ~68%:** W9 43% · W10 100% · W11 57% · W12 71%. Mid-week quality (Fri tempos, full bike intervals) remains the consistent gap. Long rides carrying the prep.
 - **Easy-run HR breaches: 4 consecutive** (May 20: 168 · May 27: 182 · May 31: 177 · Jun 8: 180 — all prescribed ≤155). No foot pain logged. PF risk remains elevated with ACWR at 1.46.
 - **W13 priority actions (non-negotiable before Imfolozi):** (1) **Sat 20 Jun — MTB 25–30 km outdoors with race nutrition**: gel at 45 min, bottle every 45 min, race kit on bike — this is the only remaining opportunity for an outdoor dress rehearsal. (2) **Mon 15 Jun easy run** — keep HR ≤155; break the breach streak. (3) **Wed bike session** — last quality ride; controlled, HR ≤180, don't add load. (4) Daily foot prehab — non-negotiable.
+
+---
+
+## Cycle 12 — 2026-06-15 (manual · health-screen integration · plan revised)
+
+- **Notable event:** folded the **15 Jun executive health screen** into the plan (see [[theo-health-screen-review-2026-06-15]]). This is the new input today; Cycle 11 (earlier) already covered the load/adherence review.
+- **Health read (athlete-relevant):** broadly clean and *confirms good systemic load tolerance* — normal FT3 (no energy-deficiency signal), healthy total testosterone, **ferritin 68.8 / TSAT 25.5% = adequate iron** (validated by ESR 2 / low CRP), no anaemia (Hb 14.8), normal ECG (sinus 63). **Green light to continue the block.** Training-relevant watch-items: **vitamin D 19.92 ng/ml (insufficient)** and **iron not buffered**; CRP 4.6 is consistent with training load (recovery discipline matters).
+- **Plan changes applied & mirrored (repo + human + Obsidian, all identical, updated 2026-06-15):** Non-Negotiable Rule 4 (daily D3 1000–2000 IU + iron-aware fuelling); derail #9 cardiac safety-net + #10 supplement insurance; W12 annotated with the indoor-Zwift reality; **W13 Sat 20 Jun upgraded to the outdoor race-kit + nutrition rehearsal** (kept 25–30 km — ACWR 1.46, freshen week).
+- **Load/readiness (unchanged from Cycle 11):** ACWR 1.46 (caution; freshen week should drop it) · bike vol 165.5 km/4wk ✓ · adherence ~68% · 4 consecutive easy-run HR breaches (PF re-flare risk) · Imfolozi 12 days out.
+- **Dashboard:** re-rendered from cache with the revised plan (render-only; data fresh from 00:11Z sync). No panel changes this cycle.
+- **Next:** highest-value action before Imfolozi is the **Sat 20 Jun outdoor nutrition/kit rehearsal** — now the only one left. Hold easy-run HR ≤155 to break the breach streak and protect the foot.
