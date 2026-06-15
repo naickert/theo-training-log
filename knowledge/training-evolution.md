@@ -324,3 +324,16 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 6 activities in last 7 days, 53 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+
+---
+
+## Cycle 11 — 2026-06-15 (manual · W12 complete · W13 freshen starts · ACWR caution re-triggered)
+
+- **Plan gate:** Current. W13 (15–21 Jun) covers today; injury log (27 May) older than plan (8 Jun); Imfolozi 12d out (not <7); all 4 races in plan.
+- **W12 COMPLETE — Stage Sim outcome:** Both sims done on Zwift indoors. Sat 13 = Zwift 20 km / 1:37 / avg HR 146 (vs. 40 km outdoor MTB prescribed). Sun 14 = Zwift Coast Crusher 42.6 km / 1:51 / avg HR 155 (vs. 15 km outdoor MTB prescribed). Volume on Sun exceeded target; but **no outdoor trail riding, no race-kit fit test, no nutrition rehearsal executed**. This is the critical gap 12 days out.
+- **⚠️ ACWR 1.46 — caution zone re-entered** (acute 7d RE 731, chronic avg 502/wk). Sun Jun 14 Zwift (RE 340) spiked the acute load — same caution level as Cycle 9 (1.47). W13 is freshen week by design; volume should drop naturally. Do not add extra sessions.
+- **Milestone: Bike vol 4wk 165.5 km ≥ 150 km target ✓** — Imfolozi bike-volume readiness criterion met for the first time. Long MTBs (29, 37 km) + Zwift cross-training got there.
+- **4-week adherence ~68%:** W9 43% · W10 100% · W11 57% · W12 71%. Mid-week quality (Fri tempos, full bike intervals) remains the consistent gap. Long rides carrying the prep.
+- **Easy-run HR breaches: 4 consecutive** (May 20: 168 · May 27: 182 · May 31: 177 · Jun 8: 180 — all prescribed ≤155). No foot pain logged. PF risk remains elevated with ACWR at 1.46.
+- **W13 priority actions (non-negotiable before Imfolozi):** (1) **Sat 20 Jun — MTB 25–30 km outdoors with race nutrition**: gel at 45 min, bottle every 45 min, race kit on bike — this is the only remaining opportunity for an outdoor dress rehearsal. (2) **Mon 15 Jun easy run** — keep HR ≤155; break the breach streak. (3) **Wed bike session** — last quality ride; controlled, HR ≤180, don't add load. (4) Daily foot prehab — non-negotiable.
