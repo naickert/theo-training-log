@@ -314,3 +314,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Bike vol 4wk: 122.9 km / 150 km target.** Longest outdoor MTB: 36.86 km (Jun 6) — not yet at the 40–50 km dress-rehearsal standard. The Zwift rides are supplementing but not substituting for trail-specific prep.
 - **Foot:** No new injury-log entry since 27 May. Tolerating high-HR runs without logged pain, but the 4 consecutive easy-run HR breaches (168, 182, 177, 180) on a PF-recovering foot remain the primary re-flare risk.
 - **Priority actions before Imfolozi:** (1) Complete Stage 2 Sim today (15 km outdoor MTB, 07:30). (2) Do a short outdoor nutrition rehearsal ride in W13 (20–25 km is enough to test the gel/bottle protocol). (3) Keep W13 easy bike + foot prehab daily — ACWR will naturally peak from race-week loading.
+
+
+---
+
+## Cycle auto — 2026-06-15
+
+- **Sync at:** 2026-06-15T00:11:56Z
+- **Data source:** Strava API
+- **Activity baseline:** 6 activities in last 7 days, 53 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
