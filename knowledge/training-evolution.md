@@ -348,3 +348,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Load/readiness (unchanged from Cycle 11):** ACWR 1.46 (caution; freshen week should drop it) · bike vol 165.5 km/4wk ✓ · adherence ~68% · 4 consecutive easy-run HR breaches (PF re-flare risk) · Imfolozi 12 days out.
 - **Dashboard:** re-rendered from cache with the revised plan (render-only; data fresh from 00:11Z sync). No panel changes this cycle.
 - **Next:** highest-value action before Imfolozi is the **Sat 20 Jun outdoor nutrition/kit rehearsal** — now the only one left. Hold easy-run HR ≤155 to break the breach streak and protect the foot.
+
+
+---
+
+## Cycle auto — 2026-06-16
+
+- **Sync at:** 2026-06-16T00:10:17Z
+- **Data source:** Strava API
+- **Activity baseline:** 6 activities in last 7 days, 54 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
