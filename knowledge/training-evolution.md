@@ -358,3 +358,16 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 6 activities in last 7 days, 54 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+
+---
+
+## Cycle 13 — 2026-06-16 (automated daily · ACWR spike above 1.5 · W13 freshen)
+
+- **⚠️ ACWR 1.58 — crossed the 1.5 injury-risk spike threshold** (build dashboard confirmed). Highest of the block. Acute load driven by Sun Jun 14 Zwift 42.6 km (RE 340) + Mon Jun 15 run (RE 141). W13 is the designed freshen week — volume MUST drop this week or ACWR stays in the red zone into Imfolozi (11 days).
+- **5th consecutive easy-run HR breach — Mon 15 Jun:** 5.01 km @ 6:05/km, avg HR **178** vs ≤155 target. Pattern: May 20 (168) · May 27 (182) · May 31 (177) · Jun 8 (180) · Jun 15 (178) — all prescribed Z2 runs, all executed at Z4/LT. No foot pain logged in any of these, but the compounded risk (5-run streak + ACWR 1.58 + active PF) is elevated.
+- **Plan gate:** Current (W13 15–21 Jun covers today; plan updated 2026-06-15; no new races). No revision needed.
+- **Race readiness (Imfolozi 11d):** 95% (on-track). Bike vol 165/150 km ✓, longest MTB 37/40 km ✓. One gap remains: **outdoor race-kit + nutrition rehearsal (Sat 20 Jun)** — gel/bottle test, race bike, race kit. Non-negotiable.
+- **4-week adherence 79%** (15/19 planned sessions). Mid-week quality sessions (Fri tempos, full bike intervals) are the consistent gap; long rides carrying readiness.
+- **Amashova (33d): 53% — behind.** Longest road ride 43/90 km; road vol 99/200 km. Phase 4 pivot starts after Imfolozi — must land the 70 km road ride on Sat 4 Jul.
+- **Action priority this week:** (1) ACWR must drop — today's Weights (light) fine; Wed bike session = last quality ride, keep HR controlled; Sat 20 Jun outdoor rehearsal = critical but keep to 25–30 km, not 40 km. (2) Easy-run HR ≤155 when running. (3) Daily foot prehab.
