@@ -371,3 +371,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **4-week adherence 79%** (15/19 planned sessions). Mid-week quality sessions (Fri tempos, full bike intervals) are the consistent gap; long rides carrying readiness.
 - **Amashova (33d): 53% — behind.** Longest road ride 43/90 km; road vol 99/200 km. Phase 4 pivot starts after Imfolozi — must land the 70 km road ride on Sat 4 Jul.
 - **Action priority this week:** (1) ACWR must drop — today's Weights (light) fine; Wed bike session = last quality ride, keep HR controlled; Sat 20 Jun outdoor rehearsal = critical but keep to 25–30 km, not 40 km. (2) Easy-run HR ≤155 when running. (3) Daily foot prehab.
+
+
+---
+
+## Cycle auto — 2026-06-17
+
+- **Sync at:** 2026-06-17T00:09:58Z
+- **Data source:** Strava API
+- **Activity baseline:** 6 activities in last 7 days, 54 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
