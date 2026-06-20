@@ -411,3 +411,17 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 6 activities in last 7 days, 55 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+
+---
+
+## Cycle 14 — 2026-06-20 (manual · T-7 Imfolozi · ACWR still elevated · outdoor rehearsal day)
+
+- **Plan gate:** Current. W13 (15–21 Jun) covers today; plan updated 2026-06-15; all 4 races reflected; Imfolozi taper (W13) + race week (W14) written. No revision.
+- **⚠️ ACWR 1.59 — STILL above 1.5 injury-risk threshold at T-7.** Cycle 13 (Jun 16) expected freshen week to drop it — it hasn't. The acute load remains elevated because Jun 13 Zwift (RE 209) + Jun 14 Zwift (RE 340) + Jun 15 run (RE 141) are still inside the 7-day window. Freshen week mid-sessions (Wed Zwift 119, Thu weights 24) kept acute load high. ACWR was 1.58 on Jun 16; now 1.59 — no meaningful drop. Imfolozi race weekend (Sat 27 Stage 1 + Sun 28 Stage 2) will add further acute load from this already-elevated base.
+- **T-7 milestone crossed — Imfolozi race week starts Mon 22 Jun.** Stage 1 (40 km, 07h30 Sat 27) and Stage 2 (15 km, 07h30 Sun 28). Registration Fri 26 Jun 13h00–20h00.
+- **W13 adherence so far (5 days):** Mon run ✅ (⚠️ HR 178, 5th consecutive easy-run breach · ≤155 target) · Tue hike instead of weights ⚠️ · Wed Zwift ✅ (HR 147, lower than 170–180 target) · Thu weights ✅ · Fri easy bike ❌ missed.
+- **TODAY (Sat 20 Jun) = outdoor race-kit + nutrition rehearsal (25–30 km).** Last opportunity before Imfolozi. Non-negotiable: race bike, race kit, full nutrition (gel at 45 min, bottle every 45 min). CRITICAL: keep to 25–30 km — do not stretch to 40 km with ACWR at 1.59.
+- **5th consecutive easy-run HR breach (Jun 15: 178 avg HR):** all prescribed easy runs are being executed at Z4/LT. Pattern unchanged since Cycle 7. No foot pain reported, but PF re-flare risk remains elevated at ACWR 1.59.
+- **Action before Imfolozi:** Outdoor rehearsal today (controlled). Tomorrow Sun 21 Jun = 8–10 km easy run (final foot test before Absa 10K — keep HR ≤155, walk if anything twinges). Then race week: Mon easy spin, Tue light weights, Wed openers, Thu rest, Fri registration.
+- **Amashova (29d): ~53% — behind.** Phase 4 road pivot starts immediately after Imfolozi. Sat 4 Jul 70 km road ride is the first non-negotiable of Phase 4.
