@@ -435,3 +435,16 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 6 activities in last 7 days, 55 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+
+---
+
+## Cycle 15 — 2026-06-21 (manual · T-6 Imfolozi · outdoor rehearsal confirmed missed · ACWR drops into safe zone)
+
+- **Plan gate:** Current. W13 (15–21 Jun) covers today; plan updated 2026-06-15; Imfolozi taper (W13) + race week (W14) written. No revision.
+- **🚨 Sat 20 Jun outdoor race-kit + nutrition rehearsal CONFIRMED MISSED — 3rd consecutive miss.** Actual: Zwift "Watopia's Waistband" 1:15:46, 25.04 km, avg HR 134. Originally scheduled W12 Sat 13 → moved to W13 Sat 20 → missed again. Race nutrition (gel at 45 min, bottle every 45 min, gut test) and race-kit outdoor fit have NOT been rehearsed before Imfolozi (T-6). Highest-risk gap entering race week.
+- **ACWR dropped to ~0.82 — back in safe zone.** Jun 14 Zwift RE 340 aged out of the 7-day acute window (acute now ~411 RE). Freshen week worked for load management: ACWR fell from 1.59 (Cycle 14, Jun 20) to the lower-safe-band. This is the intended pre-race state.
+- **W13 adherence (6 of 7 days, Sun 21 Jun run still pending):** Mon run ⚠️ HR 178 (5th consecutive easy-run breach ≤155 ceiling) · Tue hike instead of weights ⚠️ · Wed Zwift ✅ (HR 147, below 170–180 target but threshold stimulus) · Thu weights ✅ · Fri easy bike ❌ missed · Sat outdoor rehearsal ❌/⚠️ (Zwift substituted, nutrition not tested).
+- **Today (Sun 21 Jun):** prescribed 8–10 km easy run on grass (HR ≤155). Pre-Absa foot test. Not yet logged — will appear in tomorrow's build.
+- **Easy-run HR breach streak: 5 consecutive** (May 20: 168 · May 27: 182 · May 31: 177 · Jun 8: 180 · Jun 15: 178). No foot pain reported, but pattern unchanged. Approaching race week: keep W14 easy spins/openers genuinely easy.
+- **Imfolozi 6 days — practical note:** outdoor nutrition rehearsal window has closed. Recommend rehearsing nutrition protocol mentally and on the morning warmup spin (Fri 26 Jun openers — 20 min, 2 × 30 sec), accepting the gut-test risk is now race-day managed rather than pre-tested.
