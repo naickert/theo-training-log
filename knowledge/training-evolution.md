@@ -425,3 +425,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **5th consecutive easy-run HR breach (Jun 15: 178 avg HR):** all prescribed easy runs are being executed at Z4/LT. Pattern unchanged since Cycle 7. No foot pain reported, but PF re-flare risk remains elevated at ACWR 1.59.
 - **Action before Imfolozi:** Outdoor rehearsal today (controlled). Tomorrow Sun 21 Jun = 8–10 km easy run (final foot test before Absa 10K — keep HR ≤155, walk if anything twinges). Then race week: Mon easy spin, Tue light weights, Wed openers, Thu rest, Fri registration.
 - **Amashova (29d): ~53% — behind.** Phase 4 road pivot starts immediately after Imfolozi. Sat 4 Jul 70 km road ride is the first non-negotiable of Phase 4.
+
+
+---
+
+## Cycle auto — 2026-06-21
+
+- **Sync at:** 2026-06-21T00:09:24Z
+- **Data source:** Strava API
+- **Activity baseline:** 6 activities in last 7 days, 55 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
