@@ -458,3 +458,16 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 5 activities in last 7 days, 54 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+
+---
+
+## Cycle 16 — 2026-06-22 (manual · W14 IMFOLOZI RACE WEEK starts · Sun foot test confirmed missed)
+
+- **Plan gate:** Current. W14 (22–28 Jun) covers today; plan updated 2026-06-15; taper week + race written. No revision.
+- **🏁 RACE WEEK — Imfolozi 55 km MTB in 5 days.** Stage 1 Sat 27 Jun 40 km · Stage 2 Sun 28 Jun 15 km. Registration Fri 26 Jun 13h00–20h00. W14 plan: Mon easy spin/rest · Tue light weights · Wed 45 min easy + 3 × 1 min openers · Thu rest + pack · Fri travel + registration + 20 min easy spin.
+- **Sun 21 Jun foot test run CONFIRMED MISSED** (pending in Cycle 15, now confirmed by fresh build — 0 runs in last 7 days). Pre-Absa 10K foot assessment not executed. **Consequence: Absa 10K strategy (1:02–1:05 vs 1:08 finish) cannot be decided until the first easy run in W15 (Wed 2 Jul)** — that becomes the new foot-test session.
+- **ACWR ~0.72 — planned taper state.** Jun 14 Zwift (RE 340) aged out of the acute window; freshen week worked for load management. This is the intended race-week state: body freshen, no new load until race day.
+- **Outdoor race-kit + nutrition rehearsal: never done (3 missed opportunities).** Accepted risk per Cycle 15 — gut-test is now race-day managed. Mental rehearsal recommended on the Fri 26 Jun warmup spin.
+- **Easy-run HR breach streak: 5 consecutive** (through Jun 15). No run logged since Jun 15. Pattern paused by freshen week; enforce HR ≤155 strictly on W15 recovery runs.
+- **Race-week priorities:** (1) Rest and hydrate — no extra sessions. (2) Pack race kit + nutrition plan before Thu. (3) Fri 26 registration + 20 min easy spin + 2 × 30 sec openers. (4) Sat 27 Stage 1: RPE 6–7, conversational first 2/3, save legs for Sunday. (5) Post-race: first easy run in W15 = foot test + ACWR reset.
