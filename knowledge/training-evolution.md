@@ -448,3 +448,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Today (Sun 21 Jun):** prescribed 8–10 km easy run on grass (HR ≤155). Pre-Absa foot test. Not yet logged — will appear in tomorrow's build.
 - **Easy-run HR breach streak: 5 consecutive** (May 20: 168 · May 27: 182 · May 31: 177 · Jun 8: 180 · Jun 15: 178). No foot pain reported, but pattern unchanged. Approaching race week: keep W14 easy spins/openers genuinely easy.
 - **Imfolozi 6 days — practical note:** outdoor nutrition rehearsal window has closed. Recommend rehearsing nutrition protocol mentally and on the morning warmup spin (Fri 26 Jun openers — 20 min, 2 × 30 sec), accepting the gut-test risk is now race-day managed rather than pre-tested.
+
+
+---
+
+## Cycle auto — 2026-06-22
+
+- **Sync at:** 2026-06-22T00:09:12Z
+- **Data source:** Strava API
+- **Activity baseline:** 5 activities in last 7 days, 54 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
