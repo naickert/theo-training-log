@@ -471,3 +471,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Outdoor race-kit + nutrition rehearsal: never done (3 missed opportunities).** Accepted risk per Cycle 15 — gut-test is now race-day managed. Mental rehearsal recommended on the Fri 26 Jun warmup spin.
 - **Easy-run HR breach streak: 5 consecutive** (through Jun 15). No run logged since Jun 15. Pattern paused by freshen week; enforce HR ≤155 strictly on W15 recovery runs.
 - **Race-week priorities:** (1) Rest and hydrate — no extra sessions. (2) Pack race kit + nutrition plan before Thu. (3) Fri 26 registration + 20 min easy spin + 2 × 30 sec openers. (4) Sat 27 Stage 1: RPE 6–7, conversational first 2/3, save legs for Sunday. (5) Post-race: first easy run in W15 = foot test + ACWR reset.
+
+
+---
+
+## Cycle auto — 2026-06-23
+
+- **Sync at:** 2026-06-23T00:09:15Z
+- **Data source:** Strava API
+- **Activity baseline:** 5 activities in last 7 days, 54 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
