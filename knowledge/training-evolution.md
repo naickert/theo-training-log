@@ -481,3 +481,15 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 5 activities in last 7 days, 54 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+
+---
+
+## Cycle 17 — 2026-06-23 (manual · T-4 Imfolozi · race-week protocol breach)
+
+- **Plan gate:** Current. W14 (22–28 Jun) covers today; plan updated 2026-06-15; race week fully written. No revision.
+- **🚨 Race-week protocol breach — Mon Jun 22:** W14 plan = "Easy 30 min spin OR rest". Actual = **10.03 km run @ 6:21/km, avg HR 174, RE 289** — threshold-intensity 10 km run 4 days before Imfolozi Stage 1. This is the 6th consecutive easy-prescribed run above the ≤155 HR ceiling (streak: May 20 168 · May 27 182 · May 31 177 · Jun 8 180 · Jun 15 178 · Jun 22 174). Appeared to serve as the delayed Sun 21 Jun foot-test run (Sun was missed), but intensity was wrong for race week. Legs may carry residual fatigue into race day.
+- **ACWR 0.88** — safe zone, up from the 0.72 taper state (Jun 22 RE 289 re-entered the 7-day acute window). No spike, but load is higher than the intended pre-race state.
+- **Foot:** 10 km at 6:21/km completed without logged pain → foot is tolerating race-ready distances. But no explicit pain-status update in injury log since 27 May.
+- **Imfolozi T-4:** Stage 1 Sat 27 Jun 40 km / 07h30, Stage 2 Sun 28 Jun 15 km / 07h30. Registration Fri 26 Jun 13h00–20h00. Remaining W14: Tue 23 light weights; Wed 24 easy 45 min + 3×1 min openers; Thu 25 rest + pack; Fri 26 travel + registration + easy spin. **No more quality sessions before race day.**
+- **Race-week directives:** (1) No additional runs before race day. (2) Wed openers = genuinely easy — HR ≤155, 3 brief pickups only. (3) Hydrate hard Thu–Fri. (4) Nutrition plan: mental rehearsal since outdoor test never happened — gel at 45 min, bottle every 45 min, no surprises.
