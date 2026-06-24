@@ -493,3 +493,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Foot:** 10 km at 6:21/km completed without logged pain → foot is tolerating race-ready distances. But no explicit pain-status update in injury log since 27 May.
 - **Imfolozi T-4:** Stage 1 Sat 27 Jun 40 km / 07h30, Stage 2 Sun 28 Jun 15 km / 07h30. Registration Fri 26 Jun 13h00–20h00. Remaining W14: Tue 23 light weights; Wed 24 easy 45 min + 3×1 min openers; Thu 25 rest + pack; Fri 26 travel + registration + easy spin. **No more quality sessions before race day.**
 - **Race-week directives:** (1) No additional runs before race day. (2) Wed openers = genuinely easy — HR ≤155, 3 brief pickups only. (3) Hydrate hard Thu–Fri. (4) Nutrition plan: mental rehearsal since outdoor test never happened — gel at 45 min, bottle every 45 min, no surprises.
+
+
+---
+
+## Cycle auto — 2026-06-24
+
+- **Sync at:** 2026-06-24T00:09:34Z
+- **Data source:** Strava API
+- **Activity baseline:** 4 activities in last 7 days, 53 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
