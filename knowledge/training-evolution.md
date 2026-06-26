@@ -523,3 +523,16 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 2 activities in last 7 days, 53 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+
+---
+
+## Cycle 18 — 2026-06-26 (manual · RACE EVE — Imfolozi Stage 1 TOMORROW)
+
+- **Plan gate:** Current. W14 (22–28 Jun) covers today; plan updated 2026-06-15; taper + race week written. No revision.
+- **🏁 MILESTONE: Imfolozi 55 km MTB race eve.** Stage 1 (40 km, 07h30 Sat 27 Jun) in ~7 hours. Stage 2 (15 km, 07h30 Sun 28 Jun) the following morning. Registration today 13h00–20h00 at race village.
+- **ACWR 0.66 — appropriate taper.** (7-day RE 385: Jun 20 Zwift 96 + Jun 22 run 289; 28-day avg 83.1 RE/day.) Taper worked — ACWR fell from the 1.59 caution peak (Cycle 14, Jun 20) to well below the safe-band lower bound. Body is freshen-ready for race day.
+- **W14 adherence (Mon–Fri): 1/4.** Mon 22: 10 km run HR 174 (plan = easy spin/rest — 6th consecutive easy-run HR breach). Tue 23, Wed 24: nothing logged (weights + easy openers both missed). Thu 25: rest ✓. The unlogged Wed openers session is low-risk to skip — legs fresher for race day without it.
+- **Outstanding risk — outdoor nutrition rehearsal: 3 missed, never executed.** Gel-at-45-min / bottle-every-45-min protocol goes into Imfolozi untested on trail. Race-day managed: rehearse mentally on the Fri evening warmup spin tonight; stick to the plan, no improvisation on course.
+- **Foot: holding.** Jun 22 10 km run (6:21/km) completed without logged pain — last formal injury-log entry was May 27 (90% better). No acute deterioration. Continue prehab tonight.
+- **Post-race priorities:** Mon 29 Jun = full rest. First W15 easy run (Wed 2 Jul) = foot reassessment + ACWR reset. Immediate pivot to road cycling for Amashova (23 days, Phase 4).
