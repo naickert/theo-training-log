@@ -536,3 +536,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Outstanding risk — outdoor nutrition rehearsal: 3 missed, never executed.** Gel-at-45-min / bottle-every-45-min protocol goes into Imfolozi untested on trail. Race-day managed: rehearse mentally on the Fri evening warmup spin tonight; stick to the plan, no improvisation on course.
 - **Foot: holding.** Jun 22 10 km run (6:21/km) completed without logged pain — last formal injury-log entry was May 27 (90% better). No acute deterioration. Continue prehab tonight.
 - **Post-race priorities:** Mon 29 Jun = full rest. First W15 easy run (Wed 2 Jul) = foot reassessment + ACWR reset. Immediate pivot to road cycling for Amashova (23 days, Phase 4).
+
+
+---
+
+## Cycle auto — 2026-06-27
+
+- **Sync at:** 2026-06-27T00:09:01Z
+- **Data source:** Strava API
+- **Activity baseline:** 2 activities in last 7 days, 52 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
