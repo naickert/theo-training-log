@@ -546,3 +546,16 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 2 activities in last 7 days, 52 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 19 — 2026-06-27 (manual · IMFOLOZI RACE DAY — Stage 1)
+
+- **🏁 MILESTONE: Imfolozi 55 km MTB — Stage 1 today (40 km, 07h30), Stage 2 tomorrow (15 km, 07h30).** This is the A-race the entire May–Jun block was built around.
+- **ACWR 0.58** — taper complete, below safe-band floor by design. Body is freshen-ready. Post-race (both stages combined RE ~400-500 est.) ACWR will rebound to ~0.8-1.0.
+- **Bike vol 4wk: 165.6 km ✓** (target 150 km met). Longest MTB 36.86 km (Jun 6). Volume readiness green.
+- **Outstanding gap going in:** outdoor nutrition rehearsal never executed (3 missed opportunities — all done on Zwift). Gel-at-45-min / bottle-every-45-min untested on trail. Race-day managed; stick to the plan.
+- **Foot: holding.** Jun 22 10 km run (6:21/km, HR 174) completed without pain — no new injury-log entry since May 27 ("90% better"). Continue prehab tonight and tomorrow morning.
+- **Easy-run HR breach streak: 6 consecutive** — not actionable race day; flag for W15 recovery runs (enforce ≤155).
+- **Post-race log:** Stage 1 result should appear in tomorrow's build. If Stage 2 (Sun 28) syncs, W14 will be complete. Next manual cycle after results land.
+- **Phase pivot:** immediately after Imfolozi → road cycling for Amashova (22 days, Sun 19 Jul). Sat 4 Jul 70 km road ride is the first non-negotiable of Phase 4.
