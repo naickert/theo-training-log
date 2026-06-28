@@ -861,7 +861,7 @@ def render_races(races: list[dict], activities: list[dict]) -> str:
         circ_circumference = 100.5  # 2 * pi * r=16
         offset = circ_circumference * (1 - pct / 100)
         status_cls = readiness["status"]
-        ring_color = {"on-track": "currentColor", "behind": "currentColor", "at-risk": "currentColor"}[status_cls]
+        ring_color = {"on-track": "currentColor", "behind": "currentColor", "at-risk": "currentColor", "past": "currentColor"}.get(status_cls, "currentColor")
         breakdown_html = "".join(f'<span class="ready-bd-item"><span class="ready-bd-k">{_esc(k)}</span><span class="ready-bd-v">{_esc(v)}</span></span>' for k, v in readiness["breakdown"])
 
         ring_svg = (

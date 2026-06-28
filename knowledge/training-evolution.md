@@ -559,3 +559,23 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Easy-run HR breach streak: 6 consecutive** — not actionable race day; flag for W15 recovery runs (enforce ≤155).
 - **Post-race log:** Stage 1 result should appear in tomorrow's build. If Stage 2 (Sun 28) syncs, W14 will be complete. Next manual cycle after results land.
 - **Phase pivot:** immediately after Imfolozi → road cycling for Amashova (22 days, Sun 19 Jul). Sat 4 Jul 70 km road ride is the first non-negotiable of Phase 4.
+
+
+---
+
+## Cycle auto — 2026-06-28
+
+- **Sync at:** 2026-06-28T00:12:35Z
+- **Data source:** cached (Strava unreachable)
+- **Activity baseline:** 1 activities in last 7 days, 52 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 20 — 2026-06-28 (manual · IMFOLOZI STAGE 2 RACE DAY · Phase 4 pivot)
+
+- **🏁 MILESTONE: Imfolozi 55 km MTB — Stage 2 today (15 km, 07h30).** W14 A-race block concludes today. Stage 1 result (Sat 27 Jun, 40 km) and Stage 2 (today) not yet in Strava cache — sync was 28+ hours stale (last-sync: 2026-06-27T00:09:01Z). Results should appear in tomorrow's automated build.
+- **Dashboard bug patched:** `render_races()` raised `KeyError: 'past'` when a race's `status_cls` was `'past'` (Imfolozi Stage 1 now past its start date). Fixed: `.get(status_cls, "currentColor")` fallback. Dashboard rendered successfully on cached data.
+- **ACWR 0.58 (stale/taper):** Pre-race base; Imfolozi stages (est. RE 200–350 each) not in data yet. Post-sync ACWR expected to rebound to ~0.8–1.0 (safe zone).
+- **Easy-run HR breach streak: 6 consecutive** (May 20–Jun 22, range 168–182 vs ≤155 ceiling). No foot pain reported. First W15 easy run (Wed Jul 2) is the PF foot-test and must enforce ≤155.
+- **Phase 4 pivot (Amashova road build) starts Mon 29 Jun:** Road vol = 0/200 km. Non-negotiables — Sat 4 Jul: 70 km road ride · Fri 10 Jul: Absa 10K easy (≤1:10, do NOT race) · Sun 12 Jul: 85–90 km road ride. Amashova is 21 days away.
