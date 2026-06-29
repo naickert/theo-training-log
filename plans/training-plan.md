@@ -1,6 +1,6 @@
 ---
 date: 2026-04-18
-updated: 2026-06-15
+updated: 2026-06-29
 tags: [running, cycling, mtb, 10k, road-cycling, training-plan, fitness, ballito, imfolozi, amashova, hollywoodbets, plantar-fasciitis]
 source: /Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running
 type: plan
@@ -378,8 +378,8 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 - [ ] **Sat 30 May (W10)** — 30 km MTB completed, foot ok
 - [ ] **Sat 6 Jun (W11)** — 40 km MTB completed
 - [ ] **Sat 13 Jun (W12)** — 50 km dress rehearsal, kit + nutrition tested
-- [ ] **Sun 21 Jun (W13)** — 8–10 km foot test run, finished healthy
-- [ ] **Sat 27 Jun (W14)** — **IMFOLOZI 55 km MTB**
+- [x] **Mon 22 Jun (W13→14)** — 8–10 km foot test run (done 1 day late): 10 km @ 6:21/km, HR 174 — foot held, no pain ⚠️ HR above ≤155 ceiling
+- [x] **Sat/Sun 27–28 Jun (W14)** — **IMFOLOZI 55 km MTB COMPLETED** · Stage 1: 40.6 km / 3:08 / HR 163 · Stage 2: 11.9 km / 48 min / HR 147
 - [ ] **Sat 4 Jul (W15)** — 70 km road bike completed (Amashova build start)
 - [ ] **Fri 10 Jul (W16)** — Absa 10K easy (≤1:10), foot clean
 - [ ] **Sun 12 Jul (W16)** — 85–90 km road bike (Amashova dress rehearsal)

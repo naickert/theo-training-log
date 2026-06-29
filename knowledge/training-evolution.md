@@ -589,3 +589,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 3 activities in last 7 days, 53 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 21 — 2026-06-29 (manual · IMFOLOZI COMPLETE · Phase 4 pivot · ACWR spike)
+
+- **🏆 MILESTONE: Imfolozi 55 km MTB COMPLETED.** Stage 1 Sat 27 Jun: 40.6 km / 3:08 / avg HR 163 / 941m elevation. Stage 2 Sun 28 Jun: 11.9 km / 48 min / avg HR 147 (slightly shorter than planned 15 km — likely course variation). The entire May–Jun block was built around this race; it landed. Foot held across both stages.
+- **⚠️ ACWR 1.63 — above the 1.5 injury-risk spike threshold.** Acute 7-day RE = 1080 (run 289 + Stage 1 684 + Stage 2 107). Chronic weekly avg = 664 RE. This spike is expected post-A-race but elevated given active PF recovery. Today is W15 Day 1 (planned Rest) — ACWR will drop naturally through the recovery week. No additional load before Wed 2 Jul easy run.
+- **Easy-run HR breach streak: 6 consecutive** (May 20: 168 · May 27: 182 · May 31: 177 · Jun 8: 180 · Jun 15: 178 · Jun 22: 174). All prescribed Z2 runs executed at Z4/LT. Foot has held without logged pain, but this pattern must be addressed in W15+ — enforce HR ≤155 ceiling, especially on the Wed 2 Jul foot-test run.
+- **Phase 4 pivot (Amashova road build) starts today (W15):** Road vol = 0/200 km target. Amashova (106 km road cycling) is 20 days away. Non-negotiables: Sat 4 Jul 70 km road ride · Fri 10 Jul Absa 10K easy (do not race) · Sun 12 Jul 85–90 km road ride.
+- **Plan updated:** Imfolozi checkboxes marked complete; `updated:` bumped to 2026-06-29. Plan-history entry appended. Obsidian mirror needs manual sync.

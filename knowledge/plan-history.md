@@ -77,3 +77,12 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
   - Hollywoodbets order HB-20260528-ZLJMZD
   - Amashova entry WEB-5235-854733
 - **Why this matters:** June-July now has two big endurance A-races 22 days apart. Run-only block reserved for August → sub-60 peak.
+
+## 2026-06-29 — Imfolozi milestone update (post-race checkbox + ACWR flag)
+
+- **Trigger (e) — stale checkboxes post A-race:** Imfolozi completed Sat 27/Sun 28 Jun; plan checkboxes still unchecked.
+- **Changes:** Two milestone checkboxes marked complete — foot-test run (Mon 22 Jun, 10 km, HR 174, foot held) and Imfolozi 55 km MTB (Stage 1: 40.6 km / 3:08 / HR 163 · Stage 2: 11.9 km / 48 min / HR 147). `updated:` bumped to 2026-06-29. No weekly tables changed — Phase 4 (W15 onwards) is already written.
+- **ACWR flag:** Post-race ACWR 1.63 (above 1.5 injury-risk threshold) driven by Stage 1 RE 684. Expected post-A-race but elevated given PF history. W15 rest week will naturally drop it.
+- **Easy-run HR breach streak: 6 consecutive** (May 20 – Jun 22). No foot pain reported but pattern must be broken when running resumes in W15 (Wed 2 Jul).
+- **Phase 4 status:** Road vol 0/200 km. Sat 4 Jul 70 km road ride is the first non-negotiable.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
