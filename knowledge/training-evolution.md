@@ -579,3 +579,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **ACWR 0.58 (stale/taper):** Pre-race base; Imfolozi stages (est. RE 200–350 each) not in data yet. Post-sync ACWR expected to rebound to ~0.8–1.0 (safe zone).
 - **Easy-run HR breach streak: 6 consecutive** (May 20–Jun 22, range 168–182 vs ≤155 ceiling). No foot pain reported. First W15 easy run (Wed Jul 2) is the PF foot-test and must enforce ≤155.
 - **Phase 4 pivot (Amashova road build) starts Mon 29 Jun:** Road vol = 0/200 km. Non-negotiables — Sat 4 Jul: 70 km road ride · Fri 10 Jul: Absa 10K easy (≤1:10, do NOT race) · Sun 12 Jul: 85–90 km road ride. Amashova is 21 days away.
+
+
+---
+
+## Cycle auto — 2026-06-29
+
+- **Sync at:** 2026-06-29T00:09:59Z
+- **Data source:** Strava API
+- **Activity baseline:** 3 activities in last 7 days, 53 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
