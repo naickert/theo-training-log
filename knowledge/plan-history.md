@@ -86,3 +86,8 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
 - **Easy-run HR breach streak: 6 consecutive** (May 20 – Jun 22). No foot pain reported but pattern must be broken when running resumes in W15 (Wed 2 Jul).
 - **Phase 4 status:** Road vol 0/200 km. Sat 4 Jul 70 km road ride is the first non-negotiable.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+## 2026-06-30 — Race-calendar.md maintenance (trigger e: stale Active Races)
+
+- **Trigger (e) — stale:** Imfolozi (27–28 Jun) still listed in Active Races after completion.
+- **Change:** Moved Imfolozi to Past Races section with result data; `race-calendar.md updated:` bumped to 2026-06-30. No plan content changed.
