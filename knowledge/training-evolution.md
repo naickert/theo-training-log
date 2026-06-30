@@ -599,3 +599,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Easy-run HR breach streak: 6 consecutive** (May 20: 168 · May 27: 182 · May 31: 177 · Jun 8: 180 · Jun 15: 178 · Jun 22: 174). All prescribed Z2 runs executed at Z4/LT. Foot has held without logged pain, but this pattern must be addressed in W15+ — enforce HR ≤155 ceiling, especially on the Wed 2 Jul foot-test run.
 - **Phase 4 pivot (Amashova road build) starts today (W15):** Road vol = 0/200 km target. Amashova (106 km road cycling) is 20 days away. Non-negotiables: Sat 4 Jul 70 km road ride · Fri 10 Jul Absa 10K easy (do not race) · Sun 12 Jul 85–90 km road ride.
 - **Plan updated:** Imfolozi checkboxes marked complete; `updated:` bumped to 2026-06-29. Plan-history entry appended. Obsidian mirror needs manual sync.
+
+
+---
+
+## Cycle auto — 2026-06-30
+
+- **Sync at:** 2026-06-30T00:11:27Z
+- **Data source:** Strava API
+- **Activity baseline:** 2 activities in last 7 days, 52 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
