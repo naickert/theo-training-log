@@ -629,3 +629,14 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 2 activities in last 7 days, 50 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 22 — 2026-07-02 (manual · post-Imfolozi ACWR recovery · Phase 4 Day 4)
+
+- **Plan gate:** Current. W15 (29 Jun–5 Jul) covers today (Thu); plan updated 2026-06-29; all races reflected; no triggers fired.
+- **ACWR ~1.22 — back in safe zone (0.8–1.3).** Recovered from the post-Imfolozi spike of 1.63 (Cycle 21, Jun 29) via 4 rest/recovery days. Acute (last 7d) = Stage 1 RE 684 + Stage 2 RE 107 = 791; chronic weekly avg = 648. Recovery working.
+- **W15 (Jun 29–Jul 2 so far):** Mon Rest ✓ · Tue weights + Wed easy run not logged in Strava (either unlogged or not yet done) · Thu weights today (pending). No post-race foot pain reported across Imfolozi stages.
+- **⚠️ CRITICAL — Sat 4 Jul 70 km road ride is 2 days away.** First road ride for Amashova (17 days). Road vol = 0/200 km. Skipping this would make a first-time 90 km road rehearsal (Sun 12 Jul) an even greater leap. Non-negotiable.
+- **Injury log stale since 2026-05-27 (36 days).** Last entry: 90% PF recovery. Foot held across both Imfolozi stages (10 km run Jun 22 + 40.6 km MTB Jun 27 + 11.9 km MTB Jun 28, no logged pain). Recommend updating injury log with post-Imfolozi status (manual only — cannot reach Obsidian from here).
+- **Upcoming:** Sat 4 Jul 70 km road ride · Fri 10 Jul Absa 10K easy (≤1:10, do NOT race) · Sun 12 Jul 85–90 km road ride dress rehearsal · Sun 19 Jul Amashova 106 km.
