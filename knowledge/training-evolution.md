@@ -640,3 +640,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **⚠️ CRITICAL — Sat 4 Jul 70 km road ride is 2 days away.** First road ride for Amashova (17 days). Road vol = 0/200 km. Skipping this would make a first-time 90 km road rehearsal (Sun 12 Jul) an even greater leap. Non-negotiable.
 - **Injury log stale since 2026-05-27 (36 days).** Last entry: 90% PF recovery. Foot held across both Imfolozi stages (10 km run Jun 22 + 40.6 km MTB Jun 27 + 11.9 km MTB Jun 28, no logged pain). Recommend updating injury log with post-Imfolozi status (manual only — cannot reach Obsidian from here).
 - **Upcoming:** Sat 4 Jul 70 km road ride · Fri 10 Jul Absa 10K easy (≤1:10, do NOT race) · Sun 12 Jul 85–90 km road ride dress rehearsal · Sun 19 Jul Amashova 106 km.
+
+
+---
+
+## Cycle auto — 2026-07-03
+
+- **Sync at:** 2026-07-03T00:11:10Z
+- **Data source:** Strava API
+- **Activity baseline:** 2 activities in last 7 days, 48 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
