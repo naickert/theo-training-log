@@ -650,3 +650,14 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 2 activities in last 7 days, 48 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 23 — 2026-07-03 (manual · Phase 4 Day 5 · Amashova gap quantified · foot test pending)
+
+- **Plan gate:** Current. W15 (29 Jun–5 Jul) covers today (Fri); plan updated 2026-06-29; no triggers fired.
+- **ACWR 1.22 — safe zone.** Recovered from post-Imfolozi spike of 1.63 (Jun 29) via rest week. No spike concern.
+- **4-week adherence: 54% (13/24).** Post-race recovery week depressed the count — weights unlogged in Strava, Wed foot test run missed. Imfolozi stages carried the block's load.
+- **⚠️ Wed Jul 1 easy run CONFIRMED MISSED — first post-Imfolozi foot test not executed.** No run logged since Jun 22. Absa 10K is Fri Jul 10 (7 days). Need at least one easy run (HR ≤155) before race day. Today is road bike, Sat is 70 km road ride, Sun 5 Jul = first run window.
+- **⚠️ Amashova (16d): 59% — behind.** Longest road ride 43/90 km; road vol 4wk 129/200 km. **Sat 4 Jul 70 km road ride (tomorrow) is non-negotiable** — first real road ride of Phase 4. Missing it would mean the first 70 km+ road attempt is race week.
+- **Foot: stable.** Dashboard: "Resolving, ~90% recovered." No pain logged across both Imfolozi stages or since. Injury log last updated 27 May — post-Imfolozi status update needed (manual/Obsidian only).
