@@ -661,3 +661,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **⚠️ Wed Jul 1 easy run CONFIRMED MISSED — first post-Imfolozi foot test not executed.** No run logged since Jun 22. Absa 10K is Fri Jul 10 (7 days). Need at least one easy run (HR ≤155) before race day. Today is road bike, Sat is 70 km road ride, Sun 5 Jul = first run window.
 - **⚠️ Amashova (16d): 59% — behind.** Longest road ride 43/90 km; road vol 4wk 129/200 km. **Sat 4 Jul 70 km road ride (tomorrow) is non-negotiable** — first real road ride of Phase 4. Missing it would mean the first 70 km+ road attempt is race week.
 - **Foot: stable.** Dashboard: "Resolving, ~90% recovered." No pain logged across both Imfolozi stages or since. Injury log last updated 27 May — post-Imfolozi status update needed (manual/Obsidian only).
+
+
+---
+
+## Cycle auto — 2026-07-04
+
+- **Sync at:** 2026-07-04T00:09:29Z
+- **Data source:** Strava API
+- **Activity baseline:** 2 activities in last 7 days, 48 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
