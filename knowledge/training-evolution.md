@@ -681,3 +681,16 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 1 activities in last 7 days, 48 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 24 — 2026-07-05 (manual · Phase 4 Day 7 · Amashova critical gap)
+
+- **Plan gate:** Current. W15 (29 Jun–5 Jul) covers today; plan updated 2026-06-29; all races reflected. No triggers fired.
+- **ACWR: 0.18 — post-race trough.** Acute 7d RE = 107 (Stage 2 only; Stage 1 aged out). Chronic weekly avg = 590. Expected post-A-race, but the trough is now 7 days deep — resumes urgent.
+- **🚨 Sat 4 Jul 70 km road ride NOT LOGGED — Phase 4 non-negotiable missed.** Zero road/outdoor bike rides since Imfolozi. All 28d bike km are Zwift. With Amashova in 14 days (Sun 19 Jul), the first outdoor road ride still hasn't happened. Remaining window: today (easy run or rest) → Mon 6 Jul easy run → Tue light weights → **Wed 8 Jul bike intervals (last hard session before Absa)** → Thu rest → Fri Absa 10K → Sat/Sun: 85–90 km road ride is the dress rehearsal (was planned Jul 12 as the big one — the Jul 4 ride was supposed to be the easier 70 km lead-in). With Jul 4 missed, the Jul 12 90 km ride is now a first-ever outdoor road ride at that distance — risk elevated.
+- **4-week adherence: ~46%** (Jun 7–Jul 5). Imfolozi stages carried the block; W15 is near-zero (1/7 = 14%). Weights + easy runs all unlogged in Strava this week.
+- **Foot: holding.** No pain logged across Imfolozi stages. Last run Jun 22 (10 km @ 6:21/km, HR 174 — hard, not easy). **Post-race foot test run still not done (13 days since last run).** Absa 10K is Fri Jul 10 — needs at least 1 easy run before. Today's plan says "Easy 30 min run or rest" — this should be the foot test.
+- **Easy-run HR breach streak: 6 consecutive** (through Jun 22 — all ≥174 avg vs ≤155 ceiling). Streak technically paused by recovery (no runs). Must enforce ≤155 when running resumes — foot still resolving, PF re-flare risk persists.
+- **Race countdown:** Absa 10K 5d · Amashova 14d · Hollywoodbets 56d.
+- **Action priority:** (1) Today — easy 30 min run as foot test, HR ≤155 strict. (2) Mon 6 Jul — easy run 4 km. (3) Wed 8 Jul — bike intervals per plan. (4) **Sat 12 Jul — 85–90 km outdoor road ride is now the ONLY long road ride before Amashova.** Do not miss it. Nutrition and kit rehearsal must happen on that ride.
