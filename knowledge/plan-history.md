@@ -91,3 +91,15 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
 
 - **Trigger (e) — stale:** Imfolozi (27–28 Jun) still listed in Active Races after completion.
 - **Change:** Moved Imfolozi to Past Races section with result data; `race-calendar.md updated:` bumped to 2026-06-30. No plan content changed.
+
+## 2026-07-06 — W15 missed road ride; injury-log foot update; Week 16 warning
+
+- **Trigger (e):** No activities logged Jun 29–Jul 5 — W15 taken as full recovery post-Imfolozi rather than planned recovery+rebuild. Sat 4 Jul 70 km road ride (first Amashova build, flagged non-negotiable in prior cycles) was not executed. This leaves Sun 12 Jul 85–90 km as the ONLY long road ride before Amashova (13 days away).
+- **Plan changes (`plans/training-plan.md`, `updated:` → 2026-07-06):**
+  - Sat 4 Jul check-in milestone annotated as MISSED.
+  - Warning block added to Week 16 header: Sun 12 Jul is the dress-rehearsal non-negotiable; ACWR = 0 entering this week, ramp must be gradual.
+- **Injury log update (`knowledge/injury-log.md`, `updated:` → 2026-07-06):**
+  - Added Jun 27–28 entry: Imfolozi completed both stages, foot held, 0/10 pain. Status upgraded from "Resolving ~90%" to "Effectively resolved — daily prehab continues as insurance."
+- **ACWR:** Acute load = 0 RE (Stage 2 Jun 28 has aged out of 7-day window). Chronic avg ~590/wk. ACWR ≈ 0.0 — lowest of the block. Load crash after the post-Imfolozi spike (1.63 on Jun 29). Undertraining zone, not injury risk, but ramp back up is urgent with Amashova 13 days out.
+- **Phase 4 status (Amashova, 13d):** Outdoor road vol since Imfolozi = 0 km. Critical path: Mon 6 easy run → Wed 8 bike intervals → Thu rest → Fri 10 Absa 10K easy → Sat 11 easy spin → **Sun 12 Jul 85–90 km road ride (non-negotiable)**.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
