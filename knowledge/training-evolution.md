@@ -694,3 +694,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Easy-run HR breach streak: 6 consecutive** (through Jun 22 — all ≥174 avg vs ≤155 ceiling). Streak technically paused by recovery (no runs). Must enforce ≤155 when running resumes — foot still resolving, PF re-flare risk persists.
 - **Race countdown:** Absa 10K 5d · Amashova 14d · Hollywoodbets 56d.
 - **Action priority:** (1) Today — easy 30 min run as foot test, HR ≤155 strict. (2) Mon 6 Jul — easy run 4 km. (3) Wed 8 Jul — bike intervals per plan. (4) **Sat 12 Jul — 85–90 km outdoor road ride is now the ONLY long road ride before Amashova.** Do not miss it. Nutrition and kit rehearsal must happen on that ride.
+
+
+---
+
+## Cycle auto — 2026-07-06
+
+- **Sync at:** 2026-07-06T00:14:17Z
+- **Data source:** Strava API
+- **Activity baseline:** 0 activities in last 7 days, 48 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
