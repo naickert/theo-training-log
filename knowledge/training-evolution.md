@@ -704,3 +704,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 0 activities in last 7 days, 48 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 25 — 2026-07-06 (automated daily · plan revised · ACWR trough · W16 start)
+
+- **Plan revision (trigger e):** Sat 4 Jul 70 km road ride confirmed missed — no activities logged Jun 29–Jul 5 (full W15 rest). Plan annotated with missed check-in and Week 16 warning block. Injury log updated: foot status upgraded from "Resolving ~90%" to "Effectively resolved" following Imfolozi completion (0/10 pain both stages). `plans/training-plan.md updated: 2026-07-06`.
+- **ACWR ≈ 0.0** — Stage 2 Jun 28 (RE 107) aged out of the 7-day window today. Acute = 0; chronic avg = 590/wk. ACWR has collapsed from the post-Imfolozi spike of 1.63 (Jun 29) to a full trough. Lowest of the block. Not injury risk, but undertraining risk with Amashova 13 days away. Today's Mon easy run (4 km, HR ≤155) is the reset.
+- **4-week adherence ~46%;** W15 near-zero (0 logged sessions). Imfolozi A-race carried the block. The 6-consecutive easy-run HR breach streak (May 20–Jun 22, all ≥174 vs ≤155) is technically paused — must enforce ≤155 when running resumes or the PF re-flare risk re-opens.
+- **Critical path to Amashova (13d):** Mon easy run → Wed 8 Jul bike intervals (last hard session) → Thu rest → Fri Absa 10K easy C-race (≤1:10, do NOT race) → Sat easy spin → **Sun 12 Jul 85–90 km outdoor road ride (non-negotiable — the ONLY long road ride before Amashova)**. Nutrition + kit dress rehearsal must happen on the Sunday ride.
+- **Race countdown:** Absa 10K 4d · Amashova 13d · Hollywoodbets 55d. Foot: resolved.
