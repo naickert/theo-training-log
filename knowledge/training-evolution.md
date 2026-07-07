@@ -714,3 +714,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **4-week adherence ~46%;** W15 near-zero (0 logged sessions). Imfolozi A-race carried the block. The 6-consecutive easy-run HR breach streak (May 20–Jun 22, all ≥174 vs ≤155) is technically paused — must enforce ≤155 when running resumes or the PF re-flare risk re-opens.
 - **Critical path to Amashova (13d):** Mon easy run → Wed 8 Jul bike intervals (last hard session) → Thu rest → Fri Absa 10K easy C-race (≤1:10, do NOT race) → Sat easy spin → **Sun 12 Jul 85–90 km outdoor road ride (non-negotiable — the ONLY long road ride before Amashova)**. Nutrition + kit dress rehearsal must happen on the Sunday ride.
 - **Race countdown:** Absa 10K 4d · Amashova 13d · Hollywoodbets 55d. Foot: resolved.
+
+
+---
+
+## Cycle auto — 2026-07-07
+
+- **Sync at:** 2026-07-07T00:10:00Z
+- **Data source:** Strava API
+- **Activity baseline:** 1 activities in last 7 days, 48 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
