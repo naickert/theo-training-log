@@ -744,3 +744,14 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 1 activities in last 7 days, 46 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 26 — 2026-07-09 (automated daily · ABSA 10K EVE · Amashova T-10 · Wed intervals missed)
+
+- **Plan gate:** Current. W16 (6–12 Jul) covers today; plan updated 2026-07-06; all races reflected; Absa has Thu rest + easy-effort Friday covered. No revision.
+- **🏃 ABSA 10K TOMORROW (Fri 10 Jul, C race tune-up).** Easy effort target: ≤1:10, HR ≤160. Do NOT race. Last run: Jun 22 (17 days ago). Foot resolved (0/10 across both Imfolozi stages). Today is prescribed rest — hold it.
+- **⚠️ Wed 8 Jul bike intervals CONFIRMED MISSED.** 5×5 min @ HR 165–175 not executed. Means Amashova going in with zero road cycling quality sessions since Imfolozi (Jun 28) and ACWR ≈ 0. No mid-week cardio logged this week at all (Mon = walk only).
+- **ACWR ≈ 0 — full trough.** Acute 7-day RE ≈ 0 (Jul 6 walk, RE=0); chronic weekly avg ≈ 550. Undertraining risk, not injury risk — but the jump to Sun 12 Jul 85–90 km road ride (3 days away) will be significant.
+- **🚨 Sun 12 Jul 85–90 km outdoor road ride is 3 days away and NON-NEGOTIABLE.** It is the ONLY long road ride before Amashova (T-10). Race kit + full nutrition dress rehearsal must happen on this ride. Skipping or shortcutting it would mean a first-ever 106 km road ride is Amashova race day.
+- **Foot: 0/10, resolved.** Continue daily prehab. Enforce HR ≤160 during Absa.
