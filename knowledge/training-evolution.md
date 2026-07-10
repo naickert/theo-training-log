@@ -755,3 +755,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **ACWR ≈ 0 — full trough.** Acute 7-day RE ≈ 0 (Jul 6 walk, RE=0); chronic weekly avg ≈ 550. Undertraining risk, not injury risk — but the jump to Sun 12 Jul 85–90 km road ride (3 days away) will be significant.
 - **🚨 Sun 12 Jul 85–90 km outdoor road ride is 3 days away and NON-NEGOTIABLE.** It is the ONLY long road ride before Amashova (T-10). Race kit + full nutrition dress rehearsal must happen on this ride. Skipping or shortcutting it would mean a first-ever 106 km road ride is Amashova race day.
 - **Foot: 0/10, resolved.** Continue daily prehab. Enforce HR ≤160 during Absa.
+
+
+---
+
+## Cycle auto — 2026-07-10
+
+- **Sync at:** 2026-07-10T00:10:31Z
+- **Data source:** Strava API
+- **Activity baseline:** 1 activities in last 7 days, 45 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
