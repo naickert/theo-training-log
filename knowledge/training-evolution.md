@@ -775,3 +775,15 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 1 activities in last 7 days, 44 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 27 — 2026-07-11 (automated daily · Absa 10K outcome unknown · ACWR trough · Amashova T-8)
+
+- **Plan revision (trigger a):** Absa 10K (Fri 10 Jul) still in Active Races. Moved to Past with result "pending Strava upload" — no activity in Strava as of 11 Jul sync (44 activities, down from 45). Checklist item flagged `[?]`. Plan + race-calendar `updated: 2026-07-11`. **Obsidian local mirror needs manual sync.**
+- **⚠️ Absa 10K outcome unknown.** No Strava activity for Jul 10. Either the race was not run, or it was run and not yet uploaded. If Theo ran it: upload the Garmin activity to Strava and the next build will capture the result. If skipped: note in the injury log and plan checklist.
+- **ACWR 0.00 — full detraining trough** (7-day acute RE = 0 from Mon Jul 6 walk RE=0; chronic avg ~550/wk). Not injury risk but the sudden jump to tomorrow's 85–90 km road ride will be significant. Execute at RPE 5–6 (HR ≤155), eat + drink on schedule — legs will be undertrained.
+- **4-week adherence 35% (8/23)** — depressed by W15 full recovery + W16 low logging. Only logged session this week: Jul 6 morning walk.
+- **🚨 TOMORROW Sun 12 Jul = 85–90 km outdoor road ride — non-negotiable.** The ONLY long road ride before Amashova (T-8). Nutrition + kit dress rehearsal must happen on this ride. Missing it means a first-ever 106 km road ride would be Amashova race day. This is the highest-priority session left in Phase 4.
+- **Amashova (T-8): 50% readiness (behind).** Longest road ride 43/90 km; road vol 4wk 89/200 km. If Sun 12 Jul lands at 85–90 km, readiness will jump significantly.
+- **Foot: 0/10, effectively resolved.** Daily prehab continues.
