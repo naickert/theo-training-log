@@ -103,3 +103,13 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
 - **ACWR:** Acute load = 0 RE (Stage 2 Jun 28 has aged out of 7-day window). Chronic avg ~590/wk. ACWR ≈ 0.0 — lowest of the block. Load crash after the post-Imfolozi spike (1.63 on Jun 29). Undertraining zone, not injury risk, but ramp back up is urgent with Amashova 13 days out.
 - **Phase 4 status (Amashova, 13d):** Outdoor road vol since Imfolozi = 0 km. Critical path: Mon 6 easy run → Wed 8 bike intervals → Thu rest → Fri 10 Absa 10K easy → Sat 11 easy spin → **Sun 12 Jul 85–90 km road ride (non-negotiable)**.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+## 2026-07-11 — Absa 10K moved to Past; plan checklist updated
+
+- **Trigger (a):** Absa 10K (Fri 10 Jul) past as of today but still in Active Races. Moved to Past section with result "pending Strava upload."
+- **Race-calendar.md change:** Absa 10K moved from Active → Past. `updated:` bumped to 2026-07-11.
+- **Plan change:** Checklist item updated — `[ ] Absa 10K` → `[?] ran 10 Jul, no Strava upload as of 11 Jul, result pending.`
+- **ACWR:** 0.00 — post-Imfolozi/W15 rest trough. Detraining zone (not injury risk). Amashova 8 days away.
+- **Critical path still intact:** TODAY Sat 11 Jul = easy 30 min spin per plan. **TOMORROW Sun 12 Jul = 85–90 km road ride (non-negotiable — only long road ride before Amashova).** Nutrition + kit dress rehearsal must happen on this ride.
+- **Amashova readiness: 50% (behind).** Longest road ride 43/90 km; road vol 4wk 89/200 km.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).

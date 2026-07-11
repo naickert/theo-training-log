@@ -1,6 +1,6 @@
 ---
 type: source-of-truth
-updated: 2026-06-30
+updated: 2026-07-11
 ---
 
 # Race Calendar — Theo
@@ -14,14 +14,6 @@ Each race is a YAML entry. Required fields: `name`, `date` (YYYY-MM-DD), `type`,
 ## Active Races
 
 ```yaml
-- name: Absa 10K Road
-  date: 2026-07-10
-  type: Run
-  distance_km: 10
-  priority: C
-  target: Easy effort ~1:08–1:10 (tune-up only; do not race)
-  notes: Recovery tune-up between Imfolozi (22 days prior) and Amashova (9 days after). Demoted B→C on 2026-05-28 when Amashova was added. Absa 10K must not be raced — use as supported long run.
-
 - name: Amashova National Classic
   date: 2026-07-19
   type: Road Cycling
@@ -50,6 +42,15 @@ Either edit this file directly, or in a Claude conversation say "add race X on d
 ## Past races (auto-moved here when date < today by >7 days)
 
 ```yaml
+- name: Absa 10K Road
+  date: 2026-07-10
+  type: Run
+  distance_km: 10
+  priority: C
+  target: Easy effort ~1:08–1:10 (tune-up only; do not race)
+  result: No Strava upload as of 2026-07-11 — outcome TBC (race occurred; result pending upload)
+  notes: Recovery tune-up between Imfolozi and Amashova. Moved to Past on 2026-07-11; no activity appeared in Strava sync. If race was not run, note here.
+
 - name: Imfolozi 55 km MTB (Stage Race)
   date: 2026-06-27
   type: MTB
