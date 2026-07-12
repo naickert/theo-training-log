@@ -787,3 +787,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **🚨 TOMORROW Sun 12 Jul = 85–90 km outdoor road ride — non-negotiable.** The ONLY long road ride before Amashova (T-8). Nutrition + kit dress rehearsal must happen on this ride. Missing it means a first-ever 106 km road ride would be Amashova race day. This is the highest-priority session left in Phase 4.
 - **Amashova (T-8): 50% readiness (behind).** Longest road ride 43/90 km; road vol 4wk 89/200 km. If Sun 12 Jul lands at 85–90 km, readiness will jump significantly.
 - **Foot: 0/10, effectively resolved.** Daily prehab continues.
+
+
+---
+
+## Cycle auto — 2026-07-12
+
+- **Sync at:** 2026-07-12T00:10:39Z
+- **Data source:** Strava API
+- **Activity baseline:** 1 activities in last 7 days, 44 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
