@@ -1,6 +1,6 @@
 ---
 date: 2026-04-18
-updated: 2026-07-11
+updated: 2026-07-13
 tags: [running, cycling, mtb, 10k, road-cycling, training-plan, fitness, ballito, imfolozi, amashova, hollywoodbets, plantar-fasciitis]
 source: /Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running
 type: plan
@@ -385,7 +385,7 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 - [x] **Sat/Sun 27–28 Jun (W14)** — **IMFOLOZI 55 km MTB COMPLETED** · Stage 1: 40.6 km / 3:08 / HR 163 · Stage 2: 11.9 km / 48 min / HR 147
 - [ ] ~~**Sat 4 Jul (W15)** — 70 km road bike completed (Amashova build start)~~ ⚠️ **MISSED** — W15 taken as full recovery post-Imfolozi. Sun 12 Jul 85–90 km becomes the only long road ride before Amashova.
 - [?] **Fri 10 Jul (W16)** — Absa 10K ran Fri 10 Jul · no Strava upload as of 11 Jul · result pending (⚠️ outcome unknown — check Strava)
-- [ ] **Sun 12 Jul (W16)** — 85–90 km road bike (Amashova dress rehearsal)
+- [x] ~~**Sun 12 Jul (W16)** — 85–90 km road bike (Amashova dress rehearsal)~~ ⚠️ **MISSED** — no Strava upload as of 13 Jul (2:31 AM SAST). Confirmed missed: 0 activities Jul 7–12 in Strava. Going into Amashova with **0 outdoor road rides** and ACWR ≈ 0. Longest outdoor road ride remains 39 km (Apr 19). Race-day managed: extreme conservative pacing required — HR ≤145 first 50 km, eat every 30 min, accept ~5 hr finish.
 - [ ] **Sun 19 Jul (W17)** — **AMASHOVA 106 km ROAD CYCLING**
 - [ ] **Wed 5 Aug (W20)** — 5 × 800m sub-60 session at 5:30/km
 - [ ] **Wed 12 Aug (W21)** — 4 × 1 km at 5:55–6:05/km (race pace)

@@ -807,3 +807,17 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 1 activities in last 7 days, 44 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 28 — 2026-07-13 (automated daily · AMASHOVA T-6 · critical prep gap confirmed)
+
+- **🚨 AMASHOVA DRESS REHEARSAL CONFIRMED MISSED — T-6.** Sun 12 Jul 85–90 km outdoor road ride (the last non-negotiable before Amashova 106 km on Jul 19) has 0 Strava activity as of 00:31 UTC Jul 13. This was the ONLY long road ride planned for Phase 4 after the Sat 4 Jul 70 km was also missed. Longest outdoor road ride on record: 39.35 km (Apr 19, pre-PF). Going into a 106 km race with no outdoor road rides since Jan–Mar (pre-plan period).
+- **ACWR 0.0 — absolute trough.** Acute 7-day RE ≈ 0 (Jul 6 walk, RE=0; Jul 7–12 nothing). Chronic 28-day avg ≈ 53 RE/day. Not injury risk but undertraining for a 106 km race. Last meaningful training was Imfolozi Stage 2 (Jun 28, RE 107) — 15 days ago.
+- **Plan vs actual last 7 days:** 0/5 key sessions completed (Jul 6 walk substituted for run; Jul 7 weights ❌; Jul 8 bike intervals ❌; Jul 10 Absa 10K ❌/⚠️ unknown; Jul 11 easy spin ❌; Jul 12 85–90 km road ❌).
+- **Absa 10K (Jul 10) outcome still unknown.** No Strava upload as of this sync. Either not run or not uploaded. This will determine whether there's at least one recent cardio session on record.
+- **4-week adherence ~35%** (last 4 weeks, Jun 15–Jul 12): only the two Imfolozi race stages and scattered mid-week sessions logged. W16 = 0 key sessions.
+- **Amashova (T-6) race strategy revised:** Completion-only goal. Pacing target: HR ≤145 first 50 km (strict — will feel embarrassingly easy), eat every 30 min from first 30 min, drink 1 bottle/hr minimum, accept 5 hr+ finish. The risk is blowing up in the second half at an underprepared aerobic base. The body hasn't done this distance or anything close.
+- **Foot: 0/10 (resolved).** Daily prehab continues.
+- **Plan revision:** Plan checklist updated — Sun 12 Jul marked ⚠️ MISSED. Plan-history.md entry added.
+- **Note:** Obsidian local mirror of plan needs manual sync.

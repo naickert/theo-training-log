@@ -113,3 +113,12 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
 - **Critical path still intact:** TODAY Sat 11 Jul = easy 30 min spin per plan. **TOMORROW Sun 12 Jul = 85–90 km road ride (non-negotiable — only long road ride before Amashova).** Nutrition + kit dress rehearsal must happen on this ride.
 - **Amashova readiness: 50% (behind).** Longest road ride 43/90 km; road vol 4wk 89/200 km.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+## 2026-07-13 — Amashova dress rehearsal confirmed missed; race-day pacing revised
+
+- **Trigger (e) — critical deviation T-6:** Sun 12 Jul 85–90 km outdoor road ride (the ONLY long road ride before Amashova, flagged non-negotiable since Cycle 21) confirmed missed. 0 activities Jul 7–12 in Strava as of Jul 13 00:31 UTC. Longest outdoor road ride remains 39 km (Apr 19).
+- **Context:** Full training gap since Jul 6 (walk only). No outdoor road riding since pre-Imfolozi. ACWR ≈ 0. Absa 10K (Jul 10) outcome also unknown — still no Strava upload.
+- **Plan change (`plans/training-plan.md`, `updated:` → 2026-07-13):** Checklist Sun 12 Jul marked `⚠️ MISSED`. Race-day management note added: extreme conservative pacing for Amashova — HR ≤145 first 50 km, eat every 30 min, accept ~5 hr finish rather than ~4–4.5 hr target.
+- **Amashova (T-6) risk profile:** No long road rides, ACWR ≈ 0, longest outdoor road ride 39 km vs 106 km race. This is a completion-only scenario, not a performance one. Survival pacing is the plan.
+- **Remainder of taper week (W17) unchanged:** Mon easy spin, Tue light weights, Wed openers, Thu rest, Fri easy spin + expo. No additional load — body needs these 6 days to consolidate whatever fitness exists.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
