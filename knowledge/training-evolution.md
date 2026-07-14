@@ -821,3 +821,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Foot: 0/10 (resolved).** Daily prehab continues.
 - **Plan revision:** Plan checklist updated — Sun 12 Jul marked ⚠️ MISSED. Plan-history.md entry added.
 - **Note:** Obsidian local mirror of plan needs manual sync.
+
+
+---
+
+## Cycle auto — 2026-07-14
+
+- **Sync at:** 2026-07-14T00:10:33Z
+- **Data source:** Strava API
+- **Activity baseline:** 0 activities in last 7 days, 43 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
