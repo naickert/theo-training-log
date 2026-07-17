@@ -861,3 +861,14 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 2 activities in last 7 days, 44 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 29 — 2026-07-17 (manual · AMASHOVA T-2 · race-week REST breach)
+
+- **Plan gate:** Current. W17 (13–19 Jul, Amashova race week) covers today (Fri); plan updated 2026-07-13; no triggers fired.
+- **⚠️ Race-week REST breach — Thu 16 Jul:** W17 plan = Rest. Actual = **7.05 km run / 57:05 / avg HR 161 / RE 193**. This is the day before race-eve (Sat rest + travel). HR 161 exceeds the easy-run ≤155 ceiling; pace 8:06/km suggests genuinely easy effort despite the HR overshoot, but adding 57 min of running legs the day before an undertrained 106 km cycle is not ideal.
+- **T-2 context:** Going into Amashova with 0 outdoor road rides (longest outdoor road ride = 39 km on Apr 19), ACWR ≈ 0.28 (acute 7 km / chronic 25 km/wk by distance), and 0/3 key Phase 4 non-negotiables completed (Jul 4 70 km ❌, Absa 10K ❌ no upload, Jul 12 85–90 km ❌). Race strategy from Cycle 28 stands: completion-only, HR ≤145 first 50 km, eat every 30 min, accept 5+ hr finish.
+- **4-week adherence ~35%** (W14–17). Imfolozi stages carried the last meaningful load.
+- **Foot: 0/10, resolved.** Daily prehab continues.
+- **Action for race day (Sun 19 Jul):** Hold HR ≤145 for first 50 km — this is the single most important determinant of finishing vs blowing up. Do not chase groups. Eat and drink on schedule regardless of feel. Walk any sustained climb in the second half if HR rises above 155.
