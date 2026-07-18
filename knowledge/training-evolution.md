@@ -872,3 +872,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **4-week adherence ~35%** (W14–17). Imfolozi stages carried the last meaningful load.
 - **Foot: 0/10, resolved.** Daily prehab continues.
 - **Action for race day (Sun 19 Jul):** Hold HR ≤145 for first 50 km — this is the single most important determinant of finishing vs blowing up. Do not chase groups. Eat and drink on schedule regardless of feel. Walk any sustained climb in the second half if HR rises above 155.
+
+
+---
+
+## Cycle auto — 2026-07-18
+
+- **Sync at:** 2026-07-18T00:11:35Z
+- **Data source:** Strava API
+- **Activity baseline:** 3 activities in last 7 days, 44 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
