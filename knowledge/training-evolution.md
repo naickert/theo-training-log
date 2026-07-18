@@ -882,3 +882,15 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 3 activities in last 7 days, 44 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 30 — 2026-07-18 (AMASHOVA EVE · race-eve run breach · ACWR spike)
+
+- **Plan gate:** Current. W17 (13–19 Jul) covers today; plan updated 2026-07-13; taper + race written; injury log (Jul 6) older than plan. No revision.
+- **🚨 RACE-EVE RUN BREACH — Fri 17 Jul:** Plan = "30 min easy spin + openers (pack collection at expo)". Actual = **6.2 km run / 48:25 / avg HR 169 / RE 191**. Third consecutive race-week run instead of prescribed rest or easy spin (Mon 13 missing spin, Thu 16 REST breach 7.05 km HR 161, Fri 17 race-eve run HR 169). This is the 8th overall easy-run HR breach (≤155 ceiling).
+- **ACWR 1.30 — jumped to top of safe band** (acute 7d RE 520: Tue weights 136 + Thu run 193 + Fri run 191; chronic 4wk avg 400/wk). Entered the week at ~0. ACWR spike from two back-to-back runs in the final 48 hr before a 106 km race is non-ideal but technically within the safe zone (0.8–1.3).
+- **4-week adherence ~35%** — W14–17. Only 3 sessions this week (Tue weights ✓; Thu–Fri runs = plan breaches, not planned sessions). Mon spin ❌ missed, Wed bike openers ❌ missed.
+- **AMASHOVA (Sun 19 Jul) RACE STRATEGY (unchanged from Cycle 28):** Completion-only. HR ≤145 first 50 km — non-negotiable, set Garmin alarm. Eat every 30 min from km 30, 1 bottle/hr. No outdoor road rides completed in Phase 4; longest outdoor road ride = 39 km (Apr 19). Accept 5+ hr finish; blowing up in the second half is the primary risk.
+- **Foot: 0/10 (resolved).** Daily prehab continues.
+- **Next cycle:** Amashova result will appear in Monday's automated build. Manual review post-race to pivot Phase 5 (Hollywoodbets sub-60 run build, 42 days, Aug 30).
