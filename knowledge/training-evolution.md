@@ -894,3 +894,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **AMASHOVA (Sun 19 Jul) RACE STRATEGY (unchanged from Cycle 28):** Completion-only. HR ≤145 first 50 km — non-negotiable, set Garmin alarm. Eat every 30 min from km 30, 1 bottle/hr. No outdoor road rides completed in Phase 4; longest outdoor road ride = 39 km (Apr 19). Accept 5+ hr finish; blowing up in the second half is the primary risk.
 - **Foot: 0/10 (resolved).** Daily prehab continues.
 - **Next cycle:** Amashova result will appear in Monday's automated build. Manual review post-race to pivot Phase 5 (Hollywoodbets sub-60 run build, 42 days, Aug 30).
+
+
+---
+
+## Cycle auto — 2026-07-19
+
+- **Sync at:** 2026-07-19T00:09:43Z
+- **Data source:** Strava API
+- **Activity baseline:** 3 activities in last 7 days, 43 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
