@@ -914,3 +914,14 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 3 activities in last 7 days, 43 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 31 — 2026-07-20 (Phase 5 start · Amashova result unknown · ACWR spike 1.59)
+
+- **Phase transition:** Phase 5 (Hollywoodbets Sub-60 Run Build) begins today. W18 Day 1 = planned Rest (Mon 20 Jul). Hollywoodbets 10K is 41 days away.
+- **🚨 ACWR spike: 1.59 (above 1.5 injury-risk threshold).** Acute 7d RE = 520 (weights 136 + Thu run 193 + Fri run 191). Chronic 4wk avg dropped to 327.8 today because the Jun 22 long run (RE 289) aged out of the 28-day window. Yesterday ACWR was 1.30 (within safe band); today it crossed the 1.5 ceiling. Particularly significant given PF history — run ramp in Phase 5 must be gradual (HR ≤155, max 4-6 km for first easy runs this week).
+- **Amashova result: STILL MISSING after fresh sync (2026-07-20T00:14:38Z, 43 activities unchanged).** Race occurred Sun 19 Jul; sync is now ~14 hr post-race and no activity uploaded. Either not yet uploaded (likely — athlete rest/fatigue) or race not completed. Check tomorrow's auto-build. If completed, ACWR will spike further on upload (a 106 km race RE ~600–800 would push ACWR to ~3.0+).
+- **Phase 5 ramp guidance (critical given current ACWR):** Do NOT start run sessions until ACWR drops back toward 1.0. Mon–Tue = rest only. Wed 22 Jul easy run 4 km = absolute maximum. Enforce HR ≤155 ceiling from day 1. This week's plan (W18) is appropriately conservative — follow it exactly.
+- **Foot: 0/10.** Effectively resolved; daily prehab continues. Monitor first runs of Phase 5.
+- **Obsidian mirror:** plan updated 2026-07-20; manual sync needed.
