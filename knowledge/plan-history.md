@@ -122,3 +122,13 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
 - **Amashova (T-6) risk profile:** No long road rides, ACWR ≈ 0, longest outdoor road ride 39 km vs 106 km race. This is a completion-only scenario, not a performance one. Survival pacing is the plan.
 - **Remainder of taper week (W17) unchanged:** Mon easy spin, Tue light weights, Wed openers, Thu rest, Fri easy spin + expo. No additional load — body needs these 6 days to consolidate whatever fitness exists.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+## 2026-07-20 — Amashova post-race; Phase 5 (Hollywoodbets) now active
+
+- **Trigger (e) — stale post A-race:** Amashova 106 km road cycling occurred Sun 19 Jul; plan checklist still `[ ]`. Plus W17 had pre-race protocol breaches.
+- **W17 deviations logged:** Thu 16 Jul — Run 7.05 km, avg HR 161 (plan: REST). Fri 17 Jul — Run 6.2 km, avg HR 169 (plan: easy 30 min spin + openers). Running at elevated HR on planned rest/spin days is a race-week breach — impact on Amashova performance unknown until result uploads to Strava.
+- **Amashova result:** Pending Strava sync (last sync 2026-07-19T00:09:43Z was before race start). Next sync will reveal result.
+- **Plan changes (`plans/training-plan.md`, `updated:` → 2026-07-20):** Week 17 actual-logged block added with deviation detail. Checklist updated from `[ ]` to `[?]` with pending result note. `updated:` date bumped.
+- **Current phase:** Phase 5 — Hollywoodbets Sub-60 Run Build (20 Jul – 30 Aug). Today is Week 18 Day 1 (Mon 20 Jul = planned Rest). Hollywoodbets Durban 10K is 41 days away (30 Aug).
+- **PF / injury:** No new injury-log entries since Jul 6. Foot effectively resolved — monitor run ramp-up in Phase 5.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).

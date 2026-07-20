@@ -1,6 +1,6 @@
 ---
 date: 2026-04-18
-updated: 2026-07-13
+updated: 2026-07-20
 tags: [running, cycling, mtb, 10k, road-cycling, training-plan, fitness, ballito, imfolozi, amashova, hollywoodbets, plantar-fasciitis]
 source: /Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running
 type: plan
@@ -236,6 +236,9 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 | Sat | 18 Jul | Rest. Travel to start area. | Hydrate, sleep |
 | Sun | 19 Jul | **AMASHOVA 106 km ROAD CYCLING** | See pacing below |
 
+> [!warning]
+> **Actual (logged as of Jul 20 sync):** Tue 14 Jul — Weights 1:01 ✓. Thu 16 Jul — **Morning Run 7.05 km / 57:05 / avg HR 161** (plan said REST — ran instead; elevated HR day before race week). Fri 17 Jul — **Morning Run 6.2 km / 48:25 / avg HR 169** (plan said easy 30 min spin + openers — ran 6 km at HR 169 instead, 2 days before race). Sat 18 Jul — no Strava upload (rest/travel ✓). Sun 19 Jul — **Amashova result pending Strava upload** (last sync 2026-07-19T00:09:43Z was before race start). Deviations: running on planned REST and spin days in race week at elevated HR (161, 169) is a race-week protocol breach — may have compromised leg freshness entering 106 km. Result unknown until next sync.
+
 ---
 
 ## Phase 5 — Hollywoodbets Sub-60 Run Build (20 Jul – 30 Aug)
@@ -386,7 +389,7 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 - [ ] ~~**Sat 4 Jul (W15)** — 70 km road bike completed (Amashova build start)~~ ⚠️ **MISSED** — W15 taken as full recovery post-Imfolozi. Sun 12 Jul 85–90 km becomes the only long road ride before Amashova.
 - [?] **Fri 10 Jul (W16)** — Absa 10K ran Fri 10 Jul · no Strava upload as of 11 Jul · result pending (⚠️ outcome unknown — check Strava)
 - [x] ~~**Sun 12 Jul (W16)** — 85–90 km road bike (Amashova dress rehearsal)~~ ⚠️ **MISSED** — no Strava upload as of 13 Jul (2:31 AM SAST). Confirmed missed: 0 activities Jul 7–12 in Strava. Going into Amashova with **0 outdoor road rides** and ACWR ≈ 0. Longest outdoor road ride remains 39 km (Apr 19). Race-day managed: extreme conservative pacing required — HR ≤145 first 50 km, eat every 30 min, accept ~5 hr finish.
-- [ ] **Sun 19 Jul (W17)** — **AMASHOVA 106 km ROAD CYCLING**
+- [?] **Sun 19 Jul (W17)** — **AMASHOVA 106 km ROAD CYCLING** ⚠️ Race occurred — result pending Strava sync (last sync 2026-07-19T00:09:43Z, before start). Pre-race week breach: ran Thu 16 Jul (HR 161) + Fri 17 Jul (HR 169) instead of planned rest/spin.
 - [ ] **Wed 5 Aug (W20)** — 5 × 800m sub-60 session at 5:30/km
 - [ ] **Wed 12 Aug (W21)** — 4 × 1 km at 5:55–6:05/km (race pace)
 - [ ] **Sat 22 Aug (W22)** — 5 km tune-up @ 6:00/km
