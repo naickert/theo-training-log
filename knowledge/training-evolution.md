@@ -935,3 +935,12 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 3 activities in last 7 days, 42 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 32 — 2026-07-21 (manual · ACWR resolves · Amashova still missing 48hr post-race)
+
+- **ACWR 1.17 — returned to safe zone.** Yesterday's 1.59 spike (Cycle 31) was driven by Jul 14 Weights (RE 136) inside the 7-day acute window; today it aged out, dropping acute from 520→384 (Jul 16 run RE 193 + Jul 17 run RE 191). Chronic 4wk avg ≈ 328. Phase 5 run ramp must stay gradual — first runs this week should cap at 4 km, HR ≤155.
+- **🚨 Amashova result: 48hr post-race, still no Strava upload (42 activities, unchanged from yesterday).** Race occurred Sun 19 Jul. Either not yet uploaded (manual upload from Garmin/Wahoo pending) or race was not completed. When it uploads, expect ACWR to jump to 2.5–3.5+ (a 106 km race RE ~600–800); if that happens, delay W18 runs until ACWR drops below 1.3.
+- **Phase 5 start (Hollywoodbets 10K, Aug 30, 40 days):** W18 today (Tue 21) = Easy 30 min spin OR walk. Plan is correct — no deviation needed. Sub-60 interval sessions don't begin until W20 (5 Aug). Today: active recovery only.
+- **Foot: 0/10.** Daily prehab continues. No change since Imfolozi.
