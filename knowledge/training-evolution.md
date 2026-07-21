@@ -925,3 +925,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Phase 5 ramp guidance (critical given current ACWR):** Do NOT start run sessions until ACWR drops back toward 1.0. Mon–Tue = rest only. Wed 22 Jul easy run 4 km = absolute maximum. Enforce HR ≤155 ceiling from day 1. This week's plan (W18) is appropriately conservative — follow it exactly.
 - **Foot: 0/10.** Effectively resolved; daily prehab continues. Monitor first runs of Phase 5.
 - **Obsidian mirror:** plan updated 2026-07-20; manual sync needed.
+
+
+---
+
+## Cycle auto — 2026-07-21
+
+- **Sync at:** 2026-07-21T00:12:35Z
+- **Data source:** Strava API
+- **Activity baseline:** 3 activities in last 7 days, 42 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
