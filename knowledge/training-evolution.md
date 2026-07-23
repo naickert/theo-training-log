@@ -963,3 +963,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **ACWR 1.25** — safe zone. Acute 7d RE = 419 (Jul 16 run 193 + Jul 17 run 191 + Jul 21 weights 35); chronic 28d avg 336.5/wk. Slight uptick from yesterday's 1.17 as Tue weights entered the acute window. Still safe; no spike.
 - **Phase 5 W18 (20–26 Jul):** Mon REST ✓ · Tue weights 56:46 ✓ (logged fresh this sync). Today (Wed 22) = easy run 4 km, HR ≤155 — first planned run of Phase 5. Enforce HR ceiling — 8-consecutive easy-run breach streak on record.
 - **Hollywoodbets 10K: 39 days (Aug 30). Foot: 0/10.** Sub-60 interval sessions begin W20 (5 Aug). Plan current, no revision needed.
+
+
+---
+
+## Cycle auto — 2026-07-23
+
+- **Sync at:** 2026-07-23T00:14:55Z
+- **Data source:** Strava API
+- **Activity baseline:** 3 activities in last 7 days, 41 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
