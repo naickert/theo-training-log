@@ -1,6 +1,6 @@
 ---
 type: source-of-truth
-updated: 2026-07-11
+updated: 2026-07-23
 ---
 
 # Race Calendar — Theo
@@ -14,16 +14,6 @@ Each race is a YAML entry. Required fields: `name`, `date` (YYYY-MM-DD), `type`,
 ## Active Races
 
 ```yaml
-- name: Amashova National Classic
-  date: 2026-07-19
-  type: Road Cycling
-  distance_km: 106
-  priority: A
-  location: Pietermaritzburg → Durban, KZN
-  start_time: Sunday morning (TBC)
-  target: Finish strong, ~4-4.5 hr
-  notes: Registered Open/Seeded (R800). Entry WEB-5235-854733, Payment WEB_2143719. R140 permanent FinishTime board + R70 CSA day licence. Famous PMB→Durban road race. 22 days after Imfolozi MTB, 9 days after Absa 10K.
-
 - name: Hollywoodbets Durban 10K
   date: 2026-08-30
   type: Run
@@ -42,6 +32,16 @@ Either edit this file directly, or in a Claude conversation say "add race X on d
 ## Past races (auto-moved here when date < today by >7 days)
 
 ```yaml
+- name: Amashova National Classic
+  date: 2026-07-19
+  type: Road Cycling
+  distance_km: 106
+  priority: A
+  location: Pietermaritzburg → Durban, KZN
+  target: Finish strong, ~4-4.5 hr
+  result: Not on Strava as of 2026-07-22 sync (96hr post-race) — outcome pending upload or race not completed. Check Garmin/Wahoo manual upload.
+  notes: Registered Open/Seeded (R800). Entry WEB-5235-854733. Moved to Past 2026-07-23 — race date passed, result unconfirmed. Phase 4 complete.
+
 - name: Absa 10K Road
   date: 2026-07-10
   type: Run

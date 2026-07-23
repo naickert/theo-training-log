@@ -132,3 +132,10 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
 - **Current phase:** Phase 5 — Hollywoodbets Sub-60 Run Build (20 Jul – 30 Aug). Today is Week 18 Day 1 (Mon 20 Jul = planned Rest). Hollywoodbets Durban 10K is 41 days away (30 Aug).
 - **PF / injury:** No new injury-log entries since Jul 6. Foot effectively resolved — monitor run ramp-up in Phase 5.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+## 2026-07-23 — Amashova moved to Past; checklist updated (96hr no upload)
+
+- **Trigger (e) — stale:** Amashova (Jul 19) still in Active Races section of `race-calendar.md` 4 days post-race. Moved to Past with result "Not on Strava as of 2026-07-22 sync (96hr post-race) — outcome pending upload or race not completed."
+- **Changes:** `race-calendar.md` Active → Past for Amashova. `updated:` → 2026-07-23. Checklist item in `plans/training-plan.md` updated: note clarified from "~14 hr post-race" → "96+ hr post-race, 42 activities unchanged". Plan `updated:` → 2026-07-23.
+- **Action needed:** Manual Garmin/Wahoo upload to Strava to confirm race result. If not completed (DNF), note it in the plan checklist.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
