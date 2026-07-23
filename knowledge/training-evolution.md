@@ -973,3 +973,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 3 activities in last 7 days, 41 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 34 — 2026-07-23 (automated daily · plan revision · ACWR drops · Phase 5 W18 D4)
+
+- **Plan revision (trigger e):** Amashova (Jul 19) still in Active Races 4 days post-race. Moved to Past in `race-calendar.md` with result "not on Strava as of 96hr post-race." Plan checklist item updated to reflect 96hr+ no upload. `updated:` → 2026-07-23.
+- **🚨 Amashova — 96hr post-race, still no upload (41 activities).** Fifth consecutive sync with no Jul 19 activity. Action needed: manual Garmin/Wahoo upload to Strava. If race not completed, note DNF in plan checklist.
+- **ACWR 0.67 — below safe band floor (0.8).** Jul 16 run (RE 193) aged out today; acute = 226 (Jul 17 run + Jul 21 weights); chronic avg ≈ 337/wk. Undertraining zone — Phase 5 run ramp must start now. If Amashova uploads with RE ~600-800, ACWR will spike to 2.5-3.5+ and W18 runs must pause until it drops below 1.3.
+- **4-week adherence 24% (5/21).** Depressed by W15-W16 rest and W17 race breaches. W18 on track: Mon REST ✓ · Tue Weights 56:46 ✓ · Wed run pending next sync · Thu today = weights light.
+- **Hollywoodbets (38d): 39%, at-risk.** Run vol 4wk 13/30 km; fastest pace 4wk 7:48/km (target 5:59); no interval sessions yet. Sub-60 build needs to accelerate. Critical: W20 (Aug 5) 5×800m @ 5:30/km, W21 (Aug 12) 4×1km @ 5:55/km.
