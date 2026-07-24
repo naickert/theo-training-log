@@ -983,3 +983,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **ACWR 0.67 — below safe band floor (0.8).** Jul 16 run (RE 193) aged out today; acute = 226 (Jul 17 run + Jul 21 weights); chronic avg ≈ 337/wk. Undertraining zone — Phase 5 run ramp must start now. If Amashova uploads with RE ~600-800, ACWR will spike to 2.5-3.5+ and W18 runs must pause until it drops below 1.3.
 - **4-week adherence 24% (5/21).** Depressed by W15-W16 rest and W17 race breaches. W18 on track: Mon REST ✓ · Tue Weights 56:46 ✓ · Wed run pending next sync · Thu today = weights light.
 - **Hollywoodbets (38d): 39%, at-risk.** Run vol 4wk 13/30 km; fastest pace 4wk 7:48/km (target 5:59); no interval sessions yet. Sub-60 build needs to accelerate. Critical: W20 (Aug 5) 5×800m @ 5:30/km, W21 (Aug 12) 4×1km @ 5:55/km.
+
+
+---
+
+## Cycle auto — 2026-07-24
+
+- **Sync at:** 2026-07-24T00:12:51Z
+- **Data source:** Strava API
+- **Activity baseline:** 3 activities in last 7 days, 42 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
