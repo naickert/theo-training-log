@@ -1013,3 +1013,15 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 2 activities in last 7 days, 42 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 35 — 2026-07-26 (manual · W18 last day · ACWR trough · Phase 5 run debt)
+
+- **Plan gate:** Current. W18 (20–26 Jul) covers today (Sun); plan `updated: 2026-07-23`; injury log (Jul 6) older than plan; Hollywoodbets only active race (Aug 30). No triggers fired.
+- **ACWR 0.45 — below safe-band floor (0.8).** Acute 7d RE = 80 (Tue weights 35 + Thu weights 45); chronic 28d avg ≈ 177/wk. Significant trough — not injury risk, but detraining concern with Hollywoodbets 35 days out. Phase 5 run base must start immediately in W19.
+- **W18 plan vs actual:** Mon REST ✓ · Tue Weights 56:46 ✓ (plan: spin/walk) · Wed easy run 4 km ❌ MISSED · Thu Weights 1:11 ✓ · Fri easy run 5 km ❌ MISSED · Sat REST ✓ · Sun today (easy run 6 km, not yet logged). Last run was Jul 17 (9 days ago). Two consecutive planned runs skipped — first Phase 5 run week was essentially bike-only.
+- **🚨 Amashova: 7 days post-race, still no Strava upload (42 activities unchanged).** Either manual upload pending or DNF. If uploaded, ACWR will spike to 2.5–3.5+; delay W19 runs until ACWR drops below 1.3. Manual action needed — check Garmin/Wahoo app and upload.
+- **Hollywoodbets (35d): at-risk.** Run vol 4wk ≈13 km vs 30 km target; fastest recent pace 7:48/km vs 5:59/km race target; zero interval sessions completed. W20 (Aug 5) 5×800m @ 5:30/km is the first sub-60 session — 10 days away with essentially no run base under it.
+- **Foot: 0/10, resolved.** Daily prehab continues. No new entries since Jun 28.
+- **W19 priority (starts tomorrow):** Mon easy run 6 km (HR ≤155) is the reset — must happen. Wed strides + form, Sat long run 10 km. The sub-60 build cannot afford another low-run week.
