@@ -1025,3 +1025,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Hollywoodbets (35d): at-risk.** Run vol 4wk ≈13 km vs 30 km target; fastest recent pace 7:48/km vs 5:59/km race target; zero interval sessions completed. W20 (Aug 5) 5×800m @ 5:30/km is the first sub-60 session — 10 days away with essentially no run base under it.
 - **Foot: 0/10, resolved.** Daily prehab continues. No new entries since Jun 28.
 - **W19 priority (starts tomorrow):** Mon easy run 6 km (HR ≤155) is the reset — must happen. Wed strides + form, Sat long run 10 km. The sub-60 build cannot afford another low-run week.
+
+
+---
+
+## Cycle auto — 2026-07-27
+
+- **Sync at:** 2026-07-27T00:16:20Z
+- **Data source:** Strava API
+- **Activity baseline:** 3 activities in last 7 days, 43 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
