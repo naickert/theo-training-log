@@ -1045,3 +1045,15 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 3 activities in last 7 days, 41 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 36 — 2026-07-28 (automated daily · ACWR recovery 0.45→1.04 · HR breach flag · W19 Day 2)
+
+- **Plan gate:** Current. W19 (27 Jul–2 Aug) covers today; plan `updated: 2026-07-23`; injury log (Jul 6) older than plan; Hollywoodbets only active race (Aug 30, 33 days). No triggers fired.
+- **ACWR 1.04 — back in optimal band (0.8–1.3).** Recovery from 0.45 trough (Cycle 35 Jul 26). Acute 7d RE = 194 (Jul 23 weights 45 + Jul 24 run 149); chronic 28d avg ≈ 187/wk. Load is balanced; no spike risk.
+- **⚠ Fri Jul 24 run avg HR 182** — plan called for "easy run 5 km, HR ≤155". HR 182 is Z4 tempo territory. Pattern continues: easy-run HR ceiling being breached repeatedly (Jul 16 HR 161, Jul 17 HR 169, Jul 24 HR 182). This is a PF-return risk and sub-60 build inefficiency — aerobic base is not being built at these HRs.
+- **Mon Jul 27 easy run 6 km MISSED** — W19 started with a skipped session, continuing the W18 run-debt pattern. Two W18 planned runs (Wed Jul 22, Sun Jul 26) were also missed. Last confirmed run: Jul 24 (4 days ago).
+- **🚨 Amashova: 9 days post-race, still no Strava upload.** Manual upload action needed.
+- **Hollywoodbets (33d): at-risk.** Sub-60 interval sessions start W20 (Aug 5 — 5×800m @ 5:30/km). Run base remains thin with repeated missed and high-HR sessions.
+- **Foot: 0/10.** No new entries. Daily prehab continues.
