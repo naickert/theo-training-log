@@ -686,41 +686,5 @@
     "avg_hr": 88,
     "max_hr": 127,
     "synced_at": "2026-07-28T00:18:41Z"
-  },
-  {
-    "id": "2026-04-29_morning-ride_30-19",
-    "strava_id": 18302368966,
-    "date": "2026-04-29",
-    "day_of_week": "Wed",
-    "sport": "Ride",
-    "category": "bike",
-    "title": "Morning Ride",
-    "duration_sec": 1819,
-    "duration_display": "30:19",
-    "distance_km": 4.32,
-    "elevation_m": 0,
-    "relative_effort": 79,
-    "avg_hr": 151,
-    "max_hr": 180,
-    "synced_at": "2026-07-28T00:18:41Z",
-    "avg_speed_kmh": 8.5
-  },
-  {
-    "id": "2026-04-29_zwift-2-by-2_30-13",
-    "strava_id": 18302366905,
-    "date": "2026-04-29",
-    "day_of_week": "Wed",
-    "sport": "VirtualRide",
-    "category": "bike",
-    "title": "Zwift - 2 by 2",
-    "duration_sec": 1813,
-    "duration_display": "30:13",
-    "distance_km": 11.79,
-    "elevation_m": 53,
-    "relative_effort": 78,
-    "avg_hr": 151,
-    "max_hr": 180,
-    "synced_at": "2026-07-28T00:18:41Z",
-    "avg_speed_kmh": 23.4
   }
 ]

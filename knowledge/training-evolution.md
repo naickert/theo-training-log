@@ -1057,3 +1057,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **🚨 Amashova: 9 days post-race, still no Strava upload.** Manual upload action needed.
 - **Hollywoodbets (33d): at-risk.** Sub-60 interval sessions start W20 (Aug 5 — 5×800m @ 5:30/km). Run base remains thin with repeated missed and high-HR sessions.
 - **Foot: 0/10.** No new entries. Daily prehab continues.
+
+
+---
+
+## Cycle auto — 2026-07-29
+
+- **Sync at:** 2026-07-29T00:15:39Z
+- **Data source:** cached (Strava unreachable)
+- **Activity baseline:** 2 activities in last 7 days, 39 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
