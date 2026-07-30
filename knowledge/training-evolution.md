@@ -1077,3 +1077,15 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 2 activities in last 7 days, 38 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 37 — 2026-07-30 (W19 run debt deepening · Sat long run critical · 31d Hollywoodbets)
+
+- **Plan gate:** Current. W19 (27 Jul–2 Aug) covers today; plan `updated: 2026-07-23`; no triggers fired.
+- **ACWR 1.04** — optimal (acute 7d RE=194; chronic 28d avg=187/wk). Load balanced but critically low for Hollywoodbets sub-60 build.
+- **🚨 W19 — 5 consecutive missed sessions (Jul 25–29).** Last run: Jul 24 (6 days ago, avg HR **182** vs ≤155 ceiling — 9th consecutive easy-run HR breach). W19 plan through today: Mon easy run ❌ · Tue weights ❌ · Wed strides+form ❌ · Thu weights (today) = TBD. Zero running in W19 so far.
+- **Sat Aug 1 = 10 km long run (first long run of Phase 5 / first 10 km since pre-PF).** Two days away. Non-negotiable — the sub-60 build cannot slip further. HR ≤155. If the foot holds at 10 km, the block stays on track.
+- **Hollywoodbets 31 days (Aug 30).** W20 5×800m @ 5:30/km starts Aug 5 with essentially zero run base under it. Sub-60 attempt requires immediate and consistent run volume this week and next.
+- **Amashova: 11 days post-race, still no Strava upload.** Outcome (finish/DNF) unknown. Manual upload action needed.
+- **Foot: 0/10, resolved.** Daily prehab continues.
