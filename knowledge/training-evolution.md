@@ -1109,3 +1109,16 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 0 activities in last 7 days, 36 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 38 — 2026-08-01 (automated daily · ACWR 0.00 — worst of block · W19 zero runs · sub-60 alarm)
+
+- **Plan gate:** Current. W19 (27 Jul–2 Aug) covers today (Sat); plan `updated: 2026-07-23`; injury log (Jul 6) older than plan; Hollywoodbets only active race (Aug 30, 29d). No triggers fired.
+- **⚠ ACWR 0.00 — absolute block trough.** Acute 7-day RE = 0 (zero activities Jul 25–Aug 1); chronic 28-day avg = 187 RE/wk. Not injury risk — detraining risk. This is the lowest ACWR of the entire block, worse than the post-Imfolozi trough of 0.18 (Cycle 24) or the Jul 5 trough of 0.18.
+- **🚨 W19 — zero Strava uploads Mon Jul 27 – Fri Jul 31 (5 sessions missed).** Planned: Mon easy run 6 km · Tue weights · Wed strides+form · Thu weights · Fri easy run 6 km. None logged. Today (Sat Aug 1) = **Long run 10 km** (first 10 km since pre-PF, non-negotiable). This is either a Strava upload gap or a genuine rest week — upload any completed activities from Garmin app.
+- **🚨 Hollywoodbets 10K: 29 days.** W20 5×800m @ 5:30/km (Aug 5) is **4 days away** — the first critical sub-60 quality session. Entering it with ACWR=0 and zero W19 runs is a serious risk to session quality. If today's 10 km long run lands, ACWR will recover slightly but will still be below 0.5 entering W20. Plan on-target by prescription; execution is the gap.
+- **🚨 Amashova: 13 days post-race, still no Strava upload (36 activities).** Outcome (finish/DNF) unknown. Manual Garmin/Wahoo upload action needed. If completed (RE ~600-800), ACWR would spike to 3.0+ — delay W19/W20 runs until it drops below 1.3.
+- **Easy-run HR breach streak: 9 consecutive** (Jul 24 avg HR 182, most recent; all ≥161 avg vs ≤155 ceiling). No foot pain reported. Enforce ≤155 strictly on today's long run — it's the first 10 km since PF injury.
+- **4-week adherence ~23%** (5 sessions logged out of ~22 planned, Jul 4 – Aug 1). Critical run sessions to hold from here: Wed Aug 5 (5×800m), Sat Aug 8 (11 km), Wed Aug 12 (4×1km), Sat Aug 15 (12 km), Wed Aug 19 (6×400m), Sat Aug 22 (5 km TT).
+- **Foot: 0/10, resolved.** Daily prehab continues.
