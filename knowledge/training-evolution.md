@@ -1122,3 +1122,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Easy-run HR breach streak: 9 consecutive** (Jul 24 avg HR 182, most recent; all ≥161 avg vs ≤155 ceiling). No foot pain reported. Enforce ≤155 strictly on today's long run — it's the first 10 km since PF injury.
 - **4-week adherence ~23%** (5 sessions logged out of ~22 planned, Jul 4 – Aug 1). Critical run sessions to hold from here: Wed Aug 5 (5×800m), Sat Aug 8 (11 km), Wed Aug 12 (4×1km), Sat Aug 15 (12 km), Wed Aug 19 (6×400m), Sat Aug 22 (5 km TT).
 - **Foot: 0/10, resolved.** Daily prehab continues.
+
+
+---
+
+## Cycle auto — 2026-08-02
+
+- **Sync at:** 2026-08-02T00:12:44Z
+- **Data source:** Strava API
+- **Activity baseline:** 0 activities in last 7 days, 36 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
