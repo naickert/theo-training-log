@@ -1132,3 +1132,14 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 0 activities in last 7 days, 36 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 39 — 2026-08-02 (W19 closes at zero · W20 transition risk · 28d Hollywoodbets)
+
+- **Plan gate:** Current. W19 (27 Jul–2 Aug) ends today; W20 (3–9 Aug) starts tomorrow. Plan `updated: 2026-07-23`. No staleness triggers fired.
+- **W19 CONFIRMED ZERO.** Aug 1 long run (planned: 10 km, first post-PF, non-negotiable) did not appear in Strava sync at 2026-08-02T00:12:44Z (36 activities unchanged). W19 ends 0/6 active sessions — the worst week of the entire block and the second consecutive zero-activity stretch.
+- **⚠ W20 transition risk.** 5×800m intervals (Wed Aug 5) arrive in 3 days with ACWR=0.00 and zero W19 run volume. **Mon Aug 3 easy 6 km (HR ≤155) is the critical first step** — do not skip it and do not let the HR creep above 155. The long run on Sat Aug 8 (11 km) must be the anchor recovery for the ACWR to climb toward 0.8 before Wed 12 Aug intervals.
+- **Hollywoodbets 10K: 28 days.** 4-week adherence ~36% (8/22 sessions). Sub-60 requires a clean W20–W22 — every interval session and long run from here is non-negotiable.
+- **Amashova: 14 days post-race, zero Strava upload.** Upload ASAP — if completed (RE ~600-800), it would retroactively change the chronic load picture and may justify W19's reduced output.
+- **Foot: 0/10.** No change. Prehab continues.
