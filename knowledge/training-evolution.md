@@ -1143,3 +1143,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Hollywoodbets 10K: 28 days.** 4-week adherence ~36% (8/22 sessions). Sub-60 requires a clean W20–W22 — every interval session and long run from here is non-negotiable.
 - **Amashova: 14 days post-race, zero Strava upload.** Upload ASAP — if completed (RE ~600-800), it would retroactively change the chronic load picture and may justify W19's reduced output.
 - **Foot: 0/10.** No change. Prehab continues.
+
+
+---
+
+## Cycle auto — 2026-08-03
+
+- **Sync at:** 2026-08-03T00:18:43Z
+- **Data source:** Strava API
+- **Activity baseline:** 0 activities in last 7 days, 36 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
