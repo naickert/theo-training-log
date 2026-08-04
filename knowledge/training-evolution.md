@@ -1163,3 +1163,15 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 0 activities in last 7 days, 35 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 40 — 2026-08-04 (W20 Mon also missed · 5×800m tomorrow · 26d Hollywoodbets)
+
+- **Plan gate:** Current. W20 (3–9 Aug) covers today; plan `updated: 2026-07-23`. Hollywoodbets is 26 days out — not yet in the 7-day taper-needed window. No staleness triggers.
+- **ACWR 0.00** — second consecutive week of flat-zero acute load. Chronic 28d avg = 187 RE/wk. This is not an injury spike; it is a detraining trough heading into the block's most critical quality weeks.
+- **W20 Mon Aug 3 (easy 6 km) not on Strava** — first session of W20 missed, continuing the 11-day no-run streak (last run Jul 24, avg HR 182). Strava activity count dropped 36→35 vs yesterday (one activity deleted or privacy-changed; not a new run).
+- **🚨 Wed Aug 5 = 5×800m @ 5:30/km — one day away.** This is the first and most important sub-60 quality session. Entering it with ACWR=0.00 and 11 days since last run. Warm up thoroughly (15 min easy); scale to 3×800m if legs feel flat rather than skipping it entirely.
+- **Hollywoodbets 10K: 26 days.** Remaining non-negotiable sessions: Wed Aug 5 (5×800m), Sat Aug 8 (11 km), Wed Aug 12 (4×1km), Sat Aug 15 (12 km), Wed Aug 19 (6×400m), Sat Aug 22 (5 km TT). Missing even one more interval session puts sub-60 in serious jeopardy.
+- **Amashova: 16 days post-race, still no Strava upload.** Upload from Garmin app ASAP.
+- **Foot: 0/10.** No change. Prehab continues.
