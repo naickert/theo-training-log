@@ -1175,3 +1175,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Hollywoodbets 10K: 26 days.** Remaining non-negotiable sessions: Wed Aug 5 (5×800m), Sat Aug 8 (11 km), Wed Aug 12 (4×1km), Sat Aug 15 (12 km), Wed Aug 19 (6×400m), Sat Aug 22 (5 km TT). Missing even one more interval session puts sub-60 in serious jeopardy.
 - **Amashova: 16 days post-race, still no Strava upload.** Upload from Garmin app ASAP.
 - **Foot: 0/10.** No change. Prehab continues.
+
+
+---
+
+## Cycle auto — 2026-08-05
+
+- **Sync at:** 2026-08-05T00:18:42Z
+- **Data source:** Strava API
+- **Activity baseline:** 0 activities in last 7 days, 35 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
