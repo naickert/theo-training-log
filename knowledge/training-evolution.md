@@ -1195,3 +1195,12 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 1 activities in last 7 days, 36 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 41 — 2026-08-06 (W20 D4 · 5×800m confirmed not executed · 24d Hollywoodbets)
+
+- **W20 Wed Aug 5 key session substituted:** Plan = 5×800m @ 5:30/km (first critical sub-60 session). Actual = 5.09 km run / 32:01 / avg HR 172 / RE 135. Neither intervals (HR should reach 185+) nor easy (ceiling ≤155). 10th consecutive easy-run HR breach.
+- **ACWR 0.61** (acute 7d RE=135, chronic 28d avg=221/wk). Still below the 0.8 safe-band floor — undertraining entering the final 24-day build. Not an injury spike; a detraining risk.
+- **Run vol 23.4 km / 28d** (target 30 km). Fastest pace 6:05/km (Jul 24) vs sub-60 target 5:59/km. No interval sessions completed in the block.
+- **Hollywoodbets 10K: 24 days.** Remaining non-negotiables: Sat Aug 8 (11 km long run), Wed Aug 12 (4×1km @ 5:55/km), Sat Aug 15 (12 km), Wed Aug 19 (6×400m), Sat Aug 22 (5 km TT). Sub-60 attempt is seriously at risk — at minimum Wed Aug 12 intervals must land. Foot: 0/10, resolved. Plan current.
