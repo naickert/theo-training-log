@@ -1224,3 +1224,14 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** cached (Strava unreachable)
 - **Activity baseline:** 2 activities in last 7 days, 37 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 42 — 2026-08-08 (plan revision · Amashova closed · W20 actuals · sub-60 critical)
+
+- **Plan revision (trigger e):** Amashova "pending" note last updated Jul 23 — now 20 days post-race, definitively unresolved. Checklist note closed: "no Strava upload after 20 days — DNF or never uploaded." W20 Wed Aug 5 interval substitution logged in plan table. Plan `updated: 2026-08-08`.
+- **Sync WARN:** Strava API returned HTTP 403 today (00:20 UTC). Dashboard rebuilt from cached Aug 7 data (37 activities). Amber stale banner showing.
+- **ACWR 0.78** — recovering from 0.00 trough (Aug 4). Just below safe-band floor. Acute 7d RE = 180 (Aug 5 run + Aug 6 weights). Chronic 28d avg ≈ 232/wk (Jul 16–17 runs still in window). Not an injury spike — detraining concern with Hollywoodbets 22 days out.
+- **Sub-60 alarm:** No interval sessions executed in Phase 5. 5×800m (Aug 5) substituted with moderate 5 km run. Wed Aug 12 (4×1km @ 5:55/km) is now the must-not-miss session. Today's long run (11 km, last 3 km @ 6:15/km) is also critical — W20 anchor session.
+- **Foot: 0/10, resolved.** No new entries. Daily prehab continues.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
