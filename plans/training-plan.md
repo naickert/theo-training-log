@@ -1,6 +1,6 @@
 ---
 date: 2026-04-18
-updated: 2026-07-23
+updated: 2026-08-08
 tags: [running, cycling, mtb, 10k, road-cycling, training-plan, fitness, ballito, imfolozi, amashova, hollywoodbets, plantar-fasciitis]
 source: /Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running
 type: plan
@@ -282,6 +282,9 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 | Sat | 8 Aug | Long run 11 km — last 3 km @ 6:15/km | Race-pace finish |
 | Sun | 9 Aug | Easy 5 km OR rest | |
 
+> [!warning]
+> **Actual (logged as of 2026-08-08):** Mon 3 Aug — easy run 6 km ❌ not uploaded. Tue 4 Aug — Weights ❌ not uploaded. **Wed 5 Aug — 5×800m @ 5:30/km → Morning Run 5.09 km / 32:01 / avg HR 172 / 6:17/km** (substituted; moderate run, not intervals; 10th consecutive easy-run HR breach; first critical sub-60 session not executed). Thu 6 Aug — Weights 1:00:13 ✓. Fri 7 Aug — Tempo 4 km (pending). Sat 8 Aug — Long run 11 km (pending — today).
+
 ### Week 21 (10–16 Aug) — Race-pace specificity
 
 | Day | Date | Session | Details |
@@ -389,8 +392,8 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 - [ ] ~~**Sat 4 Jul (W15)** — 70 km road bike completed (Amashova build start)~~ ⚠️ **MISSED** — W15 taken as full recovery post-Imfolozi. Sun 12 Jul 85–90 km becomes the only long road ride before Amashova.
 - [?] **Fri 10 Jul (W16)** — Absa 10K ran Fri 10 Jul · no Strava upload as of 11 Jul · result pending (⚠️ outcome unknown — check Strava)
 - [x] ~~**Sun 12 Jul (W16)** — 85–90 km road bike (Amashova dress rehearsal)~~ ⚠️ **MISSED** — no Strava upload as of 13 Jul (2:31 AM SAST). Confirmed missed: 0 activities Jul 7–12 in Strava. Going into Amashova with **0 outdoor road rides** and ACWR ≈ 0. Longest outdoor road ride remains 39 km (Apr 19). Race-day managed: extreme conservative pacing required — HR ≤145 first 50 km, eat every 30 min, accept ~5 hr finish.
-- [?] **Sun 19 Jul (W17)** — **AMASHOVA 106 km ROAD CYCLING** ⚠️ Result still not on Strava as of 2026-07-22T00:12:46Z sync (96+ hr post-race, 42 activities unchanged). Either race not completed (DNF) or Garmin/Wahoo upload pending — manual upload action needed. Pre-race week breach: ran Thu 16 Jul (HR 161) + Fri 17 Jul (HR 169) instead of planned rest/spin.
-- [ ] **Wed 5 Aug (W20)** — 5 × 800m sub-60 session at 5:30/km
+- [?] **Sun 19 Jul (W17)** — **AMASHOVA 106 km ROAD CYCLING** ⚠️ Result definitively unresolved — no Strava upload after 20 days (as of 2026-08-08; 37 activities in Strava unchanged since race). Either DNF or Garmin activity never uploaded. Phase 4 closed. Pre-race week breach: ran Thu 16 Jul (HR 161) + Fri 17 Jul (HR 169) instead of planned rest/spin.
+- [⚠️] **Wed 5 Aug (W20)** — 5 × 800m sub-60 session at 5:30/km → **Substituted: 5.09 km run / 32:01 / avg HR 172 / 6:17/km** (not executed as intervals; first critical sub-60 session missed)
 - [ ] **Wed 12 Aug (W21)** — 4 × 1 km at 5:55–6:05/km (race pace)
 - [ ] **Sat 22 Aug (W22)** — 5 km tune-up @ 6:00/km
 - [ ] **Sun 30 Aug (W23)** — **HOLLYWOODBETS 10K · SUB-60 ATTEMPT**

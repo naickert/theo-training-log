@@ -139,3 +139,15 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
 - **Changes:** `race-calendar.md` Active → Past for Amashova. `updated:` → 2026-07-23. Checklist item in `plans/training-plan.md` updated: note clarified from "~14 hr post-race" → "96+ hr post-race, 42 activities unchanged". Plan `updated:` → 2026-07-23.
 - **Action needed:** Manual Garmin/Wahoo upload to Strava to confirm race result. If not completed (DNF), note it in the plan checklist.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+## 2026-08-08 — Amashova closed; W20 actuals annotated
+
+- **Trigger (e) — stale:** Amashova checklist note last updated Jul 23 ("96+ hr no upload"). Now 20 days post-race (Aug 8) with 37 activities in Strava — definitively unresolved. Phase 4 closed.
+- **Plan changes (`plans/training-plan.md`, `updated:` → 2026-08-08):**
+  - Amashova checklist item updated: "Result definitively unresolved — 20 days, no upload. Either DNF or never uploaded. Phase 4 closed."
+  - Checklist Wed 5 Aug: `[ ]` → `[⚠️]` with substitution detail (5.09 km run at HR 172 / 6:17/km instead of 5×800m @ 5:30/km).
+  - W20 actual block added after weekly table: Mon/Tue not logged, Wed substituted, Thu weights ✓, Fri/Sat pending.
+- **W20 status (as of Aug 8):** ACWR 0.78 (recovering from 0.00 trough; just below safe-band floor). Run vol 4wk ≈16 km vs 30 km target. No interval sessions completed in Phase 5.
+- **Hollywoodbets 10K: 22 days.** Critical remaining sessions: Wed Aug 12 (4×1km @ 5:55/km), Sat Aug 15 (12 km long run), Wed Aug 19 (6×400m), Sat Aug 22 (5 km TT). Sub-60 attempt in jeopardy without these.
+- **Foot: 0/10, effectively resolved.** Daily prehab continues.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
