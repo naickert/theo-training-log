@@ -1235,3 +1235,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Sub-60 alarm:** No interval sessions executed in Phase 5. 5×800m (Aug 5) substituted with moderate 5 km run. Wed Aug 12 (4×1km @ 5:55/km) is now the must-not-miss session. Today's long run (11 km, last 3 km @ 6:15/km) is also critical — W20 anchor session.
 - **Foot: 0/10, resolved.** No new entries. Daily prehab continues.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+
+---
+
+## Cycle auto — 2026-08-09
+
+- **Sync at:** 2026-08-09T00:15:41Z
+- **Data source:** Strava API
+- **Activity baseline:** 4 activities in last 7 days, 39 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
