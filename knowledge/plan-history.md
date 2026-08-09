@@ -151,3 +151,12 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
 - **Hollywoodbets 10K: 22 days.** Critical remaining sessions: Wed Aug 12 (4×1km @ 5:55/km), Sat Aug 15 (12 km long run), Wed Aug 19 (6×400m), Sat Aug 22 (5 km TT). Sub-60 attempt in jeopardy without these.
 - **Foot: 0/10, effectively resolved.** Daily prehab continues.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+## 2026-08-09 — W20 actuals confirmed; ACWR spike
+
+- **Trigger (e) — pending actuals resolved:** Fri Aug 7 and Sat Aug 8 were "pending" in yesterday's plan note. Both now confirmed in Strava.
+- **Fri 7 Aug:** Morning Run 7.01 km / 44:29 / avg HR 178 / 6:20/km — vs planned 4 km tempo @ 6:00–6:15/km. Ran 3 km longer; pace slightly slower than tempo target; 11th consecutive easy-run HR breach.
+- **Sat 8 Aug:** MTB 27.72 km / 1:58:21 / avg HR 151 / RE 303 — substituted planned long run 11 km. Second critical W20 sub-60 session not executed as a run.
+- **ACWR ~1.84** (above the 1.5 injury-risk threshold) with Fri + Sat sessions entering the acute window against a chronic base suppressed by the Jul 26-Aug 1 zero-week. Foot 0/10; caution warranted today.
+- **Plan `updated:` → 2026-08-09.** W20 actual block updated.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).

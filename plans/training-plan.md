@@ -1,6 +1,6 @@
 ---
 date: 2026-04-18
-updated: 2026-08-08
+updated: 2026-08-09
 tags: [running, cycling, mtb, 10k, road-cycling, training-plan, fitness, ballito, imfolozi, amashova, hollywoodbets, plantar-fasciitis]
 source: /Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running
 type: plan
@@ -283,7 +283,7 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 | Sun | 9 Aug | Easy 5 km OR rest | |
 
 > [!warning]
-> **Actual (logged as of 2026-08-08):** Mon 3 Aug — easy run 6 km ❌ not uploaded. Tue 4 Aug — Weights ❌ not uploaded. **Wed 5 Aug — 5×800m @ 5:30/km → Morning Run 5.09 km / 32:01 / avg HR 172 / 6:17/km** (substituted; moderate run, not intervals; 10th consecutive easy-run HR breach; first critical sub-60 session not executed). Thu 6 Aug — Weights 1:00:13 ✓. Fri 7 Aug — Tempo 4 km (pending). Sat 8 Aug — Long run 11 km (pending — today).
+> **Actual (logged as of 2026-08-09):** Mon 3 Aug — easy run 6 km ❌ not uploaded. Tue 4 Aug — Weights ❌ not uploaded. **Wed 5 Aug — 5×800m @ 5:30/km → Morning Run 5.09 km / 32:01 / avg HR 172 / 6:17/km** (substituted; moderate run, not intervals; 10th consecutive easy-run HR breach; first critical sub-60 session not executed). Thu 6 Aug — Weights 1:00:13 ✓. **Fri 7 Aug — Tempo 4 km @ 6:00–6:15/km → Morning Run 7.01 km / 44:29 / avg HR 178 / 6:20/km** (ran 3 km longer than planned; pace 6:20/km close to tempo target; HR 178 = 11th consecutive easy-run HR breach; constructive but not a precise tempo session). **Sat 8 Aug — Long run 11 km → Morning MTB 27.72 km / 1:58:21 / avg HR 151** (substituted long run with MTB cross-training; second critical W20 sub-60 session not executed as a run; ACWR spiked to ~1.84 post-session). Sun 9 Aug — Easy 5 km OR rest (pending).
 
 ### Week 21 (10–16 Aug) — Race-pace specificity
 
