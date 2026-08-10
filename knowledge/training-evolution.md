@@ -1255,3 +1255,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **W20 sub-60 key sessions both missed as designed:** Wed Aug 5 = 5×800m → substitute 5.09 km run at HR 172 (11th consecutive easy-run HR breach). Sat Aug 8 = 11 km long run → MTB 27.72 km HR 151 (cross-train; zero run-specific stimulus). Fri Aug 7 run (7.01 km / HR 178 / 6:20/km) was constructive but 3 km longer than the 4 km tempo plan. Thu Aug 6 weights ✓.
 - **Wed Aug 12 (4×1km @ 5:55–6:05/km) is now make-or-break for sub-60.** Phase 5 has zero interval sessions completed. W21 is the last full race-pace week before the sharpening phase. If this session is substituted again, sub-60 on Aug 30 becomes very unlikely.
 - **Hollywoodbets 10K: 21 days.** Foot: 0/10. Plan: current (updated 2026-08-09). Obsidian mirror needs manual sync.
+
+
+---
+
+## Cycle auto — 2026-08-10
+
+- **Sync at:** 2026-08-10T00:22:37Z
+- **Data source:** Strava API
+- **Activity baseline:** 4 activities in last 7 days, 39 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
