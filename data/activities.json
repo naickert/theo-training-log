@@ -1,5 +1,22 @@
 [
   {
+    "id": "2026-08-11_morning-weight-training_1-10-56",
+    "strava_id": 19690327829,
+    "date": "2026-08-11",
+    "day_of_week": "Tue",
+    "sport": "WeightTraining",
+    "category": "weights",
+    "title": "Morning Weight Training",
+    "duration_sec": 4256,
+    "duration_display": "1:10:56",
+    "distance_km": 0.0,
+    "elevation_m": 0,
+    "relative_effort": 15,
+    "avg_hr": 104,
+    "max_hr": 143,
+    "synced_at": "2026-08-12T00:19:50Z"
+  },
+  {
     "id": "2026-08-08_morning-mountain-bike-ride_1-58-21",
     "strava_id": 19649849041,
     "date": "2026-08-08",
@@ -14,7 +31,7 @@
     "relative_effort": 303,
     "avg_hr": 151,
     "max_hr": 179,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "avg_speed_kmh": 14.1
   },
   {
@@ -32,7 +49,7 @@
     "relative_effort": 209,
     "avg_hr": 178,
     "max_hr": 193,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "pace_per_km": "6:20"
   },
   {
@@ -50,7 +67,7 @@
     "relative_effort": 45,
     "avg_hr": 126,
     "max_hr": 173,
-    "synced_at": "2026-08-11T00:20:31Z"
+    "synced_at": "2026-08-12T00:19:50Z"
   },
   {
     "id": "2026-08-05_morning-run_32-01",
@@ -67,7 +84,7 @@
     "relative_effort": 135,
     "avg_hr": 172,
     "max_hr": 188,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "pace_per_km": "6:17"
   },
   {
@@ -85,7 +102,7 @@
     "relative_effort": 60,
     "avg_hr": 121,
     "max_hr": 169,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "avg_speed_kmh": 11.7
   },
   {
@@ -103,7 +120,7 @@
     "relative_effort": 149,
     "avg_hr": 182,
     "max_hr": 195,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "pace_per_km": "6:05"
   },
   {
@@ -121,7 +138,7 @@
     "relative_effort": 45,
     "avg_hr": 124,
     "max_hr": 164,
-    "synced_at": "2026-08-11T00:20:31Z"
+    "synced_at": "2026-08-12T00:19:50Z"
   },
   {
     "id": "2026-07-21_morning-weight-training_56-46",
@@ -138,7 +155,7 @@
     "relative_effort": 35,
     "avg_hr": 124,
     "max_hr": 155,
-    "synced_at": "2026-08-11T00:20:31Z"
+    "synced_at": "2026-08-12T00:19:50Z"
   },
   {
     "id": "2026-07-17_morning-run_48-25",
@@ -155,7 +172,7 @@
     "relative_effort": 191,
     "avg_hr": 169,
     "max_hr": 204,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "pace_per_km": "7:48"
   },
   {
@@ -173,7 +190,7 @@
     "relative_effort": 193,
     "avg_hr": 161,
     "max_hr": 191,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "pace_per_km": "8:06"
   },
   {
@@ -191,7 +208,7 @@
     "relative_effort": 136,
     "avg_hr": 149,
     "max_hr": 200,
-    "synced_at": "2026-08-11T00:20:31Z"
+    "synced_at": "2026-08-12T00:19:50Z"
   },
   {
     "id": "2026-07-06_morning-walk_1-18-37",
@@ -208,7 +225,7 @@
     "relative_effort": 0,
     "avg_hr": null,
     "max_hr": null,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "pace_per_km": "12:43"
   },
   {
@@ -226,7 +243,7 @@
     "relative_effort": 107,
     "avg_hr": 147,
     "max_hr": 172,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "avg_speed_kmh": 14.8
   },
   {
@@ -244,7 +261,7 @@
     "relative_effort": 684,
     "avg_hr": 163,
     "max_hr": 185,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "avg_speed_kmh": 12.9
   },
   {
@@ -262,7 +279,7 @@
     "relative_effort": 289,
     "avg_hr": 174,
     "max_hr": 187,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "pace_per_km": "6:21"
   },
   {
@@ -280,7 +297,7 @@
     "relative_effort": 96,
     "avg_hr": 134,
     "max_hr": 157,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "avg_speed_kmh": 19.8
   },
   {
@@ -298,7 +315,7 @@
     "relative_effort": 24,
     "avg_hr": 108,
     "max_hr": 163,
-    "synced_at": "2026-08-11T00:20:31Z"
+    "synced_at": "2026-08-12T00:19:50Z"
   },
   {
     "id": "2026-06-17_zwift-threshold-hold-marathon_52-45",
@@ -315,7 +332,7 @@
     "relative_effort": 119,
     "avg_hr": 147,
     "max_hr": 167,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "avg_speed_kmh": 24.0
   },
   {
@@ -333,7 +350,7 @@
     "relative_effort": 31,
     "avg_hr": 100,
     "max_hr": 142,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "pace_per_km": "18:05"
   },
   {
@@ -351,7 +368,7 @@
     "relative_effort": 141,
     "avg_hr": 178,
     "max_hr": 194,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "pace_per_km": "6:05"
   },
   {
@@ -369,7 +386,7 @@
     "relative_effort": 340,
     "avg_hr": 155,
     "max_hr": 178,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "avg_speed_kmh": 22.9
   },
   {
@@ -387,7 +404,7 @@
     "relative_effort": 209,
     "avg_hr": 146,
     "max_hr": 168,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "avg_speed_kmh": 12.4
   },
   {
@@ -405,7 +422,7 @@
     "relative_effort": 15,
     "avg_hr": 106,
     "max_hr": 157,
-    "synced_at": "2026-08-11T00:20:31Z"
+    "synced_at": "2026-08-12T00:19:50Z"
   },
   {
     "id": "2026-06-10_zwift-threshold-hold-marathon_52-49",
@@ -422,7 +439,7 @@
     "relative_effort": 146,
     "avg_hr": 152,
     "max_hr": 178,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "avg_speed_kmh": 22.7
   },
   {
@@ -440,7 +457,7 @@
     "relative_effort": 21,
     "avg_hr": 113,
     "max_hr": 175,
-    "synced_at": "2026-08-11T00:20:31Z"
+    "synced_at": "2026-08-12T00:19:50Z"
   },
   {
     "id": "2026-06-08_morning-run_29-13",
@@ -457,7 +474,7 @@
     "relative_effort": 138,
     "avg_hr": 180,
     "max_hr": 199,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "pace_per_km": "5:48"
   },
   {
@@ -475,7 +492,7 @@
     "relative_effort": 232,
     "avg_hr": 141,
     "max_hr": 173,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "avg_speed_kmh": 16.7
   },
   {
@@ -493,7 +510,7 @@
     "relative_effort": 38,
     "avg_hr": 133,
     "max_hr": 158,
-    "synced_at": "2026-08-11T00:20:31Z"
+    "synced_at": "2026-08-12T00:19:50Z"
   },
   {
     "id": "2026-06-02_morning-ride_30-41",
@@ -510,7 +527,7 @@
     "relative_effort": 25,
     "avg_hr": 126,
     "max_hr": 161,
-    "synced_at": "2026-08-11T00:20:31Z"
+    "synced_at": "2026-08-12T00:19:50Z"
   },
   {
     "id": "2026-05-31_morning-run_30-28",
@@ -527,7 +544,7 @@
     "relative_effort": 137,
     "avg_hr": 177,
     "max_hr": 196,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "pace_per_km": "6:03"
   },
   {
@@ -545,7 +562,7 @@
     "relative_effort": 258,
     "avg_hr": 146,
     "max_hr": 179,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "avg_speed_kmh": 14.3
   },
   {
@@ -563,7 +580,7 @@
     "relative_effort": 69,
     "avg_hr": 136,
     "max_hr": 159,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "avg_speed_kmh": 20.1
   },
   {
@@ -581,7 +598,7 @@
     "relative_effort": 21,
     "avg_hr": 117,
     "max_hr": 154,
-    "synced_at": "2026-08-11T00:20:31Z"
+    "synced_at": "2026-08-12T00:19:50Z"
   },
   {
     "id": "2026-05-27_morning-run_33-41",
@@ -598,7 +615,7 @@
     "relative_effort": 166,
     "avg_hr": 182,
     "max_hr": 194,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "pace_per_km": "6:25"
   },
   {
@@ -616,7 +633,7 @@
     "relative_effort": 15,
     "avg_hr": 136,
     "max_hr": 165,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "pace_per_km": "6:51"
   },
   {
@@ -634,7 +651,7 @@
     "relative_effort": 29,
     "avg_hr": 103,
     "max_hr": 195,
-    "synced_at": "2026-08-11T00:20:31Z"
+    "synced_at": "2026-08-12T00:19:50Z"
   },
   {
     "id": "2026-05-21_morning-weight-training_1-00-29",
@@ -651,7 +668,7 @@
     "relative_effort": 13,
     "avg_hr": 106,
     "max_hr": 148,
-    "synced_at": "2026-08-11T00:20:31Z"
+    "synced_at": "2026-08-12T00:19:50Z"
   },
   {
     "id": "2026-05-20_morning-run_34-19",
@@ -668,7 +685,7 @@
     "relative_effort": 136,
     "avg_hr": 168,
     "max_hr": 184,
-    "synced_at": "2026-08-11T00:20:31Z",
+    "synced_at": "2026-08-12T00:19:50Z",
     "pace_per_km": "6:49"
   },
   {
@@ -686,6 +703,6 @@
     "relative_effort": 21,
     "avg_hr": 114,
     "max_hr": 152,
-    "synced_at": "2026-08-11T00:20:31Z"
+    "synced_at": "2026-08-12T00:19:50Z"
   }
 ]

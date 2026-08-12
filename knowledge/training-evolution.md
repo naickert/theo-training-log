@@ -1275,3 +1275,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 4 activities in last 7 days, 39 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+
+---
+
+## Cycle auto — 2026-08-12
+
+- **Sync at:** 2026-08-12T00:19:50Z
+- **Data source:** Strava API
+- **Activity baseline:** 5 activities in last 7 days, 40 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
