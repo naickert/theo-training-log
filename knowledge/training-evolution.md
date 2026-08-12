@@ -1285,3 +1285,14 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 5 activities in last 7 days, 40 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 44 — 2026-08-12 (W21 D3 · ACWR still elevated · make-or-break interval day)
+
+- **Plan gate:** Current. W21 (10–16 Aug) covers today; plan updated 2026-08-09; Hollywoodbets race week (W23) written; no staleness triggers.
+- **ACWR 1.66 — still above 1.5 injury-risk threshold**, declining from the 1.84 spike (Cycle 43, Aug 9). Acute 7d RE = 572 (Aug 6 weights 45 + Aug 7 run 209 + Aug 8 MTB 303 + Aug 11 weights 15); chronic 28d avg = 345 RE/wk. Not a new spike — same elevated load from last week rolling forward. Foot is 0/10 (resolved), so structural overload risk is lower than the number implies, but prehab stays non-negotiable.
+- **W21 so far:** Mon 10 Aug easy run — NO upload ❌. Tue 11 Aug weights — 1:10:56 ✓.
+- **🚨 TODAY (Wed 12 Aug) = 4×1km @ 5:55–6:05/km — make-or-break race-pace session.** Called out in Cycles 41, 42, 43 as the must-not-miss W21 key session. Phase 5 has ZERO interval sessions completed. Given elevated ACWR (1.66), execute with a proper 15-min warm-up and scale to 3×1km if legs feel dead — but do not skip entirely.
+- **Hollywoodbets 10K: 18 days.** Run vol 4wk ≈ 30 km (adequate baseline but no speed work done). Sub-60 still viable if intervals land this week and next (Aug 12, Aug 19), then 5 km TT Aug 22.
+- **Foot: 0/10, effectively resolved.** No change since Cycle 21 (Jun 29). Daily prehab continues.
