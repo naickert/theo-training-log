@@ -1306,3 +1306,14 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 4 activities in last 7 days, 40 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+
+---
+
+## Cycle 45 — 2026-08-13 (W21 D4 · 4×1km CONFIRMED MISSED · ACWR 1.78 · 17d to Hollywoodbets)
+
+- **Plan gate:** Current. W21 (10–16 Aug) covers today; plan updated 2026-08-09; no revision needed.
+- **🚨 4×1km interval session (Wed 12 Aug) CONFIRMED MISSED.** No Strava upload for Aug 12 after fresh sync (40 activities unchanged). Second consecutive W20–W21 key sub-60 session not executed (W20: 5×800m substituted with easy run; W21: 4×1km skipped entirely). Phase 5 has zero interval sessions on record with 17 days to Hollywoodbets.
+- **ACWR 1.78 — above 1.5 injury-risk threshold.** Mathematically up from yesterday's 1.66 as Jul 16 run (RE 193) rolled out of 28d chronic window, lowering chronic avg from 345→297 while acute also fell (572→527). Not a new loading spike — same elevated plateau decaying. Foot 0/10; prehab continues.
+- **W21 actuals (through Thu 13):** Mon easy run — ❌ not uploaded · Tue weights 1:10:56 ✓ · Wed 4×1km — ❌ MISSED · Thu weights — pending today.
+- **Sub-60 critical path (17d out):** Remaining quality sessions: Fri 14 tempo 5km @ 6:00/km, Sat 15 long run 12km (last 4km @ 6:00/km), Wed 19 6×400m sharpening, Sat 22 5km TT. Run vol 4wk ≈ 17 km vs 30 km target; no interval sessions completed. Sub-60 is still structurally possible if all four remaining sessions land, but no further skips can occur.
