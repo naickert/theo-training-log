@@ -1296,3 +1296,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **🚨 TODAY (Wed 12 Aug) = 4×1km @ 5:55–6:05/km — make-or-break race-pace session.** Called out in Cycles 41, 42, 43 as the must-not-miss W21 key session. Phase 5 has ZERO interval sessions completed. Given elevated ACWR (1.66), execute with a proper 15-min warm-up and scale to 3×1km if legs feel dead — but do not skip entirely.
 - **Hollywoodbets 10K: 18 days.** Run vol 4wk ≈ 30 km (adequate baseline but no speed work done). Sub-60 still viable if intervals land this week and next (Aug 12, Aug 19), then 5 km TT Aug 22.
 - **Foot: 0/10, effectively resolved.** No change since Cycle 21 (Jun 29). Daily prehab continues.
+
+
+---
+
+## Cycle auto — 2026-08-13
+
+- **Sync at:** 2026-08-13T00:18:42Z
+- **Data source:** Strava API
+- **Activity baseline:** 4 activities in last 7 days, 40 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
