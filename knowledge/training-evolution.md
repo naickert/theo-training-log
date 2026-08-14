@@ -1327,3 +1327,12 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 4 activities in last 7 days, 41 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 46 — 2026-08-14 (W21 D5 · ACWR 1.89 up · Fri tempo critical · 16d to Hollywoodbets)
+
+- **Thu 13 Aug weights 1:00:11 ✓** (was "pending" in Cycle 45). W21 actuals: Mon easy run ❌ not uploaded · Tue weights ✓ · Wed 4×1km ❌ MISSED · Thu weights ✓.
+- **ACWR 1.89 — up from yesterday's 1.78**, highest since the Aug 8 spike. Chronic base decaying (Jul 17–25 block rolling out of 28d window) while acute stays elevated from Fri Aug 7 run (RE 209) + Aug 8 MTB (RE 303). No new hard session drove this — it's pure arithmetic. Foot remains 0/10; prehab continues as insurance.
+- **🚨 TODAY (Fri 14 Aug) = Tempo 5 km @ 6:00/km.** Given ACWR 1.89, a warm-up is non-negotiable (10 min easy + strides). Treat this as the de-facto interval substitute: hit 5:55–6:05/km for 5 km. HR will likely reach 178–185 — acceptable for a tempo session.
+- **Sub-60 critical path (16d out):** Remaining quality sessions — TODAY tempo, Sat 15 long run 12 km (last 4 @ 6:00/km), Wed 19 sharpening 6×400m, Sat 22 5 km TT. Zero interval sessions completed in Phase 5. Run vol 4wk = 23.3 km (vs ~30 km target). No further skips can occur.
