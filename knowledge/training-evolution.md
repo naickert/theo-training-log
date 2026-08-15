@@ -1346,3 +1346,14 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 4 activities in last 7 days, 42 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 47 — 2026-08-15 (W21 D6 · ACWR spike resolved · Fri tempo confirmed · 15d Hollywoodbets)
+
+- **ACWR 0.77 — spike resolved.** Dropped from 1.89 (Cycle 46, injury-risk zone) to 0.77 as Aug 7 run (RE 209) + Aug 8 MTB (RE 303) rolled out of the 7-day acute window. Now just below the safe-band floor (0.8) — not an injury risk, a stimulus shortfall. Chronic 28d avg = 303.5 RE/wk; acute = 233.
+- **Fri 14 Aug tempo confirmed (fresh sync):** 5.25 km / 33:30 / avg HR 177 / **6:22/km** — plan was 5 km @ 6:00/km. Ran longer but 22s/km slower than target. HR 177 is on-target for a tempo (threshold prescribed). First confirmed run-pace data point: 6:22 vs 5:59 race target = **23s/km gap** with 15 days left.
+- **W21 actuals (Mon–Fri):** Mon easy run ❌ not uploaded · Tue weights 1:10:56 ✓ · Wed 4×1km ❌ MISSED (ZERO intervals in Phase 5 now confirmed) · Thu weights 1:00:11 ✓ · Fri tempo ⚠️ (done but 22s/km slow). 4-week adherence ~46% (11/24 sessions). Run vol 4wk = 22.4 km.
+- **TODAY (Sat 15 Aug) = 12 km long run, last 4 km @ 6:00/km.** Critical W21 anchor — the only remaining session this week that builds sub-60 race specificity. Not yet on Strava.
+- **Sub-60 critical path (15d out):** Remaining sessions — TODAY 12 km long run · Wed 19 Aug 6×400m sharpening (only remaining interval session) · Sat 22 Aug 5 km TT · Race Sun 30 Aug. Phase 5 has zero interval sessions completed; pace data from Fri shows a 23s/km gap. Sub-60 requires a perfect execution of remaining sessions.
+- **Foot: 0/10, resolved.** Plan current (no staleness triggers). Obsidian mirror needs manual sync.
