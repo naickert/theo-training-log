@@ -1,6 +1,6 @@
 ---
 date: 2026-04-18
-updated: 2026-08-09
+updated: 2026-08-16
 tags: [running, cycling, mtb, 10k, road-cycling, training-plan, fitness, ballito, imfolozi, amashova, hollywoodbets, plantar-fasciitis]
 source: /Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running
 type: plan
@@ -296,6 +296,9 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 | Fri | 14 Aug | Tempo — 5 km @ 6:00/km | |
 | Sat | 15 Aug | Long run 12 km — last 4 km @ 6:00/km | |
 | Sun | 16 Aug | Rest | |
+
+> [!warning]
+> **Actual (logged as of 2026-08-16):** Mon 10 Aug — easy run ❌ not uploaded. Tue 11 Aug — Weights 1:10:56 ✓. **Wed 12 Aug — 4×1km @ 5:55–6:05/km → CONFIRMED MISSED** (no upload; zero interval sessions in Phase 5 with 14 days to race). Thu 13 Aug — Weights 1:00:11 ✓. **Fri 14 Aug — Tempo 5 km → Morning Run 5.25 km / 33:30 / avg HR 177 / 6:22/km** (22s/km slower than 6:00/km target; HR in tempo zone; constructive but not race-pace). **Sat 15 Aug — Long run 12 km → Morning MTB 24.11 km / 1:46:29 / avg HR 144** (third consecutive Saturday planned-run substituted with MTB; no run-specific long effort completed in Phase 5). Sun 16 Aug — Rest ✓. ACWR recovered to 1.25 (safe band) after 1.89 spike. Run vol 4wk = 22.4 km. With 14 days remaining: zero interval sessions completed, no long run >5 km done in Phase 5. **Wed 19 Aug 6×400m is now the LAST interval session before the race — non-negotiable.**
 
 ### Week 22 (17–23 Aug) — Sharpening
 

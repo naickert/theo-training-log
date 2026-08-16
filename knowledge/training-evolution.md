@@ -1367,3 +1367,14 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 4 activities in last 7 days, 43 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 48 — 2026-08-16 (W21 final · ACWR 1.25 · 3rd Saturday run→MTB · 14d to Hollywoodbets)
+
+- **Plan gate:** W21 actuals annotated (trigger e — week ended with no actuals in plan). Updated `plans/training-plan.md` `updated: 2026-08-16`. No weekly structure changes — W22/W23 already written.
+- **ACWR 1.25 — back in safe zone.** Down from 1.89 (Cycle 46) as Aug 7 run (RE 209) + Aug 8 MTB (RE 303) aged out of acute window. Acute 7d = 447 RE (Aug 11 weights 15 + Aug 13 weights 64 + Aug 14 run 154 + Aug 15 MTB 214). Chronic 28d avg = 357. No injury-risk alert.
+- **Sat 15 Aug confirmed: MTB 24.11 km / 1:46:29 / avg HR 144** — third consecutive Saturday planned long run substituted with MTB. Pattern: W20 Sat 8 Aug, W21 Sat 15 Aug both swapped. No run longer than 5.25 km completed in Phase 5. Run vol 4wk = 22.4 km.
+- **W21 complete: Tue weights ✓ · Thu weights ✓ · Fri run 5.25 km @ 6:22/km ✓ (moderate) · Sat MTB 24.11 km ⚠️ (sub). Mon/Wed (easy run, 4×1km) — not uploaded/missed.** Estimated adherence ~4/7.
+- **Sub-60 critical path (14d):** Hollywoodbets Aug 30. Two sessions remain — **Wed 19 Aug 6×400m @ 5:30–5:45/km (last interval chance)** + **Sat 22 Aug 5 km TT @ 6:00/km**. Phase 5 has zero interval sessions completed. Pace gap: 23s/km (6:22 vs 5:59 target). Sub-60 is still structurally possible but requires both remaining sessions to land clean.
+- **Foot: 0/10, resolved.** Prehab continues.

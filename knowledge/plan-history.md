@@ -160,3 +160,15 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
 - **ACWR ~1.84** (above the 1.5 injury-risk threshold) with Fri + Sat sessions entering the acute window against a chronic base suppressed by the Jul 26-Aug 1 zero-week. Foot 0/10; caution warranted today.
 - **Plan `updated:` → 2026-08-09.** W20 actual block updated.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+## 2026-08-16 — W21 actuals annotated; 14 days to Hollywoodbets
+
+- **Trigger (e) — stale W21 section:** Week 21 (10–16 Aug) ends today with no actuals logged in the plan. Notable deviations warrant documentation.
+- **Plan changes (`plans/training-plan.md`, `updated:` → 2026-08-16):** W21 actual block added after weekly table documenting all session outcomes.
+- **W21 critical findings:**
+  - Wed 12 Aug — 4×1km race-pace intervals CONFIRMED MISSED (zero interval sessions in Phase 5 now; was already raised as "make-or-break" in Cycle 44).
+  - Sat 15 Aug — 12 km long run (last 4 km @ 6:00/km) → MTB 24.11 km / 1:46:29 / HR 144 (**third consecutive Saturday planned-run substituted with MTB**).
+  - ACWR recovered to 1.25 (safe band) after 1.89 spike — no longer in injury-risk zone.
+  - Run vol 4wk = 22.4 km. No run longer than 5.25 km completed in Phase 5.
+- **Hollywoodbets (14 days):** Remaining quality sessions — Wed 19 Aug 6×400m (LAST interval session), Sat 22 Aug 5 km TT @ 6:00/km. Sub-60 requires executing both perfectly. Current pace evidence (6:22/km at HR 177 on Aug 14) shows a 23s/km gap on race target.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
