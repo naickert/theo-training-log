@@ -1357,3 +1357,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **TODAY (Sat 15 Aug) = 12 km long run, last 4 km @ 6:00/km.** Critical W21 anchor — the only remaining session this week that builds sub-60 race specificity. Not yet on Strava.
 - **Sub-60 critical path (15d out):** Remaining sessions — TODAY 12 km long run · Wed 19 Aug 6×400m sharpening (only remaining interval session) · Sat 22 Aug 5 km TT · Race Sun 30 Aug. Phase 5 has zero interval sessions completed; pace data from Fri shows a 23s/km gap. Sub-60 requires a perfect execution of remaining sessions.
 - **Foot: 0/10, resolved.** Plan current (no staleness triggers). Obsidian mirror needs manual sync.
+
+
+---
+
+## Cycle auto — 2026-08-16
+
+- **Sync at:** 2026-08-16T00:15:00Z
+- **Data source:** Strava API
+- **Activity baseline:** 4 activities in last 7 days, 43 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
