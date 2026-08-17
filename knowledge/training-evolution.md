@@ -1378,3 +1378,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **W21 complete: Tue weights ✓ · Thu weights ✓ · Fri run 5.25 km @ 6:22/km ✓ (moderate) · Sat MTB 24.11 km ⚠️ (sub). Mon/Wed (easy run, 4×1km) — not uploaded/missed.** Estimated adherence ~4/7.
 - **Sub-60 critical path (14d):** Hollywoodbets Aug 30. Two sessions remain — **Wed 19 Aug 6×400m @ 5:30–5:45/km (last interval chance)** + **Sat 22 Aug 5 km TT @ 6:00/km**. Phase 5 has zero interval sessions completed. Pace gap: 23s/km (6:22 vs 5:59 target). Sub-60 is still structurally possible but requires both remaining sessions to land clean.
 - **Foot: 0/10, resolved.** Prehab continues.
+
+
+---
+
+## Cycle auto — 2026-08-17
+
+- **Sync at:** 2026-08-17T00:24:06Z
+- **Data source:** Strava API
+- **Activity baseline:** 4 activities in last 7 days, 43 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
