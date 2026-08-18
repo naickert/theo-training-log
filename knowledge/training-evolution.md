@@ -1398,3 +1398,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 5 activities in last 7 days, 43 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 49 — 2026-08-18 (W22 D2 · ACWR 1.56 spike · Mon HR breach · 12d to Hollywoodbets)
+
+- **ACWR 1.56 — spiked above injury-risk threshold (>1.5).** Up from 1.25 in Cycle 48. Driven by Mon Aug 17 run (RE ~184) entering the acute 7d window. Chronic 28d avg ~357 RE/wk. With PF history, this warrants caution — Tue weights and Fri strides must stay easy; Wed 19 intervals are unavoidable but must start with full warm-up.
+- **Mon 17 Aug: Run 7.01 km / 43:16 / avg HR 171** — plan was "Easy run 5km HR≤155." Two violations: distance +40% over plan, HR 16 bpm above ceiling. 12th+ consecutive easy-run HR breach in Phase 5. Pattern unchanged since Phase 5 start.
+- **Sub-60 critical path (12d out):** Tomorrow (Wed 19 Aug) is **the last interval session before the race — 6×400m @ 5:30–5:45/km.** Phase 5 has zero interval sessions completed. If skipped or substituted, no further interval opportunity exists before Hollywoodbets Aug 30. Sat 22 Aug 5 km TT @ 6:00/km is the final readiness gauge.
+- **4-week adherence: 13/20 = 65%.** Run vol 4wk = 29.4 km (plan target ~30 km — just reaching it). No long run >7 km completed in Phase 5.
+- **Foot: 0/10, resolved.** But ACWR 1.56 with PF history requires heightened monitoring — any morning heel pain >0 should pause intervals.
