@@ -1408,3 +1408,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Sub-60 critical path (12d out):** Tomorrow (Wed 19 Aug) is **the last interval session before the race — 6×400m @ 5:30–5:45/km.** Phase 5 has zero interval sessions completed. If skipped or substituted, no further interval opportunity exists before Hollywoodbets Aug 30. Sat 22 Aug 5 km TT @ 6:00/km is the final readiness gauge.
 - **4-week adherence: 13/20 = 65%.** Run vol 4wk = 29.4 km (plan target ~30 km — just reaching it). No long run >7 km completed in Phase 5.
 - **Foot: 0/10, resolved.** But ACWR 1.56 with PF history requires heightened monitoring — any morning heel pain >0 should pause intervals.
+
+
+---
+
+## Cycle auto — 2026-08-19
+
+- **Sync at:** 2026-08-19T00:16:44Z
+- **Data source:** Strava API
+- **Activity baseline:** 5 activities in last 7 days, 43 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
