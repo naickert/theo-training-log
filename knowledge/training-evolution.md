@@ -1428,3 +1428,15 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 6 activities in last 7 days, 43 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 50 — 2026-08-20 (W22 D4 · ACWR 1.80 highest in Phase 5 · last interval missed · 10d to Hollywoodbets)
+
+- **ACWR 1.80 — new Phase-5 high, deep injury-risk zone (>1.5).** Up from 1.56 in Cycle 49 as Tue Aug 18 weights (RE 60) + Wed Aug 19 run (RE ~174) both entered the acute 7d window. Chronic 28d avg ~437 RE/wk. With PF history, this is a real injury risk — today (Thu) weights must stay light and the remaining sessions (Fri strides, Sat TT) must not be extended.
+- **Wed 19 Aug "last interval" session substituted (again): 5.22 km run / 33:01 / avg HR 173** — plan was 6×400m @ 5:30–5:45/km. Zero interval sessions completed across all of Phase 5 (W18–W22). Sub-60 without any lactate-tolerance work is structurally at risk.
+- **HR breach pattern continues:** All 3 easy runs in the last 7 days breached HR 160 ceiling (Mon 171, Wed 173, Fri 14 Aug 177). 14th+ consecutive breach. Risk: PF re-flare during taper window.
+- **Sub-60 critical path (10d):** One meaningful session remains — **Sat 22 Aug 5 km TT @ 6:00/km** (genuine race-pace effort). If executed, it both gauges readiness and provides the only race-pace stimulus before Aug 30. Must be run properly (not swapped for MTB).
+- **4-week adherence: 70% (14/20 key sessions).** Run vol 4wk = 34.6 km (approaching the 30 km target — positive). 
+- **Foot: 0/10, resolved.** High ACWR with PF history = monitor daily; any morning heel pain >0 should pause Sat TT and race-week strides.
+- **Action needed (Obsidian mirror):** This journal entry and the auto-cycle entries since 2026-08-17 need a manual sync to the local Obsidian vault — cannot push from this session.
