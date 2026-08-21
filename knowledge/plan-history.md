@@ -172,3 +172,15 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
   - Run vol 4wk = 22.4 km. No run longer than 5.25 km completed in Phase 5.
 - **Hollywoodbets (14 days):** Remaining quality sessions — Wed 19 Aug 6×400m (LAST interval session), Sat 22 Aug 5 km TT @ 6:00/km. Sub-60 requires executing both perfectly. Current pace evidence (6:22/km at HR 177 on Aug 14) shows a 23s/km gap on race target.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+## 2026-08-21 — W22 actuals annotated (mid-week); last interval missed; 9d to Hollywoodbets
+
+- **Trigger (e) — stale W22 section:** 5 days into Week 22 (17–23 Aug), confirmed critical miss warrants mid-week plan annotation.
+- **Plan changes (`plans/training-plan.md`, `updated:` → 2026-08-21):** W22 actual block added after weekly table.
+- **W22 critical findings (Mon–Wed confirmed):**
+  - Mon 17 Aug — 7.01 km / avg HR 171 (plan: 5 km HR ≤155 — 14th+ consecutive easy-run HR breach, +40% over planned distance).
+  - Tue 18 Aug — Weights ✓.
+  - Wed 19 Aug — **6×400m last interval session SUBSTITUTED again with 5.22 km run / avg HR 173.** ZERO interval sessions completed in all of Phase 5 (W18–W22). This is the final missed interval opportunity before Hollywoodbets.
+  - ACWR 1.80 entering week — highest in Phase 5, deep injury-risk zone.
+- **Hollywoodbets (9 days):** One meaningful session remains — Sat 22 Aug 5 km TT @ 6:00/km. Must not be swapped for MTB. Foot 0/10.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).

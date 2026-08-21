@@ -1,6 +1,6 @@
 ---
 date: 2026-04-18
-updated: 2026-08-16
+updated: 2026-08-21
 tags: [running, cycling, mtb, 10k, road-cycling, training-plan, fitness, ballito, imfolozi, amashova, hollywoodbets, plantar-fasciitis]
 source: /Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running
 type: plan
@@ -311,6 +311,9 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 | Fri | 21 Aug | Easy 4 km + 4 × 100m strides | |
 | Sat | 22 Aug | **Short tune-up: 5 km @ 6:00/km** | Solo TT. Gauge sub-60 readiness. |
 | Sun | 23 Aug | Rest | |
+
+> [!warning]
+> **Actual (logged as of 2026-08-21):** Mon 17 Aug — Morning Run 7.01 km / ~43 min / avg HR 171 (plan: 5 km HR ≤155; +40% over distance, HR 16 bpm above ceiling — 14th+ consecutive easy-run HR breach in Phase 5). Tue 18 Aug — Weights ✓. **Wed 19 Aug — 6×400m @ 5:30–5:45/km → Morning Run 5.22 km / 33:01 / avg HR 173 (substituted — ZERO interval sessions completed across all of Phase 5, W18–W22).** Thu 20 Aug — pending (weights light per plan). Fri 21 Aug — Easy 4 km + 4×100m strides (today). **Sat 22 Aug 5 km TT @ 6:00/km = the only remaining pre-race quality session — must not be swapped for MTB.** ACWR 1.80 entering W22 (highest in Phase 5; injury-risk zone) — taper from here. Foot 0/10.
 
 ### Week 23 (24–30 Aug) — HOLLYWOODBETS RACE WEEK
 
