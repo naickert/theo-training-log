@@ -1450,3 +1450,11 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 6 activities in last 7 days, 44 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+## Cycle 51 — 2026-08-21 (W22 D5 · plan revised · Thu weights confirmed · ACWR 1.61 · 8d to Hollywoodbets)
+
+- **Plan revised (trigger e — W22 mid-week actuals):** W22 actual block added to `plans/training-plan.md` (updated: 2026-08-21). Annotates Mon HR breach, Wed interval substitution, ACWR 1.80. Plan-history entry appended.
+- **Thu 20 Aug confirmed (fresh sync, 44 activities):** Weights session ✓ (0.0 km / avg HR 129). Plan said "weights light" — executed.
+- **ACWR ~1.61** (computed from fresh data). Above 1.5 injury-risk threshold. Taper now begins: W23 plan is very light (easy jog, strides, rest, shakeout). ACWR should decline through race week.
+- **Critical path (8d):** Sat 22 Aug 5 km TT @ 6:00/km is the ONLY remaining quality session. Sub-60 feasibility hangs on this single data point — zero interval sessions completed in Phase 5. Foot 0/10; prehab continues.
+- **Note:** Obsidian mirror needs manual sync (plan update + this entry not reachable from cloud session).
