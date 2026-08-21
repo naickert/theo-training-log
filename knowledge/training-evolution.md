@@ -1440,3 +1440,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **4-week adherence: 70% (14/20 key sessions).** Run vol 4wk = 34.6 km (approaching the 30 km target — positive). 
 - **Foot: 0/10, resolved.** High ACWR with PF history = monitor daily; any morning heel pain >0 should pause Sat TT and race-week strides.
 - **Action needed (Obsidian mirror):** This journal entry and the auto-cycle entries since 2026-08-17 need a manual sync to the local Obsidian vault — cannot push from this session.
+
+
+---
+
+## Cycle auto — 2026-08-21
+
+- **Sync at:** 2026-08-21T00:16:28Z
+- **Data source:** Strava API
+- **Activity baseline:** 6 activities in last 7 days, 44 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
