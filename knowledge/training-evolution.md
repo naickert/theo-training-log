@@ -1468,3 +1468,10 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 6 activities in last 7 days, 45 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+## Cycle 52 — 2026-08-22 (W22 D6 · ACWR 1.72 ↑ · 8d to Hollywoodbets · TT day)
+
+- **ACWR rose to 1.72** (vs 1.61 yesterday) — Fri 21 Aug run (5:49/km / HR 164 / 5 km) added real load when plan called for easy 4 km + light strides. With taper nominally starting, this is the wrong direction entering race week.
+- **Fri actuals breach confirmed:** pace 5:49/km (race-equivalent effort), HR 164 — 15th+ consecutive easy-run HR breach in Phase 5. Pattern is structural: Theo runs by feel/pace at ~6:10/km which puts HR in the 160-175 range regardless of intent.
+- **Today (Sat 22 Aug) — 5 km TT @ 6:00/km is the last quality session before Hollywoodbets (8 days).** Not yet uploaded. Result will define sub-60 readiness; if >6:20/km or HR crashes, expect 61–62 min race.
+- **Foot 0/10.** High ACWR near PF history — morning heel sensation monitoring critical through race week.
