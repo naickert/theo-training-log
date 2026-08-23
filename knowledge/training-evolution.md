@@ -1475,3 +1475,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Fri actuals breach confirmed:** pace 5:49/km (race-equivalent effort), HR 164 — 15th+ consecutive easy-run HR breach in Phase 5. Pattern is structural: Theo runs by feel/pace at ~6:10/km which puts HR in the 160-175 range regardless of intent.
 - **Today (Sat 22 Aug) — 5 km TT @ 6:00/km is the last quality session before Hollywoodbets (8 days).** Not yet uploaded. Result will define sub-60 readiness; if >6:20/km or HR crashes, expect 61–62 min race.
 - **Foot 0/10.** High ACWR near PF history — morning heel sensation monitoring critical through race week.
+
+
+---
+
+## Cycle auto — 2026-08-23
+
+- **Sync at:** 2026-08-23T00:11:07Z
+- **Data source:** Strava API
+- **Activity baseline:** 5 activities in last 7 days, 45 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
