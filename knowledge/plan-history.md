@@ -184,3 +184,14 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
   - ACWR 1.80 entering week — highest in Phase 5, deep injury-risk zone.
 - **Hollywoodbets (9 days):** One meaningful session remains — Sat 22 Aug 5 km TT @ 6:00/km. Must not be swapped for MTB. Foot 0/10.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+## 2026-08-23 — W22 actuals completed; Sat TT status unknown; 7d to race
+
+- **Trigger (e) — stale W22 actuals:** Plan updated Aug 21 with Thu 20/Fri 21 pending. Both now confirmed. Sat 22 TT (the last pre-race quality session) not on Strava after Aug 23 morning sync.
+- **Plan changes (`plans/training-plan.md`, `updated:` → 2026-08-23):**
+  - Thu 20 Aug: Weights ✓ (60 min) confirmed.
+  - Fri 21 Aug: Morning Run 5.02 km / 29:18 / avg HR 164 / 5:49/km — strides likely incorporated; HR above ≤155 ceiling.
+  - Sat 22 Aug: **NO STRAVA UPLOAD** as of 2026-08-23 morning sync. TT status unknown. Noted in W22 actual block.
+  - ACWR context updated: run-only 1.99 / RE-based 1.27 entering race week.
+- **Action needed:** Check Garmin app — if the Sat 22 5 km TT was run, upload it to Strava so the next sync captures it.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).

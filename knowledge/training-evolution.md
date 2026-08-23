@@ -1485,3 +1485,12 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 5 activities in last 7 days, 45 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+## Cycle 53 — 2026-08-23 (W22 closes · Sat TT not on Strava · race week starts tomorrow · 7d to Hollywoodbets)
+
+- **⚠ Sat 22 Aug 5 km TT NOT on Strava** after fresh morning sync (2026-08-23T00:11:07Z, 45 activities unchanged). The last pre-race quality session — the only one left after ZERO intervals in Phase 5 — is unconfirmed. Either not completed, Garmin not synced, or rest was taken. If completed: upload from Garmin app ASAP. If not done: sub-60 attempt is going in blind on pace tolerance.
+- **ACWR:** Run-only 1.99 (very high; acute 17.2 km vs chronic 8.6 km/wk — chronic depressed by MTB-heavy weeks). RE-based ACWR 1.27 (within safe band 0.8–1.3, includes weights). Taper starts NOW; no meaningful load this week.
+- **Race week (W23, starts Mon 24 Aug):** Mon easy 4 km HR ≤155 · Tue very light weights · Wed 3 km + 4×100m strides · Thu rest + race pack at Kingsmead · Fri 2 km shakeout · Sat rest · Sun race. **Priority: rest, carb-up, sleep.**
+- **Sub-60 readiness:** Zero interval sessions in Phase 5; no long run >5.25 km; consistent easy-run HR breaches (avg 164–177 on what should be ≤155 runs). Best pace evidence 5:49/km (Fri 21 Aug). The 5:59/km race target requires sustaining that effort for 60 min. Possible but will hurt from km 7.
+- **Foot: 0/10.** ACWR elevated near PF history — enforce easy pace all week, morning heel check daily.
+- **Plan revised:** W22 actual block updated (Fri 21 confirmed, Sat 22 TT status unknown). Plan `updated: 2026-08-23`.
