@@ -1494,3 +1494,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Sub-60 readiness:** Zero interval sessions in Phase 5; no long run >5.25 km; consistent easy-run HR breaches (avg 164–177 on what should be ≤155 runs). Best pace evidence 5:49/km (Fri 21 Aug). The 5:59/km race target requires sustaining that effort for 60 min. Possible but will hurt from km 7.
 - **Foot: 0/10.** ACWR elevated near PF history — enforce easy pace all week, morning heel check daily.
 - **Plan revised:** W22 actual block updated (Fri 21 confirmed, Sat 22 TT status unknown). Plan `updated: 2026-08-23`.
+
+
+---
+
+## Cycle auto — 2026-08-24
+
+- **Sync at:** 2026-08-24T00:16:16Z
+- **Data source:** Strava API
+- **Activity baseline:** 5 activities in last 7 days, 44 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
