@@ -195,3 +195,14 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
   - ACWR context updated: run-only 1.99 / RE-based 1.27 entering race week.
 - **Action needed:** Check Garmin app — if the Sat 22 5 km TT was run, upload it to Strava so the next sync captures it.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+## 2026-08-24 — Sat TT confirmed not done; W22 closed; race week begins (6d to Hollywoodbets)
+
+- **Trigger (e) — closing W22 unknown:** Aug 24 fresh Strava sync (44 activities, most recent 2026-08-21) definitively confirms Sat 22 Aug 5 km TT was not completed or never uploaded.
+- **Plan changes (`plans/training-plan.md`, `updated:` → 2026-08-24):**
+  - Sat 22 Aug status updated: "NOT COMPLETED / NOT UPLOADED — confirmed 2026-08-24 sync."
+  - Weekly check-in target for Sat 22 Aug marked as MISSED.
+- **W22 final state (17–23 Aug):** Mon HR breach (7 km / HR 171) · Tue weights ✓ · Wed intervals substituted (5.22 km run / HR 173, 0/5 intervals across all Phase 5) · Thu weights ✓ · Fri run 5 km / HR 164 / 5:49 pace (strides done) · Sat TT NOT DONE · Sun rest ✓.
+- **Race week starts today (Mon 24 Aug).** Plan W23 is in place: easy 4 km → light weights → strides → rest + race pack → shakeout → rest → race.
+- **Sub-60 reality check:** ZERO interval sessions completed in Phase 5; no long run >5.25 km; no TT. Best pace evidence 5:49/km (Fri 21 Aug, 5 km). Target 5:59/km for 10 km is physically achievable but will be painful from km 7 onward without lactate-tolerance work.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).

@@ -1,6 +1,6 @@
 ---
 date: 2026-04-18
-updated: 2026-08-23
+updated: 2026-08-24
 tags: [running, cycling, mtb, 10k, road-cycling, training-plan, fitness, ballito, imfolozi, amashova, hollywoodbets, plantar-fasciitis]
 source: /Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running
 type: plan
@@ -313,7 +313,7 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 | Sun | 23 Aug | Rest | |
 
 > [!warning]
-> **Actual (logged as of 2026-08-23):** Mon 17 Aug — Morning Run 7.01 km / 43:18 / avg HR 171 (plan: 5 km HR ≤155; +40% over distance, HR 16 bpm above ceiling — 14th+ consecutive easy-run HR breach in Phase 5). Tue 18 Aug — Weights ✓. **Wed 19 Aug — 6×400m @ 5:30–5:45/km → Morning Run 5.22 km / 32:43 / avg HR 173 (substituted — ZERO interval sessions completed across all of Phase 5, W18–W22).** Thu 20 Aug — Weights ✓ (60 min). **Fri 21 Aug — Easy 4 km + 4×100m strides → Morning Run 5.02 km / 29:18 / avg HR 164 / 5:49/km** (1 km longer than plan; pace 5:49 suggests strides were included; HR 164 = above ≤155 ceiling but acceptable for stride work). **Sat 22 Aug — 5 km TT @ 6:00/km → NO STRAVA UPLOAD as of 2026-08-23 morning sync** (status unknown — either TT not completed, Garmin not synced, or rest taken; this was the only remaining pre-race quality session with 7 days to race). Sun 23 Aug — Rest (today). ACWR (run-only) 1.99 entering race week — taper critical; RE-based ACWR 1.27 (within safe band). Foot 0/10.
+> **Actual (logged as of 2026-08-23):** Mon 17 Aug — Morning Run 7.01 km / 43:18 / avg HR 171 (plan: 5 km HR ≤155; +40% over distance, HR 16 bpm above ceiling — 14th+ consecutive easy-run HR breach in Phase 5). Tue 18 Aug — Weights ✓. **Wed 19 Aug — 6×400m @ 5:30–5:45/km → Morning Run 5.22 km / 32:43 / avg HR 173 (substituted — ZERO interval sessions completed across all of Phase 5, W18–W22).** Thu 20 Aug — Weights ✓ (60 min). **Fri 21 Aug — Easy 4 km + 4×100m strides → Morning Run 5.02 km / 29:18 / avg HR 164 / 5:49/km** (1 km longer than plan; pace 5:49 suggests strides were included; HR 164 = above ≤155 ceiling but acceptable for stride work). **Sat 22 Aug — 5 km TT @ 6:00/km → NOT COMPLETED / NOT UPLOADED** (confirmed 2026-08-24 sync: 44 activities, most recent still 2026-08-21 — 2 days post-TT day with no upload confirms TT was not done; sub-60 attempt goes in without any race-pace session completed in Phase 5). Sun 23 Aug — Rest (today). ACWR (run-only) 1.99 entering race week — taper critical; RE-based ACWR 1.27 (within safe band). Foot 0/10.
 
 ### Week 23 (24–30 Aug) — HOLLYWOODBETS RACE WEEK
 
@@ -401,7 +401,7 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 - [?] **Sun 19 Jul (W17)** — **AMASHOVA 106 km ROAD CYCLING** ⚠️ Result definitively unresolved — no Strava upload after 20 days (as of 2026-08-08; 37 activities in Strava unchanged since race). Either DNF or Garmin activity never uploaded. Phase 4 closed. Pre-race week breach: ran Thu 16 Jul (HR 161) + Fri 17 Jul (HR 169) instead of planned rest/spin.
 - [⚠️] **Wed 5 Aug (W20)** — 5 × 800m sub-60 session at 5:30/km → **Substituted: 5.09 km run / 32:01 / avg HR 172 / 6:17/km** (not executed as intervals; first critical sub-60 session missed)
 - [ ] **Wed 12 Aug (W21)** — 4 × 1 km at 5:55–6:05/km (race pace)
-- [ ] **Sat 22 Aug (W22)** — 5 km tune-up @ 6:00/km
+- [x] ~~**Sat 22 Aug (W22)** — 5 km tune-up @ 6:00/km~~ ⚠️ **NOT COMPLETED** — confirmed absent from Strava as of 2026-08-24 sync (44 activities, most recent Aug 21). Sub-60 attempt goes in without any race-pace evidence from Phase 5.
 - [ ] **Sun 30 Aug (W23)** — **HOLLYWOODBETS 10K · SUB-60 ATTEMPT**
 
 ---
