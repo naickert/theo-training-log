@@ -1514,3 +1514,22 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Foot: 0/10.** Elevated ACWR near PF history — enforce easy pace all this week, morning heel check each day.
 - **Plan updated (2026-08-24):** Sat TT confirmed missed; check-in target marked ⚠️. Plan-history entry appended.
 - **Note:** Obsidian local mirror needs manual sync (cloud session cannot reach it).
+
+
+---
+
+## Cycle auto — 2026-08-25
+
+- **Sync at:** 2026-08-25T00:19:01Z
+- **Data source:** cached (Strava unreachable)
+- **Activity baseline:** 4 activities in last 7 days, 44 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+## Cycle 55 — 2026-08-25 (Race Week Day 2 · ACWR back to optimal · 5d to Hollywoodbets)
+
+- **ACWR 0.97 (all-sport, duration-based)** — taper is working. Down from 1.20 (Aug 24 all-sport) and 1.99 (Aug 23 run-only). Now firmly in the optimal 0.8–1.3 band. Risk window passed.
+- **No new activity since Aug 21** — Mon Aug 24 easy 4 km not yet uploaded (either not done or Garmin not synced; data cached, Strava unreachable in this session).
+- **4-week adherence: 13 sessions / ~28 planned (~46%)** — reflecting the MTB-substitution and missed interval weeks. Fitness is there from the volume; speed-specific work was not done.
+- **5 days to Hollywoodbets 10K.** Sub-60 attempt goes in with fresh legs (ACWR optimal), zero injury (foot 0/10), but zero interval or TT evidence from Phase 5. Best pace evidence: 5:49/km (Aug 21 strides run, 5 km). Pacing strategy: strict km 1 @ ≥6:10, HR ≤189 through km 7, then push.
+- **Data:** Strava sync cached — today's dashboard reflects Aug 24 sync data.
+- **Note:** Obsidian local mirror needs manual sync.
