@@ -1533,3 +1533,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **5 days to Hollywoodbets 10K.** Sub-60 attempt goes in with fresh legs (ACWR optimal), zero injury (foot 0/10), but zero interval or TT evidence from Phase 5. Best pace evidence: 5:49/km (Aug 21 strides run, 5 km). Pacing strategy: strict km 1 @ ≥6:10, HR ≤189 through km 7, then push.
 - **Data:** Strava sync cached — today's dashboard reflects Aug 24 sync data.
 - **Note:** Obsidian local mirror needs manual sync.
+
+
+---
+
+## Cycle auto — 2026-08-26
+
+- **Sync at:** 2026-08-26T00:18:47Z
+- **Data source:** Strava API
+- **Activity baseline:** 4 activities in last 7 days, 43 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
