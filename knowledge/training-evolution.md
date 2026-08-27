@@ -1553,3 +1553,15 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 3 activities in last 7 days, 42 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+
+---
+
+## Cycle 56 — 2026-08-27 (Race Eve -3 · Wed strides unconfirmed · 3d to Hollywoodbets)
+
+- **ACWR 1.01 (run-only)** — optimal zone (0.8–1.3). Taper complete. No injury risk.
+- **Wed Aug 26 stride session unconfirmed** — no Strava upload for the planned "3 km + 4×100m strides" session. If not done, the only remaining run before race day is Fri 28 shakeout (2 km + 2×30s). Still manageable.
+- **Activity count: 42** (was 43 yesterday) — one Strava activity appears to have been deleted or merged. No impact on training analytics.
+- **4-week run volume: 39.6 km (~10 km/wk)** vs. 30 km/wk sub-60 target — below target but legs are fresh and ACWR is in the band. Race execution (km 1 ≥ 6:10, HR ≤189 through km 7) is now the lever.
+- **Foot: 0/10.** Race pack collection at Kingsmead today (Thu 27 Aug).
+- **Note:** Obsidian local mirror needs manual sync (cloud session cannot reach it).
