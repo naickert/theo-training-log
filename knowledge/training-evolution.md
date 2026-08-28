@@ -1565,3 +1565,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **4-week run volume: 39.6 km (~10 km/wk)** vs. 30 km/wk sub-60 target — below target but legs are fresh and ACWR is in the band. Race execution (km 1 ≥ 6:10, HR ≤189 through km 7) is now the lever.
 - **Foot: 0/10.** Race pack collection at Kingsmead today (Thu 27 Aug).
 - **Note:** Obsidian local mirror needs manual sync (cloud session cannot reach it).
+
+
+---
+
+## Cycle auto — 2026-08-28
+
+- **Sync at:** 2026-08-28T00:16:01Z
+- **Data source:** Strava API
+- **Activity baseline:** 3 activities in last 7 days, 42 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
