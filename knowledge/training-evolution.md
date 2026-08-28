@@ -1575,3 +1575,15 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 3 activities in last 7 days, 42 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 57 — 2026-08-28 (Race Week Day 5 · 2d to Hollywoodbets · Final Pre-Race Snapshot)
+
+- **ACWR 0.55 (all-sport, taper-deep)** — below the 0.8 safe-band lower bound but this is race-week taper by design. Acute load minimal (walk + one easy run since Tue); chronic base from the Phase 5 build still there. Legs should be fresh Sunday.
+- **Race week compliance (W23):** Mon Aug 24 — easy 4 km NOT UPLOADED (likely skipped or Garmin sync pending). Tue Aug 25 — RAN 5.02 km / HR 164 instead of planned weights-very-light (minor taper protocol breach, not harmful at this volume). Wed Aug 26 — no run uploaded (strides session likely missed; walked Thu Aug 27 instead). Thu Aug 27 — Walk 3.74 km / HR 102 (rest day ✓, race pack collected at Kingsmead). Today Fri Aug 28 — shakeout 2 km + 2 × 30 sec race pace on plan; not yet uploaded.
+- **Final race-readiness snapshot:** 4-wk run 39.6 km (target ≥30 km ✓) · zero interval sessions in Phase 5 (zero race-pace evidence) · best recent pace 5:49/km (Aug 21 strides) · foot 0/10 · ACWR taper-low · 42 Strava activities in sync.
+- **Sub-60 verdict:** Achievable if km 1 is held ≥6:10 and HR ≤189 through km 7. Without any interval benchmark the risk is going out too fast on adrenaline and blowing up after km 6. Pacing discipline is the make-or-break variable.
+- **Tomorrow Sat 29:** Rest, light walk only. Sleep early. Full carb-up tonight (oats/pasta). Gear laid out.
+- **Sunday 30 Aug race plan:** 2.5 hr before = full breakfast. Gel 15 min before. Km 1 target 6:10. HR ceiling 189 until km 7. Push km 8–10.
+- **Note:** Obsidian local mirror needs manual sync (cloud session cannot reach it).
