@@ -1587,3 +1587,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Tomorrow Sat 29:** Rest, light walk only. Sleep early. Full carb-up tonight (oats/pasta). Gear laid out.
 - **Sunday 30 Aug race plan:** 2.5 hr before = full breakfast. Gel 15 min before. Km 1 target 6:10. HR ceiling 189 until km 7. Push km 8–10.
 - **Note:** Obsidian local mirror needs manual sync (cloud session cannot reach it).
+
+
+---
+
+## Cycle auto — 2026-08-29
+
+- **Sync at:** 2026-08-29T00:12:30Z
+- **Data source:** Strava API
+- **Activity baseline:** 2 activities in last 7 days, 41 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
