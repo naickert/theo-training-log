@@ -1619,3 +1619,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Phase 5 summary going in:** 4-wk run vol 39.6 km (≥30 km ✓); ZERO interval sessions all of Phase 5; best recent pace 5:49/km (Aug 21 strides); easy-run HR breaches persistent (avg 164–177 vs ≤155 target throughout phase).
 - **Sub-60 make-or-break variable:** pacing discipline in km 1 (target ≥6:10) and HR ceiling ≤189 through km 7. Without any interval benchmark, adrenaline-driven blow-up after km 6 is the primary risk.
 - **Result pending next Strava sync** — watch tomorrow's build for the outcome.
+
+
+---
+
+## Cycle auto — 2026-08-31
+
+- **Sync at:** 2026-08-31T00:19:33Z
+- **Data source:** Strava API
+- **Activity baseline:** 3 activities in last 7 days, 41 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
