@@ -1,6 +1,6 @@
 ---
 type: source-of-truth
-updated: 2026-07-23
+updated: 2026-08-31
 ---
 
 # Race Calendar — Theo
@@ -14,15 +14,7 @@ Each race is a YAML entry. Required fields: `name`, `date` (YYYY-MM-DD), `type`,
 ## Active Races
 
 ```yaml
-- name: Hollywoodbets Durban 10K
-  date: 2026-08-30
-  type: Run
-  distance_km: 10
-  priority: A
-  location: Durban, KZN
-  start_time: Sunday morning (TBC)
-  target: Sub-60 attempt — under 60:00
-  notes: Registered. Order HB-20260528-ZLJMZD. Race pack collection 27-29 Aug at Hollywoodbets Kingsmead. Race number via SMS/WhatsApp in race week. This is the season's sub-60 target — replaces the Sept/Oct placeholder.
+# No active races. Season complete as of 2026-08-31. Add next race target here when identified.
 ```
 
 ## How to add a new race
@@ -32,6 +24,16 @@ Either edit this file directly, or in a Claude conversation say "add race X on d
 ## Past races (auto-moved here when date < today by >7 days)
 
 ```yaml
+- name: Hollywoodbets Durban 10K
+  date: 2026-08-30
+  type: Run
+  distance_km: 10
+  priority: A
+  location: Durban, KZN
+  target: Sub-60 attempt — under 60:00
+  result: Pending Strava sync — daily build synced midnight UTC before race start. Check next build for result.
+  notes: Registered. Order HB-20260528-ZLJMZD. Season A-goal. Moved to Past 2026-08-31.
+
 - name: Amashova National Classic
   date: 2026-07-19
   type: Road Cycling

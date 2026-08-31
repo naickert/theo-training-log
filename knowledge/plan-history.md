@@ -206,3 +206,15 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
 - **Race week starts today (Mon 24 Aug).** Plan W23 is in place: easy 4 km → light weights → strides → rest + race pack → shakeout → rest → race.
 - **Sub-60 reality check:** ZERO interval sessions completed in Phase 5; no long run >5.25 km; no TT. Best pace evidence 5:49/km (Fri 21 Aug, 5 km). Target 5:59/km for 10 km is physically achievable but will be painful from km 7 onward without lactate-tolerance work.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+## 2026-08-31 — Season closed; Hollywoodbets race day passed; plan coverage ended
+
+- **Trigger (d) — current-week header doesn't include today:** W23 covered 24–30 Aug; today is 31 Aug (day after race day). Season complete.
+- **Trigger (e) — stale (post-season):** No active race on the calendar. Hollywoodbets moved to Past.
+- **Plan changes (`plans/training-plan.md`, `updated:` → 2026-08-31):**
+  - W23 check-in for Hollywoodbets updated: race run, result pending Strava sync (midnight UTC sync was before race start — tomorrow's build will show outcome).
+  - Post-season section added to the plan.
+- **Race calendar (`knowledge/race-calendar.md`):** Hollywoodbets moved from Active to Past (result pending). Active races section cleared — no next race yet identified.
+- **Season summary:** Imfolozi 55 km MTB ✓ (Jun 27–28) · Absa 10K (result unresolved) · Amashova 106 km (result unresolved) · Hollywoodbets 10K (result pending sync). Phase 5 executed without any interval sessions; pacing discipline on race day was the make-or-break variable.
+- **Next:** Await tomorrow's Strava sync for Hollywoodbets result. Draft new plan when next race target is set.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).

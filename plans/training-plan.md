@@ -1,6 +1,6 @@
 ---
 date: 2026-04-18
-updated: 2026-08-24
+updated: 2026-08-31
 tags: [running, cycling, mtb, 10k, road-cycling, training-plan, fitness, ballito, imfolozi, amashova, hollywoodbets, plantar-fasciitis]
 source: /Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running
 type: plan
@@ -402,7 +402,7 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 - [⚠️] **Wed 5 Aug (W20)** — 5 × 800m sub-60 session at 5:30/km → **Substituted: 5.09 km run / 32:01 / avg HR 172 / 6:17/km** (not executed as intervals; first critical sub-60 session missed)
 - [ ] **Wed 12 Aug (W21)** — 4 × 1 km at 5:55–6:05/km (race pace)
 - [x] ~~**Sat 22 Aug (W22)** — 5 km tune-up @ 6:00/km~~ ⚠️ **NOT COMPLETED** — confirmed absent from Strava as of 2026-08-24 sync (44 activities, most recent Aug 21). Sub-60 attempt goes in without any race-pace evidence from Phase 5.
-- [ ] **Sun 30 Aug (W23)** — **HOLLYWOODBETS 10K · SUB-60 ATTEMPT**
+- [?] **Sun 30 Aug (W23)** — **HOLLYWOODBETS 10K · SUB-60 ATTEMPT** ⏳ Race run today. Result pending next Strava sync (daily build synced midnight UTC before race start — check tomorrow's build for outcome).
 
 ---
 
@@ -418,6 +418,19 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 8. **Compounding fatigue from back-to-back hard days.** Tue/Thu = weights only by design. Don't add cardio on those days.
 9. **Ignoring cardiac warning signs.** The resting ECG is normal, but with two endurance A-races in the block, any new **exertional chest pain, blackout/near-blackout, sustained palpitations, or breathlessness out of proportion to effort** → stop and get assessed before continuing. (Safety-net from the 15 Jun health screen — not a current finding.)
 10. **Skipping vitamin D / under-fuelling iron.** Both are now cheap insurance for bone and blood through a heavy block on a foot that's still healing — see Non-Negotiable Rule 4.
+
+---
+
+---
+
+## Post-Season (31 Aug 2026 onwards)
+
+> [!success]
+> **Season complete.** The May–Aug 2026 block concluded with the Hollywoodbets Durban 10K on Sun 30 Aug. Plan coverage ends here. Result pending Strava sync.
+>
+> Races completed: Imfolozi 55 km MTB ✓ · Absa 10K (result TBC) · Amashova 106 km (result TBC) · Hollywoodbets 10K (result pending).
+>
+> Next steps: allow 1–2 weeks off-structured-training, then draft a new plan when the next race target is identified. The injury log (foot 0/10) and plan-history.md are the primary carry-over documents.
 
 ---
 
