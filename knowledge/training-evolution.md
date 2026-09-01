@@ -1642,3 +1642,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Foot: 0/10.** Fully resolved through race week.
 - **Next:** Await full Hollywoodbets activity upload for result. No active race on calendar. Begin recovery week; draft new plan when next target identified.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+
+---
+
+## Cycle auto — 2026-09-01
+
+- **Sync at:** 2026-09-01T00:18:15Z
+- **Data source:** Strava API
+- **Activity baseline:** 3 activities in last 7 days, 40 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
