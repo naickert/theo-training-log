@@ -1671,3 +1671,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Foot: 0/10.** No flare through race week or after.
 - **Post-season status:** No active race on calendar. Zero training logged since Aug 30. Recovery week ongoing. Plan-staleness gate: post-season — no revision triggered.
 - **Next:** Resolve race result, then begin off-season. Draft new plan when next target identified.
+
+
+---
+
+## Cycle auto — 2026-09-03
+
+- **Sync at:** 2026-09-03T00:13:28Z
+- **Data source:** Strava API
+- **Activity baseline:** 2 activities in last 7 days, 39 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
