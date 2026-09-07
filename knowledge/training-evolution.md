@@ -1721,3 +1721,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 0 activities in last 7 days, 37 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+
+---
+
+## Cycle 61 — 2026-09-07 (Day 8 post-HB · race result still absent · post-season)
+
+- **⚠️ ESCALATED: Hollywoodbets 10K result still unresolved — day 8.** Sep 7 sync (37 activities) confirms no race activity has appeared. The Aug 30 "Morning Run" 5.21 km / 5:54/km / HR 169 remains the only Aug 30 entry. At day 8, auto-sync is unlikely to surface it — **manual Garmin Connect → Strava upload needed.** The result (sub-60 or otherwise) is the single unresolved thread from the entire May–Aug block.
+- **ACWR 0.00** — zero training in last 7 days. Full post-season recovery week complete. Appropriate; no injury risk.
+- **Post-season status:** No active race on calendar. Plan marked complete (updated: 2026-08-31). Next action: identify next race target and draft new plan.
+- **Foot: 0/10.** No change — fully resolved.
