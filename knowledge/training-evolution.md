@@ -1731,3 +1731,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **ACWR 0.00** — zero training in last 7 days. Full post-season recovery week complete. Appropriate; no injury risk.
 - **Post-season status:** No active race on calendar. Plan marked complete (updated: 2026-08-31). Next action: identify next race target and draft new plan.
 - **Foot: 0/10.** No change — fully resolved.
+
+
+---
+
+## Cycle auto — 2026-09-08
+
+- **Sync at:** 2026-09-08T00:13:51Z
+- **Data source:** Strava API
+- **Activity baseline:** 0 activities in last 7 days, 36 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
