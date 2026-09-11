@@ -1771,3 +1771,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 2 activities in last 7 days, 36 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 62 — 2026-09-11 (Day 12 post-HB · post-season rest complete · race result still absent)
+
+- **⚠️ Hollywoodbets 10K result unresolved — day 12.** Sep 11 sync (36 activities, +1 vs yesterday) still shows no 10K race upload. Aug 30 entry remains "Morning Run" 5.21 km / 5:55/km / HR 169 — not a race finish. At 12 days post-race, auto-sync is definitively not surfacing it. **Manual Garmin Connect → Strava upload is required to resolve this.** The season A-goal result (sub-60 or otherwise) is the only unresolved thread from the entire May–Aug block.
+- **Post-season rest window complete.** The plan specified 1–2 weeks off-structured-training post-Hollywoodbets (Aug 30). We are now 12 days out — at the outer edge of that window. Theo has logged Sep 8 weights (49 min, HR 131) + Sep 10 weights (60 min, HR 125) — consistent with a gentle return to structure. Time to identify the next race target and begin planning.
+- **ACWR 0.30** — post-season floor. Acute (7d) 93 RE vs chronic (28d avg/wk) 312 RE. No overtraining risk; appropriate detraining.
+- **No active race on calendar.** Race-calendar.md: "No active races. Season complete as of 2026-08-31." Next step: identify target → update race-calendar.md → draft new plan. Obsidian mirror will need manual sync.
+- **Foot: 0/10.** No flare through race week or recovery. PF fully resolved; maintain prehab as insurance when training resumes.
