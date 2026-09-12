@@ -1781,3 +1781,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **ACWR 0.30** — post-season floor. Acute (7d) 93 RE vs chronic (28d avg/wk) 312 RE. No overtraining risk; appropriate detraining.
 - **No active race on calendar.** Race-calendar.md: "No active races. Season complete as of 2026-08-31." Next step: identify target → update race-calendar.md → draft new plan. Obsidian mirror will need manual sync.
 - **Foot: 0/10.** No flare through race week or recovery. PF fully resolved; maintain prehab as insurance when training resumes.
+
+
+---
+
+## Cycle auto — 2026-09-12
+
+- **Sync at:** 2026-09-12T00:09:35Z
+- **Data source:** Strava API
+- **Activity baseline:** 2 activities in last 7 days, 35 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
