@@ -218,3 +218,15 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
 - **Season summary:** Imfolozi 55 km MTB ✓ (Jun 27–28) · Absa 10K (result unresolved) · Amashova 106 km (result unresolved) · Hollywoodbets 10K (result pending sync). Phase 5 executed without any interval sessions; pacing discipline on race day was the make-or-break variable.
 - **Next:** Await tomorrow's Strava sync for Hollywoodbets result. Draft new plan when next race target is set.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+## 2026-09-15 — Hollywoodbets partial result clarified; post-season recovery noted
+
+- **Trigger (e) — stale:** Hollywoodbets result still "pending Strava sync" as of 16 days post-race. Sep 14 Strava sync (33 activities) now shows an Aug 30 activity: 5.21 km / 30:46 / avg HR 169 / 5:54/km (Strava ID 19957549369). Watch appears to have stopped at ~5.2 km (halfway). Full chip time unknown.
+- **Interpretation:** First-half pace (5:54/km, HR 169) is consistent with the sub-60 target. If this pace held, projected finish ≈ 59:00. Race was likely run; GPS failure/watch-stop explains partial record. Recommend checking Hollywoodbets results portal for official chip time.
+- **Plan changes (`plans/training-plan.md`, `updated:` → 2026-09-15):**
+  - W23 checklist item updated from "pending" to partial result detail.
+  - Post-Season section updated with partial result note and Sep recovery activities (Sep 8 weights · Sep 10 weights).
+- **Race calendar (`knowledge/race-calendar.md`):** Hollywoodbets Past entry updated with partial Strava data and recommendation to check results portal.
+- **Post-race recovery:** No running Sep 1–15. Sep 8 weights (49:30) · Sep 10 weights (1:00:05). Foot 0/10. Normal post-season deload.
+- **Race calendar:** No active races. Season complete. Next plan when new race target identified.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).

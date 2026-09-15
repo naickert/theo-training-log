@@ -1,6 +1,6 @@
 ---
 type: source-of-truth
-updated: 2026-08-31
+updated: 2026-09-15
 ---
 
 # Race Calendar — Theo
@@ -31,8 +31,8 @@ Either edit this file directly, or in a Claude conversation say "add race X on d
   priority: A
   location: Durban, KZN
   target: Sub-60 attempt — under 60:00
-  result: Pending Strava sync — daily build synced midnight UTC before race start. Check next build for result.
-  notes: Registered. Order HB-20260528-ZLJMZD. Season A-goal. Moved to Past 2026-08-31.
+  result: Partial Strava upload (Strava ID 19957549369) — 5.21 km at 5:54/km avg pace, HR 169 (max 183), 30:46 on race day. Watch appears to have stopped at ~5.2 km (halfway). Full finish time unknown. First-half pace consistent with sub-60 target — if held, projected finish ≈ 59:00. Confirm official chip time via Hollywoodbets results portal or Garmin connect.
+  notes: Registered. Order HB-20260528-ZLJMZD. Season A-goal. Moved to Past 2026-08-31. Race day result clarified 2026-09-15.
 
 - name: Amashova National Classic
   date: 2026-07-19

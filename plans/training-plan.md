@@ -1,6 +1,6 @@
 ---
 date: 2026-04-18
-updated: 2026-08-31
+updated: 2026-09-15
 tags: [running, cycling, mtb, 10k, road-cycling, training-plan, fitness, ballito, imfolozi, amashova, hollywoodbets, plantar-fasciitis]
 source: /Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running
 type: plan
@@ -402,7 +402,7 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 - [⚠️] **Wed 5 Aug (W20)** — 5 × 800m sub-60 session at 5:30/km → **Substituted: 5.09 km run / 32:01 / avg HR 172 / 6:17/km** (not executed as intervals; first critical sub-60 session missed)
 - [ ] **Wed 12 Aug (W21)** — 4 × 1 km at 5:55–6:05/km (race pace)
 - [x] ~~**Sat 22 Aug (W22)** — 5 km tune-up @ 6:00/km~~ ⚠️ **NOT COMPLETED** — confirmed absent from Strava as of 2026-08-24 sync (44 activities, most recent Aug 21). Sub-60 attempt goes in without any race-pace evidence from Phase 5.
-- [?] **Sun 30 Aug (W23)** — **HOLLYWOODBETS 10K · SUB-60 ATTEMPT** ⏳ Race run today. Result pending next Strava sync (daily build synced midnight UTC before race start — check tomorrow's build for outcome).
+- [?] **Sun 30 Aug (W23)** — **HOLLYWOODBETS 10K · SUB-60 ATTEMPT** · Strava 19957549369: 5.21 km / 30:46 / avg HR 169 / 5:54/km. Watch stopped at ~5.2 km (halfway). Full finish time unknown. First-half pace consistent with sub-60 target (projected ≈ 59:00 if held). Confirm chip time via Hollywoodbets results portal.
 
 ---
 
@@ -426,11 +426,15 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 ## Post-Season (31 Aug 2026 onwards)
 
 > [!success]
-> **Season complete.** The May–Aug 2026 block concluded with the Hollywoodbets Durban 10K on Sun 30 Aug. Plan coverage ends here. Result pending Strava sync.
+> **Season complete.** The May–Aug 2026 block concluded with the Hollywoodbets Durban 10K on Sun 30 Aug. Plan coverage ends here.
 >
-> Races completed: Imfolozi 55 km MTB ✓ · Absa 10K (result TBC) · Amashova 106 km (result TBC) · Hollywoodbets 10K (result pending).
+> **Hollywoodbets result (partial):** Strava upload shows 5.21 km / 30:46 / avg HR 169 / 5:54/km on race day — watch likely stopped mid-race. Full finish time unknown. First-half pace consistent with sub-60 target. Check Hollywoodbets results portal for official chip time.
 >
-> Next steps: allow 1–2 weeks off-structured-training, then draft a new plan when the next race target is identified. The injury log (foot 0/10) and plan-history.md are the primary carry-over documents.
+> Races completed: Imfolozi 55 km MTB ✓ · Absa 10K (result TBC) · Amashova 106 km (result TBC) · Hollywoodbets 10K (partial Strava — see above).
+>
+> **Post-race recovery (Sep 2026):** Sep 8 weights (49:30) · Sep 10 weights (1:00:05). No running since race day — appropriate recovery. Foot 0/10.
+>
+> Next steps: once recovery complete, draft a new plan when the next race target is identified. The injury log (foot 0/10) and plan-history.md are the primary carry-over documents.
 
 ---
 
