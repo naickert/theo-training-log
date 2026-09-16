@@ -1820,3 +1820,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **ACWR:** 0.55 (acute RE 97 vs chronic avg 175/wk) — undertraining zone, appropriate for post-season deload. Not an injury-risk scenario.
 - **Post-race activities (Sep):** Sep 8 weights (49:30) · Sep 10 weights (1:00:05) · Sep 14 walk (31:56). No running since Aug 30 (16 days). Foot 0/10.
 - **No active race target.** Season complete. Next plan pending new race registration.
+
+
+---
+
+## Cycle auto — 2026-09-16
+
+- **Sync at:** 2026-09-16T00:10:48Z
+- **Data source:** Strava API
+- **Activity baseline:** 3 activities in last 7 days, 33 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
