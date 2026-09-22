@@ -1890,3 +1890,12 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 4 activities in last 7 days, 33 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 64 — 2026-09-22 (first run back · ACWR nudge · post-season)
+
+- **Milestone:** Sep 21 Morning Run 5.01 km / 32:08 / avg HR 163 / 6:24/km — first run since Aug 30 Hollywoodbets race day (22-day run gap). Return-to-running phase begun.
+- **HR flag:** Avg HR 163 exceeds easy-run ceiling (≤155). Persistent pattern across the whole season. Non-critical in post-season but important to enforce once next plan begins — PF re-flare risk if easy runs stay above ceiling.
+- **ACWR:** ~1.38 (acute 26.9 RE/day vs chronic 19.5 RE/day over 28d). Slight overshoot of 0.8–1.3 safe band driven by the run returning load after a quiet patch. Not a spike risk; no PF concern (foot 0/10).
+- **Race calendar:** Empty. No next race identified yet. Season remains closed.
