@@ -1899,3 +1899,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **HR flag:** Avg HR 163 exceeds easy-run ceiling (≤155). Persistent pattern across the whole season. Non-critical in post-season but important to enforce once next plan begins — PF re-flare risk if easy runs stay above ceiling.
 - **ACWR:** ~1.38 (acute 26.9 RE/day vs chronic 19.5 RE/day over 28d). Slight overshoot of 0.8–1.3 safe band driven by the run returning load after a quiet patch. Not a spike risk; no PF concern (foot 0/10).
 - **Race calendar:** Empty. No next race identified yet. Season remains closed.
+
+
+---
+
+## Cycle auto — 2026-09-23
+
+- **Sync at:** 2026-09-23T00:10:33Z
+- **Data source:** Strava API
+- **Activity baseline:** 4 activities in last 7 days, 34 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
