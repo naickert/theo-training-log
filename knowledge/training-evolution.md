@@ -1918,3 +1918,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Sep 22 Weights intensity:** avg HR 135 / RE 76 — noticeably harder than Sep 8 (HR 131 / RE 51) and Sep 10 (HR 125 / RE 42). Intensity creeping up in weights, which is fine for post-season, but adds to cumulative load.
 - **HR ceiling breach:** Sep 21 run avg HR 163 (plan ceiling ≤155). Persistent pattern (15th+ breach across the season). Critical to enforce once next plan written — foot 0/10 now but PF re-flare risk on easy runs above ceiling.
 - **Post-season status:** No next race. 34 activities in Strava. Recovery arc healthy. Next action: identify next race target and draft new plan.
+
+
+---
+
+## Cycle auto — 2026-09-24
+
+- **Sync at:** 2026-09-24T00:09:21Z
+- **Data source:** Strava API
+- **Activity baseline:** 4 activities in last 7 days, 35 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
