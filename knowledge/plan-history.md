@@ -230,3 +230,11 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
 - **Post-race recovery:** No running Sep 1–15. Sep 8 weights (49:30) · Sep 10 weights (1:00:05). Foot 0/10. Normal post-season deload.
 - **Race calendar:** No active races. Season complete. Next plan when new race target identified.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+## 2026-09-26 — Post-season activities updated; first run back logged
+
+- **Trigger (d) — no current-week header for today (Sep 26):** Plan ended at W23 (24–30 Aug). Post-season section is the active section.
+- **Trigger (e) — stale post-season section:** Post-Season last updated 2026-09-15; 11 days of activities not captured. Key miss: Sep 21 first run back (5.01 km / 32:08 / avg HR 163 — above ≤155 ceiling, first run since Hollywoodbets race day).
+- **Plan changes (`plans/training-plan.md`, `updated:` → 2026-09-26):** Post-Season block updated with Sep 14–24 activities. First run back on Sep 21 highlighted with HR-ceiling note (watch the easy-run HR pattern on restart).
+- **Current status:** Post-season recovery. Weights 2–3×/week (Tue/Thu pattern maintained). Walking daily. Sep 21 run restart — foot 0/10 throughout. No new race target identified yet.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).

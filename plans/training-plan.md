@@ -1,6 +1,6 @@
 ---
 date: 2026-04-18
-updated: 2026-09-15
+updated: 2026-09-26
 tags: [running, cycling, mtb, 10k, road-cycling, training-plan, fitness, ballito, imfolozi, amashova, hollywoodbets, plantar-fasciitis]
 source: /Users/theonaicker/Documents/Claude/Quick_Projects/Personal/Running
 type: plan
@@ -432,7 +432,7 @@ Cycling HR runs ~10 bpm lower than running for equivalent effort — go by RPE o
 >
 > Races completed: Imfolozi 55 km MTB ✓ · Absa 10K (result TBC) · Amashova 106 km (result TBC) · Hollywoodbets 10K (partial Strava — see above).
 >
-> **Post-race recovery (Sep 2026):** Sep 8 weights (49:30) · Sep 10 weights (1:00:05). No running since race day — appropriate recovery. Foot 0/10.
+> **Post-race recovery (Sep 2026):** Sep 8 weights (49:30) · Sep 10 weights (1:00:05) · Sep 14 walk (2.58 km) · Sep 15 weights (30:14) · Sep 16 walk (5.07 km) · Sep 17 weights (1:00:10) · **Sep 21 first run back: 5.01 km / 32:08 / avg HR 163** (above the ≤155 easy-run ceiling — watch the easy-run HR pattern on restart) · Sep 22 weights (1:00:58) · Sep 23 walk (5.68 km) · Sep 24 weights (42:40). Foot 0/10. No new race target yet — draft new plan when identified.
 >
 > Next steps: once recovery complete, draft a new plan when the next race target is identified. The injury log (foot 0/10) and plan-history.md are the primary carry-over documents.
 
