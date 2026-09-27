@@ -1955,3 +1955,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **ACWR:** ~1.75 (RE-based; ↓ from 1.85 on Sep 23 as Sep 17 weights aging out of window). Still above 1.5 injury-risk threshold. Primary driver: Sep 22 Weights RE 76. Foot 0/10 — no acute concern, but monitor as run volume builds.
 - **Pattern:** 4 sessions/7d. Weights Tue/Thu (consistent), one run Mon, walks mid-week. Healthy recovery cadence.
 - **Next:** No active races. Draft new plan once next race target identified. Easy-run HR ceiling (≤155) must be enforced from day 1 of new plan.
+
+
+---
+
+## Cycle auto — 2026-09-27
+
+- **Sync at:** 2026-09-27T00:09:49Z
+- **Data source:** Strava API
+- **Activity baseline:** 4 activities in last 7 days, 34 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
