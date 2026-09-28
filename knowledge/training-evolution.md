@@ -1975,3 +1975,12 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 4 activities in last 7 days, 34 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 67 — 2026-09-28 (ACWR jump · Aug 30 race aged out of 28d window)
+
+- **ACWR jump:** ~2.29 today (↑ from ~1.75 on Sep 26). Driver: Aug 30 Hollywoodbets race-day run (RE 127) aged out of the 28-day chronic window, collapsing chronic baseline (14.7 RE/day vs 19.25 on Sep 26). Acute load unchanged (Sep 21–27: RE 236). Artifact of the post-season transition — not a real ramp. Foot 0/10, no concern.
+- **Post-season status:** No active races, no new target yet. Last 7 days: 1 run (5 km, HR 163) + 2 weights + 1 walk. 4 days quiet (Sep 25–28). Healthy recovery cadence.
+- **Persistent flag:** Easy-run HR ceiling breach continues (Sep 21 avg HR 163 vs ≤155 plan ceiling). Must enforce from day 1 of next plan to protect resolving PF.
+- **Next action:** Identify next race target; draft new plan.
