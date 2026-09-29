@@ -1994,3 +1994,12 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 3 activities in last 7 days, 34 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 68 — 2026-09-29 (ACWR normalized · post-season quiet)
+
+- **ACWR:** ~1.23 (↓ from ~2.29 on Sep 28). Sep 21 run (RE 109) aged out of 7d acute window today — ACWR artifact cycle from C67 closed. Back in safe band (0.8–1.3). Chronic base: 10 activities, 412 RE total in 28d (103/wk avg).
+- **Last 7 days (Sep 22–28):** 2 weights + 1 walk = RE 127. No cardio run. 5 quiet days (Sep 24 Thu–Sep 28 Mon). Expected post-season recovery pattern.
+- **Foot:** 0/10. No flare post Aug 30 race or Sep 21 first-run-back.
+- **Status:** 30 days post-season. No active race target. Ready to begin new cycle when next race is identified.
