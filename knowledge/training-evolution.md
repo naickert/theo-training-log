@@ -1984,3 +1984,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Post-season status:** No active races, no new target yet. Last 7 days: 1 run (5 km, HR 163) + 2 weights + 1 walk. 4 days quiet (Sep 25–28). Healthy recovery cadence.
 - **Persistent flag:** Easy-run HR ceiling breach continues (Sep 21 avg HR 163 vs ≤155 plan ceiling). Must enforce from day 1 of next plan to protect resolving PF.
 - **Next action:** Identify next race target; draft new plan.
+
+
+---
+
+## Cycle auto — 2026-09-29
+
+- **Sync at:** 2026-09-29T00:10:49Z
+- **Data source:** Strava API
+- **Activity baseline:** 3 activities in last 7 days, 34 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
