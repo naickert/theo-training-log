@@ -2003,3 +2003,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Last 7 days (Sep 22–28):** 2 weights + 1 walk = RE 127. No cardio run. 5 quiet days (Sep 24 Thu–Sep 28 Mon). Expected post-season recovery pattern.
 - **Foot:** 0/10. No flare post Aug 30 race or Sep 21 first-run-back.
 - **Status:** 30 days post-season. No active race target. Ready to begin new cycle when next race is identified.
+
+
+---
+
+## Cycle auto — 2026-09-30
+
+- **Sync at:** 2026-09-30T00:10:21Z
+- **Data source:** Strava API
+- **Activity baseline:** 2 activities in last 7 days, 34 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
