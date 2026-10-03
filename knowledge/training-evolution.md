@@ -2043,3 +2043,11 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 0 activities in last 7 days, 34 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+## Cycle 69 — 2026-10-03 (ACWR 0.0 · 9d inactivity streak · detraining onset)
+
+- **ACWR 0.0** — 9 consecutive days with no activity (Sep 24 weights was the last session). Acute 7d = 0 RE; chronic 28d avg = 103 RE/wk. Below the 0.8 safe-band floor — genuine detraining, not a calculation artifact (cf. C67 which was an aging-out spike). Running detraining becomes measurable after ~7–10 days.
+- **Post-season day 34.** No active race target. Plan is in post-season holding mode (`updated: 2026-09-26`). No new race entry in race-calendar.md.
+- **Foot: 0/10.** PF fully resolved. Sep 21 first-run-back (5 km, HR 163) showed no flare; no running since.
+- **Flag:** ACWR = 0.0 for 3rd consecutive day. If no race target is set, a maintenance base block (2–3 runs/week, 1–2 bikes) is advisable to avoid significant aerobic deconditioning. Historic easy-run HR ceiling breach pattern (≤155 target, actual avg 163+) must be addressed from day 1 of next cycle.
+- **Next action:** Identify next race target and draft new plan. Or start informal maintenance (2×run, 1×bike, 2×weights/week) until target is set.
