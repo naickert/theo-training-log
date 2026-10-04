@@ -2051,3 +2051,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Foot: 0/10.** PF fully resolved. Sep 21 first-run-back (5 km, HR 163) showed no flare; no running since.
 - **Flag:** ACWR = 0.0 for 3rd consecutive day. If no race target is set, a maintenance base block (2–3 runs/week, 1–2 bikes) is advisable to avoid significant aerobic deconditioning. Historic easy-run HR ceiling breach pattern (≤155 target, actual avg 163+) must be addressed from day 1 of next cycle.
 - **Next action:** Identify next race target and draft new plan. Or start informal maintenance (2×run, 1×bike, 2×weights/week) until target is set.
+
+
+---
+
+## Cycle auto — 2026-10-04
+
+- **Sync at:** 2026-10-04T00:10:28Z
+- **Data source:** Strava API
+- **Activity baseline:** 1 activities in last 7 days, 35 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
