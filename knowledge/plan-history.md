@@ -231,6 +231,14 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
 - **Race calendar:** No active races. Season complete. Next plan when new race target identified.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
 
+## 2026-10-07 — Oct 3 run logged; near-race-pace effort flagged
+
+- **Trigger (e) — stale post-season section:** Plan updated 2026-09-26; new activity on Oct 3 not captured.
+- **New activity:** Oct 3 (Sat) — Morning Run 5.01 km / 29:59 / avg HR 174 / max HR 198 / 5:58/km. This is at sub-60 target pace, not an easy run. Max HR 198 = HRmax. Pattern of HR-above-ceiling runs continues post-season (Sep 21 HR 163, Oct 3 HR 174). Foot 0/10.
+- **Plan changes (`plans/training-plan.md`, `updated:` → 2026-10-07):** Post-Season block updated with Oct 3 activity and ⚠️ pace/HR flag.
+- **Current status:** Post-season. No active races. Next plan when new race target identified.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
 ## 2026-09-26 — Post-season activities updated; first run back logged
 
 - **Trigger (d) — no current-week header for today (Sep 26):** Plan ended at W23 (24–30 Aug). Post-season section is the active section.
