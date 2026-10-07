@@ -2098,3 +2098,12 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 2 activities in last 7 days, 35 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+## Cycle 71 — 2026-10-07 (ACWR 1.47 · approaching injury threshold · plan revised)
+
+- **ACWR 1.47** — jumped from 0.97 (Cycle 70, Oct 4) to 1.47 in four days. Driven by Oct 3 run (RE 131) + Oct 6 weights (RE 79) in the acute window against a decaying chronic base (28d avg 20.4 RE/day). Approaching the 1.5 injury-risk spike threshold — significant given PF history and deconditioning.
+- **New activity: Oct 6 weights (1:00:09, HR 136).** Consistent weights cadence maintained (Tue/Thu pattern). Oct 3 run now captured in plan.
+- **Plan revised today (trigger e):** Post-season section updated with Oct 3 run detail (5.01 km / 29:59 / 5:58/km / avg HR 174 / max 198). Continuing pattern of near-race-pace runs at max HR on post-season "easy" days. 16th+ easy-run HR ceiling breach across the season.
+- **Run vol 30d: 10.0 km** (two 5 km runs — Sep 21 and Oct 3). No structured base.
+- **Flag:** ACWR 1.47 approaching 1.5 threshold with PF history. Next hard run should be easy effort (HR ≤155, not 174). No active race target; plan in holding mode.
+- **Obsidian local mirror needs manual sync.**
