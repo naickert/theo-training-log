@@ -2117,3 +2117,11 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 3 activities in last 7 days, 36 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+## Cycle 72 — 2026-10-08 (ACWR 1.50 — injury-risk threshold crossed · post-season)
+
+- **ACWR 1.50** — crossed the 1.5 injury-risk spike threshold (was 1.47 yesterday). Driven by Oct 3 run (RE 131) + Oct 6 weights (RE 79) + Oct 7 walk (RE 6) in the 7-day acute window against chronic avg of 144/wk. Marginal crossing, but given PF history this warrants care on the next run.
+- **Fresh Strava sync: 36 activities. Last-sync: OK (fresh, not cached).**
+- **Pattern flag:** Both post-season runs (Sep 21 HR 163, Oct 3 HR 174/max 198 at 5:58/km) are well above the ≤155 easy-run ceiling. Next run should be genuinely easy — HR ≤155, no race-pace effort.
+- **No active race target. No plan revision triggered.** Post-season holding mode — weights 2×/week + easy runs as foot and legs allow.
+- **Foot: 0/10 (resolved).** Continue prehab as insurance.
