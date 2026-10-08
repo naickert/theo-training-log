@@ -2107,3 +2107,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Run vol 30d: 10.0 km** (two 5 km runs — Sep 21 and Oct 3). No structured base.
 - **Flag:** ACWR 1.47 approaching 1.5 threshold with PF history. Next hard run should be easy effort (HR ≤155, not 174). No active race target; plan in holding mode.
 - **Obsidian local mirror needs manual sync.**
+
+
+---
+
+## Cycle auto — 2026-10-08
+
+- **Sync at:** 2026-10-08T00:10:59Z
+- **Data source:** Strava API
+- **Activity baseline:** 3 activities in last 7 days, 36 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
