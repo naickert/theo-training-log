@@ -2125,3 +2125,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Pattern flag:** Both post-season runs (Sep 21 HR 163, Oct 3 HR 174/max 198 at 5:58/km) are well above the ≤155 easy-run ceiling. Next run should be genuinely easy — HR ≤155, no race-pace effort.
 - **No active race target. No plan revision triggered.** Post-season holding mode — weights 2×/week + easy runs as foot and legs allow.
 - **Foot: 0/10 (resolved).** Continue prehab as insurance.
+
+
+---
+
+## Cycle auto — 2026-10-09
+
+- **Sync at:** 2026-10-09T00:10:41Z
+- **Data source:** Strava API
+- **Activity baseline:** 4 activities in last 7 days, 37 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
