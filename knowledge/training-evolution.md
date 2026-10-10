@@ -2145,3 +2145,10 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 4 activities in last 7 days, 37 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+## Cycle 73 — 2026-10-10 (ACWR 1.19 · back in safe band · post-season holding)
+
+- **ACWR 1.19** — back in the safe band (0.8–1.3) after the 1.50 spike flagged in Cycle 72 (Oct 8). Acute load 2.71h vs chronic avg 2.28h/wk. Oct 3 run (RE 131) is still the dominant acute event; no new run this week (Oct 4–10 activities are weights × 2 + walk).
+- **4 sessions this week** (Oct 3 run + Oct 6 weights + Oct 7 walk + Oct 8 weights). Zero sessions the prior week (Sep 26–Oct 2). Holding post-season rhythm.
+- **Run pattern flag persists:** Both post-season runs remain at HR 163 (Sep 21) and HR 174/max 198 (Oct 3, 5:58/km near race pace). No new run this week. When next run happens, enforce HR ≤155 genuinely easy — not race pace.
+- **No active race target. No plan revision.** Foot 0/10. Post-season continues.
