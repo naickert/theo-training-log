@@ -2152,3 +2152,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **4 sessions this week** (Oct 3 run + Oct 6 weights + Oct 7 walk + Oct 8 weights). Zero sessions the prior week (Sep 26–Oct 2). Holding post-season rhythm.
 - **Run pattern flag persists:** Both post-season runs remain at HR 163 (Sep 21) and HR 174/max 198 (Oct 3, 5:58/km near race pace). No new run this week. When next run happens, enforce HR ≤155 genuinely easy — not race pace.
 - **No active race target. No plan revision.** Foot 0/10. Post-season continues.
+
+
+---
+
+## Cycle auto — 2026-10-11
+
+- **Sync at:** 2026-10-11T00:09:46Z
+- **Data source:** Strava API
+- **Activity baseline:** 3 activities in last 7 days, 37 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
