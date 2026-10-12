@@ -2169,3 +2169,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **8 days since last run.** Maintenance only since Oct 3 (weights × 2 + walk × 1). Post-season deload phase effectively complete; safe to resume run base now.
 - **Next run should be HR ≤155 genuinely easy** — the two prior post-season runs were HR 163 (Sep 21) and HR 174/max 198 (Oct 3, near race-pace). No new race target. Draft next plan when target identified.
 - **Foot: 0/10. No active races. Plan: post-season holding.**
+
+
+---
+
+## Cycle auto — 2026-10-12
+
+- **Sync at:** 2026-10-12T00:10:45Z
+- **Data source:** Strava API
+- **Activity baseline:** 3 activities in last 7 days, 37 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
