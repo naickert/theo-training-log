@@ -2239,3 +2239,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 0 activities in last 7 days, 34 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 75 — 2026-10-18 (extended deload · 15d no run · ACWR 0.00)
+
+- **ACWR 0.00** — zero activity in last 7 days. Chronic avg still 92 min/wk (Oct 6 weights + Oct 7 walk + Oct 8 weights in the 28-day window).
+- **15 days since last run** (Oct 3), **10 days since any activity** (Oct 8 weights). Cycle 74 (Oct 11) flagged deload complete and "ready to rebuild" — the gap has extended a further week since.
+- **No red flags physiologically**: foot 0/10, no injury log entries since Jul 6, no active races, no plan phases pending.
+- **Action cue**: safe to resume light base (easy run HR ≤155 or easy spin) — the deload is done. The prior two post-season runs were HR 163 and HR 174 (near race-pace); next run should be genuinely easy.
+- **Plan status**: post-season holding. No next race identified. Obsidian mirror of plan needs manual sync (updated 2026-10-18 in repo only).
