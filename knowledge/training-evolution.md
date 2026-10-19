@@ -2249,3 +2249,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **No red flags physiologically**: foot 0/10, no injury log entries since Jul 6, no active races, no plan phases pending.
 - **Action cue**: safe to resume light base (easy run HR ≤155 or easy spin) — the deload is done. The prior two post-season runs were HR 163 and HR 174 (near race-pace); next run should be genuinely easy.
 - **Plan status**: post-season holding. No next race identified. Obsidian mirror of plan needs manual sync (updated 2026-10-18 in repo only).
+
+
+---
+
+## Cycle auto — 2026-10-19
+
+- **Sync at:** 2026-10-19T00:09:52Z
+- **Data source:** Strava API
+- **Activity baseline:** 0 activities in last 7 days, 34 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
