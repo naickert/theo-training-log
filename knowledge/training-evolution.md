@@ -2299,3 +2299,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 0 activities in last 7 days, 31 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 76 — 2026-10-23 (20d no run · deload extending past signal)
+
+- **ACWR 0.00** — 0 sessions in last 7 days. Chronic avg dropping as 28-day window loses earlier Oct sessions.
+- **20 days since last run** (Oct 3 near-race-pace 5km, HR 174/max 198). **15 days since any activity** (Oct 8 weights). Cycle 74 flagged "ready to rebuild" 12 days ago; Cycle 75 (Oct 18) said same — no return yet.
+- **Flag**: Next resumption run must be genuinely easy (HR ≤155, ~7:00–7:30/km) — the last two post-season runs showed persistent race-pace HR (163, 174) on "easy" days. Pattern requires conscious effort to break on restart.
+- **Foot 0/10** — PF log last entry Jul 6; no flare across Hollywoodbets block or post-season. Daily prehab should resume before first run back.
+- **No next race target identified** — this is the rate-limiting step for drafting a new plan. Post-season holding.
