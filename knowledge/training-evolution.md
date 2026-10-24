@@ -2309,3 +2309,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Flag**: Next resumption run must be genuinely easy (HR ≤155, ~7:00–7:30/km) — the last two post-season runs showed persistent race-pace HR (163, 174) on "easy" days. Pattern requires conscious effort to break on restart.
 - **Foot 0/10** — PF log last entry Jul 6; no flare across Hollywoodbets block or post-season. Daily prehab should resume before first run back.
 - **No next race target identified** — this is the rate-limiting step for drafting a new plan. Post-season holding.
+
+
+---
+
+## Cycle auto — 2026-10-24
+
+- **Sync at:** 2026-10-24T00:10:33Z
+- **Data source:** Strava API
+- **Activity baseline:** 0 activities in last 7 days, 30 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
