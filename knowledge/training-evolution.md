@@ -2339,3 +2339,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 1 activities in last 7 days, 31 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 77 — 2026-10-26 (post-deload restart confirmed)
+
+- **Post-season restart:** Oct 23 Afternoon Run 4.87 km / 33:11 / avg HR 163 / max HR 186 / 6:49/km — first cardio in 20 days (last run Oct 3). Deload extended beyond Cycle 74/76 signals for 20 days.
+- **ACWR 1.38** — slightly above safe band (0.8–1.3). Chronic load very low (daily avg 12.8 RE/day over 28d) so even one moderate run tips acute ratio up. Not a spike risk, but monitor next 7 days.
+- **HR pattern:** Easy-run HR ceiling breach continues — HR 163 vs ≤155 target at 6:49/km pace. Consistent with the long-standing Phase 5 pattern. Needs conscious throttle on restart.
+- **Foot 0/10** — no PF flare reported across the deload or on the Oct 23 run. Good.
+- **No race target identified** — race-calendar.md shows no active races. Season closed Aug 31. New plan depends on race selection.
