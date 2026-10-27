@@ -2359,3 +2359,14 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** cached (Strava unreachable)
 - **Activity baseline:** 1 activities in last 7 days, 31 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 78 — 2026-10-27 (ACWR spike: 2.09 post-deload)
+
+- **ACWR 2.09** ⚠️ — injury-risk zone (>1.5). Triggered by two consecutive runs (Oct 23 + Oct 26) on a near-zero chronic base (~17.5 RE/day). Mathematically expected after 20-day deload, but still a genuine load ratio signal — especially given the PF history.
+- **Oct 26 run:** Morning Run 5.0 km / 31:31 / avg HR 171 / 6:16/km (RE 131). Pace 6:16/km at HR 171 is tempo-adjacent effort on a day that should have been easy. Two-day back-to-back runs on restart.
+- **HR pattern — persistent:** All 3 recent runs breach the ≤155 easy-run ceiling: Oct 3 (HR 174), Oct 23 (HR 163), Oct 26 (HR 171). The restart pattern exactly mirrors Phase 5 — running harder than prescribed regardless of intended effort.
+- **Foot 0/10** — no flare reported on either Oct 23 or Oct 26 run. PF remains effectively resolved.
+- **Recommendation:** 2–3 day rest before next run; enforce strict HR ≤155 cap; allow ACWR to recover below 1.3 before increasing frequency.
+- **Data source:** Fresh Strava sync OK 2026-10-27T00:12:07Z · 32 activities.
