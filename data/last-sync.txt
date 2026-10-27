@@ -1,3 +1,4 @@
-OK 2026-10-27T00:12:07Z
-source: Strava API
-activities_synced: 32
+WARN 2026-10-27T00:15:25Z
+source: cached (Strava unreachable)
+reason: render-only (no fetch requested)
+activities_synced: 31

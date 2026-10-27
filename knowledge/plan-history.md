@@ -246,3 +246,13 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
 - **Plan changes (`plans/training-plan.md`, `updated:` → 2026-09-26):** Post-Season block updated with Sep 14–24 activities. First run back on Sep 21 highlighted with HR-ceiling note (watch the easy-run HR pattern on restart).
 - **Current status:** Post-season recovery. Weights 2–3×/week (Tue/Thu pattern maintained). Walking daily. Sep 21 run restart — foot 0/10 throughout. No new race target identified yet.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+## 2026-10-27 — Oct 23 run restart logged; ACWR 1.39 (above safe band)
+
+- **Trigger (e) — stale post-season section:** Plan updated 2026-10-18 (noted "15 days no run, ACWR=0.00, safe to resume"); Oct 23 run not captured.
+- **New activity:** Oct 23 (Fri) — Afternoon Run 4.87 km / 33:11 / avg HR 163 / 6:49/km. First run since Oct 3 (20-day gap). Foot 0/10 — no flare.
+- **ACWR note:** 1.39 — above 0.8–1.3 safe band but well below 1.5 injury-risk threshold. Acute load driven by the single Oct 23 run after extended deload; chronic load near zero.
+- **Pattern flag:** HR 163 on a 6:49/km easy-paced run continues the persistent easy-run HR-above-ceiling pattern (≤155 target). Foot intact but HR management remains the ongoing coaching note.
+- **Plan changes (`plans/training-plan.md`, `updated:` → 2026-10-27):** Post-Season block updated with Oct 23 run and Oct 27 status summary.
+- **Current status:** Light base rebuild in progress. 1 run last 7d; 5 sessions last 28d (2 runs, 2 weights, 1 walk). No active race target. Next plan when race identified.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
