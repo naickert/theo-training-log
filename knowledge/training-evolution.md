@@ -2349,3 +2349,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **HR pattern:** Easy-run HR ceiling breach continues — HR 163 vs ≤155 target at 6:49/km pace. Consistent with the long-standing Phase 5 pattern. Needs conscious throttle on restart.
 - **Foot 0/10** — no PF flare reported across the deload or on the Oct 23 run. Good.
 - **No race target identified** — race-calendar.md shows no active races. Season closed Aug 31. New plan depends on race selection.
+
+
+---
+
+## Cycle auto — 2026-10-27
+
+- **Sync at:** 2026-10-27T00:12:07Z
+- **Data source:** Strava API
+- **Activity baseline:** 2 activities in last 7 days, 32 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
