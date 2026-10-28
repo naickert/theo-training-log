@@ -2370,3 +2370,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Foot 0/10** — no flare reported on either Oct 23 or Oct 26 run. PF remains effectively resolved.
 - **Recommendation:** 2–3 day rest before next run; enforce strict HR ≤155 cap; allow ACWR to recover below 1.3 before increasing frequency.
 - **Data source:** Fresh Strava sync OK 2026-10-27T00:12:07Z · 32 activities.
+
+
+---
+
+## Cycle auto — 2026-10-28
+
+- **Sync at:** 2026-10-28T00:10:22Z
+- **Data source:** Strava API
+- **Activity baseline:** 3 activities in last 7 days, 33 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
