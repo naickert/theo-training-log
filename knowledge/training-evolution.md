@@ -2400,3 +2400,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 4 activities in last 7 days, 34 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 79 — 2026-10-30 (ACWR recovery 2.09 → 1.39)
+
+- **ACWR 1.39** (Caution zone) — recovered from the 2.09 injury-risk spike on Oct 27. Oct 23 run (RE 124) dropped out of the 7-day acute window; only Oct 26 run + 2 weights sessions remain in the acute window. Trend is positive.
+- **Oct 29 weights:** 56:05 / avg HR 118 — solid session, maintains base fitness during run rest days. Two consecutive rest-from-run days (Oct 27, Oct 29) are correct given the ACWR spike.
+- **HR pattern persists:** Both recent runs breach the ≤155 easy ceiling — Oct 23 (HR 163, 6:49/km) and Oct 26 (HR 171, 6:16/km). Running at tempo-adjacent effort on "easy" days is the long-standing pattern from Phases 4–5 and now post-season.
+- **Foot 0/10** — no flare across post-deload restart. PF effectively resolved.
+- **No active race target** — hold until race identified. Next run should be genuine easy (HR ≤155, 7:00+/km, 2-3 day gap from Oct 26).
