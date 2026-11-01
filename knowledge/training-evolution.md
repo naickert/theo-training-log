@@ -2430,3 +2430,14 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 4 activities in last 7 days, 35 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 80 — 2026-11-01 (ACWR re-spike: ~2.2–2.7 post-Oct-31 run)
+
+- **ACWR re-spiked to ~2.2–2.7** ⚠️ — injury-risk zone (>1.5, safe band 0.8–1.3). Cycle 79 (Oct 30) had recovered ACWR to 1.39 via two run-rest days. The Oct 31 run (RE 113) re-entered the 7-day acute window, pushing acute load back up against the still-low chronic base.
+- **Oct 31 run:** Morning Run 5.0 km / 29:21 / avg HR 163 / max 180 / **5:50/km** ⚠️ — this is near-race-pace territory (Hollywoodbets target was 5:59/km). Running at 5:50/km on what should be easy post-season rebuilding continues the persistent pattern from all of Phase 5.
+- **HR ceiling breach: now 4 consecutive runs above ≤155:** Oct 3 (174), Oct 23 (163), Oct 26 (171), Oct 31 (163). Pace on Oct 31 (5:50/km) is the fastest post-season run — HR not yet matching the pace due to fitness carry-over, but the pace trend is moving in the wrong direction.
+- **Data source:** Fresh Strava sync OK 2026-11-01T00:10:28Z · 35 activities.
+- **Foot 0/10** — no flare reported.
+- **No active race target** — priority is rebuilding on a genuine easy base before any new plan is drafted. Next run should observe strict HR ≤155 / pace ≥7:00/km.
