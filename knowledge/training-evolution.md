@@ -2441,3 +2441,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Fresh Strava sync OK 2026-11-01T00:10:28Z · 35 activities.
 - **Foot 0/10** — no flare reported.
 - **No active race target** — priority is rebuilding on a genuine easy base before any new plan is drafted. Next run should observe strict HR ≤155 / pace ≥7:00/km.
+
+
+---
+
+## Cycle auto — 2026-11-02
+
+- **Sync at:** 2026-11-02T00:10:56Z
+- **Data source:** Strava API
+- **Activity baseline:** 4 activities in last 7 days, 35 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
