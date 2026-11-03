@@ -2461,3 +2461,12 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 3 activities in last 7 days, 35 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 81 — 2026-11-03 (ACWR recovered to safe band)
+
+- **Run ACWR 1.25** ✅ — back in safe band (0.8–1.3) after the 2.09 spike on Oct 27. Overall ACWR 1.56 (mildly elevated, but driven by weights sessions, not run load — PF risk is run-ACWR).
+- **Pattern unchanged:** Oct 31 run 5.0 km / 29:21 / HR 163 / 5:50/km — 4th consecutive post-season run above the ≤155 easy ceiling; pace 5:50/km is near-race-pace. Two run-rest days (Oct 27, Oct 29) were correct.
+- **No new race target identified.** Foot 0/10.
+- **Plan updated** to Nov 3 with current ACWR and activity summary. Obsidian mirror requires manual sync.
