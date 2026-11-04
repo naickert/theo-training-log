@@ -2470,3 +2470,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Pattern unchanged:** Oct 31 run 5.0 km / 29:21 / HR 163 / 5:50/km — 4th consecutive post-season run above the ≤155 easy ceiling; pace 5:50/km is near-race-pace. Two run-rest days (Oct 27, Oct 29) were correct.
 - **No new race target identified.** Foot 0/10.
 - **Plan updated** to Nov 3 with current ACWR and activity summary. Obsidian mirror requires manual sync.
+
+
+---
+
+## Cycle auto — 2026-11-04
+
+- **Sync at:** 2026-11-04T00:09:52Z
+- **Data source:** Strava API
+- **Activity baseline:** 2 activities in last 7 days, 34 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
