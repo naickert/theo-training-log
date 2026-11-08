@@ -256,3 +256,11 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
 - **Plan changes (`plans/training-plan.md`, `updated:` → 2026-10-27):** Post-Season block updated with Oct 23 run and Oct 27 status summary.
 - **Current status:** Light base rebuild in progress. 1 run last 7d; 5 sessions last 28d (2 runs, 2 weights, 1 walk). No active race target. Next plan when race identified.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+## 2026-11-08 — 8-day inactivity gap; ACWR dropped to 0.00
+
+- **Trigger (d) — no current-week header for today (Nov 8):** Plan still in post-season; no week headers after Aug 30.
+- **Notable change:** 8-day activity gap (last upload Oct 31). ACWR = 0.00 — acute 7-day window empty; chronic run load ~92 RE/wk still present but eroding.
+- **Plan changes (`plans/training-plan.md`, `updated:` → 2026-11-08):** Post-Season block updated with Nov 8 status, ACWR=0 flag, and restart guidance (extra caution on re-ramp due to zero acute base).
+- **Current status:** Extended rest/deload. 0 sessions last 7d; 5 sessions last 28d (3 runs 14.9 km, 2 weights). Foot 0/10. No active race target.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
