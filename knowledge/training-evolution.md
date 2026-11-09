@@ -2529,3 +2529,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Run ACWR 0.00** — acute 7-day window is empty. Chronic run load ~92 RE/wk (last 28d). Re-entry will generate a disproportionate ACWR spike even from a single easy run — extra caution needed.
 - **No active race target.** Foot 0/10. All 3 post-season runs (Oct 23, 26, 31) breached HR ≤155 ceiling (avg 163, 171, 163).
 - **Plan updated** to Nov 8 status with ACWR=0 warning and restart guidance. Obsidian mirror requires manual sync.
+
+
+---
+
+## Cycle auto — 2026-11-09
+
+- **Sync at:** 2026-11-09T00:10:10Z
+- **Data source:** Strava API
+- **Activity baseline:** 0 activities in last 7 days, 31 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
