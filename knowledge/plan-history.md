@@ -264,3 +264,13 @@ Superseded training plans, kept for context. Each entry: dates of validity, what
 - **Plan changes (`plans/training-plan.md`, `updated:` → 2026-11-08):** Post-Season block updated with Nov 8 status, ACWR=0 flag, and restart guidance (extra caution on re-ramp due to zero acute base).
 - **Current status:** Extended rest/deload. 0 sessions last 7d; 5 sessions last 28d (3 runs 14.9 km, 2 weights). Foot 0/10. No active race target.
 - **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
+
+---
+
+## Cycle 83 — 2026-11-12 (weights restart / 12-day run gap)
+
+- **Trigger (e) — post-season section stale:** Plan's last status entry was Nov 8; Nov 10 Weights session not yet reflected.
+- **Notable change:** Weights resumed Nov 10 (50:58 / HR 135) after 10-day complete rest. 12-day run gap — last run Oct 31.
+- **Plan changes (`plans/training-plan.md`, `updated:` → 2026-11-12):** Post-Season block updated with Nov 10 weights note and Nov 12 status (run ACWR 0.00, run gap, restart caution).
+- **Current status:** 1 session last 7d (weights); 6 sessions last 28d (3 runs 14.9 km, 3 weights). Run ACWR 0.00. Foot 0/10. No active race target.
+- **Note:** Obsidian local mirror of the plan needs manual sync (cloud session cannot reach it).
