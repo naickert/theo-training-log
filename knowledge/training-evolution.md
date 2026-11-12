@@ -2569,3 +2569,12 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 2 activities in last 7 days, 31 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+---
+
+## Cycle 83 — 2026-11-12 (run restart / HR-ceiling breach / pace drift)
+
+- **Run restarted Nov 11** after 11-day gap: 5.0 km / 29:53 / avg HR 174 / 5:59/km. Pace = Hollywoodbets A-race pace on what should be an easy aerobic return run. 5th consecutive post-season run breaching HR ≤155 ceiling.
+- **Run ACWR 1.04** ✅ (safe band 0.8–1.3) — ACWR is balanced by low chronic base, not genuine recovery. Overall ACWR 1.26.
+- **Pattern flag:** Every post-season run (Oct 23, 26, 31, Nov 11) has been run at or above tempo effort. Without a race goal, pace is drifting toward Hollywoodbets target. Injury risk (PF return) increases if this continues — HR ≤155 / pace ≥7:00/km is non-negotiable on next run.
+- **No active race target.** Foot 0/10. Weights stable (Nov 10, Nov 7).
