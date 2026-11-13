@@ -2578,3 +2578,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Run ACWR 1.04** ✅ (safe band 0.8–1.3) — ACWR is balanced by low chronic base, not genuine recovery. Overall ACWR 1.26.
 - **Pattern flag:** Every post-season run (Oct 23, 26, 31, Nov 11) has been run at or above tempo effort. Without a race goal, pace is drifting toward Hollywoodbets target. Injury risk (PF return) increases if this continues — HR ≤155 / pace ≥7:00/km is non-negotiable on next run.
 - **No active race target.** Foot 0/10. Weights stable (Nov 10, Nov 7).
+
+
+---
+
+## Cycle auto — 2026-11-13
+
+- **Sync at:** 2026-11-13T00:10:13Z
+- **Data source:** Strava API
+- **Activity baseline:** 3 activities in last 7 days, 31 in 90-day window.
+- **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
