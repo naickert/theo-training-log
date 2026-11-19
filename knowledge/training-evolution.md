@@ -2648,3 +2648,13 @@ The self-improvement log. Each daily dashboard run appends an entry here. Future
 - **Data source:** Strava API
 - **Activity baseline:** 1 activities in last 7 days, 26 in 90-day window.
 - **Notes:** Auto-cycle (resilient build · on-demand data worker). Manual /my-training review cycles are logged separately.
+
+
+---
+
+## Cycle 84 — 2026-11-19 (7-day run gap · ACWR acute=0)
+
+- **7-day run gap confirmed:** Last run Nov 11 (5.0 km / 29:53 / HR 174 / 5:59/km). No run since — 8 days.
+- **Run ACWR 0.00** ⚠️ — acute window fully empty. Chronic base eroding: 5km/wk avg (w1=0, w2=5, w3=5, w4=9.9 km). First run back will cause a disproportionate ACWR spike (same pattern as Oct 27 spike to 2.09).
+- **Adherence: 8/20 (40%)** over 28 days — 4 runs (19.9 km), 3 weights. Post-season maintenance only; no race structure.
+- **Foot 0/10, no active race target.** Pattern flag: all 5 post-season runs breached HR ≤155 ceiling (avg HR range 163–174). Next restart must be strict easy effort (HR ≤155 / ≥7:00/km). Plan updated with Nov 19 status.
